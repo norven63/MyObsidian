@@ -11,7 +11,8 @@
           "state": {
             "file": "11闪念笔记/202202261643-测试自动提交.md",
             "mode": "source",
-            "backlinks": false
+            "backlinks": false,
+            "source": false
           }
         }
       }
