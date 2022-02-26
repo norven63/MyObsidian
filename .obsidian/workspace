@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "a952ca229469d484",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1337a923b87c053",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "01专题索引/享学Vip课程笔记.md",
+            "mode": "preview",
+            "backlinks": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9112869b5b22a2de",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e594b66fc6df100",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b92a1b03d00959ee",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "eb69a3677a161194",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "98d44a8b32ee16f1",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "065d4635a980b0fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "4771f7bf5b6964f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8835c8611e63d636",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "01专题索引/享学Vip课程笔记.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b7aeb4a4cf8795a8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "01专题索引/享学Vip课程笔记.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2f7c56383e18c4ad",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0c80a1c3a4f47f7f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01专题索引/享学Vip课程笔记.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "d1337a923b87c053",
+  "lastOpenFiles": [
+    "01专题索引/享学Vip课程笔记.md",
+    "12学习笔记/享学-Handler原理.md",
+    "11闪念笔记/享学-卡顿和布局优化.md",
+    "11闪念笔记/202202220031-.md",
+    "11闪念笔记/202202220029-.md",
+    "99附件/Pasted image 20220222002850.png",
+    "99附件/Pasted image 20220222002947.png",
+    "01专题索引/60天引爆学习力.md",
+    "00索引/网络原理.md",
+    "00索引/效能提高.md"
+  ]
+}

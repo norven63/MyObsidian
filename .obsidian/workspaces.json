@@ -1,0 +1,130 @@
+{
+  "workspaces": {
+    "我的笔记": {
+      "main": {
+        "id": "a952ca229469d484",
+        "type": "split",
+        "children": [
+          {
+            "id": "802f1c810c8decfa",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "9112869b5b22a2de",
+        "type": "split",
+        "children": [
+          {
+            "id": "5e594b66fc6df100",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b92a1b03d00959ee",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              },
+              {
+                "id": "eb69a3677a161194",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "98d44a8b32ee16f1",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "right": {
+        "id": "065d4635a980b0fe",
+        "type": "split",
+        "children": [
+          {
+            "id": "4771f7bf5b6964f8",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "8835c8611e63d636",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "collapseAll": true,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "b7aeb4a4cf8795a8",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "2f7c56383e18c4ad",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "0c80a1c3a4f47f7f",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 3
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "active": "802f1c810c8decfa"
+    }
+  },
+  "active": "我的笔记"
+}

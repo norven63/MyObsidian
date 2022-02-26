@@ -1,0 +1,19 @@
+{
+  "legacyEditor": true,
+  "livePreview": true,
+  "promptDelete": false,
+  "readableLineLength": false,
+  "newFileLocation": "folder",
+  "foldHeading": true,
+  "foldIndent": true,
+  "defaultViewMode": "preview",
+  "alwaysUpdateLinks": true,
+  "newFileFolderPath": "11闪念笔记",
+  "attachmentFolderPath": "99附件",
+  "showLineNumber": true,
+  "tabSize": 4,
+  "trashOption": "system",
+  "autoPairMarkdown": false,
+  "autoPairBrackets": false,
+  "fileSortOrder": "alphabetical"
+}
