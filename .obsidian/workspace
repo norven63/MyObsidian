@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "01专题索引/享学Vip课程笔记.md",
-            "mode": "preview",
+            "file": "11闪念笔记/202202261643-测试自动提交.md",
+            "mode": "source",
             "backlinks": false
           }
         }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01专题索引/享学Vip课程笔记.md",
+                "file": "11闪念笔记/202202261643-测试自动提交.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01专题索引/享学Vip课程笔记.md",
+                "file": "11闪念笔记/202202261643-测试自动提交.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01专题索引/享学Vip课程笔记.md"
+                "file": "11闪念笔记/202202261643-测试自动提交.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "d1337a923b87c053",
   "lastOpenFiles": [
+    "11闪念笔记/202202261643-测试自动提交.md",
     "01专题索引/享学Vip课程笔记.md",
     "12学习笔记/享学-Handler原理.md",
     "11闪念笔记/享学-卡顿和布局优化.md",
@@ -138,7 +139,6 @@
     "99附件/Pasted image 20220222002850.png",
     "99附件/Pasted image 20220222002947.png",
     "01专题索引/60天引爆学习力.md",
-    "00索引/网络原理.md",
-    "00索引/效能提高.md"
+    "00索引/网络原理.md"
   ]
 }
