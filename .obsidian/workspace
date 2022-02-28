@@ -7,13 +7,8 @@
         "id": "d1337a923b87c053",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "11闪念笔记/202202262253-测试111111111111.md",
-            "mode": "preview",
-            "backlinks": false,
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -78,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/202202262253-测试111111111111.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/202202262253-测试111111111111.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "11闪念笔记/202202262253-测试111111111111.md"
-              }
+              "state": {}
             }
           }
         ]
