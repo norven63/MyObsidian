@@ -16,7 +16,7 @@
 2. 线程间不会干扰
 3. 为什么 wait/notify 用处不大
 
-ke'c
+## 课程大纲
 源码epoll，设计思路，设计模式， 异步消息和同步消息，消息屏障/ handlerThread IntentServer
 
   
