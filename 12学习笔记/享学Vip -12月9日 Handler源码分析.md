@@ -19,7 +19,7 @@
 ## 课程大纲
 源码epoll，设计思路，设计模式， 异步消息和同步消息，消息屏障/ handlerThread IntentServer
 
-  
+
 
 源于生活高于生活
 
@@ -27,15 +27,12 @@ Choreographer，艺术，舞蹈者，跳舞 节奏
 
 屏幕的点击。
 
+
+
 handler： 地下 - 地上《 消息管理机制：消息-》事物
 
 子线程（bean）  -》 主线程（显示）
 
-ActivityThread: AMS
-
-zero
-
-1节课： 20页
 
 ActivityThread： handler
 
