@@ -163,9 +163,29 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 ## 性能优化
 
-[[享学Vip-erw]]
+1月13号   SparseArray数据结构优化
 
-[[享学Vip -卡顿和布局优化]]
+1月16号   OOM与内存优化1-内存抖动
+
+1月18号   OOM与内存优化2-内存泄漏
+
+1月20号   App启动速度优化
+
+1月23号   Android启动优化
+
+1月25号   App启动架构
+
+2月10号   卡顿和布局优化
+
+2月13号   WorkManager详解
+
+2月15号   电量与网络优化
+
+2月17号   apk瘦身优化
+
+2月20号   APM 线上监控1
+
+2月22号   APM 线上监控2
   
 <br><br>
   
