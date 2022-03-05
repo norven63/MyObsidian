@@ -41,6 +41,8 @@ ANR
 # 数据结构
 ## ArrayList
 1. 构建函数的源码
+	- 数组
+	- 默认size
 2. add()的源码
 
 ## HashMap 源码
