@@ -8,4 +8,19 @@
 ---
 <br>
 
-线上APM相关的知识点
+# 线上APM监控相关的知识点
+## 技术点
+Bytecode
+Hook（PLT）
+JS注入
+Gradle
+
+## Java层实现
+CPU
+内存
+FPS
+ANR
+卡顿
+内存（GC、OOM）
+网络（http hook）
+功耗（电量、发热、wifi）
