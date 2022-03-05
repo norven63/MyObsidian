@@ -7,8 +7,13 @@
         "id": "25625bd00e3bd9ac",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "01专题索引/60天引爆学习力.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
         }
       }
     ],
@@ -57,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 249.99999809265137,
-    "collapsed": true
+    "width": 289.99999809265137
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -74,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01专题索引/60天引爆学习力.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "01专题索引/60天引爆学习力.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -111,7 +117,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "01专题索引/60天引爆学习力.md"
+              }
             }
           }
         ],
@@ -124,15 +132,15 @@
   },
   "active": "25625bd00e3bd9ac",
   "lastOpenFiles": [
-    "11闪念笔记/享学Vip -卡顿和布局优化.md",
-    "11闪念笔记/享学Vip -2月10号 卡顿和布局优化.md",
+    "01专题索引/60天引爆学习力.md",
     "01专题索引/享学Vip课程笔记.md",
+    "11闪念笔记/享学Vip -2月10号 卡顿和布局优化.md",
+    "11闪念笔记/享学Vip -卡顿和布局优化.md",
     "11闪念笔记/享学Vip -12月9日 Handler源码分析.md",
     "00索引/Android.md",
     "11闪念笔记/享学Vip -12月9日   Handler源码分析.md",
     "11闪念笔记/202202262253-测试111111111111.md",
     "11闪念笔记/202202262310-士大夫士大夫士大夫.md",
-    "11闪念笔记/202202261643-测试自动提交.md",
-    "11闪念笔记/202202220031-.md"
+    "11闪念笔记/202202261643-测试自动提交.md"
   ]
 }

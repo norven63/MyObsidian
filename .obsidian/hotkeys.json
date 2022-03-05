@@ -5,7 +5,7 @@
         "Alt",
         "Shift"
       ],
-      "key": "P"
+      "key": "O"
     }
   ],
   "app:toggle-right-sidebar": [
@@ -24,6 +24,23 @@
         "Shift"
       ],
       "key": "["
+    }
+  ],
+  "editor:fold-all": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ],
+  "outline:open": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Q"
     }
   ]
 }
