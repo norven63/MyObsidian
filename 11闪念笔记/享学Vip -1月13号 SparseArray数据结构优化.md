@@ -26,3 +26,9 @@ ANR
 网络（http hook）
 功耗（电量、发热、wifi）
 远程下发、日志回捞
+
+## APM
+- 配置（注解 + json）
+- 数据链的保存
+- Crash
+	- Thread UnCaought
