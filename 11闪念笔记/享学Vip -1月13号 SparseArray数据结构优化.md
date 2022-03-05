@@ -30,5 +30,11 @@ ANR
 ## APM
 - 配置（注解 + json）
 - 数据链的保存
+	- App启动
 - Crash
 	- Thread UnCaought
+- CPU、GC、电量
+- /prco/stat、/prco/pid/stat、BatterMonitor
+- ANR
+	- 文件的检查，/data/anr/traces.txt
+
