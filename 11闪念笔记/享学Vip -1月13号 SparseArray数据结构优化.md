@@ -28,22 +28,24 @@ ANR
 远程下发、日志回捞
 
 ## APM
-- 配置（注解 + json）
-- 数据链的保存
+1. 配置（注解 + json）
+2. 数据链的保存
 	- App启动
-- Crash
+3. Crash
 	- Thread UnCaought
-- CPU、GC、电量
-- /prco/stat、/prco/pid/stat、BatterMonitor
-- ANR
+4. CPU、GC、电量
+	- /prco/stat、/prco/pid/stat、BatterMonitor
+5. ANR
 	- 文件的检查，/data/anr/traces.txt
 
 # 数据结构
 ## ArrayList
-- 构建函数的源码
-- add()的源码
+1. 构建函数的源码
+2. add()的源码
 
 ## HashMap 源码
--  数组+链表+红黑树，结合各方的优点
--  hash冲突
--  
+1. 数组+链表+红黑树，结合各方的优点
+2. hash冲突
+3. 负载因子
+4. 红黑树
+5. 
