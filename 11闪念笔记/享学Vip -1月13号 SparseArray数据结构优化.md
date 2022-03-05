@@ -39,3 +39,11 @@ ANR
 	- 文件的检查，/data/anr/traces.txt
 
 # 数据结构
+## ArrayList
+- 构建函数的源码
+- add()的源码
+
+## HashMap 源码
+-  数组+链表+红黑树，结合各方的优点
+-  hash冲突
+-  
