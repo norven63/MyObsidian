@@ -38,3 +38,4 @@ ANR
 - ANR
 	- 文件的检查，/data/anr/traces.txt
 
+# 数据结构
