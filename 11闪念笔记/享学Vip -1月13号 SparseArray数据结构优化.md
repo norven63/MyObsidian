@@ -13,7 +13,7 @@
 Bytecode
 Hook（PLT）
 JS注入
-Gradle
+Gradle（ASM、javapoet）
 
 ## Java层实现
 CPU
@@ -24,3 +24,4 @@ ANR
 内存（GC、OOM）
 网络（http hook）
 功耗（电量、发热、wifi）
+远程下发、日志回捞
