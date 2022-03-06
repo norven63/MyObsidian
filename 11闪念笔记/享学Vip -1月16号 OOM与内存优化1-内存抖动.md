@@ -10,10 +10,19 @@
 ---
 <br>
 
-# 核心命令
+# ADB命令
 ==参考《性能优化内存篇.pdf》==
 
-1. 官网
-2. 手机型号区分，降级
+## 基础
+ 
+1. 官网“ADB 调试桥”
+2. 手机型号
 3. mDisplayId=0，显示屏编号
 4. adb shell cat /system/build.prop 
+
+
+## 核心命令
+1. adb shell cat /proc/meminfo
+	- MemTotal - MemFree = 进程使用的内存
+	- 
+2. 
