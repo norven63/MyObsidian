@@ -22,6 +22,7 @@
 2. 手机型号
 3. mDisplayId=0，显示屏编号
 4. adb shell cat /system/build.prop 
+5. xlog 日志系统
 
 
 ## 核心命令
