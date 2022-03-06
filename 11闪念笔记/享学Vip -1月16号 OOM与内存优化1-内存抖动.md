@@ -33,7 +33,12 @@
 	- Buffers、Cached、SwapCached，内存黑洞，搜“Linux kernel 动态内存分配”
 	- KernelStack，内核栈
 3. adb shell dumpsys meminfo
-	- RSS（共享so动态链接库）
+	- VSS 虚拟内存
+	- RSS 共享so动态链接库
 	- A Service、B Service，进程优先级
-	- PSS 实际实用的物理内存，一个系统所有进程的PSS相加=真正PSS占用内存
-4. 
+	- PSS 实际实用的物理内存（a一个系统所有进程的PSS相加=真正PSS占用内存
+	- USS 
+
+
+## 核心指标
+1. 
