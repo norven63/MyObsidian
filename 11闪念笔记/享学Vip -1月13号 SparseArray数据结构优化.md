@@ -51,6 +51,7 @@ ANR
 3. tableSizeFor()
 4. putMapEntries()
 5. getNode()
+	1. ![[Pasted image 20220306151740.png]]
 6. 位运算：一个数求余的%等价为 X&(2^N-1)?
 7. 负载因子
 8. 红黑树
