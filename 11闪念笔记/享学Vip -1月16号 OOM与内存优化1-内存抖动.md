@@ -33,12 +33,12 @@
 	- Buffers、Cached、SwapCached，内存黑洞，搜“Linux kernel 动态内存分配”
 	- KernelStack，内核栈
 3. adb shell dumpsys meminfo
-	- VSS 虚拟内存
-	- RSS 共享so动态链接库
-	- PSS 实际实用的物理内存（按比例分配，一个系统所有进程的PSS相加=真正PSS占用内存）
-	- USS 该进程独自占的物理内存（查内存泄漏时主要看这个）
-4. adb shell dumpsys procrank
+4. adb shell procrank
+5. adb shell vmstat
 
 
 ## 核心指标
-1. 
+1. VSS：Virtual Set Size 虚拟耗用的内存(包含与其他进程共享占用的虚拟内存）
+2. RSS：Resident Set Size 实际使用的物理内存（包含与其他进程共享占用的内存）
+3. PSS：Proportional Set Size 实际使用的物理内存（按比例包含与其他进程共享占用的内存）
+4. USS：Unique Set Size 进程独自占用的物理内存（不包含与其他进程共享占用的内存）
