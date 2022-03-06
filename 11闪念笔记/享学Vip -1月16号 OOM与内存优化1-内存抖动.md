@@ -56,7 +56,12 @@
 4. 堆，新生代、老生代
 5. 垃圾回收算法
 6. android kill机制，lowmemorykill，ADJ值，adb shell cat /proc/pid/oom_adj
-7. 强、软、弱引用，Reference
+7. 强、软、弱引用，Reference构建函数、ReferenceQueue
 
 
 ## LeakCanary
+读讲义
+1. 源码分析
+
+
+## 线上内存监测
