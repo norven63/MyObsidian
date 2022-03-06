@@ -32,7 +32,9 @@
 3. adb shell dumpsys meminfo
 4. adb shell procrank
 5. adb shell top meminfo
-6. adb shell vmstat 2
+6. adb shell cat /proc/pid/oom_adj
+	1. 进程类型
+7. adb shell vmstat 2
 	- si输入、so输出
 	- bi、bo
 

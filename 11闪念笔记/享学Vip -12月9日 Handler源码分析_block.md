@@ -160,11 +160,7 @@ Activity中new一个Handler匿名内部类 -> new Message() -> Message持有Hand
 
 ## MessageQueue源码分析
 
-  
-
 1. enqueueMessage()没有设置上限阻塞，可以无限入队。所以如果逻辑处理不当，会导致内存溢出卡死。
-
-  
 
 2. next()有两个方面的阻塞，通过调用MessageQueue.nativePollOnce(long,ptr, int timeoutMillis)实现：
 
