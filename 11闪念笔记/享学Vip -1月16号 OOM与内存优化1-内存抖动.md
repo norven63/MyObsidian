@@ -70,4 +70,4 @@
 3. 如何识别Activity回收的时机，LifeCycle.onDestory()，WeakHashMap<Activity,String>
 4. 如何判断Activity无法回收 
 5. 监控后台时机，然后gc()，遍历WeakHashMap
-6. Debug.MemoryInfo，debugMemoryInfo.nativePass>>10 堆内存（OOM核心原因）、getTotal、
+6. Debug.MemoryInfo，debugMemoryInfo.nativePass>>10 堆内存（OOM核心原因）、getTotalPss()整体内存
