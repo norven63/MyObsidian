@@ -44,3 +44,4 @@
 2. RSS：Resident Set Size 实际使用的物理内存（包含与其他进程共享占用的内存）
 3. PSS：Proportional Set Size 实际使用的物理内存（按比例包含与其他进程共享占用的内存）
 4. USS：Unique Set Size 进程独自占用的物理内存（不包含与其他进程共享占用的内存）
+5. 用户CPU时间、系统CPU时间、Linux的TMS、Walltime、Cmos RTC
