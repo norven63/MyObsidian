@@ -41,6 +41,9 @@ ANR
 	- 文件的检查，/data/anr/traces.txt
 
 # 数据结构
+## 常用数据结构
+看讲义
+
 ## ArrayList
 1. 构建函数的源码
 	- 数组
@@ -67,4 +70,9 @@ ANR
 ## SparseArray
 1. binarySearch() 
 	- 二分查找，若查找失败则 i=~i; ，即 i 取反
-2. 
+2. 什么场景下用SparseArray替换HashMap
+	- 节省内存
+	- 对查找性能要求不高
+
+## 堆
+1. 本质：二叉树的特性维护一维数组
