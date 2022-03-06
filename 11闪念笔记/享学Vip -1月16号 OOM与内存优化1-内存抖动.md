@@ -35,9 +35,9 @@
 3. adb shell dumpsys meminfo
 	- VSS 虚拟内存
 	- RSS 共享so动态链接库
-	- A Service、B Service，进程优先级
-	- PSS 实际实用的物理内存（a一个系统所有进程的PSS相加=真正PSS占用内存
-	- USS 
+	- PSS 实际实用的物理内存（按比例分配，一个系统所有进程的PSS相加=真正PSS占用内存）
+	- USS 该进程独自占的物理内存（查内存泄漏时主要看这个）
+4. adb shell dumpsys procrank
 
 
 ## 核心指标
