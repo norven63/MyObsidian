@@ -56,7 +56,7 @@
 4. 堆，新生代、老生代
 5. 垃圾回收算法
 6. android kill机制，lowmemorykill，ADJ值，adb shell cat /proc/pid/oom_adj
-7. 强、软、弱引用，Reference构建函数、ReferenceQueue
+7. 强、软、弱引用，Reference构建函数、ReferenceQueue、WeakHashMap
 
 
 ## LeakCanary
@@ -65,3 +65,6 @@
 
 
 ## 线上内存监测
+1. 目标：监测Activity泄漏
+2. 如何：识别Activity回收的时机、判断Activity无法回收
+3. WeakHashMap
