@@ -10,6 +10,9 @@
 ---
 <br>
 
+
+
+
 # ADB命令
 ==参考《性能优化内存篇.pdf》==
 
@@ -22,8 +25,10 @@
 
 
 ## 核心命令
-1. adb shell cat /proc/meminfo
+1. 学习 Linux内核 内存分配机制
+2. adb shell cat /proc/meminfo
 	- 进程使用的内存 = MemTotal - MemFree
-	- ==MemAvailable = MemFree + 正在用但可回收的内存(cache、buffer、slba)==
-	- Buffers、Cached、SwapCached
-2. 
+	- ==MemAvailable = MemFree + 正在用但可回收的内存(cache、buffer、slab)==
+	- Buffers、Cached、SwapCached，内存黑洞，搜“Linux kernel 动态内存分配”
+	- KernelStack，内核栈
+3. 
