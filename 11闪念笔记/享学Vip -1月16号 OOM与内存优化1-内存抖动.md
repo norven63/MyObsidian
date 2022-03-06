@@ -66,5 +66,6 @@
 
 ## 线上内存监测
 1. 目标：监测Activity泄漏
-2. 如何：识别Activity回收的时机、判断Activity无法回收
-3. WeakHashMap
+2. 如何识别Activity回收的时机，LifeCycle.onDestory()，WeakHashMap<Activity,String>
+3. 如何判断Activity无法回收
+4. WeakHashMap
