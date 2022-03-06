@@ -50,8 +50,9 @@ ANR
 2. hashCode()：hash冲突，扰动函数降低hash碰撞，无符号右位移16位、混合原始hash码的高位和低位以增加低位随机性、混合后的低位参杂（变相保留）高位部分特征
 3. tableSizeFor()
 4. putMapEntries()
-5. getNode()
-	1. ![[Pasted image 20220306151740.png]]
+5. remove()
+6. get() -> getNode()：
+	![[Pasted image 20220306151748.png]]
 6. 位运算：一个数求余的%等价为 X&(2^N-1)?
 7. 负载因子
 8. 红黑树
