@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "11闪念笔记/享学Vip -1月16号 OOM与内存优化1-内存抖动.md",
+            "file": "01专题索引/享学Vip课程笔记.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip -1月16号 OOM与内存优化1-内存抖动.md",
+                "file": "01专题索引/享学Vip课程笔记.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip -1月16号 OOM与内存优化1-内存抖动.md",
+                "file": "01专题索引/享学Vip课程笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,12 +118,11 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip -1月16号 OOM与内存优化1-内存抖动.md"
+                "file": "01专题索引/享学Vip课程笔记.md"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -131,8 +130,8 @@
   },
   "active": "7213ae6f9f4bc569",
   "lastOpenFiles": [
-    "11闪念笔记/享学Vip -1月16号 OOM与内存优化1-内存抖动.md",
     "01专题索引/享学Vip课程笔记.md",
+    "11闪念笔记/享学Vip -1月16号 OOM与内存优化1-内存抖动.md",
     "11闪念笔记/享学Vip -12月9日 Handler源码分析_block.md",
     "11闪念笔记/享学Vip -2月20号 APM 线上监控_block.md",
     "11闪念笔记/享学Vip -2月10号 卡顿和布局优化_block.md",
