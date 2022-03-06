@@ -4,12 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "25625bd00e3bd9ac",
+        "id": "7213ae6f9f4bc569",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "99附件/Pasted image 20220306151748.png"
+            "file": "11闪念笔记/享学Vip -1月13号 SparseArray数据结构优化.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
           }
         }
       }
@@ -75,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99附件/Pasted image 20220306151748.png",
+                "file": "11闪念笔记/享学Vip -1月13号 SparseArray数据结构优化.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99附件/Pasted image 20220306151748.png",
+                "file": "11闪念笔记/享学Vip -1月13号 SparseArray数据结构优化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -115,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99附件/Pasted image 20220306151748.png"
+                "file": "11闪念笔记/享学Vip -1月13号 SparseArray数据结构优化.md"
               }
             }
           }
@@ -127,17 +130,17 @@
     "width": 225.1428680419922,
     "collapsed": true
   },
-  "active": "25625bd00e3bd9ac",
+  "active": "7213ae6f9f4bc569",
   "lastOpenFiles": [
-    "99附件/Pasted image 20220306151748.png",
-    "99附件/Pasted image 20220306155555.png",
-    "99附件/Pasted image 20220306151414.png",
-    "99附件/Pasted image 20220306151528.png",
     "11闪念笔记/享学Vip -1月13号 SparseArray数据结构优化.md",
+    "99附件/Pasted image 20220306155704.png",
+    "99附件/Pasted image 20220306155624.png",
+    "99附件/Pasted image 20220306155555.png",
+    "99附件/Pasted image 20220306151528.png",
+    "99附件/Pasted image 20220306151748.png",
+    "99附件/Pasted image 20220306151414.png",
     "11闪念笔记/享学Vip -2月10号 卡顿和布局优化.md",
     "11闪念笔记/享学Vip -12月9日 Handler源码分析.md",
-    "88模板/模板-学习笔记.md",
-    "88模板/模板-ZK.md",
-    "01专题索引/享学Vip课程笔记.md"
+    "88模板/模板-学习笔记.md"
   ]
 }
