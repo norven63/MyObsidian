@@ -29,11 +29,12 @@
 	- MemAvailable = MemFree + 正在用但可回收的内存(cache、buffer、slab)
 	- Buffers、Cached、SwapCached，内存黑洞，搜“Linux kernel 动态内存分配”
 	- KernelStack，内核栈
+	- A、B Service
 3. adb shell dumpsys meminfo
 4. adb shell procrank
 5. adb shell top meminfo
 6. adb shell cat /proc/pid/oom_adj
-	1. 进程类型
+	- 进程类别，值越高越容易被杀死
 7. adb shell vmstat 2
 	- si输入、so输出
 	- bi、bo
@@ -53,4 +54,4 @@
 3. 虚拟机栈，栈帧
 4. 堆，新生代、老生代
 5. 垃圾回收算法
-6. android kill机制
+6. android kill机制，lowmemorykill，ADJ值，adb shell cat /proc/pid/oom_adj
