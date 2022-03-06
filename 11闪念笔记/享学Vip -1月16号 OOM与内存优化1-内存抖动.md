@@ -31,8 +31,9 @@
 	- KernelStack，内核栈
 3. adb shell dumpsys meminfo
 4. adb shell procrank
-5. adb shell vmstat 2
-	1. si输入、so输出
+5. adb shell top meminfo
+6. adb shell vmstat 2
+	- si输入、so输出
 	- bi、bo
 
 
@@ -42,3 +43,12 @@
 3. PSS：Proportional Set Size 实际使用的物理内存（按比例包含与其他进程共享占用的内存）
 4. USS：Unique Set Size 进程独自占用的物理内存（不包含与其他进程共享占用的内存）
 5. 用户CPU时间、系统CPU时间、Linux的TMS、Walltime、Cmos RTC
+
+
+## Java内存分配和垃圾回收算法
+1. 本地方法栈
+2. 程序计数器
+3. 虚拟机栈，栈帧
+4. 堆，新生代、老生代
+5. 垃圾回收算法
+6. android kill机制
