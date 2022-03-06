@@ -122,8 +122,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -132,6 +131,7 @@
   "active": "7213ae6f9f4bc569",
   "lastOpenFiles": [
     "11闪念笔记/享学Vip -1月13号 SparseArray数据结构优化.md",
+    "01专题索引/享学Vip课程笔记.md",
     "99附件/Pasted image 20220306155704.png",
     "99附件/Pasted image 20220306155624.png",
     "99附件/Pasted image 20220306155555.png",
@@ -139,7 +139,6 @@
     "99附件/Pasted image 20220306151748.png",
     "99附件/Pasted image 20220306151414.png",
     "11闪念笔记/享学Vip -2月10号 卡顿和布局优化.md",
-    "11闪念笔记/享学Vip -12月9日 Handler源码分析.md",
-    "88模板/模板-学习笔记.md"
+    "11闪念笔记/享学Vip -12月9日 Handler源码分析.md"
   ]
 }
