@@ -23,6 +23,7 @@
 
 ## 核心命令
 1. adb shell cat /proc/meminfo
-	- MemTotal - MemFree = 进程使用的内存
-	- 
+	- 进程使用的内存 = MemTotal - MemFree
+	- ==MemAvailable = MemFree + 正在用但可回收的内存(cache、buffer、slba)==
+	- Buffers、Cached、SwapCached
 2. 
