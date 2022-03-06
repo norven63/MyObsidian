@@ -65,5 +65,6 @@ ANR
 
 
 ## SparseArray
-1. 二分查找，若查找失败则 i=~i; ，即 i 取反
+1. binarySearch() 
+	- 二分查找，若查找失败则 i=~i; ，即 i 取反
 2. 
