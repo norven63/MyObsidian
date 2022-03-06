@@ -49,9 +49,14 @@
 
 
 ## Java内存分配和垃圾回收算法
+补习2期课件：《OOM与内存优化.pdf》
 1. 本地方法栈
 2. 程序计数器
 3. 虚拟机栈，栈帧
 4. 堆，新生代、老生代
 5. 垃圾回收算法
 6. android kill机制，lowmemorykill，ADJ值，adb shell cat /proc/pid/oom_adj
+7. 强、弱引用
+
+
+## LeakCanary
