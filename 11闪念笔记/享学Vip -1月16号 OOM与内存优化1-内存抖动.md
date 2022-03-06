@@ -34,7 +34,9 @@
 	- KernelStack，内核栈
 3. adb shell dumpsys meminfo
 4. adb shell procrank
-5. adb shell vmstat
+5. adb shell vmstat 2
+	1. si输入、so输出
+	- bi、bo
 
 
 ## 核心指标
