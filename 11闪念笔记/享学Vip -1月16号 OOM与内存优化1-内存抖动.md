@@ -25,10 +25,13 @@
 
 
 ## 核心命令
-1. 学习 Linux内核 内存分配机制
+1. ==学习 Linux内核 内存分配机制==
 2. adb shell cat /proc/meminfo
 	- 进程使用的内存 = MemTotal - MemFree
-	- ==MemAvailable = MemFree + 正在用但可回收的内存(cache、buffer、slab)==
+	- MemAvailable = MemFree + 正在用但可回收的内存(cache、buffer、slab)
 	- Buffers、Cached、SwapCached，内存黑洞，搜“Linux kernel 动态内存分配”
 	- KernelStack，内核栈
-3. 
+3. adb shell dumpsys meminfo
+	- RSS（共享so动态链接库）
+	- A Service、B Service，进程优先级
+4. 
