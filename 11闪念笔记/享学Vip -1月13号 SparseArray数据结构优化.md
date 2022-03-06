@@ -52,8 +52,10 @@ ANR
 4. putMapEntries()
 5. remove()
 6. get() -> getNode()：
-	![[Pasted image 20220306151748.png]]
+	![[Pasted image 20220306155704.png]]
 6. 位运算：一个数求余的%等价为 X&(2^N-1)?
 7. 负载因子
 8. 红黑树
-9. 
+
+![[Pasted image 20220306155624.png]]
+![[Pasted image 20220306155555.png]]
