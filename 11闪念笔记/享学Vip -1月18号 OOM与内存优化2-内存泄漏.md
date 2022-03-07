@@ -21,5 +21,9 @@
 # Koom
 1. Native Heap泄漏
 	- 借助 Tracing Garbage Collection，可跟踪垃圾回收算法
-	- libmemunreachable.so，从官网上巴拉源码，自己通过ndk编译成so，即可检测 “Native Heap泄漏”
+	- libmemunreachable.so
+		- google提供的库，进行堆空间检测
+		- 从官网上巴拉源码，自己通过ndk编译成so，即可检测 “Native Heap泄漏”
+		- breakpad，通过地址追踪还原对象
+	- 
 2. 
