@@ -36,7 +36,7 @@
 6. adb shell cat /proc/pid/oom_adj
 	- 进程类别，值越高越容易被杀死
 7. adb shell vmstat 2
-	看讲义，对照着查阅Linux相关字段shi'yi
+	==看讲义，对照着查阅Linux相关字段释义==
 	- si输入、so输出
 	- bi、bo
 
@@ -50,7 +50,7 @@
 
 
 ## Java内存分配和垃圾回收算法
-补习2期课件：《OOM与内存优化.pdf》
+==补习2期课件：《OOM与内存优化.pdf》==
 1. 本地方法栈
 2. 程序计数器
 3. 虚拟机栈，栈帧
@@ -63,6 +63,7 @@
 ## LeakCanary
 读讲义
 1. 源码分析
+2. GC Root
 
 
 ## 线上内存监测
