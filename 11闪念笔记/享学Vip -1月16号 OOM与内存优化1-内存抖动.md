@@ -45,7 +45,7 @@
 1. VSS：Virtual Set Size 虚拟耗用的内存(包含与其他进程共享占用的虚拟内存）
 2. RSS：Resident Set Size 实际使用的物理内存（包含与其他进程共享占用的内存）
 3. PSS：Proportional Set Size 实际使用的物理内存（按比例包含与其他进程共享占用的内存）
-4. **USS**：Unique Set Size 进程独自占用的物理内存（不包含与其他进程共享占用的内存）
+4. **USS：Unique Set Size 进程独自占用的物理内存（不包含与其他进程共享占用的内存）**
 5. 用户CPU时间、系统CPU时间、Linux的TMS、Walltime、Cmos RTC
 
 
@@ -57,7 +57,8 @@
 4. 堆，新生代、老生代
 5. 垃圾回收算法
 6. android kill机制，lowmemorykill，ADJ值，adb shell cat /proc/pid/oom_adj
-7. 强、软、弱引用，Reference构建函数、ReferenceQueue、WeakHashMap
+7. 强、软、弱引用
+8. **Reference构建函数、ReferenceQueue、WeakHashMap**
 
 
 ## LeakCanary
@@ -71,7 +72,7 @@
 1. 目标：监测Activity泄漏
 2. WeakHashMap
 3. 如何识别Activity回收的时机
-	- LifeCycle.onDestory()，WeakHashMap<Activity,String>缓存Activity的ruo'yi
+	- LifeCycle.onDestory()，WeakHashMap<Activity,String>缓存Activity对象的弱引用
 4. 如何判断Activity无法回收 
-	- 监控后台时机，当触发阈值时，通过gc()、遍历WeakHashMap 来检查
+	- 监控后台时机，当触发阈值时，通过gc()、遍历 WeakHashMap 来检查
 5. Debug.MemoryInfo，debugMemoryInfo.nativePass>>10 堆内存（OOM核心原因）、getTotalPss()整体内存
