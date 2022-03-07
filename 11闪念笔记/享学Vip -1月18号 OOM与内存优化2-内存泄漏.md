@@ -19,3 +19,7 @@
 
 
 # Koom
+1. Native Heap
+	- 借助Tracing Garbage Collection，可跟踪垃圾回收算法
+	- libmemunreachable.so，自己通过n'd
+2. 
