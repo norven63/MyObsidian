@@ -13,6 +13,9 @@
 # 常见内存泄漏的原因
 1. 根本原因：长生命周期持有短寿命周期，导致短无法被gc回收
 	- 静态变量、单例（不要持有activity、view）
-	- 匿名内部类（new Handler）
-	- dd动画未在activi
-2. 
+	- 内部类、匿名内部类（new Handler）
+	- 动画未在activity销毁时cancel
+	- 文件fd没有close
+
+
+# Koom
