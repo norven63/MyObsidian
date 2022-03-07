@@ -36,6 +36,7 @@
 6. adb shell cat /proc/pid/oom_adj
 	- 进程类别，值越高越容易被杀死
 7. adb shell vmstat 2
+	看讲义，对照着查阅Linux相关字段shi'yi
 	- si输入、so输出
 	- bi、bo
 
@@ -44,7 +45,7 @@
 1. VSS：Virtual Set Size 虚拟耗用的内存(包含与其他进程共享占用的虚拟内存）
 2. RSS：Resident Set Size 实际使用的物理内存（包含与其他进程共享占用的内存）
 3. PSS：Proportional Set Size 实际使用的物理内存（按比例包含与其他进程共享占用的内存）
-4. USS：Unique Set Size 进程独自占用的物理内存（不包含与其他进程共享占用的内存）
+4. **USS**：Unique Set Size 进程独自占用的物理内存（不包含与其他进程共享占用的内存）
 5. 用户CPU时间、系统CPU时间、Linux的TMS、Walltime、Cmos RTC
 
 
