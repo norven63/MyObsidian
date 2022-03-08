@@ -39,5 +39,8 @@
 ![[Pasted image 20220308211931.png|600]]
 
 ## 动态链接库
-1. dll、-l'd'l
-2. 
+1. dll、-ldl、dlopen
+2. 调用其他so里的函数
+
+
+## hprof文件
