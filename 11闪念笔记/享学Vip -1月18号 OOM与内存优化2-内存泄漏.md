@@ -32,3 +32,4 @@
 2. xhook，把某个so的malloc等函数hook替换成自己的
 3. ida逆向so
 4. 核心代码：leak_monitor.cpp
+5. 讲义中的“思路总结”
