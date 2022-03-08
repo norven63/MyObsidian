@@ -44,3 +44,6 @@
 
 
 ## hprof文件
+1. 导出命令：adb shell am  dumpheap < processname> < filename>
+2. Debug.dumpHprofData(fileName);
+3. 
