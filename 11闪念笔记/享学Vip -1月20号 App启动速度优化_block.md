@@ -18,4 +18,7 @@
 
 ## 启动流程
 - 流程图：![[Pasted image 20220322224704.png|650]]
+	1. 点击桌面icon，Launcher，AMS通信
+	2. Application
+	3. MainAtivity
 - 
