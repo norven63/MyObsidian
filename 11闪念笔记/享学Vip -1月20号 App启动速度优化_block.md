@@ -23,6 +23,7 @@
 	2. Application
 		1. attachBaseContext：dex（加固、热修复）；Provider加载；优化，启动Class编排进主dex
 		2. onCreate
-		3. theme、PhoneWindow、windowsSplashscreenContent（26以前是background）、jetpack：splashScreeen、ActivityStack.startActiviytLocked() -> showStartingWindow() -> addStartingWindow() -> scheduleAddStartingWindow() -> AnimationHandler.postAtFrontOfQueue() -> WindowManagerPolicy.StartingSurface = SplashScreenStartingData.createStartingSurface() -> PhoneWindowManager.addSplashScreen() -> PhoneWindowManager.addSplashscreenContent() -> R.styleable.Window_windowSplashscreenContent
+		3. 什么时候显示Window：
+		4. theme、PhoneWindow、windowsSplashscreenContent（26以前是background）、jetpack：splashScreeen、ActivityStack.startActiviytLocked() -> showStartingWindow() -> addStartingWindow() -> scheduleAddStartingWindow() -> AnimationHandler.postAtFrontOfQueue() -> WindowManagerPolicy.StartingSurface = SplashScreenStartingData.createStartingSurface() -> PhoneWindowManager.addSplashScreen() -> PhoneWindowManager.addSplashscreenContent() -> R.styleable.Window_windowSplashscreenContent -> PhoneWindow.setContent()
 	3. MainAtivity
 - 
