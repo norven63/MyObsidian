@@ -21,7 +21,7 @@
 - 流程图：![[Pasted image 20220322224704.png|650]]
 	1. 点击桌面icon，Launcher，AMS通信（Framework层，要学）
 	2. Application
-		1. attachBaseContext：dex加固、热修复、Provider
+		1. attachBaseContext：dex加固、热修复、Provider；启动Class编排进主dex
 		2. 
 	3. MainAtivity
 - 
