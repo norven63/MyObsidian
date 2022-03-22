@@ -23,6 +23,6 @@
 	2. Application
 		1. attachBaseContext：dex（加固、热修复）；Provider加载；优化，启动Class编排进主dex
 		2. onCreate
-		3. theme、PhoneWindow、windowsSplashscreenContent（26以前是background）、jetpack：splashScreeen
+		3. theme、PhoneWindow、windowsSplashscreenContent（26以前是background）、jetpack：splashScreeen、
 	3. MainAtivity
 - 
