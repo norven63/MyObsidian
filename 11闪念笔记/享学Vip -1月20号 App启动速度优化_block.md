@@ -22,6 +22,6 @@
 	1. 点击桌面icon，Launcher，AMS通信（Framework层，要学）
 	2. Application
 		1. attachBaseContext：dex（加固、热修复）；Provider加载；优化，启动Class编排进主dex
-		2. 
+		2. onCreate
 	3. MainAtivity
 - 
