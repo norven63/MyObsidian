@@ -17,8 +17,11 @@
 ## 工具、耗时统计 看《补充资料》，第二期 第四节课
 
 ## 启动流程
+- 看《预习资料》
 - 流程图：![[Pasted image 20220322224704.png|650]]
-	1. 点击桌面icon，Launcher，AMS通信
+	1. 点击桌面icon，Launcher，AMS通信（Framework层，要学）
 	2. Application
+		1. attachBaseContext：dex加固、热修复、Provider
+		2. 
 	3. MainAtivity
 - 
