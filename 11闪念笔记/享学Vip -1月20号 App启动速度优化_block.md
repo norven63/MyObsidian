@@ -20,12 +20,11 @@
 - 看《预习资料》
 - 流程图：![[Pasted image 20220322224704.png|650]]
 	1. 点击桌面icon，Launcher，AMS通信（Framework层，要学）
-	2. Application
-		1. attachBaseContext：dex（加固、热修复）；Provider加载；优化，启动Class编排进主dex
-		2. onCreate
-	3. 黑白屏优化：
+	2. 黑白屏优化：
 		- theme、PhoneWindow、windowsSplashscreenContent（26以前是background）、jetpack：splashScreeen、
 		- ActivityStack.startActiviytLocked() -> showStartingWindow() -> addStartingWindow() -> scheduleAddStartingWindow() -> AnimationHandler.postAtFrontOfQueue() -> WindowManagerPolicy.StartingSurface = SplashScreenStartingData.createStartingSurface() -> PhoneWindowManager.addSplashScreen() -> PhoneWindowManager.addSplashscreenContent() -> R.styleable.Window_windowSplashscreenContent -> PhoneWindow.setContent()
 		- 什么时候显示Window：WindowManager.addView()，WMS
-	5. MainAtivity
-- 
+	3. Application
+		1. attachBaseContext：dex（加固、热修复）；Provider加载；优化，启动Class编排进主dex
+		2. onCreate：
+	4. MainAtivity
