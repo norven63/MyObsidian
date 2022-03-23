@@ -26,5 +26,5 @@
 		- 什么时候显示Window：WindowManager.addView()，WMS
 	3. Application
 		1. attachBaseContext：dex（加固、热修复）；Provider加载；优化，启动Class编排进主dex
-		2. onCreate：
+		2. onCreate：解决线程拥挤，降低CPU切换成本
 	4. MainAtivity
