@@ -29,6 +29,6 @@
 		2. onCreate：解决线程拥挤，降低CPU切换成本
 	4. MainAtivity
 		- attach：**WMS**，绑定Context、new PhoneWindow()、window.setWindowManager()
-		- 
+		- onCreate：setContentView()、inflate的View比自定义View效率低(用反射)、精简xml层级、compose优化(new组件，效率高)
 		- 
 	5. 
