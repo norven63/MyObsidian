@@ -168,7 +168,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip -1月18号 OOM与内存优化2-内存泄漏]]
 
-[[享学Vip -1月20号 App启动速度优化_block]]
+[[享学Vip -1月20号 App启动速度优化]]
 
 [[享学Vip -1月23号 Android启动优化]]
 
