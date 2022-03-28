@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "11闪念笔记/享学Vip -1月23号 Android启动优化.md",
+            "file": "11闪念笔记/享学Vip -1月23号 Android启动优化-block.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -62,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 351.99999809265137,
-    "collapsed": true
+    "width": 351.99999809265137
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -79,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip -1月23号 Android启动优化.md",
+                "file": "11闪念笔记/享学Vip -1月23号 Android启动优化-block.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip -1月23号 Android启动优化.md",
+                "file": "11闪念笔记/享学Vip -1月23号 Android启动优化-block.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip -1月23号 Android启动优化.md"
+                "file": "11闪念笔记/享学Vip -1月23号 Android启动优化-block.md"
               }
             }
           }
@@ -133,7 +132,7 @@
   },
   "active": "7213ae6f9f4bc569",
   "lastOpenFiles": [
-    "11闪念笔记/享学Vip -1月23号 Android启动优化.md",
+    "11闪念笔记/享学Vip -1月23号 Android启动优化-block.md",
     "11闪念笔记/享学Vip -1月20号 App启动速度优化.md",
     "99附件/Pasted image 20220306155555.png",
     "99附件/Pasted image 20220306155624.png",
