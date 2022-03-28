@@ -24,4 +24,5 @@
 		- 重复1、2两步
 		- ![[Pasted image 20220329001327.png|800]]
 ## 启动器
+-  单例Cache类：前置Task将处理结果封装到Result中 -> 以前置Task的Class作为key放入单例Cache类中 -> 后置类去读取Result
 - 
