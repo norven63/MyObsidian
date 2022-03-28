@@ -10,10 +10,12 @@
   "templates",
   "command-palette",
   "slash-command",
+  "editor-status",
   "starred",
   "zk-prefixer",
   "outline",
   "word-count",
+  "audio-recorder",
   "open-with-default-app",
   "workspaces",
   "file-recovery"
