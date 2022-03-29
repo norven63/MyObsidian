@@ -26,4 +26,4 @@
 ## 启动器
 - 单例Cache类：前置Task将处理结果封装到Result中 -> 以前置Task的Class作为key放入单例Cache类中 -> 后置类去读取Result
 - StartupManger：不需要单例，因为每个阶段均有一个独立的Manger类（类似ykBoot里的Project）
-- 线程同步：
+- 线程同步：CountDownLatch，闭锁
