@@ -168,9 +168,9 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip -1月18号 OOM与内存优化2-内存泄漏]]
 
-[[享学Vip -1月20号 App启动速度优化]]
+[[享学Vip -1月20号 Android面试必备Application启动过程与耗时分析]]
 
-[[享学Vip -1月23号 Android启动优化]]
+[[享学Vip -1月23号 Android启动优化，有向无环图任务管理分析]]
 
 [[享学Vip -1月25号 App启动架构]]
 
