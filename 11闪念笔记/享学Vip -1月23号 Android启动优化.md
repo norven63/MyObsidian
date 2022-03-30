@@ -32,3 +32,4 @@
 	- 挨个运行排序后的Task
 	- 前置Task执行完毕 -> notify后置任务 -> CountDownLatch.cuntDown();
 	- 记录Block型Task的个数，构建对应个数的CountDownLatch，主线程通过该锁对象阻塞
+- 如何解决主线程参与工作：主线程Task单独放在一个列表中。***先***把子线程Task列表分发给异步线程池，**再**把主线程Task列表分发给主线程
