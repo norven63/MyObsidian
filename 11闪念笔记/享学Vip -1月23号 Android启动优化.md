@@ -30,4 +30,4 @@
 - 调度算法：
 	- Task列表拓扑排序
 	- 挨个运行排序后的Task
-	- 前置Task执行完毕 -> notify后置任务 -> CountDownLatch -1
+	- 前置Task执行完毕 -> notify后置任务 -> CountDownLatch.cuntDown();
