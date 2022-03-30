@@ -31,4 +31,4 @@
 	- Task列表拓扑排序
 	- 挨个运行排序后的Task
 	- 前置Task执行完毕 -> notify后置任务 -> CountDownLatch.cuntDown();
-	- 记录Block型Task
+	- 记录Block型Task的个数，构建对应个数的CountDownLatch，主线程通过该锁对象阻塞
