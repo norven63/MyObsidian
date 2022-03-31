@@ -1,16 +1,21 @@
 {
   "workspaces": {
-    "我的笔记": {
+    "我的布局": {
       "main": {
         "id": "a952ca229469d484",
         "type": "split",
         "children": [
           {
-            "id": "802f1c810c8decfa",
+            "id": "7213ae6f9f4bc569",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/享学Vip -1月25号 App启动架构.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
@@ -38,7 +43,7 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "",
+                    "query": "tag:#闪念笔记",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -59,7 +64,7 @@
           }
         ],
         "direction": "horizontal",
-        "width": 300
+        "width": 351.99999809265137
       },
       "right": {
         "id": "065d4635a980b0fe",
@@ -75,13 +80,14 @@
                 "state": {
                   "type": "backlink",
                   "state": {
+                    "file": "11闪念笔记/享学Vip -1月25号 App启动架构.md",
                     "collapseAll": true,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
                     "showSearch": false,
                     "searchQuery": "",
                     "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
+                    "unlinkedCollapsed": false
                   }
                 }
               },
@@ -91,6 +97,7 @@
                 "state": {
                   "type": "outgoing-link",
                   "state": {
+                    "file": "11闪念笔记/享学Vip -1月25号 App启动架构.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": true
                   }
@@ -112,19 +119,19 @@
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {}
+                  "state": {
+                    "file": "11闪念笔记/享学Vip -1月25号 App启动架构.md"
+                  }
                 }
               }
-            ],
-            "currentTab": 3
+            ]
           }
         ],
         "direction": "horizontal",
-        "width": 300,
-        "collapsed": true
+        "width": 225.1428680419922
       },
-      "active": "802f1c810c8decfa"
+      "active": "7213ae6f9f4bc569"
     }
   },
-  "active": "我的笔记"
+  "active": "我的布局"
 }

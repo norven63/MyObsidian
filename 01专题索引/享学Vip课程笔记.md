@@ -172,9 +172,9 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip -1月23号 Android启动优化，有向无环图任务管理分析]]
 
-[[享学Vip -1月25号 App启动架构]]
+[[享学Vip -1月25号 基于AutoService和Compose的App启动架构_delay]]
 
-[[享学Vip -2月10号 卡顿和布局优化_block]]
+[[享学Vip -2月10号 Alpha启动框架 工具（小开个头）_block]]
 
 [[享学Vip -2月13号 WorkManager详解]]
 
