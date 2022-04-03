@@ -23,11 +23,11 @@
 
 
 ### Proefile
-- 不建议直接使用工具去抓，用代码调用来控制监控段
-- Application.onCreate() 调用开始，调用结束
-	- 开始：Debug.startMethodTracingSimpling(new File(Environment.getExternalStorageDirectory(),),);
+- 不建议直接使用工具去抓，推荐用代码调用来控制监控的逻辑段
+- Application.onCreate() 调用开始，Activity.onWindowFacusChanged() 调用结束
+	- 开始：Debug.startMethodTracingSimpling("file path", 8 * 1024 * 1024, 1000);
 	- 结束：Debug.stopMethodTracing();
-- 
+- 导出.trace文件
 
 ### systrace
 
