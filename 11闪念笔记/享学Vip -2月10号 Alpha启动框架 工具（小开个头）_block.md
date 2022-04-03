@@ -25,7 +25,7 @@
 ### Proefile
 - 不建议直接使用工具去抓，用代码调用来控制监控段
 - Application.onCreate() 调用开始，调用结束
-	- 开始：Debug.startMethodTracingSimpling();
+	- 开始：Debug.startMethodTracingSimpling(new File(Environment.getExternalStorageDirectory(),));
 	- 结束：Debug.stopMethodTracing();
 - 
 
