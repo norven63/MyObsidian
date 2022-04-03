@@ -34,7 +34,8 @@
 
 
 ## 线上监控
+- 消息处理机制
 - 
 /proc/stat
-com.github.moduth.blockcanary
+com.github.moduth.blockcanary、PerformanceUtils.java
 epic
