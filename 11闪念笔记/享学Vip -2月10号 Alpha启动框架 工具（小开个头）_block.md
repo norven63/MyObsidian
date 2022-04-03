@@ -30,10 +30,11 @@
 - 导出.trace文件
 
 ### systrace
-
+- Perfetto UI
 
 
 ## 线上监控
+- 
 /proc/stat
 com.github.moduth.blockcanary
 epic
