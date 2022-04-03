@@ -23,9 +23,10 @@
 
 
 ### Proefile
-- 代码开启
-	Debug.startMethodTracingSimpling();
-	Debug.stopMethodTracing();
+- 不建议直接使用工具去抓，用代码调用来控制监控段
+- Application.onCreate() 调用开始，调用结束
+	- 开始：Debug.startMethodTracingSimpling();
+	- 结束：Debug.stopMethodTracing();
 - 
 
 ### systrace
