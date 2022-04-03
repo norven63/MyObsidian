@@ -19,9 +19,6 @@
 
 
 ## 工具
-### Perfetto
-
-
 ### Proefile
 - 不建议直接使用工具去抓，推荐用代码调用来控制监控的逻辑段
 - Application.onCreate() 调用开始，Activity.onWindowFacusChanged() 调用结束
@@ -35,7 +32,8 @@
 
 ## 线上监控
 - 消息处理机制
-- 
-/proc/stat
-com.github.moduth.blockcanary、PerformanceUtils.java
-epic
+- com.github.moduth.blockcanary框架
+	- PerformanceUtils.java
+	- /proc/stat CPU核心的数据
+	- merrory
+- epic框架
