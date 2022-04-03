@@ -23,8 +23,10 @@
 
 
 ### Proefile
-Debug.startMethodTracingSimpling();
-Debug.stopMethodTracing();
+- 代码开启
+	Debug.startMethodTracingSimpling();
+	Debug.stopMethodTracing();
+- 
 
 ### systrace
 
