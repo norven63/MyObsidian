@@ -174,9 +174,9 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip -1月25号 基于AutoService和Compose的App启动架构_delay]]
 
-[[享学Vip -2月10号 Alpha启动框架、工具（小开个头）]]
+[[享学Vip -2月10号 Alpha启动框架 & 工具（小开个头）]]
 
-[[享学Vip -2月13号 卡顿监测&布局优化---路哥]]
+[[享学Vip -2月13号 卡顿监测 & 布局优化]]
 
 [[享学Vip -2月15号 电量与网络优化]]
 
