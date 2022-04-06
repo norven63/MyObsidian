@@ -7,13 +7,8 @@
         "id": "7213ae6f9f4bc569",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "01专题索引/享学Vip课程笔记.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -62,8 +57,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 504.99999809265137,
-    "collapsed": true
+    "width": 504.99999809265137
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -79,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01专题索引/享学Vip课程笔记.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01专题索引/享学Vip课程笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "01专题索引/享学Vip课程笔记.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -131,12 +121,12 @@
   },
   "active": "7213ae6f9f4bc569",
   "lastOpenFiles": [
+    "11闪念笔记/Screenshot_20220403_230705.jpg.md",
     "01专题索引/享学Vip课程笔记.md",
     "11闪念笔记/享学Vip -2月15号 电量与网络优化.md",
     "11闪念笔记/享学Vip -1月25号 基于AutoService和Compose的App启动架构_delay.md",
     "11闪念笔记/享学Vip -2月13号 卡顿监测 & 布局优化.md",
     "11闪念笔记/享学Vip -2月10号 Alpha启动框架 & 工具（小开个头）.md",
-    "11闪念笔记/Screenshot_20220403_230705.jpg.md",
     "99附件/Screenshot_20220403_230705.jpg",
     "99附件/Pasted image 20220403224841.png",
     "11闪念笔记/享学Vip -2月20号 APM 线上监控_block.md",
