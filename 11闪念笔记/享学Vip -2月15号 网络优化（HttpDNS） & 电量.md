@@ -17,10 +17,11 @@
 	- 运营商劫持
 	- 公网的路由（映射耗时）
 - HttpDNS
-	- 引入阿里云SDK，com.aliyun.ams:alicloud-android-httpdns，调用okhttp的dns()接口
+		- 引入阿里云SDK，com.aliyun.ams:alicloud-android-httpdns，调用okhttp的dns()接口
 	- 域名映射到多个ip地址
 	- 客户端通过httpdns服务获取ip地址 -> 选择最优的ip地址（ping，延时低） -> 缓存 -> 容灾（localdns兜底处理）
-	- 直连IP：将header中的host字段设置成 ip地址
+	- 直连IP：将header中的host字段设置成 ip
+	- InetAddress.getAllByName(ip) 可以传入ip，也可以是hostname
 	- 优化TCP时延高：
 		- 缓存，map，hostname：ip
 			- 120s~300s 过期时间，过期更新
