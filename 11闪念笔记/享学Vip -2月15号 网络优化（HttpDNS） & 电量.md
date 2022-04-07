@@ -28,7 +28,8 @@
 			- 网络切换时更新
 		- 异步解析httpdns
 
-![[Pasted image 20220407215315.png|500]]
+![[Pasted image 20220407234718.png|500]]
+
 ```json
 "dns": [  
 	{ 
@@ -47,5 +48,3 @@
 	}
 ]
 ```
-
-- 协议：Socket/长连接/HTTP

@@ -7,12 +7,9 @@
         "id": "7213ae6f9f4bc569",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "11闪念笔记/享学Vip -2月15号 网络优化（HttpDNS） & 电量.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
+            "file": "99附件/Screenshot_20220403_230618_cn.wps.moffice_eng_edit_4391195058704.jpg"
           }
         }
       }
@@ -78,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip -2月15号 网络优化（HttpDNS） & 电量.md",
+                "file": "99附件/Screenshot_20220403_230618_cn.wps.moffice_eng_edit_4391195058704.jpg",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +92,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip -2月15号 网络优化（HttpDNS） & 电量.md",
+                "file": "99附件/Screenshot_20220403_230618_cn.wps.moffice_eng_edit_4391195058704.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip -2月15号 网络优化（HttpDNS） & 电量.md"
+                "file": "99附件/Screenshot_20220403_230618_cn.wps.moffice_eng_edit_4391195058704.jpg"
               }
             }
           }
@@ -130,6 +127,7 @@
   },
   "active": "7213ae6f9f4bc569",
   "lastOpenFiles": [
+    "99附件/Screenshot_20220403_230618_cn.wps.moffice_eng_edit_4391195058704.jpg",
     "11闪念笔记/享学Vip -2月15号 网络优化（HttpDNS） & 电量.md",
     "01专题索引/享学Vip课程笔记.md",
     "11闪念笔记/享学Vip -2月10号 Alpha启动框架 & 工具（小开个头）.md",
@@ -138,7 +136,6 @@
     "11闪念笔记/享学Vip -1月25号 基于AutoService和Compose的App启动架构_delay.md",
     "99附件/Screenshot_20220403_230705.jpg",
     "99附件/Pasted image 20220403224841.png",
-    "11闪念笔记/享学Vip -2月20号 APM 线上监控_block.md",
-    "11闪念笔记/享学Vip -1月23号 StartupManager启动框架-有向无环图任务管理分析.md"
+    "11闪念笔记/享学Vip -2月20号 APM 线上监控_block.md"
   ]
 }
