@@ -29,7 +29,7 @@
 		- 异步解析httpdns
 
 ![[Pasted image 20220407234718.png|500]]
-
+- json示例
 ```json
 "dns": [  
 	{ 
