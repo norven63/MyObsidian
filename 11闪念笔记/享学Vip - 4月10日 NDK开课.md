@@ -10,3 +10,8 @@
 ---
 <br>
 
+## NDK学习内容
+- C、C++、JNI的学习
+- CMake、Linux、Linux Shell
+- 项目实战
+- FFmpeg、RTMP直播里
