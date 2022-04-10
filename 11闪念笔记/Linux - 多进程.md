@@ -105,17 +105,17 @@ vfork()也是用于创建一个进程，用法与fork()一致。但是它俩存�
 <br><br>
 
 ## 常见的进程
-### systemd进程
-
-
-
 ### idle进程
 由系统自动创建，运行在内核态，pid=0。其前身是系统创建的第一个进程，也是唯一一个没有通过fork或者kernel_thread产生的进程。完成加载系统后，演变为进程调度、交换。
 <br>
 
 ### Systemd、init进程
-1. init进程是Linux 系统中最新的初始化系统，由idle通过kernel_thread创建，在内核空间完成初始化后加载init程序，完成系统的初始化，pid = 1。它是系统中所有其它用户进程的祖先进程。
+1. init进程由idle通过kernel_thread创建，在内核空间完成初始化后加载init程序，完成系统的初始化，pid = 1。它是系统中所有其它用户进程的祖先进程。
 2. Systemd 是最新的初始化系统，其诞生目的是为了通过**异步、按需**两个方向作为抓手，解决老版本init进程 启动速度慢、系统资源浪费 的两个缺点。
+> systemd 是 Linux 下一个与 SysV 和 LSB 初始化脚本兼容的系统和服务管理器。systemd 使用 socket 和 D-Bus 来开启服务，提供基于守护进程的按需启动策略，保留了 Linux cgroups 的进程追踪功能，支持快照和系统状态恢复，维护挂载和自挂载点，实现了各服务间基于从属关系的一个更为精细的逻辑控制，拥有前卫的并行性能。systemd 无需经过任何修改便可以替代 sysvinit 。
+> ——wiki https://fedoraproject.org/wiki/Systemd/zh-cn
+
+
 <br>
 
 ### kthreadd进程
