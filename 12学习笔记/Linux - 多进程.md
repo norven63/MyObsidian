@@ -130,7 +130,7 @@ pid_t wait(int * status);
 
 ### fork()函数
 #### 函数能力
-调用fork()函数时，复制父进程的进程空间来创建子进程。此时子进程*写拷贝了父进程的所有变量、环境变量、程序计数器的当前空间和值，并且子进程修改自身变量的值时并不影响父进程的变量值。
+调用fork()函数时，复制父进程的进程空间来创建子进程。此时子进程 **写拷贝（copy-on-wtite）** 了父进程的所有变量、环境变量、程序计数器的当前空间和值，并且子进程修改自身变量的值时并不影响父进程的变量值。
  ![Engelbart|400](https://img-blog.csdnimg.cn/20200203193209959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDUxOTMxNQ==,size_16,color_FFFFFF,t_70)
  
 #### 执行细节
