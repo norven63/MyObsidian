@@ -65,7 +65,7 @@ wiki - https://fedoraproject.org/wiki/Systemd/zh-cn
 	- 当进程正常退出，且调用exit()函数时，会自动调用退出处理函数。
 	- 退出处理函数需要先登记保存在退出处理函数栈中才生效(**先进后出**的原则)。
 
-代码示例：	
+  代码示例：	
  ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -99,11 +99,10 @@ int main()
     //return 0; //无法调用退出处理函数
 }
  ```
-	
- 输出结果
- > hello!func3
- >  func2
- >  func1
+  输出结果：
+> hello!func3
+>  func2
+>  func1
 	
 
 #### 资源回收
