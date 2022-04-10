@@ -7,8 +7,13 @@
         "id": "7213ae6f9f4bc569",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "12学习笔记/Linux - 多进程.md",
+            "mode": "preview",
+            "backlinks": false,
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "12学习笔记/Linux - 多进程.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "12学习笔记/Linux - 多进程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +117,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "12学习笔记/Linux - 多进程.md"
+              }
             }
           }
         ],
@@ -122,15 +131,15 @@
   },
   "active": "7213ae6f9f4bc569",
   "lastOpenFiles": [
+    "12学习笔记/Linux - 多进程.md",
+    "13沉淀笔记/MarkDown流程图示例.md",
     "00索引/Linux.md",
     "00索引/Android.md",
     "00索引/Java核心技术.md",
     "00索引/网络原理.md",
     "00索引/效能提高.md",
-    "12学习笔记/Linux - 多进程.md",
     "11闪念笔记/享学Vip -2月15号 网络优化（HttpDNS） & 电量_block.md",
     "11闪念笔记/享学Vip -12月9日 Handler源码分析_block.md",
-    "11闪念笔记/享学Vip -2月20号 APM 线上监控_block.md",
-    "11闪念笔记/享学Vip -2月13号 卡顿监测 & 布局优化.md"
+    "11闪念笔记/享学Vip -2月20号 APM 线上监控_block.md"
   ]
 }
