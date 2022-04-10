@@ -8,6 +8,8 @@ https://blog.csdn.net/weixin_40519315/article/details/104156838
 https://blog.csdn.net/jobbofhe/article/details/82192092
 
 http://c.biancheng.net/view/3492.html
+
+https://blog.csdn.net/weibo1230123/article/details/82187572
 ---
 <br>
 
@@ -20,12 +22,11 @@ http://c.biancheng.net/view/3492.html
 	- 结束
 	- 清除
 3. 进程的状态
-	- D（不可中断休眠状态）——进程正在休眠并且不能恢复，直到一个事件发生为止。
-	- R（运行状态）——进程正在运行。
-	- S（休眠状态）——进程没有在运行，而在等待一个事件或是信号。
-	- T（停止状态）——进程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信号后停止运行运行。
-	- Z（僵死状态）——进程已终止，但进程描述符存在，直到父进程调用wait4()系统调用后释放
-
+	- D（uninterruptible sleep，不可中断休眠状态）——进程正在休眠并且不能恢复，直到一个事件发生为止。
+	- R（runnable，运行状态）——进程正在运行。
+	- S（sleeping，休眠状态）——进程没有在运行，而在等待一个事件或是信号。
+	- T（stopped，停止状态）——进程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信号后停止运行运行。
+	- Z（a defunct process，僵死状态）——进程已终止，但进程描述符存在，直到父进程调用wait4()系统调用后释放
 <br>
 
 ### 关于PID
@@ -101,14 +102,15 @@ vfork()也是用于创建一个进程，用法与fork()一致。但是它俩存�
 <br><br>
 
 ## 常见的进程
+### systemd进程
+
+
 ### idle进程
 由系统自动创建，运行在内核态，pid=0。其前身是系统创建的第一个进程，也是唯一一个没有通过fork或者kernel_thread产生的进程。完成加载系统后，演变为进程调度、交换。
-
 <br>
 
 ### init进程
-由idle通过kernel_thread创建，在内核空间完成初始化后,加载init程序，完成系统的初始化.是系统中所有其它用户进程的祖先进程。.init 进程 (pid = 1, ppid = 0),init进程由0进程创建，完成系统的初始化.是系统中所有其它用户进程的祖先进程。
-
+由idle通过kernel_thread创建，pid = 1，在内核空间完成初始化后加载init程序，完成系统的初始化，是系统中所有其它用户进程的祖先进程。
 <br>
 
 ### kthreadd进程
