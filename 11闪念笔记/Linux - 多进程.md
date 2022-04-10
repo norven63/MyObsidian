@@ -2,7 +2,7 @@
 
 标签： #学习笔记 #技术 #Linux
 
-学习源： 
+学习资料： 
 https://blog.csdn.net/weixin_40519315/article/details/104156838
 
 https://blog.csdn.net/jobbofhe/article/details/82192092
@@ -23,9 +23,10 @@ https://blog.csdn.net/jobbofhe/article/details/82192092
 	- R（运行状态）——进程正在运行。
 	- S（休眠状态）——进程没有在运行，而在等待一个事件或是信号。
 	- T（停止状态）——进程被信号停止，比如，信号 SIGINT 或 SIGSTOP。
-	- Z（僵死状态）——标记为 <defunct> 的进程是僵死的进程，它们之所以残留是因为它们的父进程适当地销毁它们。如果父进程退出，这些进程将被 init 进程销毁。
+	- Z（僵死状态）——标记为 defunct 的进程是僵死的进程，它们之所以残留是因为它们的父进程适当地销毁它们。如果父进程退出，这些进程将被 init 进程销毁。
 
 <br>
+
 
 ### 关于PID
 1. 每个进程在被创建时都会被分配到一个唯一 PID 标识，并在消亡时取消该 PID。
