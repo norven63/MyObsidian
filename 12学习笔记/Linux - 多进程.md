@@ -30,6 +30,7 @@ wiki - https://fedoraproject.org/wiki/Systemd/zh-cn
 	- S（sleeping，休眠状态）——进程没有在运行，而在等待一个事件或是信号。
 	- T（stopped，停止状态）——进程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信号后停止运行运行。
 	- Z（a defunct process，僵死状态）——进程已终止，但进程描述符存在，直到父进程调用wait4()系统调用后释放
+
 <br>
 
 ### 关于PID
@@ -54,6 +55,7 @@ wiki - https://fedoraproject.org/wiki/Systemd/zh-cn
 #### 退出&回收
 1. 子进程退出时，无论正常还是异常，父进程会收到信号，其内存资源必须由父进程负责回收。
 2. 如果父进程不处理子进程的结束信号，子进程则变成**僵尸进程**。而当父进程退出时，子进程变成**孤儿进程**，并由 **1号进程** 后续负责回收销毁。
+
 <br>
 
 ### fork()函数
@@ -107,6 +109,7 @@ vfork()也是用于创建一个进程，用法与fork()一致。但是它俩存�
 ## 常见的进程
 ### idle进程
 由系统自动创建，运行在内核态，pid=0。其前身是系统创建的第一个进程，也是唯一一个没有通过fork或者kernel_thread产生的进程。完成加载系统后，演变为进程调度、交换。
+
 <br>
 
 ### Systemd、init进程
