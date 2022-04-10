@@ -54,3 +54,35 @@ https://blog.csdn.net/jobbofhe/article/details/82192092
 <br>
 
 ### fork函数
+1. 调用fork函数时，复制父进程的进程空间来创建子进程。
+ ![Engelbart|400](https://img-blog.csdnimg.cn/20200203193209959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDUxOTMxNQ==,size_16,color_FFFFFF,t_70)
+ ```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+ 
+int main()
+{
+    printf("+++process %d start running!ppid = %d\n",getpid(),getppid());
+ 
+    pid_t pid = fork();
+ 
+    if(pid)//父进程
+    {
+        printf("parent:process %d start running!ppid = %d\n",getpid(),getppid());
+        //do something
+        //...
+    }
+    else//子进程
+    {
+        printf("child:process %d start running!ppid = %d\n",getpid(),getppid());
+        //do something
+        //...
+        exit(0);
+    }
+ 
+    exit(0);
+}
+ 
+ ```
+2. 
