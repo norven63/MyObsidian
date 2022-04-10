@@ -13,5 +13,6 @@
 ## NDK学习内容
 - C、C++、JNI的学习
 - CMake、Linux、Linux Shell
-- 项目实战
+- 项目实战（MMKV、QQ变声等）
 - FFmpeg、RTMP直播里
+- OpenCV、OpenGL
