@@ -64,9 +64,47 @@ wiki - https://fedoraproject.org/wiki/Systemd/zh-cn
 3. 退出处理函数：
 	- 当进程正常退出，且调用exit()函数时，会自动调用退出处理函数。
 	- 退出处理函数需要先登记保存在退出处理函数栈中才生效(**先进后出**的原则)。
-	```c
-	```
-	- 
+
+代码示例：	
+ ```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+ 
+void func1(void)
+{
+    printf("%s\n",__func__);
+}
+ 
+void func2(void)
+{
+    printf("%s\n",__func__);
+}
+ 
+void func3(void)
+{
+    printf("%s\n",__func__);
+}
+ 
+int main()
+{
+    atexit(func1);//先登记
+    atexit(func2);
+    atexit(func3);
+ 
+    printf("hello!");
+ 
+    exit(0);
+    //_exit(0); //无法调用退出处理函数
+    //return 0; //无法调用退出处理函数
+}
+ ```
+	
+ 输出结果
+ > hello!func3
+ >  func2
+ >  func1
+	
 
 #### 资源回收
 1. 子进程退出时，无论正常还是异常，父进程会收到信号，其内存资源必须由父进程负责回收。
