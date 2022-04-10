@@ -54,8 +54,10 @@ https://blog.csdn.net/jobbofhe/article/details/82192092
 <br>
 
 ### fork函数
-1. 调用fork函数时，复制父进程的进程空间来创建子进程。
+1. 调用fork函数时，复制父进程的进程空间来创建子进程。此时子进程获取到了父进程的所有变量、环境变量、程序计数器的当前空间和值
  ![Engelbart|400](https://img-blog.csdnimg.cn/20200203193209959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDUxOTMxNQ==,size_16,color_FFFFFF,t_70)
+ 
+2. 代码执行细节
  ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -65,8 +67,9 @@ int main()
 {
     printf("+++process %d start running!ppid = %d\n",getpid(),getppid());
  
-    pid_t pid = fork();
- 
+    pid_t pid = fork();// for子线程
+
+	// 由此开始的代码，分为两个进程分别执行。其中父进程的pid值为原PID号，子进程的pid值为0
     if(pid)//父进程
     {
         printf("parent:process %d start running!ppid = %d\n",getpid(),getppid());
