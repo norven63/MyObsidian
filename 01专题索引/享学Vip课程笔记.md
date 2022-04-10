@@ -51,138 +51,138 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip -2021.9.5    手写HTML解析器，DSL自定义语言（Kotlin第四节课）】]]
 
-[[享学Vip -9月7日    Kotlin协程实战篇（Kotlin第五节课）】]]
+[[享学Vip -9月7日 Kotlin协程实战篇（Kotlin第五节课）】]]
 
-[[享学Vip -9月9日    泛型/注解/两版DSL（Kotlin第六节课）】]]
+[[享学Vip -9月9日 泛型/注解/两版DSL（Kotlin第六节课）】]]
 
 <br><br>
 
 ## 高级UI
 
-[[享学Vip -9月12日   setContentView流程分析】]]
+[[享学Vip -9月12日 setContentView流程分析】]]
 
-[[享学Vip -9月14日   高性能换肤框架原理解析 实现皮肤随心换】]]
+[[享学Vip -9月14日 高性能换肤框架原理解析 实现皮肤随心换】]]
 
-[[享学Vip -9月16日   View的绘制流程】]]
+[[享学Vip -9月16日 View的绘制流程】]]
 
-[[享学Vip -9月23日   自定义UI实战】]]
+[[享学Vip -9月23日 自定义UI实战】]]
 
-[[享学Vip -9月26日   事件处理机制原理分析】]]
+[[享学Vip -9月26日 事件处理机制原理分析】]]
 
-[[享学Vip -9月28日   事件分发机制原理分析】]]
+[[享学Vip -9月28日 事件分发机制原理分析】]]
 
-[[享学Vip -10月10日  PhotoView手势处理及双指操作】]]
+[[享学Vip -10月10日 PhotoView手势处理及双指操作】]]
 
-[[享学Vip -10月12日  东淘宝首页二级联动实战】]]
+[[享学Vip -10月12日 东淘宝首页二级联动实战】]]
 
-[[享学Vip -10月14日  RecyclerView缓存复用原理讲解】]]
+[[享学Vip -10月14日 RecyclerView缓存复用原理讲解】]]
 
-[[享学Vip -10月17日  自定义LayoutManager实战】]]
+[[享学Vip -10月17日 自定义LayoutManager实战】]]
 
-[[享学Vip -10月19日  Banner实战】]]
+[[享学Vip -10月19日 Banner实战】]]
 
-[[享学Vip -10月21日  灵动的锦鲤】]]
+[[享学Vip -10月21日 灵动的锦鲤】]]
 
 [[享学Vip -2021.10.24  实现锦鲤游动动画】]]
 
 [[享学Vip -2021.10.26  WebView模块搭建】]]
 
-[[享学Vip -10月28日  Html调用Kotlin原生功能实现】]]
+[[享学Vip -10月28日 Html调用Kotlin原生功能实现】]]
 
-[[享学Vip -11月1日   WebView命令怎样实现自动注册】]]
+[[享学Vip -11月1日 WebView命令怎样实现自动注册】]]
 
 <br><br>
 
 ## Jetpack
 
-[[享学Vip -11月2日   移动端IOC注入技术Dagger2】]]
+[[享学Vip -11月2日 移动端IOC注入技术Dagger2】]]
 
-[[享学Vip -11月4日   Hilt注入技术实现隔离层架构】]]
+[[享学Vip -11月4日 Hilt注入技术实现隔离层架构】]]
 
-[[享学Vip -11月7日   AndroidStudio自定义插件技术】]]
+[[享学Vip -11月7日 AndroidStudio自定义插件技术】]]
 
-[[享学Vip -11月9日   JetPack之Lifecycle原理分析】]]
+[[享学Vip -11月9日 JetPack之Lifecycle原理分析】]]
 
-[[享学Vip -11月11日  JetPack之Livedata原理解密】]]
+[[享学Vip -11月11日 JetPack之Livedata原理解密】]]
 
-[[享学Vip -11月14日  JetPack之LivedataBus源码解析】]]
+[[享学Vip -11月14日 JetPack之LivedataBus源码解析】]]
 
-[[享学Vip -11月16日  JetPack之DataBinding技术分析】]]
+[[享学Vip -11月16日 JetPack之DataBinding技术分析】]]
 
-[[享学Vip -11月18日  JetPack之ViewModel原理分析】]]
+[[享学Vip -11月18日 JetPack之ViewModel原理分析】]]
 
-[[享学Vip -11月21日  JetPack之Room技术分析】]]
+[[享学Vip -11月21日 JetPack之Room技术分析】]]
 
-[[享学Vip -11月23日  JetPack之Navigation技术解密】]]
+[[享学Vip -11月23日 JetPack之Navigation技术解密】]]
 
-[[享学Vip -11月25日  WorkManager源码原理研究】]]
+[[享学Vip -11月25日 WorkManager源码原理研究】]]
 
-[[享学Vip -11月28日  JetPack实战项目之基础代码部署】]]
+[[享学Vip -11月28日 JetPack实战项目之基础代码部署】]]
 
-[[享学Vip -11月30日  JetPack项目实战二（JetPack实战项目之首页细节功能的编写）】]]
+[[享学Vip -11月30日 JetPack项目实战二（JetPack实战项目之首页细节功能的编写）】]]
 
-[[享学Vip -12月2号 【 JetPack项目实战三（播放条与菜单细节功能的编写）】]]
+[[享学Vip -12月2号 【JetPack项目实战三（播放条与菜单细节功能的编写）】]]
 
-[[享学Vip -12月5号 【 JetPack项目实战四（其他辅助功能与WebView的编写）】]]
+[[享学Vip -12月5号 【JetPack项目实战四（其他辅助功能与WebView的编写）】]]
 
-[[享学Vip -12月7号 【 JetPack项目实战五（JetPack实战项目之完善后续功能与总结）】]]
+[[享学Vip -12月7号 【JetPack项目实战五（JetPack实战项目之完善后续功能与总结）】]]
   
 <br><br>
 
 ## Framework源码分析
 
-[[享学Vip - 2021年12月9日 【Handler源码分析】_block】]]
+[[享学Vip - 2021年12月9日 【Handler源码分析】_block]]
 
-[[享学Vip -12月12日  Binder原理讲解】]]
+[[享学Vip -12月12日 Binder原理讲解】]]
 
-[[享学Vip -12月14日  Android启动流程讲解】]]
+[[享学Vip -12月14日 Android启动流程讲解】]]
 
-[[享学Vip -12月16日  AMS1-AMS启动过程分析】]]
+[[享学Vip -12月16日 AMS1-AMS启动过程分析】]]
 
-[[享学Vip -12月19日  AMS2-hookActivity启动流程】]]
+[[享学Vip -12月19日 AMS2-hookActivity启动流程】]]
 
-[[享学Vip -12月21日  WMS1-WindowManager】]]
+[[享学Vip -12月21日 WMS1-WindowManager】]]
 
-[[享学Vip -12月23日  WMS2-WMS启动流程分析】]]
+[[享学Vip -12月23日 WMS2-WMS启动流程分析】]]
 
-[[享学Vip -12月26日  PMS1-PMS安装与签名校验】]]
+[[享学Vip -12月26日 PMS1-PMS安装与签名校验】]]
 
-[[享学Vip -12月28日  PMS2-动态权限申请概念讲解】]]
+[[享学Vip -12月28日 PMS2-动态权限申请概念讲解】]]
 
-[[享学Vip -12月30日  新闻客户端实战1-MVx的演进史】]]
+[[享学Vip -12月30日 新闻客户端实战1-MVx的演进史】]]
 
-[[享学Vip -1月4号 【  新闻客户端实战2-模块化层次化控件化】]]
+[[享学Vip -1月4号 【新闻客户端实战2-模块化层次化控件化】]]
 
-[[享学Vip -1月6号 【  新闻客户端实战3-LazyColumn加载更多及组件化】]]
+[[享学Vip -1月6号 【新闻客户端实战3-LazyColumn加载更多及组件化】]]
 
-[[享学Vip -1月9号 【  新闻客户端实战4-网络API数据缓存机制】]]
+[[享学Vip -1月9号 【新闻客户端实战4-网络API数据缓存机制】]]
 
-[[享学Vip -1月11号 【 新闻客户端实战5-ViewModel和模块组件化】]]
+[[享学Vip -1月11号 【新闻客户端实战5-ViewModel和模块组件化】]]
 
 <br><br>
 
 ## 性能优化
-[[享学Vip - 2022年1月13号 【【SparseArray数据结构优化】】]]
+[[享学Vip - 2022年1月13号 【SparseArray数据结构优化】]]
 
-[[享学Vip - 2022年1月16号 【【OOM与内存优化1-内存抖动】】]]
+[[享学Vip - 2022年1月16号 【OOM与内存优化1-内存抖动】]]
 
-[[享学Vip - 2022年1月18号 【【OOM与内存优化2-内存泄漏】】]]
+[[享学Vip - 2022年1月18号 【OOM与内存优化2-内存泄漏】]]
 
-[[享学Vip - 2022年1月20号 【【面试必备Application启动过程与耗时分析】】]]
+[[享学Vip - 2022年1月20号 【面试必备Application启动过程与耗时分析】]]
 
-[[享学Vip - 2022年1月23号 【【StartupManager启动框架-有向无环图任务管理分析】】]]
+[[享学Vip - 2022年1月23号 【StartupManager启动框架-有向无环图任务管理分析】]]
 
-[[享学Vip - 2022年1月25号 【【基于AutoService和Compose的App启动架构】_delay】]]
+[[享学Vip - 2022年1月25号 【基于AutoService和Compose的App启动架构】_delay]]
 
-[[享学Vip - 2022年2月10号 【【Alpha启动框架 & 工具（小开个头）】】]]
+[[享学Vip - 2022年2月10号 【Alpha启动框架 & 工具（小开个头）】]]
 
 [[享学Vip - 2022年2月13号 【卡顿监测 & 布局优化】]]
 
-[[享学Vip - 2022年2月15号 【网络优化（HttpDNS） & 电量_block】]]
+[[享学Vip - 2022年2月15号 【网络优化（HttpDNS） & 电量】_block]]
 
 [[享学Vip -2月17号 【apk瘦身优化】]]
 
-[[享学Vip - 2022年2月20号 【APM 线上监控_block】]]
+[[享学Vip - 2022年2月20号 【APM 线上监控】_block]]
 
 <br><br>
 
