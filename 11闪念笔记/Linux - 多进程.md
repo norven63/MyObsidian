@@ -9,7 +9,7 @@ https://blog.csdn.net/jobbofhe/article/details/82192092
 
 http://c.biancheng.net/view/3492.html
 
-https://www.jianshu.com/p/3ee98847f861
+https://blog.csdn.net/u010444107/article/details/78736951
 ---
 <br>
 
@@ -45,8 +45,8 @@ https://www.jianshu.com/p/3ee98847f861
 ### 父子进程
 #### 基本概念
 1. Linux中的进程都是由其它进程启动。如果 进程a 启动了 进程b，那么称 a 是 b 的父进程，b 是 a 的子进程。
-2. Linux启动时，0号进程 启动 **1号进程(init)** 和 **2号进程(内核线程)**，后续其它进程是由1、2直接或间接产生。
-3. **1号进程(init )** 是所有用户进程的祖先；**2号进程(内核线程)** 是所有内核进程的祖先。
+2. Linux启动时，0号进程 启动 **1号进程(init)** 和 **2号进程(kernel)**，后续其它进程是由1、2直接或间接产生。
+3. **1号进程(init )** 是所有用户进程的祖先；**2号进程(kernel)** 是所有内核进程的祖先。
 
 #### 退出&回收
 1. 子进程退出时，无论正常还是异常，父进程会收到信号，其内存资源必须由父进程负责回收。
