@@ -188,6 +188,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 ## NDK
 [[享学Vip - 2022年4月10日 【NDK开课】]]
+[[享学Vip - 2021年2月23日 【C语言-指针入门与基本数据类型---derry老师】]]
 
 <br><br>
 
