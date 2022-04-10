@@ -27,7 +27,6 @@ https://blog.csdn.net/jobbofhe/article/details/82192092
 
 <br>
 
-
 ### 关于PID
 1. 每个进程在被创建时都会被分配到一个唯一 PID 标识，并在消亡时取消该 PID。
 2. 被取消的 PID 会延时再次复用 , 但不会同时出多个相同的 PID。
@@ -48,16 +47,18 @@ https://blog.csdn.net/jobbofhe/article/details/82192092
 ## 多进程
 ### 父子进程
 1. Linux中的进程都是由其它进程启动。如果 进程a 启动了 进程b，那么称 a 是 b 的父进程，b 是 a 的子进程。
-2. 子进程退出时，无论正常还是异常，父进程会收到信号，其内存资源必须由父进程负责回收。
-3. 如果父进程不处理子进程的结束信号，子进程则变成**僵尸进程**。而当父进程退出时，子进程变成**孤儿进程**，并由 **1号进程** 后续负责回收销毁。
 
+#### 
+3. 子进程退出时，无论正常还是异常，父进程会收到信号，其内存资源必须由父进程负责回收。
+4. 如果父进程不处理子进程的结束信号，子进程则变成**僵尸进程**。而当父进程退出时，子进程变成**孤儿进程**，并由 **1号进程** 后续负责回收销毁。
 <br>
 
 ### fork函数
-1. 调用fork函数时，复制父进程的进程空间来创建子进程。此时子进程获取到了父进程的所有变量、环境变量、程序计数器的当前空间和值
+#### 函数能力
+调用fork函数时，复制父进程的进程空间来创建子进程。此时子进程拷贝了父进程的所有变量、环境变量、程序计数器的当前空间和值，并且子进程修改自身变量的值时并不影响父进程的变量值。
  ![Engelbart|400](https://img-blog.csdnimg.cn/20200203193209959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDUxOTMxNQ==,size_16,color_FFFFFF,t_70)
  
-2. 代码执行细节
+#### 执行细节
  ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -69,18 +70,17 @@ int main()
  
     pid_t pid = fork();// for子线程
 
-	// 由此开始的代码，分为两个进程分别执行。其中父进程的pid值为原PID号，子进程的pid值为0
+	// 由此开始的代码，分为两个进程分别执行。其中父进程的pid值为原PID号，子进程的pid值为0；fork失败则pid值为-1
     if(pid)//父进程
     {
         printf("parent:process %d start running!ppid = %d\n",getpid(),getppid());
-        //do something
-        //...
+        //do something        
     }
     else//子进程
     {
         printf("child:process %d start running!ppid = %d\n",getpid(),getppid());
         //do something
-        //...
+        
         exit(0);
     }
  
@@ -88,4 +88,4 @@ int main()
 }
  
  ```
-2. 
+ - 
