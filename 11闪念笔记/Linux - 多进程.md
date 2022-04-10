@@ -105,13 +105,14 @@ vfork()也是用于创建一个进程，用法与fork()一致。但是它俩存�
 ### systemd进程
 
 
+
 ### idle进程
 由系统自动创建，运行在内核态，pid=0。其前身是系统创建的第一个进程，也是唯一一个没有通过fork或者kernel_thread产生的进程。完成加载系统后，演变为进程调度、交换。
 <br>
 
 ### init进程
-由idle通过kernel_thread创建，pid = 1，在内核空间完成初始化后加载init程序，完成系统的初始化，是系统中所有其它用户进程的祖先进程。
+由idle通过kernel_thread创建，在内核空间完成初始化后加载init程序，完成系统的初始化，pid = 1。它是系统中所有其它用户进程的祖先进程。
 <br>
 
 ### kthreadd进程
-由idle通过kernel_thread创建，并始终运行在内核空间,负责所有内核线程的调度和管理 .kthreadd (pid = 2, ppid = 0)它的任务就是管理和调度其他内核线程kernel_thread,会循环执行一个kthread的函数，该函数的作用就是运行kthread_create_list全局链表中维护的kthread,当我们调用kernel_thread创建的内核线程会被加入到此链表中，因此所有的内核线程都是直接或者间接的以kthreadd为父进程。
+由idle通过kernel_thread创建，并始终运行在内核空间，负责所有内核线程的调度和管理，pid = 2。它的任务就是管理和调度其他内核线程kernel_thread，会循环执行一个kthread的函数，该函数的作用就是运行kthread_create_list全局链表中维护的kthread，当我们调用kernel_thread创建的内核线程会被加入到此链表中，因此所有的内核线程都是直接或者间接的以kthreadd为父进程。
