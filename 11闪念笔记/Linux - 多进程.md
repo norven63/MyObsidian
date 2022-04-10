@@ -10,6 +10,9 @@ https://blog.csdn.net/jobbofhe/article/details/82192092
 http://c.biancheng.net/view/3492.html
 
 https://blog.csdn.net/u010444107/article/details/78736951
+
+wiki - https://fedoraproject.org/wiki/Systemd/zh-cn
+
 ---
 <br>
 
