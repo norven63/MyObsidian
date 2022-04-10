@@ -116,16 +116,15 @@ pid_t wait(int * status);
 ```
 - pid_t：结束子进程的PID
 - status：子进程退出状态（退出码），有以下几种判断使用方式：
-- WIFEXITED(status)如果子进程正常结束则为非0值。  
-WEXITSTATUS(status)取得子进程exit()返回的结束代码，一般会先用WIFEXITED 来判断是否正常结束才能使用此宏。  
-WIFSIGNALED(status)如果子进程是因为信号而结束则此宏值为真  
-WTERMSIG(status)取得子进程因信号而中止的信号代码，一般会先用WIFSIGNALED 来判断后才使用此宏。  
-WIFSTOPPED(status)如果子进程处于暂停执行情况则此宏值为真。一般只有使用WUNTRACED 时才会有此情况。  
-WSTOPSIG(status)取得引发子进程暂停的信号代码，
-	- WEXITSTATUS(status) -> 
-2. waitpid()函数
+	- WIFEXITED(status) -> 如果子进程正常结束则为非0值。
+	- WEXITSTATUS(status) -> 取得子进程exit()返回的结束代码，一般会先用 WIFEXITED 判断是否正常结束后，才能使用此宏。
+	- WIFSIGNALED(status) -> 如果子进程是因为信号而结束则此宏值为真。
+	- WTERMSIG(status) -> 取得子进程因信号而中止的信号代码，一般会先用 WIFSIGNALED 判断后才使用此宏。
+	- WIFSTOPPED(status) -> 如果子进程处于暂停执行情况则此宏值为真。一般只有使用 WUNTRACED 时才会有此情况。
+	- WSTOPSIG(status) -> 取得引发子进程暂停的信号代码。
+2. waitpid()函数：与wait()雷同，但可以选择等指定哪个子进程，以及选择等待方式(阻塞、不阻塞)。
 3. 子进程退出时，无论正常还是异常，父进程会收到信号，其内存资源必须由父进程负责回收。
-4. 如果父进程不处理子进程的结束信号，子进程则变成**僵尸进程**。而当父进程退出时，子进程变成**孤儿进程**，并由 **1号进程** 后续负责回收销毁。
+4. 如果父进程不处理子进程的结束信号，子进程则变成**僵尸进程**。而当父进程退出时，子进程变成**孤儿进程**，并由 **1号进程** 托管并fu'ze回收销毁。
 
 <br>
 
