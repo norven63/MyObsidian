@@ -1,5 +1,4 @@
 #学习
-# MarkDown绘图示例
 
 ## 一、mermaid 流程图
 官方文档： https://mermaid-js.github.io/mermaid/#/

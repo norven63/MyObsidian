@@ -208,8 +208,6 @@ Activity中new一个Handler匿名内部类 -> new Message() -> Message持有Hand
 
 主线程Loop() -> 轮询 MessageQueue -> 获取msg对象 -> 执行目标逻辑
 
-  
-
 ```java
 
 static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>(); -> 所有的线程共享操作同一个 主线程里的sThreadLocal对象
