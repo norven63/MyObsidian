@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "11闪念笔记/享学Vip - 2021年2月25日 【函数指针与指针运算】.md",
+            "file": "88模板/模板-代码块Java.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -62,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 577.9999980926514,
-    "collapsed": true
+    "width": 577.9999980926514
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -79,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2021年2月25日 【函数指针与指针运算】.md",
+                "file": "88模板/模板-代码块Java.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2021年2月25日 【函数指针与指针运算】.md",
+                "file": "88模板/模板-代码块Java.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2021年2月25日 【函数指针与指针运算】.md"
+                "file": "88模板/模板-代码块Java.md"
               }
             }
           }
@@ -132,15 +131,15 @@
   },
   "active": "7213ae6f9f4bc569",
   "lastOpenFiles": [
+    "88模板/模板-代码块Java.md",
+    "88模板/模板-代码块C++.md",
+    "88模板/模板-代码块C.md",
     "11闪念笔记/享学Vip - 2021年2月25日 【函数指针与指针运算】.md",
     "01专题索引/享学Vip课程笔记.md",
     "11闪念笔记/享学Vip - 2021年2月23日 【C语言-指针入门与基本数据类型】.md",
     "88模板/模板-双回车.md",
     "88模板/模板-单回车.md",
     "88模板/模板-学习笔记.md",
-    "11闪念笔记/享学Vip - 2022年4月10日 【NDK开课】.md",
-    "11闪念笔记/享学公开课 - 2022年4月9日 视频剪辑框架实现.md",
-    "12学习笔记/60天引爆学习力-3. 三步式快速学习方法.md",
-    "11闪念笔记/享学Vip - 2022年1月16日 【OOM与内存优化1-内存抖动】.md"
+    "11闪念笔记/享学Vip - 2022年4月10日 【NDK开课】.md"
   ]
 }
