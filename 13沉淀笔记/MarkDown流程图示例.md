@@ -12,7 +12,11 @@ flowchart LR
 	b-->c{ifxxx}
 	c-->|yes|a
 	c-->|no|d
-	b-->e
+	c-->|no2|e
+	d-->e
+	d-->f
+	d-->g
+	g-->a
 ```
 ### 上下布局
 ```mermaid
