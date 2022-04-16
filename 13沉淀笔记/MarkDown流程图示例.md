@@ -21,8 +21,12 @@ flowchart TB
 ### 时序图
 ```mermaid
 sequenceDiagram
-	a ->> +b: test1
-	b -->> -a: test2
+	a->>+b:test1->
+	a->>+b:test2->
+	b->>+c:test2.1->
+	c-->>-b:test2.1<-
+	b-->>-a:test2<-
+	b-->>-a:test1<-
 ```
 
 ## 二、markdownd 流程图
