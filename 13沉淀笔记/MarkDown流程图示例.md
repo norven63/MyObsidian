@@ -26,6 +26,7 @@ flowchart LR
 ### 时序图
 ```mermaid
 sequenceDiagram
+	autonumber
 	a->>+b:test1->
 	Note over a,b: Text in note
 	a->>+b:test2->
@@ -34,7 +35,10 @@ sequenceDiagram
 	c-->>-b:test2.1<-
 	b-->>-a:test2<-
 	b-->>-a:test1<-
-	c->
+	c->>+d:start loop
+	loop 每分钟
+		d-->>-c:callback loop
+	end
 ```
 
 ## 二、markdownd 流程图
