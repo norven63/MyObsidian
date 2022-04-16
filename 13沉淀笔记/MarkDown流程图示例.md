@@ -1,8 +1,31 @@
 #学习
 # MarkDown绘图示例
 
-## 一、流程图
+## 一、mermaid 流程图
+官方文档： https://mermaid-js.github.io/mermaid/#/
 
+### 流程图
+#### 左右布局
+```mermaid
+flowchart LR
+	aa(afc) --> b
+	b --> c --> aa
+```
+### 上下布局
+```mermaid
+flowchart TB
+	aa(afc) --> b
+	b --> c --> aa
+```
+
+### 时序图
+```mermaid
+sequenceDiagram
+	a ->> +b: test1
+	b -->> -a: test2
+```
+
+## 二、markdownd 流程图
 ### 流程图1
 
 ```flow
