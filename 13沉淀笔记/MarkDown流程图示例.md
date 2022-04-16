@@ -21,19 +21,16 @@ flowchart LR
 	d---f2
 	d===g2
 ```
-### 上下布局
-```mermaid
-flowchart TB
-	aa(afc) --> b
-	b --> c --> aa
-```
+
 
 ### 时序图
 ```mermaid
 sequenceDiagram
 	a->>+b:test1->
+	Note over a,b: Text in note
 	a->>+b:test2->
 	b->>+c:test2.1->
+	Note right of c: Text in note
 	c-->>-b:test2.1<-
 	b-->>-a:test2<-
 	b-->>-a:test1<-
