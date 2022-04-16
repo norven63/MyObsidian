@@ -19,7 +19,7 @@
 ## 启动流程
 - 看《预习资料》
 - 流程图：
- ![[Pasted image 20220322224704.png|650]]
+ ![[20220322224704.png|650]]
 	1. 点击桌面icon，Launcher，AMS通信（Framework层，要学）
 	2. 启动“黑白屏”阶段优化：
 		- theme、PhoneWindow、windowsSplashscreenContent（26以前是background）、jetpack：splashScreeen、
