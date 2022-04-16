@@ -42,5 +42,13 @@
       ],
       "key": "Q"
     }
+  ],
+  "insert-template": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "T"
+    }
   ]
 }
