@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "11闪念笔记/享学公开课 - 2022年4月8日 播放器手势.md",
+            "file": "01专题索引/60天引爆学习力.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学公开课 - 2022年4月8日 播放器手势.md",
+                "file": "01专题索引/60天引爆学习力.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学公开课 - 2022年4月8日 播放器手势.md",
+                "file": "01专题索引/60天引爆学习力.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学公开课 - 2022年4月8日 播放器手势.md"
+                "file": "01专题索引/60天引爆学习力.md"
               }
             }
           }
@@ -131,6 +131,7 @@
   },
   "active": "7213ae6f9f4bc569",
   "lastOpenFiles": [
+    "01专题索引/60天引爆学习力.md",
     "11闪念笔记/享学公开课 - 2022年4月8日 播放器手势.md",
     "13沉淀笔记/MarkDown流程图示例.md",
     "88模板/模板-序列图.md",
@@ -139,7 +140,6 @@
     "88模板/模板-代码块C++.md",
     "88模板/模板-代码块Java.md",
     "11闪念笔记/享学Vip - 2021年2月25日 【函数指针与指针运算】.md",
-    "01专题索引/享学Vip课程笔记.md",
-    "11闪念笔记/享学Vip - 2021年2月23日 【C语言-指针入门与基本数据类型】.md"
+    "01专题索引/享学Vip课程笔记.md"
   ]
 }
