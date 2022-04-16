@@ -34,6 +34,7 @@ sequenceDiagram
 	c-->>-b:test2.1<-
 	b-->>-a:test2<-
 	b-->>-a:test1<-
+	c->
 ```
 
 ## 二、markdownd 流程图
