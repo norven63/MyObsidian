@@ -8,15 +8,16 @@
 #### 左右布局
 ```mermaid
 flowchart LR
-	a[afc]-->b
+	a[a别名:start]-->b
 	b-->c{ifxxx}
 	c-->|yes|a
 	c-->|no|d
 	c-->|no2|e
-	d-->e
+	d-.->e
 	d-->f
-	d-->g
-	g-->a
+	d==>g
+	d-.-e2
+	d
 ```
 ### 上下布局
 ```mermaid
