@@ -9,15 +9,17 @@
 ```mermaid
 flowchart LR
 	a[a别名:start]-->b
-	b-->c{ifxxx}
-	c-->|yes|a
-	c-->|no|d
-	c-->|no2|e
+	b-->c{if xxx?}
+	c-->|no|a
+	c-->|yes|y
+	c-->|yes2|z
+	y-->d
 	d-.->e
 	d-->f
 	d==>g
 	d-.-e2
-	d
+	d---f2
+	d===g2
 ```
 ### 上下布局
 ```mermaid
