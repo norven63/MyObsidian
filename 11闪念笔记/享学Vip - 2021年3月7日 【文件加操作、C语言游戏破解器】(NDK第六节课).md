@@ -191,15 +191,84 @@ int main() {
 ##### 2、文件加密、解密
 - 加密的算法：
 	1. while 循环遍历取出来的值 x
-	2. x ^异惑 5，就变成这了 yyyy
+	2. x ^异或 5，就变成这了 yyyy
 
 ```C
+// 1.【文件的加密】
 
+#include <stdio.h>
+#include <stdlib.h> // 文件的操作，是在这个头文件里面的
+#include <string.h>
+
+int main() {
+	char* fileNameStr = "D:\\Temp\\IMG.jpg"; // 来源
+	char* fileNameStrEncode = "D:\\Temp\\IMG_encode.jpg"; // 加密后的目标文件
+
+	FILE* file = fopen(fileNameStr, "rb"); // r 必须字节提前准备好文件
+	FILE* fileEncode = fopen(fileNameStrEncode, "wb"); // w 创建一个0kb的文件
+
+	if (!file || !fileEncode) {
+		printf("文件打开失败，请你个货检测：路径为%s路径的文件，看看有什么问题\n", fileNameStr);
+		exit(0); // 退出程序
+	}
+
+	int c; // 接收读取的值
+
+	// fgetc(文件指针) 读取文件信息，当返回值=EOF(end fo file)时，表示到文件末尾
+	while ((c = fgetc(file)) != EOF) {
+		// 加密操作，异或5
+		fputc(c ^ 5, fileEncode); // 写入到 fileEncode  D:\Temp\IMG_encode.jpg（加密后的图片）
+	}
+
+	// 关闭文件
+	fclose(file);
+	fclose(fileEncode);
+
+	return 0;
+}
 ```
 
-- 解密的算法
+- 解密的算法：
 	1. while 循环遍历取出来的值 yyyy
 	2. yyyy ^异或 5，就还原成 x
+
+```C
+// 2.【文件的解密】
+
+#include <stdio.h>
+#include <stdlib.h> // 文件的操作，是在这个头文件里面的
+#include <string.h>
+
+int main() {
+
+	char* fileNameStr = "D:\\Temp\\IMG_encode.jpg"; // 来源
+	char* fileNameStrDecode = "D:\\Temp\\IMG_decode.jpg"; // 解密后的目标文件
+
+	FILE* file = fopen(fileNameStr, "rb"); // r 必须字节提前准备好文件
+	FILE* fileEncode = fopen(fileNameStrDecode, "wb"); // w 创建一个0kb的文件
+
+	if (!file || !fileEncode) {
+		printf("文件打开失败，请你个货检测：路径为%s路径的文件，看看有什么问题\n", fileNameStr);
+		exit(0); // 退出程序
+	}
+
+	int c; // 接收读取的值
+
+	while ((c = fgetc(file)) != EOF) {
+		// 解密操作 1111 ^ 5 = 10；（还原）
+		fputc(c ^ 5, fileEncode);
+	}
+
+	fclose(file);
+	fclose(fileEncode);
+
+	return 0;
+}
+```
+
+<br><br>
+
+##### 3、使用密钥加密、解密
 
 ```C
 
