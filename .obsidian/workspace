@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "12学习笔记/享学Vip - 2021年2月25日 【多级指针、数组指针、函数指针 与 指针挪动】(NDK第二节课).md",
+            "file": "12学习笔记/享学Vip - 2021年3月2日 【指针实战运用进阶之字符串操作】(NDK第四节课).md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "12学习笔记/享学Vip - 2021年2月25日 【多级指针、数组指针、函数指针 与 指针挪动】(NDK第二节课).md",
+                "file": "12学习笔记/享学Vip - 2021年3月2日 【指针实战运用进阶之字符串操作】(NDK第四节课).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "12学习笔记/享学Vip - 2021年2月25日 【多级指针、数组指针、函数指针 与 指针挪动】(NDK第二节课).md",
+                "file": "12学习笔记/享学Vip - 2021年3月2日 【指针实战运用进阶之字符串操作】(NDK第四节课).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,23 +118,23 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12学习笔记/享学Vip - 2021年2月25日 【多级指针、数组指针、函数指针 与 指针挪动】(NDK第二节课).md"
+                "file": "12学习笔记/享学Vip - 2021年3月2日 【指针实战运用进阶之字符串操作】(NDK第四节课).md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 225.1428680419922,
-    "collapsed": true
+    "width": 225.1428680419922
   },
   "active": "45b16695cd1db876",
   "lastOpenFiles": [
+    "12学习笔记/享学Vip - 2021年3月2日 【指针实战运用进阶之字符串操作】(NDK第四节课).md",
     "12学习笔记/享学Vip - 2021年2月25日 【多级指针、数组指针、函数指针 与 指针挪动】(NDK第二节课).md",
     "11闪念笔记/享学Vip - 2021年3月7日 【文件加操作、C语言游戏破解器】(NDK第六节课).md",
     "12学习笔记/享学Vip - 2021年2月23日 【C语言-指针入门与基本数据类型】(NDK第一节课).md",
-    "12学习笔记/享学Vip - 2021年3月2日 【指针实战运用进阶之字符串操作】(NDK第四节课).md",
     "12学习笔记/享学Vip - 2021年2月28日 【静态开辟内存、动态开辟内存】(NDK第三节课).md",
     "12学习笔记/享学Vip - 2021年3月4日 【结构体、结构体指针数组、枚举】(NDK第五节课).md",
     "01专题索引/享学Vip课程笔记.md",
