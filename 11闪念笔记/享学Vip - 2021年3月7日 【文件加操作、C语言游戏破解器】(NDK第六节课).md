@@ -14,6 +14,7 @@
 ##### 1、文件的读
 - 引入： **`#include <stdlib.h>`** 
 - 打开文件： **`FILE * fopen (const char* fileName, const char* mode);`**
+- 读取文件：
 - 【重要】关闭文件流： **`fclose(FILE* stream);`**
 
 ```C
