@@ -11,13 +11,15 @@
 <br>
 
 ### 一、文件操作
-##### 1、文件的读
-- 引入： **`#include <stdlib.h>`** 
+##### 打开文件流
+- 库引入： **`#include <stdlib.h>`** 
 - 打开文件： **`FILE* fopen (const char* fileName, const char* mode);`**
 mode参数说明
 ![600](../99附件/20220426081957.png)
-- 读取文件：**`char* fgets( char *buf, int n, FILE *fp );`**
 - 【重要】关闭文件流： **`fclose(FILE* stream);`**
+
+##### 2、读文件
+- 读取文件：**`char* fgets( char *buf, int n, FILE *fp );`**
 
 ```C
 #include <stdio.h>
@@ -55,4 +57,9 @@ int main() {
 
 <br>
 
-##### 2、文件的写
+##### 3、写文件
+- 写入文件：**`char* fputs( char* buf, FILE* fp );`**
+
+```C
+
+```
