@@ -14,6 +14,8 @@
 ##### 1、文件的读
 - 引入： **`#include <stdlib.h>`** 
 - 打开文件： **`FILE* fopen (const char* fileName, const char* mode);`**
+mode参数说明
+![600](../99附件/20220426081957.png)
 - 读取文件：**`char* fgets( char *buf, int n, FILE *fp );`**
 - 【重要】关闭文件流： **`fclose(FILE* stream);`**
 
@@ -29,7 +31,7 @@ int main() {
 
 	char* fileNameStr = "D:\\Temp\\DerryFile.txt";
 
-	// 既然是使用了r，你要提前准备好文件
+	// 因为是使用了r，所以要提前生成好文件
 	FILE* file = fopen(fileNameStr, "r");
 
 	if (!file) {
@@ -51,5 +53,6 @@ int main() {
 }
 ```
 
-mode参数
-![600](../99附件/20220426081957.png)
+<br>
+
+##### 2、文件的写
