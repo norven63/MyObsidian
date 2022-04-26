@@ -11,9 +11,10 @@
 <br>
 
 ### 一、文件操作
-##### 1、文件的写
+##### 1、文件的读
 - 引入： **`#include <stdlib.h>`** 
-- 文件读： **`FILE * fopen (const char *, const char *);`**
+- 打开文件： **`FILE * fopen (const char* fileName, const char* mode);`**
+- 【重要】关闭文件流： **`fclose(FILE* stream);`**
 
 ```C
 
