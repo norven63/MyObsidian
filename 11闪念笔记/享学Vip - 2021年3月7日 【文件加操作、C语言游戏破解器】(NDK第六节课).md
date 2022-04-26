@@ -90,16 +90,12 @@ int main() {
 
 ##### 4、复制文件
 ```C
-// 4.文件的复制。
-
 #include <stdio.h>
 #include <stdlib.h> // 文件的操作，是在这个头文件里面的
 #include <string.h>
 
 // 二进制文件来复制 rb rw
 int main() {
-
-	// https://en.cppreference.com/w/c/io
 
 	char* fileNameStr = "D:\\Temp\\DerryFile.txt"; // 来源
 	char* fileNameStrCopy = "D:\\Temp\\DerryFileCopy.txt"; // 目标
@@ -115,19 +111,18 @@ int main() {
 		exit(0); // 退出程序
 	}
 
-	int buffer[514]; // 514 * 4 = 2048
+	int buffer[514];
 	int len; // 每次读取的长度
 
 	/*
 		fread()
 
 		参数1：容器buffer，
-		参数2：每次偏移多少 int，
-		参数3：容器大小 写个2048，等下文件就报废了
+		参数2：每次偏移多少，
+		参数3：容器大小，需要与容器声明的大小相等
 
-		sizeof(buffer) / sizeof(int) 等价与 514
 	*/
-	while ((len = fread(buffer, sizeof(int), 514, file)) != 0) {
+	while ((len = fread(buffer, sizeof(int), sizeof(buffer) / sizeof(int), file)) != 0) {
 		fwrite(buffer, sizeof(int), len, fileCopy);
 	}
 
