@@ -33,7 +33,7 @@ int main() {
 
 	char* fileNameStr = "D:\\Temp\\DerryFile.txt";
 
-	// 因为是使用了r，所以要提前生成好文件
+	// 因为使用了r，所以要提前生成好文件
 	FILE* file = fopen(fileNameStr, "r");
 
 	if (!file) {
@@ -61,5 +61,31 @@ int main() {
 - 写入文件：**`char* fputs( char* buf, FILE* fp );`**
 
 ```C
+#include <stdio.h>
+#include <stdlib.h> // 文件的操作，是在这个头文件里面的
+#include <string.h>
 
+int main() {
+
+	char* fileNameStr = "D:\\Temp\\DerryFileW.txt";
+
+	// 因为使用了w，所以会自动新建一个 0kb 的文件
+	FILE* file = fopen(fileNameStr, "w");
+
+	if (!file) {
+		printf("文件打开失败，请你个货检测：路径为%s路径的文件，看看有什么问题\n", fileNameStr);
+		exit(0); // 退出程序
+	}
+
+	fputs("Derry Success run...", file);
+
+	// 【重要】关闭文件
+	fclose(file);
+
+	return 0;
+}
 ```
+
+<br>
+
+##### 4、复制文件
