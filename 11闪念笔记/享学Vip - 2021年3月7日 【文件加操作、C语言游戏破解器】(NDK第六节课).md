@@ -34,7 +34,7 @@ int main() {
 	char* fileNameStr = "D:\\Temp\\DerryFile.txt";
 
 	// 因为使用了r，所以要提前生成好文件
-	FILE* file = fopen(fileNameStr, "r");
+	FILE* file = fopen(fileNameStr, "r"); // file == 指针
 
 	if (!file) {
 		printf("文件打开失败，请你个货检测：路径为%s路径的文件，看看有什么问题\n", fileNameStr);
@@ -70,7 +70,7 @@ int main() {
 	char* fileNameStr = "D:\\Temp\\DerryFileW.txt";
 
 	// 因为使用了w，所以会自动新建一个 0kb 的文件
-	FILE* file = fopen(fileNameStr, "w");
+	FILE* file = fopen(fileNameStr, "w"); // file == 指针
 
 	if (!file) {
 		printf("文件打开失败，请你个货检测：路径为%s路径的文件，看看有什么问题\n", fileNameStr);
@@ -103,7 +103,7 @@ int main() {
 	// rb 读取二进制数据
 	FILE* file = fopen(fileNameStr, "rb");
 
-	// rw 写入二进制数据
+	// wb 写入二进制数据
 	FILE* fileCopy = fopen(fileNameStrCopy, "wb");
 
 	if (!file || !fileCopy) {
@@ -136,8 +136,39 @@ int main() {
 
 <br>
 
-##### 5、读取文件大小
+##### 5、获取文件大小
+- 没有专门的 文件大小获取 API
+- 【思路】：读取文件头指针，将头指针挪动位置并记录挪动的信息，当挪动到最后，就可以求得文件大小
 
 ```C
+#include <stdio.h>
+#include <stdlib.h> // 文件的操作，是在这个头文件里面的
+#include <string.h>
 
+int main() {
+
+	char* fileNameStr = "D:\\Temp\\DerryFile.txt"; // 来源
+
+	// 既然是使用了w，他会自动生成文件 0kb
+	FILE* file = fopen(fileNameStr, "rb"); // file == 指针
+
+	if (!file) {
+		printf("文件打开失败，请你个货检测：路径为%s路径的文件，看看有什么问题\n", fileNameStr);
+		exit(0); // 退出程序
+	}
+
+	// SEEK_SET（开头）  SEEK_CUR（当前）  SEEK_END（结尾）
+	fseek(file, 0, SEEK_END);
+	// 走到这里之后：file有了更丰富的值，给你的file指针赋值，挪动的记录信息
+
+	// 读取刚刚给file赋值的记录信息
+	// ftell函数目的是：计算偏移的位置，ftell 从 0 开始统计到当前（SEEK_END）
+	long file_size = ftell(file);
+	printf("%s文件的字节大小是:%ld\n", fileNameStr, file_size);
+
+	// 关闭文件
+	fclose(file);
+
+	return 0;
+}
 ```
