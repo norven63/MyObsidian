@@ -10,3 +10,11 @@
 ---
 <br>
 
+### 一、文件操作
+##### 1、文件的写
+- 引入： **`#include <stdlib.h>`** 
+- 文件读： **`FILE * fopen (const char *, const char *);`**
+
+```C
+
+```
