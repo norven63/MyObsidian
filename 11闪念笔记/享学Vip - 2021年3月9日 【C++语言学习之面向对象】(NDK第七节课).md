@@ -103,8 +103,6 @@ int main() {
 - C++方案：通过引用对象互换
 
 ```cpp
-// 3.引用的原理与
-
 #include <iostream>
 
 using namespace std;
@@ -142,9 +140,7 @@ int main() {
 	// numberChange(&number1, &number2);
 	numberChange2(number1, number2);
 
-	cout << "n1:" << number1 << " , n2:" << number2 << endl;
-
-	cout << endl;
+	cout << "n1:" << number1 << " , n2:" << number2 << endl; // 两数互换成功
 
 	// 引用做实验，来学原理：
 
@@ -169,4 +165,6 @@ int main() {
 <br>
 
 ##### 2、C++引用语法的原理
-- 引用语法
+- 引用语法符：`&`  ，例如 `int n1 = 999;  int& n2 = n1;`
+- 当声明引用变量后，**原始变量** 与 **引用变量** 的内存地址就一致了，可以相互修改地址指向的值
+- 当不采用引用变量时，变量之间赋值仅限于“值”之间的传递，但各自的地址仍然不同，互相无法修改
