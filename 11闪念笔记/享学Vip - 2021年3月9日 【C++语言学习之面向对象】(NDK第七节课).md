@@ -98,3 +98,75 @@ int main() {
 <br><br>
 
 ### 三、引用的原理 与 常量引用
+##### 1、例子：两数互换
+- C语言方案：通过指针取地址互换
+- C++方案：通过引用对象互换
+
+```cpp
+// 3.引用的原理与
+
+#include <iostream>
+
+using namespace std;
+
+// 【1.C语言方案：通过指针取地址互换】
+// 接收number1、number2的地址，取该地址上的值，来完成的互换
+void numberChange(int* number1, int* number2) {
+	int temp = 0;
+	temp = *number1;
+	*number1 = *number2;
+	*number2 = temp;
+}
+
+// 【2.C++方案：通过引用对象互换】
+// &符是C++的引用语法
+void numberChange2(int& number1, int& number2) {
+
+	// 如果不采用引用语法，则main() 与 numberChange2() 中，入参与形参的内存地址不一样的
+	// 如果采用引用语法，则main() 与 numberChange2() 中，入参与形参的内存地址是一样的
+	cout << "numberChange2()中：" << "number1地址：" << &number1 << " , number2地址：" << &number2 << endl;
+
+	int temp = 0;
+	temp = number1;
+	number1 = number2;
+	number2 = temp;
+}
+
+int main() {
+
+	int number1 = 10;
+	int number2 = 20;
+
+	cout << "main()中：" << "number1地址：" << &number1 << " , number2地址：" << &number2 << endl;
+
+	// numberChange(&number1, &number2);
+	numberChange2(number1, number2);
+
+	cout << "n1:" << number1 << " , n2:" << number2 << endl;
+
+	cout << endl;
+
+	// 引用做实验，来学原理：
+
+	// 第一部分，不采用 &
+	int nn1 = 999;
+	int nn2 = nn1;
+	cout << &nn1 << "---" << &nn2 << endl; // 0xffffcbb4、0xffffcbb0
+
+	// 第二部分，采用&
+	int n1 = 999;
+	int& n2 = n1;
+	int& n9 = n1;
+	n2 = 777;
+	n9 = 9527;
+	cout << "地址：" << &n1 << "---" << &n2 << endl;
+	cout << "值：" << n1 << "---" << n2 << endl;
+
+	return 0;
+}
+```
+
+<br>
+
+##### 2、C++引用语法的原理
+- 引用语法
