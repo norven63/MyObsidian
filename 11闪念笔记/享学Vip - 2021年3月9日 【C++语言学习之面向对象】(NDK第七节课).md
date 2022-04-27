@@ -47,9 +47,9 @@ int main() {
 
 <br><br>
 
-### 二、C和C++的常量
-##### 1、C语言的常量
-C语言中的常量是个“假”常量，属于伪命题，因为可以通过指针直接修改
+### 二、C和C+C+++的常量
+##### 1、C的常量
+- C语言中的常量是个“假”常量，属于伪命题，因为可以通过指针直接修改。
 
 ```C
 #include <stdio.h>
@@ -62,6 +62,32 @@ int main() {
 	int* numP = &number;
 
 	*numP = 10000; // 指针修改常量
+
+	printf("%d\n", number);
+
+	return 0;
+}
+```
+
+##### 2、C++的常量
+- C++的常量是真常量，无论直接修改还是指针修改，都不允许。
+
+```cpp
+#include <iostream>
+
+int main() {
+	const int number = 100;
+
+	/*
+		编译不通过，或者运行报错，C++不允许修改常量
+	*/
+	
+	// 1. 直接修改
+	// number = 200; 
+	
+	// 2. 指针修改
+	// int * numP = &number;
+	// *numP = 10000;
 
 	printf("%d\n", number);
 
