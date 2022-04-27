@@ -15,8 +15,8 @@
 - C++语言面向对象 + 标准特性
 - C语言面向过程，函数+结构体
 - C++里面可以运行C语言，可以调用C语言；反之则不行，C语言无法运行C++
-- 打印函数 `std::cout << "C++语言的学习" << std::endl;` ，其中endl==\n，换行符
-- 引入命名空间 `using namespace std;` ，这样一来就不用额外写 `std::`
+- 打印函数： `std::cout << "Hello World" << std::endl;` ，其中endl==\n，换行符
+- 引入命名空间： `using namespace std;` ，这样允许不用额外写 `std::`
 
 ```cpp
 // #include <stdio.h> // C语言的标准支持
