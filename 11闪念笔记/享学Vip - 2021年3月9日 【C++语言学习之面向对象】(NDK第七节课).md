@@ -45,28 +45,3 @@ int main() {
 	return 0;
 }
 ```
-```c++
-#include <iostream> // C++标准支持  C++的与众不同
-
-using namespace std; // 命名空间 C++ 的特性 （Java语言的内部类）
-
-int main() {
-
-	// C++里面可以运行C语言，可以调用C语言，反之 就不行C语言无法运行C++
-	printf("降龙十八掌(C版)\n");
-
-	// std::cout << "C++语言的学习" << std::endl;
-	cout << "C++语言的学习" << endl; // 因为你前面引入了命名空间，所以允许省略std::
-
-	// endl == \n  都是换行的含义一样
-
-	// << 不是属性里面的运算，操作符重载，后面会讲
-	cout << "擒龙功" << endl;
-
-	cout << "铁头功\n"
-		<< "金刚腿\n"
-		<< "铁布衫\n";
-
-	return 0;
-}
-```
