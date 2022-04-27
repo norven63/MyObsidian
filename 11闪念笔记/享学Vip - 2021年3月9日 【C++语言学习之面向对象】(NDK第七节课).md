@@ -190,4 +190,38 @@ int main() {
 ##### 3、常量引用
 - 借助于C++的 **“真”** 常量特性，实现引用对象不可被修改
 - 不可被修改包括：
+	1. 直接修改引用变量指向的值
+	2. 修改引用变量的成员变量
 
+```cpp
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+typedef struct {
+	char name[20];
+	int age;
+}Student;
+
+void insertStudent(const Student& student) {
+	// strcpy(student.name, "李元霸"); // error，不能修改成变量
+
+	Student student2 = { "刘奋", 43 };
+	// student = student2; // error，不能直接修改引用变量指向的值
+
+	cout << student.name << "," << student.age << endl;
+}
+
+int main() {
+
+	Student student = { "张无忌", 30 };
+	insertStudent(student);
+
+	return 0;
+}
+```
+
+<br><br>
+
+### 四、函数重载
