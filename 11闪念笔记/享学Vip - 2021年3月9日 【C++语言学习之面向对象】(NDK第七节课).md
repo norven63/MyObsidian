@@ -18,7 +18,7 @@
 - 打印函数 `std::cout << "C++语言的学习" << std::endl;` ，其中endl==\n，换行符
 - 引入命名空间 `using namespace std;` ，这样一来就不用额外写 `std::`
 
-```C++
+```cpp
 // #include <stdio.h> // C语言的标准支持
 
 #include <iostream> // C++标准支持  C++的与众不同
