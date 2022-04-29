@@ -226,4 +226,42 @@ int main() {
 
 ### 四、函数重载、默认形参
 - C++与Java一样，支持函数重载，即方法名相同，但方法签名不一样
-- 默认形参可以让在函数在声明形参时，赋予默认值，`int add(double n1 = 100, int n2 = 200)` 
+- 默认形参可以让在函数在声明形参时，赋予默认值，例如： `int add(double n1 = 100, int n2 = 200)` ，当调用层不传入参数时，保证该形参的值仍然可读取
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+// Java构造函数  50个字段，我真正使用的，只有6个
+// 建造者设计模式 去解决此问题
+
+int add(int number1) {
+	return number1;
+}
+
+int add(int number1, int number2) {
+	return number1 + number2;
+}
+
+int add(int number1, int number2, int number3) {
+	return number1 + number2 + number3;
+}
+
+// 函数重载 二义性
+// 自己做实验
+// 默认行参赋值，   // KT也有默认行参赋值   优先寻找默认行参赋值的函数， 跟顺序无关
+int add(double n1 = 100, int n2 = 200, int n3 = 300, int n4 = 400, bool isOK = 0) {
+	return n1 + n2 + n3;
+}
+
+int main() {
+	add(999);
+
+	add(999, 777);
+
+	add(100, 200, 888);
+
+	return 0;
+}
+```
