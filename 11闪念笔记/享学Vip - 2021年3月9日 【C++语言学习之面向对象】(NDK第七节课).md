@@ -354,8 +354,56 @@ char* Student::getName() {
 
 <br>
 
-##### 3、使用示例
+##### 3、对象使用示例
+1. 引入头文件
+2. 直接声明对象，静态申请空间，示例 `Student student1;`
+3. **`new`** 关键字声明，动态申请空间，需要 **`delete`** 关键字手动释放，示例 `Student* student2 = new Student();  delete student2;`
 
 ```cpp
+#include "Student.h"
+
+int main10() {
+
+	/*
+	* 【1. 栈空间开辟】
+	*/
+
+	// 声明对象变量
+	// 直接声明，栈区开辟的空间
+	// main()函数弹栈后，会释放栈成员 student1
+	Student student1;
+
+	// 赋值
+	student1.setAge(99);
+	student1.setName("李连杰");
+
+	cout << "name:" << student1.getName() << " ,age:" << student1.getAge() << endl;
+
+
+	/*
+	* 【2. 堆空间开辟】
+	*/
+
+	// 声明对象变量
+	// 用new声明，堆空间开辟
+	// new/delete 必须成对使用，开辟/释放 内存空间
+	Student* student2 = new Student();
+
+	// 赋值
+	student2->setAge(88);
+	student2->setName("李元霸");
+
+	// 因为这里是动态申请，属于指针，调用成员变量要用->
+	cout << "name:" << student2->getName() << " ,age:" << student2->getAge() << endl;
+
+	// 必须手动释放内存
+	if (student2)
+		// free(student2); // 不能这样写，不规范，会被鄙视的
+		delete student2; // 必须用delete释放堆空间的对象student2
+
+	student2 = NULL; // 指向NULL的地址区域，防止悬空指针
+
+	return 0;
+}
 
 ```
