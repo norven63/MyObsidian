@@ -251,7 +251,7 @@ int add(int number1, int number2, int number3) {
 // 函数重载 二义性
 // 自己做实验
 // 默认行参赋值，   // KT也有默认行参赋值   优先寻找默认行参赋值的函数， 跟顺序无关
-int add(double n1 = 100, int n2 = 200, int n3 = 300, int n4 = 400, bool isOK = 0) {
+int add(long n1 = 100, int n2 = 200, int n3 = 300, int n4 = 400, bool isOK = 0) {
 	return n1 + n2 + n3;
 }
 
