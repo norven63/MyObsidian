@@ -405,3 +405,41 @@ int main10() {
 }
 
 ```
+
+<br><br>
+
+### C++的boolean类型
+- **核心一句话："非0即true"、"非0即true"、"非0即true"**
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main11() {
+	/*
+	* C++的boolean类型核心一句话："非0即true"、"非0即true"、"非0即true"
+	*/
+	// bool  isOK = 1; // !0 即true
+	// bool  isOK = -8891; // !0 即true
+	// bool  isOK = 4359; // !0 即true
+	bool  isOK = 0; // 0 则false
+
+	// 只有两个类型：!0、0
+	// 和前面的C一模一样
+
+	if (isOK) {
+		cout << "真" << endl;
+	}
+	else {
+		cout << "假" << endl;
+	}
+
+	// ==========================
+	bool isRun = true;
+	isRun = false;
+	cout << "isRun = " << isRun << endl; // true==1,   false=0
+
+	return 0;
+}
+```
