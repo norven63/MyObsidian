@@ -278,7 +278,11 @@ void JNIMethod(double, int, int) {
 <br><br>
 
 ### 五、C++面向对象
-1. 
+##### 1、头文件
+- Student.h 头文件
+1. 头文件中只写声明，不写实现
+2. 在引入头文件( 通过 #include 'Student.h' 引入 )后，该头文件中所有的 #include、using 都能够被间接引入
+
 
 ```cpp
 
