@@ -279,7 +279,7 @@ void JNIMethod(double, int, int) {
 
 ### 五、C++面向对象
 ##### 1、头文件
-- `.h`、`.hpp` 的文件叫做头文件
+- **`.h`** 、**`.hpp`** 的文件叫做**头文件**
 - 头文件中只写声明，不写实现
 - 在引入头文件（通过 `#include 'xxx.h'` 引入）后，该头文件中所有的 `#include`、`using` 都能够被间接引入
 
@@ -305,4 +305,43 @@ public: // 下面的代码（成员和函数），都是公开
 	int getAge();
 	char* getName();
 };
+```
+
+<br>
+
+##### 2、实现文件
+- **`.c`** 、**`.cpp`** 的文件叫做**实现文件**
+- 实现函数时，函数名称必须加上对应的 class名 + `::` ，例如 `void Student::setAge(int age) `
+
+```cpp
+// 头文件 Student.h 的实现文件
+
+#include "Student.h"
+
+// 这种写法，和头文件声明的那个setAge()函数没有任何关系，相当于另外一个新函数
+void setAge(int age) {
+
+}
+
+// Student的setAge()实现函数
+void Student::setAge(int age) {
+	// C++对象指向的是一个指针
+	// -> 调用一级指针的成员，与C语言的结构体一致
+	this->age = age;
+}
+
+// Student的setName()实现函数
+void  Student::setName(char* name) {
+	this->name = name;
+}
+
+// Student的getAge()实现函数
+int Student::getAge() {
+	return this->age;
+}
+
+// Student的getName()实现函数
+char* Student::getName() {
+	return this->name;
+}
 ```
