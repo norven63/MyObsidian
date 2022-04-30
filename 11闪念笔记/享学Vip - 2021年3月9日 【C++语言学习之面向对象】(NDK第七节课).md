@@ -279,11 +279,30 @@ void JNIMethod(double, int, int) {
 
 ### 五、C++面向对象
 ##### 1、头文件
-- Student.h 头文件
-1. 头文件中只写声明，不写实现
-2. 在引入头文件( 通过 #include 'Student.h' 引入 )后，该头文件中所有的 #include、using 都能够被间接引入
-
+- `.h`、`.hpp` 的文件叫做头文件
+- 头文件中只写声明，不写实现
+- 在引入头文件（通过 `#include 'xxx.h'` 引入）后，该头文件中所有的 `#include`、`using` 都能够被间接引入
 
 ```cpp
+/*
+* Student.h 头文件
+* 1. 头文件中只写声明，不写实现
+* 2. 在引入头文件( 通过 #include 'Student.h' 引入 )后，该头文件中所有的 #include、using 都能够被间接引入
+*/
 
+#include <iostream> // 能够被间接引入
+using namespace std; // 能够被间接引入
+
+class Student {
+
+private: // 下面的代码（成员和函数），都是私有
+	char* name;
+	int age;
+
+public: // 下面的代码（成员和函数），都是公开
+	void setAge(int age);
+	void setName(char* age);
+	int getAge();
+	char* getName();
+};
 ```
