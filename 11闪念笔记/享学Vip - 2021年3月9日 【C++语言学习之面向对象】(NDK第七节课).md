@@ -14,7 +14,7 @@
 - C++语言面向对象 + 标准特性
 - C语言面向过程，函数+结构体
 - C++里面可以运行C语言，可以调用C语言；反之则不行，C语言无法运行C++
-- 打印函数： `std::cout << "Hello World" << std::endl;` ，其中endl==\n，换行符
+- 打印函数： `std::cout << "Hello World" << std::endl;` ，其中 `endl` = `\n` 换行符
 - 引入命名空间： `using namespace std;` ，这样允许不用额外写 `std::`
 
 ```cpp
@@ -51,7 +51,7 @@ int main() {
 常量关键字 `const`
 <br>
 ##### 1、C的常量
-- C语言中的常量是个“假”常量，属于伪命题，因为可以通过指针直接修改。
+- C语言中的常量是个“假”常量，属于伪命题，因为可以通过指针修改。
 
 ```C
 #include <stdio.h>
@@ -59,7 +59,7 @@ int main() {
 int main() {
 	const int number = 100;
 
-	// number = 200; // 编译报错，不能直接修改
+	// number = 200; // 编译报错，const常量不能直接修改
 
 	int* numP = &number;
 
@@ -122,8 +122,8 @@ void numberChange(int* number1, int* number2) {
 // &符是C++的引用语法
 void numberChange2(int& number1, int& number2) {
 
-	// 如果不采用引用语法，则main() 与 numberChange2() 中，入参与形参的内存地址不一样的
-	// 如果采用引用语法，则main() 与 numberChange2() 中，入参与形参的内存地址是一样的
+	// 如果"不"采用引用语法，则 main() 与 numberChange2() 中，入参与形参的内存地址"不"一样
+	// 如果采用引用语法，则 main() 与 numberChange2() 中，入参与形参的内存地址一样
 	cout << "numberChange2()中：" << "number1地址：" << &number1 << " , number2地址：" << &number2 << endl;
 
 	int temp = 0;
