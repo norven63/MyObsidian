@@ -356,8 +356,8 @@ char* Student::getName() {
 
 ##### 3、对象使用示例
 1. 引入头文件
-2. 直接声明对象，静态申请空间，示例 `Student student1;`
-3. **`new`** 关键字声明，动态申请空间，需要 **`delete`** 关键字手动释放，示例 `Student* student2 = new Student();  delete student2;`
+2. 直接声明对象，静态申请栈内存空间，示例 `Student student1;`
+3. **`new`** 关键字声明，动态申请堆内存空间，需要 **`delete`** 关键字手动释放，示例 `Student* student2 = new Student();  delete student2;`
 
 ```cpp
 #include "Student.h"
@@ -368,7 +368,6 @@ int main10() {
 	* 【1. 栈空间开辟】
 	*/
 
-	// 声明对象变量
 	// 直接声明，栈区开辟的空间
 	// main()函数弹栈后，会释放栈成员 student1
 	Student student1;
@@ -384,8 +383,7 @@ int main10() {
 	* 【2. 堆空间开辟】
 	*/
 
-	// 声明对象变量
-	// 用new声明，堆空间开辟
+	// 用new声明，动态申请内存空间
 	// new/delete 必须成对使用，开辟/释放 内存空间
 	Student* student2 = new Student();
 
