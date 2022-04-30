@@ -274,3 +274,12 @@ void JNIMethod(double, int, int) {
 
 }
 ```
+
+<br><br>
+
+### 五、C++面向对象
+1. 
+
+```cpp
+
+```
