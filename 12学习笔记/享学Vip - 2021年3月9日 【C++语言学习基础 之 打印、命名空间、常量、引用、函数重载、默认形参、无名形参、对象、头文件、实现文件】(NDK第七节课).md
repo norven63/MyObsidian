@@ -51,9 +51,97 @@ int main() {
 ##### 2、命名空间
 - 定义命名空间：`namespace abc { ... }` ，可以在命名空间里声明成员变量、函数
 - 引入命名空间： `using namespace std;` ，这样允许不用额外写 `std::`
+- 局部引入、全局引入
+- 多个命名空间重复变量或者函数
+- 嵌套命名空间定义和调用
 
 ```cpp
+#include <iostream>
 
+// 声明std，我们的main函数就可以直接使用里面的成员，不需要使用 std::
+using namespace std; // C++自己的命名空间 (C# .net 命名空间)
+
+// 1.1 自定义命名空间1
+namespace derry1 {
+	int age = 33;
+	char* name = "Derry猛男1";
+
+	void show() {
+		cout << "name:" << name << ", age:" << age << endl;
+	}
+
+	void action() {
+		cout << "derry1 action" << endl;
+	}
+}
+
+// 1.2 自定义命名空间2
+namespace derry2 {
+	void action() {
+		cout << "derry2 action" << endl;
+	}
+}
+
+// 2. 自定义【嵌套】命名空间
+namespace derry3 {
+	namespace derry3Inner {
+		namespace derry3Inner1 {
+			namespace derry3Inner2 {
+				namespace derry3Inner3 {
+					void out() {
+						cout << "爱恨情仇人消瘦，悲欢起落人寂寞" << endl;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 引入命名空间
+using namespace derry1; // 【全局引入】
+
+int main1() {
+	cout << "命名空间" << endl;
+
+	/*
+	 * 一、命名空间引入（全局引用、局部引用）
+	 */
+
+	// 【方式1】 通过 :: 引用变量或者函数
+	int ageValue = derry1::age;
+	derry1::show();
+
+	// 【方式2】 先引入命名空间，再直接引用变量或者函数
+	using namespace derry1; // 【局部引用】
+	ageValue = age; // 直接引用成员变量
+	show(); // 直接引用函数
+
+
+
+	/*
+	 * 二、多个命名空间里面函数重复名称
+	 */
+
+	using namespace derry2;
+	// action(); // 编译报错，derry1、derry2都定义了action()函数
+	derry1::action(); // 通过 :: 指定调用函数
+	derry2::action(); // 通过 :: 指定调用函数
+
+
+	
+	/*
+	 * 三、嵌套命名空间
+	 */
+
+	// 【方式1】 通过 :: 引用变量或者函数
+	derry3::derry3Inner::derry3Inner1::derry3Inner2::derry3Inner3::out();
+
+	// 【方式2】 先引入命名空间，再直接引用变量或者函数
+	using namespace derry3::derry3Inner::derry3Inner1::derry3Inner2::derry3Inner3;
+	out();
+
+	return 0;
+}
 ```
 
 <br><br>
