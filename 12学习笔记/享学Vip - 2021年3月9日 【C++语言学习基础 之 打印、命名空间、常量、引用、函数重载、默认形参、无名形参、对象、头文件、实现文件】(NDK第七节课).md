@@ -171,6 +171,7 @@ int main() {
 ```
 
 ##### 2、C++的常量
+###### 基本概念
 - C++的常量是真常量，无论直接修改还是指针修改，都不允许。
 
 ```cpp
@@ -191,6 +192,44 @@ int main() {
 	// *numP = 10000;
 
 	printf("%d\n", number);
+
+	return 0;
+}
+```
+
+###### 常量指针、指针常量、常量指针常量
+- **常量指针**：指向一个常量的指针
+- **指针常量**：一个指针类型的常量
+- **常量指针常量**：指向一个常量的指针，且该指针是个常量
+
+```cpp
+#include <iostream>
+#include <string.h>
+#include <string.h>
+
+using namespace std;
+
+int main() {
+	// strcpy()系统函数示例：
+	// *strcpy (char *__restrict, const char *__restrict);
+
+	int number = 9;
+	int number2 = 8;
+
+	// 常量指针，指向一个常量的指针
+	const int* numberP1 = &number;
+	// *numberP1 = 100; // 报错，不允许去修改【常量指针】指向地址所对应的值，因为这个值是个常量
+	numberP1 = &number2; // OK，允许【常量指针】重新指向新的地址
+
+   //  指针常量，一个指针类型的常量
+	int* const numberP2 = &number;
+	*numberP2 = 100; // OK，允许去修改【指针常量】指向地址所对应的值
+	// numberP2 = &number2; // 报错，不允许【指针常量】重新指向新的地址，因为这个指针是常量
+
+	// 常量指针常量，指向一个常量的指针，且该指针是个常量
+	const int* const numberP3 = &number;
+	// *numberP3 = 100; // 报错，不允许去修改【常量指针】指向地址所对应的值，因为这个值是个常量
+	// numberP3 = &number2; // 报错，不允许【指针常量】重新指向新的地址，因为这个指针是常量
 
 	return 0;
 }
