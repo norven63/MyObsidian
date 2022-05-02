@@ -328,8 +328,8 @@ int main() {
 ##### 3、常量引用
 - 借助于C++的 **“真”** 常量特性，实现引用对象不可被修改
 - 常量引用不可被修改，包括：
-	1. 直接修改引用变量指向的值
-	2. 修改引用变量的成员变量
+	1. 不可修改引用变量的成员变量
+	2. 不可直接修改引用变量指向的值
 
 ```cpp
 #include <iostream>
@@ -343,10 +343,10 @@ typedef struct {
 }Student;
 
 void insertStudent(const Student& student) {
-	// strcpy(student.name, "李元霸"); // error，不能修改成变量
+	// strcpy(student.name, "李元霸"); // error，不可修改引用变量的成员变量
 
 	Student student2 = { "刘奋", 43 };
-	// student = student2; // error，不能直接修改引用变量指向的值
+	// student = student2; // error，不可直接修改引用变量指向的值
 
 	cout << student.name << "," << student.age << endl;
 }
@@ -363,9 +363,9 @@ int main() {
 <br><br>
 
 ### 四、函数重载、默认形参、无名形参
-- **函数重载**：C++与Java一样，支持函数重载，即方法名相同，但方法签名不一样
-- **默认形参**：可以让在函数在声明形参时，赋予默认值，当调用层不传入参数时，保证该形参的值仍然可读取，类似Java中的 "构造者模式"。例如： `int add(double n1 = 100, int n2 = 200)` 
-- **无名形参**：参数没有名称，只是起到一个预留占位的作用，等到后续版本迭代再扩展实现。例如 `void method(double, int, int) { ... }`
+- **函数重载**：C++与Java一样，支持函数重载，即方法名相同，但方法签名不一样。
+- **默认形参**：可以让在函数在声明形参时，赋予默认值，当调用层不传入参数时，保证该形参的值仍然可读取，类似Java中的 "构造者模式"。例如： `int add(double n1 = 100, int n2 = 200){ ... } ` 
+- **无名形参**：参数没有名称，只是起到一个预留占位的作用，等到后续版本迭代再扩展实现。例如 `void method(double, int, int){ ... }`
 
 ```cpp
 #include <iostream>
@@ -388,6 +388,23 @@ int add(int number1, int number2, int number3) {
 }
 
 
+/*
+  2. 默认形参
+*/
+int add(long n1 = 100, int n2 = 200, int n3 = 300, int n4 = 400, bool isOK = 0) {
+	return n1 + n2 + n3;
+}
+
+
+/*
+  3. 无名形参
+*/
+void JNIMethod(double, int, int) {
+
+}
+
+
+
 int main() {
 	add(999);
 
@@ -397,26 +414,12 @@ int main() {
 
 	return 0;
 }
-
-/*
-  2. 默认形参
-*/
-int add(long n1 = 100, int n2 = 200, int n3 = 300, int n4 = 400, bool isOK = 0) {
-	return n1 + n2 + n3;
-}
-
-/*
-  3. 无名形参
-*/
-void JNIMethod(double, int, int) {
-
-}
 ```
 
 <br><br>
 
 ### 五、C++对象
-> 1. C++中的对象，规范的写法是包含 **头文件、实现文件** 两个部分
+> 1. C++中的对象，规范的定义是包含 **头文件、实现文件** 两个部分
 > 2. 正规的流程：将xxx.so（`.c`、`.cpp`的实现代码） 提供给用户，再把头文件给用户引入。so文件时加密过的，用户看不到实现细节
 
 <br>
@@ -443,6 +446,7 @@ private: // 下面的代码（成员和函数），都是私有
 	char* name;
 	int age;
 
+
 public: // 下面的代码（成员和函数），都是公开
 	void setAge(int age);
 	void setName(char* age);
@@ -462,7 +466,7 @@ public: // 下面的代码（成员和函数），都是公开
 
 #include "Student.h"
 
-// 这种写法，和头文件声明的那个setAge()函数没有任何关系，相当于另外一个新函数
+// 【错误】：这种写法，与头文件中声明的那个setAge()函数没有任何关系，相当于另外一个新函数
 void setAge(int age) {
 
 }
@@ -492,9 +496,9 @@ char* Student::getName() {
 
 <br>
 
-##### 3、对象使用示例
-1. 引入头文件
-2. 直接声明对象，静态申请栈内存空间，示例 `Student student1;`
+##### 3、对象的声明与使用
+1. 先引入对象的头文件
+2. 直接声明对象，静态申请栈内存空间，示例：`Student student1;`
 3. **`new`** 关键字声明，动态申请堆内存空间，需要 **`delete`** 关键字手动释放，示例 `Student* student2 = new Student();  delete student2;`
 
 ```cpp
