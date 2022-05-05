@@ -230,7 +230,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年5月8日 【JNI技术之手写JNIEnv与静态缓存与native异常】]]
 
-[[享学Vip - 202[[2年5月10日 【JNI技术之手写Parcel的C++层与原理】]]
+[[享学Vip - 2022年5月10日 【JNI技术之手写Parcel的C++层与原理】]]
 
 [[享学Vip - 2022年5月12日 【Linux学习之命令执行原理与文件用户组】]]
 
