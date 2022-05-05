@@ -226,7 +226,14 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年4月28日【JNI技术之C++层玩转Java层的对象】]]
 
-
+享学Vip - 2022年5月5日 【JNI技术之动态注册与JNI线程实战】
+享学Vip - 2022年5月8日 【JNI技术之手写JNIEnv与静态缓存与native异常】
+享学Vip - 2022年5月10日 【JNI技术之手写Parcel的C++层与原理】
+享学Vip - 2022年5月12日 【Linux学习之命令执行原理与文件用户组】
+享学Vip - 2022年5月15日 【Linux学习之Shell脚本编程】
+享学Vip - 2022年5月17日 【Linux学习之NDK交叉编译库给Android用】
+享学Vip - 2022年5月19日 【NDK交叉编译FFmpeg与集成FFmpeg】
+享学Vip - 2022年5月22日 【Cmake原生构建工具学习】
 <br><br>
 
 ## 其他
