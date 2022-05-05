@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "88模板/模板概览.md",
-            "mode": "source",
+            "file": "01专题索引/享学Vip课程笔记.md",
+            "mode": "preview",
             "backlinks": false,
             "source": false
           }
@@ -62,7 +62,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 623.9999980926514
+    "width": 623.9999980926514,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -78,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "88模板/模板概览.md",
+                "file": "01专题索引/享学Vip课程笔记.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "88模板/模板概览.md",
+                "file": "01专题索引/享学Vip课程笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "88模板/模板概览.md"
+                "file": "01专题索引/享学Vip课程笔记.md"
               }
             }
           }
@@ -126,10 +127,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.1428680419922
+    "width": 225.1428680419922,
+    "collapsed": true
   },
   "active": "45b16695cd1db876",
   "lastOpenFiles": [
+    "01专题索引/享学Vip课程笔记.md",
     "88模板/模板概览.md",
     "88模板/模板-学习笔记_享学.md",
     "88模板/模板-学习笔记.md",
@@ -138,7 +141,6 @@
     "12学习笔记/享学Vip - 2021年3月14日 【C++浅拷贝与深拷贝的原理】(NDK第九节课).md",
     "12学习笔记/享学Vip - 2021年3月11日 【C++构造函数、析构函数、拷贝构造函数】(NDK第八节课).md",
     "12学习笔记/享学Vip - 2021年3月9日 【C++语言学习基础 之 打印、命名空间、常量、引用、函数重载、默认形参、无名形参、对象、头文件、实现文件】(NDK第七节课).md",
-    "12学习笔记/享学Vip - 2021年3月7日 【文件加操作、C语言游戏破解器】(NDK第六节课).md",
-    "12学习笔记/享学Vip - 2021年3月4日 【结构体、结构体指针数组、枚举】(NDK第五节课).md"
+    "12学习笔记/享学Vip - 2021年3月7日 【文件加操作、C语言游戏破解器】(NDK第六节课).md"
   ]
 }
