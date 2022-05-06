@@ -120,8 +120,63 @@ int main() {
 3. 当给成员函数的末尾修饰`const`时，等价于给该函数传入的`this`指针，修饰成**常量指针常量**。例如 `void foo() const { ... }`
 4. 参见`const`修饰指针的细节：[[享学Vip - 2021年3月9日 【C++语言学习基础 之 打印、命名空间、常量、引用、函数重载、默认形参、无名形参、对象、头文件、实现文件】(NDK第七节课)#3、常量指针、指针常量、常量指针常量]]中的 **"指针常量"、"常量指针常量"**。
 
+- **this与函数的关系：**
 ![650](../99附件/20220506193846.png)
+- **const修饰函数的this意义何在：**
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class Worker {
+public:
+	char* name;
+	int age = NULL; // C++中不像Java，Java有默认值， 如果你不给默认值，那么就是系统值 -64664
+
+	// int * const  指针常量 指针常量【地址对应的值能改，地址不可以修改】
+	// const int *  常量指针 常量指针【地址可以修改，地址对应的值不能改】
+
+	// 纠结：原理：为什么可以修改age
+	// 默认持有隐式的this【类型 * const this】
+	// 类型 * const 指针常量：代表指针地址不能被修改，但是指针地址的值是可以修改的
+	void change1() {
+		// 代表指针地址不能被修改
+		// this = 0x6546;  // 编译不通过，地址不能被修改，因为是指针常量
+		// 地址不可以修改
+		// this = 0x43563;
+
+		// 隐式的this
+		// 但是指针地址的值是可以修改的
+		// 地址对应的值能改
+		this->age = 100;
+		this->name = "JJJ";
+	}
+
+	// 默认现在：this 等价于 const Student * const  常量指针常量（地址不能改，地址对应的值不能改）
+	void changeAction() const {
+		// 地址不能改
+		// this = 0x43563;
+
+		// 地址对应的值不能改
+		// this->age = 100;
+	}
+
+	// 原理：修改隐式代码  const 类型 * const 常量指针常量
+	void showInfo() const {
+		// this->name = "";
+		// this->age = 88;
+
+		// 只读的
+		cout << "age:" << age << endl;
+	}
+};
+
+int main() {
+	return 0;
+}
+```
 
 <br><br>
 
-### 四、关键字：const
+### 四、友元
+
