@@ -179,6 +179,48 @@ int main() {
 <br><br>
 
 ### 四、友元
-##### 友元函数
+##### 1、友元函数
 - 关键字：**`friend`**
 - 在`.h`头文件中声明函数`friend void foo(Persion* p);`，在`.cpp`中实现函数时，就可以对`Persion`**访问私有成员变量**。
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class Person {
+private:
+	// 私有的age，外界不能访问
+	int age = 0;
+
+public:
+	Person(int age) {
+		this->age = age;
+	}
+
+	int getAge() {
+		return this->age;
+	}
+
+	// 声明定义友元函数
+	friend void updateAge(Person* person, int age);
+};
+
+// 实现友元函数
+void updateAge(Person* person, int age) {
+	person->age = age;//
+}
+
+int main() {
+	Person person = Person(9);
+	updateAge(&person, 88);
+
+	cout << person.getAge() << endl;
+
+	return 0;
+}
+```
+
+<br>
+
+##### 2、友元类
