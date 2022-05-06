@@ -87,21 +87,25 @@ public:
 	static int id;
 
 	// 1.1 声明静态函数 
-	static void update() {
-		id += 100;// 如果id没有初始化过，这里会运行报错
-
-		// 报错：静态函数不能调用非静态函数（与Java一样）
-		// update2();
-	}
+	static void update();
 
 	void update2() {
 		id = 13;
 	}
 };
 
-// 2. 实现静态成员变量的初始化
+// 2.1 实现静态成员变量的初始化
 // 不需要 static 关键字
 int Dog::id = 9;
+
+// 2.2 实现静态函数 
+// 静态函数不能调用非静态函数（与Java一样）
+void update() {
+	id += 100;// 如果id没有初始化过，这里会运行报错
+
+	// 报错：静态函数不能调用非静态函数（与Java一样）
+	// update2();
+}
 
 int main() {
 	Dog dog;
@@ -216,7 +220,7 @@ public:
 // 2. 实现友元函数
 // 不需要 friend 关键字，也不需要 Class名:: ，只需要保证函数签名一致即可
 void updateAge(Person* person, int age) {
-	person->age = age;//
+	person->age = age;
 }
 
 int main() {
