@@ -73,3 +73,46 @@ int main() {
 3. 静态属性必须要先在`.h`文件中声明，然后再在`.cpp`文件中实现初始化
 4. 静态函数只能取操作静态的属性和方法（与Java一样）
 
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class Dog {
+public:
+    char * info;
+    int age;
+
+    // 1. 先声明
+    static int id;
+
+    static void update() {
+        id += 100;// 如果id没有初始化过，这里会运行报错
+
+        // 报错：静态函数不能调用非静态函数（与Java一样）
+        // update2();
+    }
+
+    void update2() {
+        id = 13;
+    }
+};
+
+// 2. 再实现初始化
+int Dog::id = 9;
+
+int main() {
+    Dog dog;
+    dog.update2(); // 调用普通函数
+    Dog::update(); // 调用静态函数
+    dog.update(); // 对象名.静态函数名（一般都是用::调用静态函数、成员。这种调用方式虽然也可以，但知道就行）
+
+    cout << Dog::id << endl;
+    
+    return 0;
+}
+```
+
+<br><br>
+
+### 
