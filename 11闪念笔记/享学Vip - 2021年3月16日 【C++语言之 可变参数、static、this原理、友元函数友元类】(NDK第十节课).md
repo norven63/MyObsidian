@@ -179,4 +179,6 @@ int main() {
 <br><br>
 
 ### 四、友元
-- 关键字：
+##### 友元函数
+- 关键字：**`friend`**
+- 在`.h`头文件中声明函数`friend void foo(Persion* p);`，在`.cpp`中实现函数时，就可以对`Persion`**访问私有成员变量**。
