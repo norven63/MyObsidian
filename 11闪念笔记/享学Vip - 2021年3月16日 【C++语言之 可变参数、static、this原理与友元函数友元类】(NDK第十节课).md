@@ -80,36 +80,35 @@ using namespace std;
 
 class Dog {
 public:
-    char * info;
-    int age;
+	char* info;
+	int age;
 
-    // 1. 先声明
-    static int id;
+	// 1. 先声明
+	static int id;
 
-    static void update() {
-        id += 100;// 如果id没有初始化过，这里会运行报错
+	static void update() {
+		id += 100;// 如果id没有初始化过，这里会运行报错
 
-        // 报错：静态函数不能调用非静态函数（与Java一样）
-        // update2();
-    }
+		// 报错：静态函数不能调用非静态函数（与Java一样）
+		// update2();
+	}
 
-    void update2() {
-        id = 13;
-    }
+	void update2() {
+		id = 13;
+	}
 };
 
 // 2. 再实现初始化
 int Dog::id = 9;
 
 int main() {
-    Dog dog;
-    dog.update2(); // 调用普通函数
-    Dog::update(); // 调用静态函数
-    dog.update(); // 对象名.静态函数名（一般都是用::调用静态函数、成员。这种调用方式虽然也可以，但知道就行）
+	Dog dog;
+	dog.update2(); // 调用普通函数
+	Dog::update(); // 调用静态函数
+	dog.update(); // 对象名.静态函数（一般都是使用::调用静态成员，这种方式也可以，知道就行）
 
-    cout << Dog::id << endl;
-    
-    return 0;
+	cout << Dog::id << endl;
+	return 0;
 }
 ```
 
