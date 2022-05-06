@@ -207,11 +207,12 @@ public:
 		return this->age;
 	}
 
-	// 声明定义友元函数
+	// 1. 声明定义友元函数
 	friend void updateAge(Person* person, int age);
 };
 
-// 实现友元函数
+// 2. 实现友元函数
+// 不需要 friend 关键字，也不需要 Class名:: ，只需要保证函数签名一致即可
 void updateAge(Person* person, int age) {
 	person->age = age;//
 }
