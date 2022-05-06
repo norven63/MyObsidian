@@ -83,7 +83,7 @@ public:
 	char* info;
 	int age;
 
-	// 1. 先声明
+	// 1. 先声明静态成员变量
 	static int id;
 
 	static void update() {
@@ -98,7 +98,7 @@ public:
 	}
 };
 
-// 2. 再实现初始化
+// 2. 再实现静态成员变量的初始化
 int Dog::id = 9;
 
 int main() {
