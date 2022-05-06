@@ -40,25 +40,26 @@ flowchart LR
 ### 时序图
 ```mermaid
 sequenceDiagram
-	participant a
-	participant b
-	
-	a->>+b:call0_a->b+实线
-	a-->>+b:call0_a->b+虚线
-	Note over a,b: TextNote1+覆盖显示
-	
-	a->>+b:call0_a->b
-	b->>+c:call0_b->c
-	Note right of c: TextNote2+右边显示
-	c-->>-b:callback0_b<-c
-	
-	b-->>-a:callback0_a<-b
-	b-->>-a:call1_a<-b
-	
-	c->>+d:start loop
-	loop 循环名称:每分钟
-		d-->>-c:callback loop
-	end
+
+participant a
+participant b
+
+a->>+b:call0_a->b+实线
+a-->>+b:call0_a->b+虚线
+Note over a,b: TextNote1+覆盖显示
+
+a->>+b:call0_a->b
+b->>+c:call0_b->c
+Note right of c: TextNote2+右边显示
+c-->>-b:callback0_b<-c
+
+b-->>-a:callback0_a<-b
+b-->>-a:call1_a<-b
+
+c->>+d:start loop
+loop 循环名称:每分钟
+	d-->>-c:callback loop
+end
 ```
 
 <br>
