@@ -239,3 +239,38 @@ int main() {
 - 关键字：**`friend`**
 - 类似声明一个Java的内部类，允许该类**访问自己的私有成员**
 
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class ImageView {
+private:
+	int viewSize;
+	friend class FriendClass; // 声明友元类
+};
+
+class FriendClass {
+public:
+	ImageView imageView;
+
+	void changeViewSize(int size) {
+		imageView.viewSize = size;
+	}
+
+	int getViewSize() {
+		// 因为已经将FriendClass声明为ImageView的友元类，所以这里允许访问它的私有成员
+		return imageView.viewSize;
+	}
+};
+
+int main() {
+	FriendClass mImageViewClass;
+
+	mImageViewClass.changeViewSize(600);
+
+	cout << mImageViewClass.getViewSize() << endl;
+
+	return 0;
+}
+```
