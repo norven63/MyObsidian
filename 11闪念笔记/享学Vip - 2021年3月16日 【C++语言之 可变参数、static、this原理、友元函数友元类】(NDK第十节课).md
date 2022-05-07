@@ -11,12 +11,14 @@
 <br>
 
 ### 一、可变参数
-- Java可变参数写法 `void foo(int ...)`、C++可变参数写法 `void foo(...)`
-- **核心函数：**
-	1. `va_list` ：声明变量
-	2. `va_start` ：为可变参数变量加载信息
-	3. `va_arg`：从可变参数中读取一个值
-	4. `va_end`：关闭可变参数的读取（规范：例如file文件要关闭流一样）
+1. Java可变参数写法 `void foo(int ...)`、C++可变参数写法 `void foo(...)`
+
+2. **核心函数：**
+	- `va_list` ：声明变量
+	- `va_start` ：为可变参数变量加载信息
+	- `va_arg`：从可变参数中读取一个值
+	- `va_end`：关闭可变参数的读取（规范：例如file文件要关闭流一样）
+
 - **越界：** 越界后仍然可以读取值，但会读取到一个系统值、乱码
 
 ```cpp
@@ -68,9 +70,12 @@ int main() {
 <br><br>
 
 ### 二、关键字：static
-1. 可以直接通过 **`Class名::静态成员`** 的方式，引用、调用
+1. 可以直接通过 **`Class名::静态成员`** 的方式，引用、调用。
+
 2. **静态属性**必须要被初始化，否则无论哪里引用都会运行crash
+
 3. **静态属性、函数**必须要先在`.h`文件中声明，然后再在`.cpp`文件中实现初始化（实现的时候直接使用`Class名::`即可，不需要`static`）
+
 4. 静态函数只能操作静态的属性、函数（与Java一样）
 
 ```cpp
@@ -121,7 +126,7 @@ int main() {
 <br><br>
 
 ### 三、关键字：this
-1. 当声明对象时，**构造函数**会创建一个`this`的指针，指向当前对象的地址。当对象的**成员函数**都在**代码区**运行，当被调用时，会传入对象的`this`指针到代码区。同理，构造函数、栈区空间，也会传入。
+1. 当声明对象时，**构造函数**会创建一个`this`的指针，指向当前对象的地址。对象的**成员函数**都在**代码区**运行，当被调用时，会传入对象的`this`指针到代码区。同理，构造函数、栈区空间，也会传入。
 
 2. `this`指针默认被 **`const` 修饰成"指针常量"**，使其指向地址不可修改，但是成员变量允许修改。
 
@@ -191,7 +196,9 @@ int main() {
 ### 四、友元
 ##### 1、友元函数
 - 关键字：**`friend`**
+
 - 在`.h`头文件中声明函数`friend void foo(Persion* p);`，在`.cpp`中实现函数时，就可以对`Persion`**访问私有成员**。
+
 - 实现友元函数时，不需要 **`friend`** 关键字，也不需要 **`Class名::`** ，只需要保证函数签名一致即可
 
 ```cpp
@@ -272,5 +279,125 @@ int main() {
 	cout << mImageViewClass.getViewSize() << endl;
 
 	return 0;
+}
+```
+
+<br><br>
+
+### 五、综合使用
+##### 1、头文件
+```cpp
+#include <iostream>
+
+using namespace std;
+
+#ifndef PIG_H // 你有没有这个宏？（宏类似Java常量）
+#define PIG_H // 定义这个宏
+
+class Pig {
+private:
+	int age;
+	char* name;
+
+public:
+	// 静态成员的声明
+	static int id;
+
+	// 构造函数的声明系列
+	Pig();
+	// 刻意隐藏入参名称，不暴露实现细节
+	Pig(char*);
+	Pig(char*, int);
+
+	// 析构函数
+	~Pig();
+
+	// 拷贝构造函数
+	Pig(const Pig& pig);
+
+	// 普通函数 set、get
+	int getAge();
+	char* getName();
+	void setAge(int);
+	void setName(char*);
+
+	void showPigInfo() const; // 把this声明成"常量指针常量"，只读
+
+	// 静态函数的声明
+	static void changeTag(int age);
+
+	// 不要这样干
+	// void changeTag(int age);
+
+	// 友元函数的声明
+	friend void changeAge(Pig* pig, int age);
+};
+
+#endif // 宏 关闭/结尾
+```
+
+##### 2、实现文件
+```cpp
+#include "Pig.h"
+
+// TODO  ======================  普通的成员，主要加 对象::
+
+// 实现构造函数
+Pig::Pig() {
+    cout << "默认构造函数" << endl;
+}
+
+Pig::Pig(char * name) {
+    cout << "1个参数构造函数" << endl;
+}
+
+Pig::Pig(char * name, int age) {
+    cout << "2个参数构造函数" << endl;
+}
+
+// 实现析构函数
+Pig::~Pig() {
+    cout << "析构函数" << endl;
+}
+
+// 实现拷贝构造函数
+Pig::Pig(const Pig &pig) {
+    cout << "拷贝构造函数" << endl;
+}
+
+int Pig::getAge() {
+    return this->age;
+}
+char * Pig::getName() {
+    return this->name;
+}
+void Pig::setAge(int age) {
+    this->age = age;
+}
+void Pig::setName(char * name) {
+    this->name = name;
+}
+
+// 把this编程"常量指针常量"，只读
+void Pig::showPigInfo() const {
+
+}
+
+
+
+// TODO ===============================  静态、友元的成员
+
+// 实现 静态属性【不需要增加 static关键字】
+int Pig::id = 878;
+
+// 实现静态函数，【不需要增加 static关键字】
+void Pig::changeTag(int age) {
+
+}
+
+// 友元的实现
+// 友元特殊：不需要 friend 关键字，也不需要 Class名:: ，只需要保证函数签名一致即可
+void changeAge(Pig * pig, int age) {
+
 }
 ```
