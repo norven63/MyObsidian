@@ -11,5 +11,30 @@
 <br>
 
 ### 一、JNI初识
+##### 1、
 ![650](../99附件/20220512212719.png)
 
+##### 2、签名规则
+boolean --> Z
+
+byte --> B
+
+char --> C
+
+short --> S
+
+int --> I
+
+long --> J
+
+float --> F
+
+double --> D
+
+void --> V
+
+object --> L完整的类名；
+
+array[ 数组的数据类型 ]  -->  int[] [I double[][] [[D
+
+method(参数类型)返回值类型  -->  void name（int a，double b） （ID）V
