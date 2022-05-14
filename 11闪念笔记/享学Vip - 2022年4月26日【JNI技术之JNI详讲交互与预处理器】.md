@@ -38,3 +38,5 @@ object --> L完整的类名；
 array[ 数组的数据类型 ] -->  int[] [I double[][] [[D
 
 method(参数类型)返回值类型  -->  void name（int a，double b） （ID）V
+
+##### 3、JNIEnv
