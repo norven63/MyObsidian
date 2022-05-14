@@ -10,11 +10,13 @@
 ---
 <br>
 
-### 一、JNI初识
-##### 1、JNI定位概览
+### 一、JNI定位概览
 ![650](../99附件/20220512212719.png)
 
-##### 2、签名规则
+<br><br>
+
+
+### 二、JNI 与 Java 的签名对应关系
 boolean --> Z
 
 byte --> B
@@ -33,10 +35,198 @@ double --> D
 
 void --> V
 
-object --> L完整的类名；
+object（对象，引用类型）固定格式 ” L + 全限定名 + ; “，示例：**`String`** --> **`Ljava/lang/String;`**
 
-array[ 数组的数据类型 ] -->  int[] [I double[][] [[D
+数组 固定格式 ” [ + 元素的类型签名 “，示例：**`int[]` --> `[I`**    、  **`String[][]`** --> **`[[Ljava/lang/String;`**
 
-method(参数类型)返回值类型  -->  void name（int a，double b） （ID）V
+函数签名，固定格式 ” ( + 参数的类型签名 + ) + 返回值的类型签名 “ ，示例： **`void name(int a，double b)`** --> **`(ID)V`**
 
-##### 3、JNIEnv
+<br><br>
+
+
+### 三、JNIEnv
+1. Java层与C层之间的核心桥梁
+
+2. 无论是C还是C++编译，JNIEnv都使用 `JNINativeInterface` 这个结构体
+
+**jni.h文件**：
+```cpp
+
+#if defined(__cplusplus) // 如果是C++
+typedef _JNIEnv JNIEnv;  
+typedef _JavaVM JavaVM;  
+#else // 如果是C
+typedef const struct JNINativeInterface *JNIEnv;  
+typedef const struct JNIInvokeInterface *JavaVM;  
+#endif
+
+
+struct _JNIEnv {  
+    /* do not rename this; it does not seem to be entirely opaque */  
+    const struct JNINativeInterface *functions;
+    
+	// ... ...
+}
+
+```
+
+<br>
+
+### 四、JNI函数详解
+
+##### 1、签名结构
+```cpp
+extern "C" // 表示下面的代码，都采用C的编译方式
+
+JNIEXPORT // JNI重要标记关键字，不能少（VS编译能通过，运行会报错） / (AS 运行不会报错)，规则(标记为该方法可以导出被外部调用) Windows内部规则，与Linux内部规则不同
+
+ // 【函数返回值】，这里代表返回 java 中的 String
+jstring
+
+JNICALL // （Linux非必选、Windows必选） jni call ，约束了函数入栈顺序，和堆栈内存清理的规则
+
+// 【函数入参】
+// 如果是 "实例" 方法，则这里入参的是jobject，代表java层传递下来的 "调用对象"，例如本地即为 MainActivity 对象
+// 如果是 "静态" 方法，则这里入参的是jclass，代表java传递下来的 "class对象"，例如本地即为 MainActivity.class
+
+// 【函数名称】
+// 命名规范：Java_包名_类名_方法名
+// 如果包名、类名、方法名中有下划线 _ ，则用数字1代替
+
+Java_com_derry_jnidemo_MainActivity_getPwd(JNIEnv *env, jobject thiz) {
+	
+	jstring resultPwd = env->NewStringUTF("bianhao-9527");
+
+	return resultPwd;
+}
+```
+
+<br>
+
+
+##### 2、函数调用示例
+
+**1. 调用 JNIEnv 的函数**
+
+```cpp
+extern "C"
+JNIEXPORT
+jstring
+JNICALL
+Java_com_derry_jnidemo_MainActivity_getPwd(JNIEnv *env, jobject thiz) {
+
+	// 1.【如果是.c文件】这里需要调用 (*env)->NewStringUTF()，因为C编译下，JNIEnv *env 指向的是 JNINativeInterface *functions（自己就是指针） 的地址，所以是个二级指针，需要先取值，再用->调用函数
+	jstring resultPwd = (*env)->NewStringUTF(env, "bianhao-9527"); // 需要把 env 入参传进去
+
+
+	// 2.【如果是.cpp文件】这里可以直接调用 env->NewStringUTF，因为C++编译下，env是个一级指针，可直接->调用函数
+	jstring resultPwd = env->NewStringUTF("bianhao-9527");
+
+	return resultPwd;
+}
+```
+
+
+**2. 修改Java的属性**（与反射调用规则一致）
+
+==**【注意】**== ：**JNI可以暴力修改 `private` 、 `final` 的属性**
+
+1）修改 “引用类型” 的 “实例” 属性
+```cpp
+extern "C"
+JNIEXPORT
+jstring
+JNICALL
+Java_com_derry_jnidemo_MainActivity_changeName(JNIEnv *env, jobject thiz) {
+
+	/*
+	 * 【先拿到Class对象】
+	 */
+	// 方式一
+	jclass mainActivityCls = env->FindClass("com/derry/as_jni_project_cpp/MainActivity"); // 传入Class完整包路径
+	// 方式二
+	jclass mainActivityCls2 = env->GetObjectClass(mainActivitThis);
+
+	 
+	// 1. 拿到实例属性，这里是 String name
+	jfieldID nameFid = env->GetFieldID(mainActivityCls, "name", "Ljava/lang/String;"); // 传入对象、属性名称、属性的类型签名
+
+	// 2. 因为属性是 String 类型的，所以必须构建一个jstring对象
+	jstring value = env->NewStringUTF("修改为Beyond");  
+
+	// 3. 修改属性值
+	env->SetObjectField(mainActivityThis, nameFid, value); // 因为修改的是 "实例" 属性，且是引用类型，用SetObjectField()，不需要static关键字
+
+	return resultPwd;
+}
+```
+
+2）修改 “基本类型” 的 “静态” 属性
+```cpp
+extern "C"
+JNIEXPORT
+jstring
+JNICALL
+Java_com_derry_jnidemo_MainActivity_changeAge(JNIEnv *env, jclass mainActivityCls) {
+
+	// 【注意】因为是静态方法，所以这里入参是jclass
+
+	// 1. 拿到静态属性，这里是 int age
+	// 【注意】这里要用GetStaticFieldID，有static关键字
+	jfieldID ageFid = env->GetStaticFieldID(mainActivityCls, "age", "I");  
+  
+	// 2. jint底层是int的别名而已，所以不需要先构建一个jint，而是可以直接用int声明（所有基本类型都是如此）
+	int age = env->GetStaticIntField(mainActivityCls, ageFid); // 获取原age值
+
+	// 3. 修改属性值
+	// void SetStaticIntField(jclass clazz, jfieldID fieldID, jint value)  
+	env->SetStaticIntField(mainActivityCls, ageFid, age + 1); // 因为修改的是 "实例" 属性，且是int类型，SetStaticIntField()，需要static关键字
+	
+	return resultPwd;
+}
+```
+
+<br>
+
+**3. 调用Java的方法**（与反射调用规则一致）
+
+```cpp
+extern "C"  
+JNIEXPORT
+void
+JNICALL  
+Java_com_derry_as_1jni_1project_1cpp_MainActivity_callAddMathod(JNIEnv *env, jobject mainActivitThis) {  
+  
+    // 获取Class对象  
+    jclass mainActivitCls = env->GetObjectClass(mainActivitThis);  
+  
+    /**  
+     * 1. 调用 public int add(int number1, int number2) 方法  
+     */  
+    // 获取方法对象  
+    jmethodID addMeId = env->GetMethodID(mainActivitCls, "add", "(II)I"); // 传入对象、方法名、方法签名  
+  
+    // 调用方法，并获取返回值  
+    // 因为Java方法返回值为int，所以调用CallIntMethod()  
+    int result = env->CallIntMethod(mainActivitThis, addMeId, 1, 1);  
+    __android_log_print(ANDROID_LOG_DEBUG, TAG, "result:%d\n", result);  
+  
+  
+    /**  
+     * 2. 调用 public String showString(String str,int value) 方法  
+     */  
+    jmethodID showStringMeId = env->GetMethodID(mainActivitCls, "showString", "(Ljava/lang/String;I)Ljava/lang/String;");  
+  
+    // 构建一个jstring作为入参  
+    jstring value = env->NewStringUTF("李元霸");  
+  
+    // 调用方法，并获取返回值  
+    // 因为Java方法返回值为String，属于引用类型，所以调用CallObjectMethod()  
+    jstring resultStr = (jstring) env->CallObjectMethod(mainActivitThis, showStringMeId, value, 9527); // 因为jstring是公开继承jobject  
+  
+    // 将jstring转换成C的字符串  
+    const char *resultCStr = env->GetStringUTFChars(resultStr, NULL);  
+  
+    __android_log_print(ANDROID_LOG_DEBUG, TAG, "*****jni==:%s\n", resultCStr);  
+}
+```
