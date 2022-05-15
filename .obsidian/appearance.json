@@ -1,5 +1,8 @@
 {
   "baseFontSize": 15,
   "theme": "obsidian",
-  "translucency": false
+  "translucency": false,
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "cssTheme": "nord"
 }

@@ -13,7 +13,7 @@
 ### 一、Java层“入参”调用JNI层
 - 之所以单独笔记“入参”调用的方式，是因为这种行为会存在高密度的上下层数据交互，会大量使用到JNIEnv函数中的**各种数据格式转换**。当然笔记无法枚举齐全所有case，只是起到一个抛砖引玉作用。
 
-##### 1、调用 基本类型、引用类型 的入参
+##### 1、入参类型：基本类型、引用类型
 
 ```cpp
 extern "C"  
@@ -48,7 +48,7 @@ Java_com_derry_as_1jni_12_MainActivity_testArrayAction(JNIEnv *env,
 
 <br>
 
-##### 2、调用 数组 入参
+##### 2、入参类型：数组
 
 ```cpp
 extern "C"  
@@ -68,7 +68,7 @@ Java_com_derry_as_1jni_12_MainActivity_testArrayAction(JNIEnv *env,
     // 这是第一次调用，所以相当于拿到了 “首元素” 的地址，而C语言中首元素地址即为数组地址  
     jint *_ints = env->GetIntArrayElements(ints, NULL);  
   
-    // 2、获取数组长度size  
+    // 2、获取数组的长度Length
     // jarray父类——jintArray子类、jobjectArray子类、jxxxArray子类  
     // sizeof(_ints) / sizeof(int) 是C语言的方式，不需要这么底层  
     int intsLen = env->GetArrayLength(ints);  
@@ -93,10 +93,10 @@ Java_com_derry_as_1jni_12_MainActivity_testArrayAction(JNIEnv *env,
   
     /**  
      * 【二、String[] “引用类型”的数组】  
-     *     * 无论 Student[]、Person[]、Test[]、String[] 都一样  
+     *  无论 Student[]、Person[]、Test[]、String[] 都一样，都属于引用类型
      */
     
-    // 1、获取数组长度  
+    // 1、获取数组的长度Length  
     int strsLen = env->GetArrayLength(strs);  
   
     // 2、与基本类型数组不同，引用类型的数组不通过挪动指针来遍历，而是通过 GetObjectArrayElement(jobjectArray array, jsize index) 函数来遍历
@@ -115,4 +115,12 @@ Java_com_derry_as_1jni_12_MainActivity_testArrayAction(JNIEnv *env,
         env->SetObjectArrayElement(strs, i, updateValue); // 内部会操纵杆刷新  
     }  
 } // JNI函数结束，会自动释放，所有的局部成员
+```
+
+<br>
+
+##### 3、 入参类型：对象
+
+```cpp
+
 ```
