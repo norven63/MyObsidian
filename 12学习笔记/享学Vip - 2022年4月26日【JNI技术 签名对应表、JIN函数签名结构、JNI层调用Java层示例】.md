@@ -12,7 +12,7 @@
 
 ### 一、JNI定位概览
 ![650](../99附件/20220512212719.png)
-
+JNI起到C、Java两层交互的桥梁作用，扮演着翻译官的角色，将两层各个类型转相互转换。
 <br><br>
 
 
@@ -72,7 +72,7 @@ struct _JNIEnv {
 
 <br>
 
-### 四、JNI函数详解
+### 四、JNI层函数详解
 
 ##### 1、签名结构
 ```cpp
@@ -104,9 +104,7 @@ Java_com_derry_jnidemo_MainActivity_getPwd(JNIEnv *env, jobject thiz) {
 <br>
 
 
-##### 2、函数调用示例
-
-**1. 调用 JNIEnv 的函数**
+##### 2、调用JNIEnv函数
 
 ```cpp
 extern "C"
@@ -126,8 +124,30 @@ Java_com_derry_jnidemo_MainActivity_getPwd(JNIEnv *env, jobject thiz) {
 }
 ```
 
+<br>
 
-**2. 修改Java的属性**（与反射调用规则一致）
+##### 3、打印日志
+
+```cpp
+extern "C"  
+JNIEXPORT
+void
+JNICALL  
+Java_com_derry_as_1jni_1project_1cpp_MainActivity_log(JNIEnv *env, jobject mainActivitThis) {  
+
+	const char *logTag = "demoTag";
+	    
+    const char *logMsg = "demo msg";
+  
+    __android_log_print(ANDROID_LOG_DEBUG, logTag, "*****jni log:%s\n", logMsg);  
+}
+```
+
+<br>
+
+##### 4、JNI层调用Java层示例
+
+**1. 修改Java的属性**（与反射调用规则一致）
 
 ==**【注意】**== ：**JNI可以暴力修改 `private` 、 `final` 的属性**
 
@@ -188,7 +208,7 @@ Java_com_derry_jnidemo_MainActivity_changeAge(JNIEnv *env, jclass mainActivityCl
 
 <br>
 
-**3. 调用Java的方法**（与反射调用规则一致）
+**2. 调用Java的方法**（与反射调用规则一致）
 
 ```cpp
 extern "C"  

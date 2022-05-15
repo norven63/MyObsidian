@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "11闪念笔记/享学Vip - 2022年4月26日【JNI技术之JNI详讲交互与预处理器】.md",
-            "mode": "preview",
+            "file": "11闪念笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象】.md",
+            "mode": "source",
             "backlinks": false,
             "source": false
           }
@@ -62,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 536.9999980926514,
-    "collapsed": true
+    "width": 536.9999980926514
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -79,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年4月26日【JNI技术之JNI详讲交互与预处理器】.md",
+                "file": "11闪念笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年4月26日【JNI技术之JNI详讲交互与预处理器】.md",
+                "file": "11闪念笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年4月26日【JNI技术之JNI详讲交互与预处理器】.md"
+                "file": "11闪念笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象】.md"
               }
             }
           }
@@ -127,20 +126,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.1428680419922,
-    "collapsed": true
+    "width": 225.1428680419922
   },
   "active": "436556d33e17c057",
   "lastOpenFiles": [
-    "11闪念笔记/享学Vip - 2022年4月26日【JNI技术之JNI详讲交互与预处理器】.md",
-    "11闪念笔记/享学公开课 - 2022年5月13日 音视频功能与方案、面试简历分析.md",
+    "11闪念笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象】.md",
+    "12学习笔记/享学Vip - 2022年4月26日【JNI技术 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
     "01专题索引/享学Vip课程笔记.md",
     "12学习笔记/享学Vip - 2021年3月18日 【C++ 运算符重载、面向对象继承】.md",
+    "12学习笔记/享学Vip - 2021年3月7日 【C语言 文件操作、C语言游戏破解器】(NDK第六节课).md",
+    "12学习笔记/享学Vip - 2021年3月9日 【C++ 日志打印、命名空间、常量、引用、函数重载、默认形参、无名形参、对象、头文件、实现文件】(NDK第七节课).md",
+    "11闪念笔记/享学公开课 - 2022年5月13日 音视频功能与方案、面试简历分析.md",
     "11闪念笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
-    "12学习笔记/享学Vip - 2021年2月25日 【多级指针、数组指针、函数指针、指针挪动】(NDK第二节课).md",
-    "12学习笔记/享学Vip - 2021年2月23日 【C语言-指针入门与基本数据类型】(NDK第一节课).md",
-    "12学习笔记/享学Vip - 2021年3月16日 【C++语言之 可变参数、static、this原理、友元函数友元类】(NDK第十节课).md",
-    "12学习笔记/享学Vip - 2021年3月11日 【C++构造函数、析构函数、拷贝构造函数】(NDK第八节课).md",
-    "12学习笔记/享学Vip - 2021年3月14日 【C++浅拷贝与深拷贝的原理】(NDK第九节课).md"
+    "12学习笔记/享学Vip - 2021年2月25日 【C语言 多级指针、数组指针、函数指针、指针挪动】(NDK第二节课).md",
+    "12学习笔记/享学Vip - 2021年2月23日 【C语言 指针入门与基本数据类型】(NDK第一节课).md"
   ]
 }
