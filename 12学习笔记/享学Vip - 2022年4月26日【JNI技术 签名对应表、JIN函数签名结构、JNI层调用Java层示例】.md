@@ -105,6 +105,7 @@ Java_com_derry_jnidemo_MainActivity_getPwd(JNIEnv *env, jobject thiz) {
 
 
 ##### 2、调用JNIEnv函数
+- 所有JNIEnv函数返回的对象，都不需要手动释放内存，其内部会自动完成释放工作
 
 ```cpp
 extern "C"
@@ -157,7 +158,7 @@ extern "C"
 JNIEXPORT
 jstring
 JNICALL
-Java_com_derry_jnidemo_MainActivity_changeName(JNIEnv *env, jobject thiz) {
+Java_com_derry_jnidemo_MainActivity_changeName(JNIEnv *env, jobject mainActivitThis) {
 
 	/*
 	 * 【先拿到Class对象】
@@ -169,7 +170,7 @@ Java_com_derry_jnidemo_MainActivity_changeName(JNIEnv *env, jobject thiz) {
 
 	 
 	// 1. 拿到实例属性，这里是 String name
-	jfieldID nameFid = env->GetFieldID(mainActivityCls, "name", "Ljava/lang/String;"); // 传入对象、属性名称、属性的类型签名
+	jfieldID nameFid = env->GetFieldID(mainActivityCls, "name", "Ljava/lang/String;"); // 传入Class、属性名称、属性的类型签名
 
 	// 2. 因为属性是 String 类型的，所以必须构建一个jstring对象
 	jstring value = env->NewStringUTF("修改为Beyond");  
@@ -177,6 +178,11 @@ Java_com_derry_jnidemo_MainActivity_changeName(JNIEnv *env, jobject thiz) {
 	// 3. 修改属性值
 	env->SetObjectField(mainActivityThis, nameFid, value); // 因为修改的是 "实例" 属性，且是引用类型，用SetObjectField()，不需要static关键字
 
+    // 4. 释放本地引用（这里只是为了让我们记得要有释放内存空间的好习惯）
+    // 即使这里不手动释放，函数在执行完毕后也会自动释放（因为这里是一个局部变量，存在于栈空间里）
+	// 因为这里释放了jclass引用，所以会把所有关联过的jmethodID、jfieldID引用也一起释放  
+	env->DeleteLocalRef(mainActivityCls);
+	
 	return resultPwd;
 }
 ```
@@ -219,7 +225,8 @@ Java_com_derry_as_1jni_1project_1cpp_MainActivity_callAddMathod(JNIEnv *env, job
   
     // 获取Class对象  
     jclass mainActivitCls = env->GetObjectClass(mainActivitThis);  
-  
+
+
     /**  
      * 1. 调用 public int add(int number1, int number2) 方法  
      */  
@@ -247,6 +254,12 @@ Java_com_derry_as_1jni_1project_1cpp_MainActivity_callAddMathod(JNIEnv *env, job
     // 将jstring转换成C的字符串  
     const char *resultCStr = env->GetStringUTFChars(resultStr, NULL);  
   
-    __android_log_print(ANDROID_LOG_DEBUG, TAG, "*****jni==:%s\n", resultCStr);  
+    __android_log_print(ANDROID_LOG_DEBUG, TAG, "*****jni==:%s\n", resultCStr);
+
+
+    // 释放本地引用（这里只是为了让我们记得要有释放内存空间的好习惯）
+    // 即使这里不手动释放，函数在执行完毕后也会自动释放（因为这里是一个局部变量，存在于栈空间里）
+    // 因为这里释放了jclass引用，所以会把所有关联过的jmethodID引用也一起释放，不需要手动释放
+	env->DeleteLocalRef(mainActivityCls);
 }
 ```

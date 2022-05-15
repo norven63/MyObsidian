@@ -224,7 +224,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年4月26日【JNI技术 签名对应表、JIN函数签名结构、JNI层调用Java层示例】]]
 
-[[享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象】]]
+[[享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】]]
 
 [[享学Vip - 2022年5月5日 【JNI技术之动态注册与JNI线程实战】]]
 
