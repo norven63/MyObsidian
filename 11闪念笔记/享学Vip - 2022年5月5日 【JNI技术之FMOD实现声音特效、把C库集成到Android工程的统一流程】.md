@@ -11,4 +11,8 @@
 <br>
 
 - Cmake：本质是makefile文件
-- configuration：配置需要打包的库
+- ffmpeg configuration：配置需要打包的库
+- GCC：
+	- 编译、预处理、link（链接）
+	- -S
+- 
