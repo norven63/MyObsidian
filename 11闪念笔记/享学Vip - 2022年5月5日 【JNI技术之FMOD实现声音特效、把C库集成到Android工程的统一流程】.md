@@ -10,4 +10,5 @@
 ---
 <br>
 
-- Cmake，本质是makefile文件
+- Cmake：本质是makefile文件
+- configuration：配置需要打包的库
