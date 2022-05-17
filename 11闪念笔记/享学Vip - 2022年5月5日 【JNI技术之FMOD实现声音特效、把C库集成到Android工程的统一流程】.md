@@ -13,6 +13,7 @@
 - Cmake：本质是makefile文件
 - ffmpeg configuration：配置需要打包的库
 - GCC：
+	- 汇编
 	- 编译、预处理、link（链接）
-	- -S
+	- -S、-C、-E
 - 
