@@ -133,6 +133,7 @@
   "active": "1d198d9821f52f07",
   "lastOpenFiles": [
     "11闪念笔记/享学Vip - 2022年5月5日 【JNI技术之FMOD实现声音特效、把C库集成到Android工程的统一流程】.md",
+    "11闪念笔记/享学公开课 - 2022年5月17日 一次性解决FFmpeg编译链条的问题.md",
     "01专题索引/享学Vip课程笔记.md",
     "12学习笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
     "12学习笔记/享学Vip - 2022年4月26日【JNI技术 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
@@ -140,7 +141,6 @@
     "11闪念笔记/享学Vip - 2022年2月20日 【APM 线上监控】_block.md",
     "11闪念笔记/享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】_block.md",
     "11闪念笔记/享学Vip - 2022年2月10日 【Alpha启动框架 & 工具（小开个头）】.md",
-    "11闪念笔记/享学Vip - 2022年1月25日 【基于AutoService和Compose的App启动架构】_delay.md",
-    "11闪念笔记/享学Vip - 2022年2月13日 【卡顿监测 & 布局优化】.md"
+    "11闪念笔记/享学Vip - 2022年1月25日 【基于AutoService和Compose的App启动架构】_delay.md"
   ]
 }
