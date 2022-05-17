@@ -130,6 +130,8 @@ Java_com_derry_jnidemo_MainActivity_getPwd(JNIEnv *env, jobject thiz) {
 ##### 3、打印日志
 
 ```cpp
+#include <android/log.h> // 导入日志头文件
+
 extern "C"  
 JNIEXPORT
 void
