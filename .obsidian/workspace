@@ -7,13 +7,8 @@
         "id": "1d198d9821f52f07",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "11闪念笔记/享学Vip - 2022年5月5日 【JNI技术之FMOD实现声音特效、把C库集成到Android工程的统一流程】.md",
-            "mode": "preview",
-            "backlinks": false,
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -62,8 +57,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 420.49999809265137,
-    "collapsed": true
+    "width": 420.49999809265137
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -79,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月5日 【JNI技术之FMOD实现声音特效、把C库集成到Android工程的统一流程】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月5日 【JNI技术之FMOD实现声音特效、把C库集成到Android工程的统一流程】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月5日 【JNI技术之FMOD实现声音特效、把C库集成到Android工程的统一流程】.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -132,15 +122,15 @@
   },
   "active": "1d198d9821f52f07",
   "lastOpenFiles": [
-    "11闪念笔记/享学Vip - 2022年5月5日 【JNI技术之FMOD实现声音特效、把C库集成到Android工程的统一流程】.md",
+    "99附件/20220518212647.png",
+    "99附件/20220512212719.png",
+    "12学习笔记/享学Vip - 2021年3月11日 【C++ 构造函数、析构函数、拷贝构造函数】(NDK第八节课).md",
+    "99附件/20220504164241.png",
     "12学习笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
+    "11闪念笔记/享学Vip - 2022年5月5日 【JNI技术之FMOD实现声音特效、把C库集成到Android工程的统一流程】.md",
+    "99附件/20220518212016.png",
     "13沉淀笔记/MarkDown绘图示例.md",
     "99附件/20220518211233.png",
-    "99附件/20220512212719.png",
-    "99附件/20220518212016.png",
-    "11闪念笔记/享学公开课 - 2022年5月17日 一次性解决FFmpeg编译链条的问题.md",
-    "11闪念笔记/享学公开课 - 2022年4月23日 音视频岗位做什么？安卓岗如何转音视频岗.md",
-    "11闪念笔记/享学公开课 - 2022年5月13日 音视频功能与方案、面试简历分析.md",
-    "11闪念笔记/享学公开课 - 2022年5月7日 FFmpeg核心解析.md"
+    "11闪念笔记/享学公开课 - 2022年5月17日 一次性解决FFmpeg编译链条的问题.md"
   ]
 }
