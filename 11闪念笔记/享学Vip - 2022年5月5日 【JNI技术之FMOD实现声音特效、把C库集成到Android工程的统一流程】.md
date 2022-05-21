@@ -160,16 +160,7 @@ using namespace std;
 #include <android/log.h>  
   
 using namespace FMOD;
-  
-extern "C" JNIEXPORT jstring JNICALL  
-Java_com_derry_as_1jni_1projectkt_MainActivity_stringFromJNI(  
-        JNIEnv *env,  
-        jobject thiz) {  
-        
-    string hello = "AAA";  
-    return env->NewStringUTF(hello.c_str());  
-}  
-  
+ 
 extern "C" JNIEXPORT void JNICALL  
 Java_com_derry_as_1jni_1projectkt_MainActivity_voiceChangeNative(JNIEnv *env, jobject thiz,  
                                                                  jint mode, jstring path) {  
@@ -303,7 +294,8 @@ Java_com_derry_as_1jni_1projectkt_MainActivity_voiceChangeNative(JNIEnv *env, jo
   
     /**  
      * C语言心法：时时刻刻 记得回收！  
-     */    // TODO 第六步：释放内存  
+     */
+	// TODO 第六步：释放内存  
     sound->release();  
     system->close();  
     system->release();  
