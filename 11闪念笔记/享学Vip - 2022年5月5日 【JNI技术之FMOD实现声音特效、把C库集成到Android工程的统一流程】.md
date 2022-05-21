@@ -17,17 +17,16 @@
 ![650](../99附件/20220521_171011_1.png)
 
 ##### 1、CMakeLists.txt 文件
-```c
+```cmake
 cmake_minimum_required(VERSION 3.4.1)  # 最低支持的CMake版本  
-  
-# project("as_jni_projectkt")  
-  
+ 
 # <批量导入源文件> step1  
 file(GLOB allCPP *.c *.h *.cpp)  
   
   
 # TODO【第一步】：导入头文件  
-include_directories("inc") # 相对路径（即CMakeList.txt文件当前所在目录下的inc文件夹。如果是父目录下，则用../inc）  
+# 相对路径（即CMakeList.txt文件当前所在目录下的inc文件夹。如果是父目录下，则用../inc）  
+include_directories("inc") 
   
 add_library(  
         native-lib  # 库的名字，最终文件名头部会自动拼接lib，即libnative-lib.so  
@@ -86,7 +85,8 @@ android {
                 abiFilters "armeabi-v7a"  
             }  
         }  
-  
+
+
         // TODO【第五步】：指定CPU的架构  apk/lib/平台  
         // 下面代码不写，默认是四大CPU架构平台  
         ndk {  
@@ -95,6 +95,7 @@ android {
             abiFilters("armeabi-v7a")  
         }  
     }  
+    
     buildTypes {  
         release {  
             minifyEnabled false  
@@ -113,22 +114,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8  
         targetCompatibility JavaVersion.VERSION_1_8  
     }  
+    
     kotlinOptions {  
         jvmTarget = '1.8'  
     }  
 }  
   
 dependencies {  
-  
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"  
-    implementation 'androidx.core:core-ktx:1.2.0'  
-    implementation 'androidx.appcompat:appcompat:1.1.0'  
-    implementation 'com.google.android.material:material:1.1.0'  
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'  
-    testImplementation 'junit:junit:4.+'  
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'  
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'  
-  
     // TODO【第六步】：主要是 有没有提供 java的 jar包  
     implementation files("libs\\fmod.jar")  
 }
