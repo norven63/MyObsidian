@@ -222,17 +222,19 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2021年3月18日 【C++ 运算符重载、面向对象继承】]]
 
-[[享学Vip - 2022年4月26日【JNI技术 签名对应表、JIN函数签名结构、JNI层调用Java层示例】]]
+[[享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】]]
 
-[[享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】]]
+[[享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】]]
 
-[[享学Vip - 2022年5月5日 【JNI技术之FMOD实现声音特效、把C库集成到Android工程的统一流程】]]
+[[享学Vip - 2022年5月5日 【JNI技术 之 FMOD实现声音特效、把C库集成到Android工程的统一流程】]]
 
-[[享学Vip - 2022年5月8日 【JNI技术之手写JNIEnv与静态缓存与native异常】]]
+[[享学Vip - 2022年5月8日 【JNI技术 之 动态注册与JNI线程实战】]]
 
-[[享学Vip - 2022年5月10日 【JNI技术之手写Parcel的C++层与原理】]]
+[[享学Vip - 2022年5月10日-JNI技术之手写JNIEnv与静态缓存与native异常（五）---derry]]
 
-[[享学Vip - 2022年5月12日 【Linux学习之命令执行原理与文件用户组】]]
+[[享学Vip - 2022年5月12日 【JNI技术之手写Parcel的C++层与原理】]]
+
+[[享学Vip - 2022年5月14日 【Linux学习之命令执行原理与文件用户组】]]
 
 [[享学Vip - 2022年5月15日 【Linux学习之Shell脚本编程】]]
 

@@ -120,7 +120,7 @@ Java_com_derry_as_1jni_12_MainActivity_testArrayAction(JNIEnv *env,
 <br>
 
 ##### 3、JNI对象操作
-- 细节参考  [[享学Vip - 2022年4月26日【JNI技术 签名对应表、JIN函数签名结构、JNI层调用Java层示例】#4、JNI层调用Java层示例]] 中函数调用部分
+- 细节参考  [[享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】#4、JNI层调用Java层示例]] 中函数调用部分
 
 ```cpp
 extern "C"  
