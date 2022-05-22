@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "12学习笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
-            "mode": "preview",
+            "file": "11闪念笔记/享学Vip - 2022年5月8日 【JNI技术之手写JNIEnv与静态缓存与native异常】.md",
+            "mode": "source",
             "backlinks": false,
             "source": false
           }
@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月8日 【JNI技术之手写JNIEnv与静态缓存与native异常】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月8日 【JNI技术之手写JNIEnv与静态缓存与native异常】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,12 +119,11 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md"
+                "file": "11闪念笔记/享学Vip - 2022年5月8日 【JNI技术之手写JNIEnv与静态缓存与native异常】.md"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -132,6 +131,8 @@
   },
   "active": "1d198d9821f52f07",
   "lastOpenFiles": [
+    "11闪念笔记/享学Vip - 2022年5月8日 【JNI技术之手写JNIEnv与静态缓存与native异常】.md",
+    "01专题索引/享学Vip课程笔记.md",
     "12学习笔记/享学Vip - 2022年4月28日【JNI技术 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
     "12学习笔记/享学Vip - 2022年4月26日【JNI技术 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
     "12学习笔记/享学Vip - 2021年3月11日 【C++ 构造函数、析构函数、拷贝构造函数】(NDK第八节课).md",
@@ -139,8 +140,6 @@
     "12学习笔记/享学Vip - 2021年2月25日 【C语言 多级指针、数组指针、函数指针、指针挪动】(NDK第二节课).md",
     "12学习笔记/享学Vip - 2021年2月23日 【C语言 指针入门与基本数据类型】(NDK第一节课).md",
     "11闪念笔记/享学Vip - 2022年5月5日 【JNI技术之FMOD实现声音特效、把C库集成到Android工程的统一流程】.md",
-    "11闪念笔记/Pasted image 20220521173913.png.md",
-    "99附件/20220521173913.png",
-    "99附件/20220518212647.png"
+    "11闪念笔记/Pasted image 20220521173913.png.md"
   ]
 }
