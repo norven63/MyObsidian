@@ -236,11 +236,9 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年5月14日 【Linux学习之命令执行原理与文件用户组】]]
 
-[[享学Vip - 2022年5月15日 【Linux学习之Shell脚本编程】]]
+[[享学Vip - 2022年5月17日 【Linux学习之Shell脚本编程】]]
 
-[[享学Vip - 2022年5月17日 【Linux学习之NDK交叉编译库给Android用】]]
-
-[[享学Vip - 2022年5月19日 【NDK交叉编译FFmpeg与集成FFmpeg】]]
+[[享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】]]
 
 [[享学Vip - 2022年5月22日 【Cmake原生构建工具学习】]]
 
