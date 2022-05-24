@@ -26,10 +26,9 @@
 
 ##### 1、Java层代码
 ```java
-public class MainActivity extends AppCompatActivity {  
+public class MainActivity extends Activity {  
   
     static {  
-        // Java 的构造函数，构建对象的时候
         // 默认执行C层的 jint JNI_OnLoad(JavaVM *vm, void *args) 方法  
         System.loadLibrary("jni04_study");
     }  
@@ -124,7 +123,11 @@ static const JNINativeMethod methods[] = {
         {"dynamicJavaMethod01", "()V",                   (void *) (actionDerry1)},//注意：这里是把函数指针 actionDerry1 强转成 void* 指针  
         {"dynamicJavaMethod02", "(Ljava/lang/String;)I", (void *) (actionDerry2)}  
 };  
-  
+
+
+/**  
+ * 【0. Java层调用 System.loadLibrary() 时，触发C层 JNI_OnLoad() 函数】  
+ */
 JavaVM *vm = nullptr; // 不规范  3532532  -3534255
 // java:像 Java的构造函数，如果你不写构造函数，默认就有构造函数，如果你写了 会覆盖  
 // JNI_OnLoad，如果你不写JNI_OnLoad，默认就有JNI_OnLoad，如果你写了，会覆盖  
