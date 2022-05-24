@@ -49,7 +49,8 @@
       1.JNI 函数名很长  
       2.捆绑了上层的包名、类名等敏感信息  
       3.运行期 才会去 匹配JNI函数，性能上 低于一点点 动态注册  
- */extern "C" JNIEXPORT jstring JNICALL  
+ */
+extern "C" JNIEXPORT jstring JNICALL  
 Java_com_mac_jni04_1study_MainActivity_stringFromJNI(  
         JNIEnv *env,  
         jobject /* this */) {  
@@ -62,7 +63,8 @@ Java_com_mac_jni04_1study_MainActivity_stringFromJNI(
   
 /**  
  * 【5. C层的实现函数】  
- */// void actionDerry1(JNIEnv * env, jobject mainThis) { // 这种声明方式也可以，这样就可以在函数体里使用JNIEnv指针了  
+ */
+// void actionDerry1(JNIEnv * env, jobject mainThis) { // 这种声明方式也可以的，这样就可以在函数体里使用JNIEnv指针了  
 void actionDerry1() {  
     // 我想用env，我想用 jobject怎么办？  
     LOGI("C++ 动态注册的函数 actionDerry1 执行了啊")  
@@ -80,14 +82,16 @@ jint actionDerry2(JNIEnv *env, jobject mainThis, jstring str) {
 /**  
  * 【3. 声明动态注册函数表】  
  */
+ 
 /**  
- * 结构体 JNINativeMethod 的结构成分：  
+ *  结构体 JNINativeMethod 的结构成分：  
   
     typedef struct {
 		const char* name;      // 动态注册JNI的函数名 --- Java的动态注册函数  
         const char* signature; // 函数签名 --- Java的动态注册函数签名  
         void*       fnPtr;     // 函数指针 -- C层的实现函数  
     } JNINativeMethod;  
+    
  */  
 static const JNINativeMethod methods[] = {  
         {"dynamicJavaMethod01", "()V",                   (void *) (actionDerry1)},//注意：这里是把函数指针 actionDerry1 强转成 void* 指针  
