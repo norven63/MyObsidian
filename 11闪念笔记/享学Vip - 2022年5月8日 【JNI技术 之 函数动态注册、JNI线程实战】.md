@@ -24,6 +24,33 @@
 
 ### 一、函数动态注册
 
+##### 1、Java层代码
+```java
+public class MainActivity extends AppCompatActivity {  
+  
+    static {  
+        // Java 的构造函数，构建对象的时候
+        // 默认执行C层的 jint JNI_OnLoad(JavaVM *vm, void *args) 方法  
+        System.loadLibrary("jni04_study");
+    }  
+  
+    private ActivityMainBinding binding;  
+  
+    @Override  
+    protected void onCreate(Bundle savedInstanceState) {  
+        super.onCreate(savedInstanceState);  
+    }  
+  
+	public native String stringFromJNI(); // 默认生成的，其实也是静态注册方式  
+  
+    public native void dynamicJavaMethod01(); // 动态注册1 ()V  
+  
+    public native int dynamicJavaMethod02(String valueStr); // 动态注册2  (Ljava/lang/String;)I
+}
+```
+
+
+##### 2、C层代码
 ```cpp
 #include <jni.h>  
 #include <string>  
