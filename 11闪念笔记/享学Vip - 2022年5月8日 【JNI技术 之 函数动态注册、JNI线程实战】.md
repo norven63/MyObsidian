@@ -88,7 +88,8 @@ Java_com_mac_jni04_1study_MainActivity_stringFromJNI(
 
 
 /**  
- * 【全局持有JavaVM】  
+ * 【全局持有JavaVM】
+ *  用于后续创建JNIEnv
  */
 // JavaVM *vm; // 不规范，系统会默认赋值 3532532  -3534255，属于野指针
 JavaVM *vm = nullptr; // 规范，默认赋值0
