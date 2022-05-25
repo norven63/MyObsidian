@@ -187,7 +187,12 @@ jint JNI_OnLoad(JavaVM *vm, void *args) {
 <br><br>
 
 ### 二、JNI线程
-##### 1、pthread_create
+##### 1、JavaVM、JNIEnv、jobject 的作用域
+- `JavaVM` 是全局的，是相当于APP进程的全局成员，可以跨线程、跨函数
+- `JNIEnv` 绑定当前JNI函数所在的线程，所以不能跨线程传递。即使提升全局也没有用，主线程的env不能切换到子线程使用。
+- 
+
+##### 2、pthread_create
 ```cpp
 int pthread_create(  
 	pthread_t* __pthread_ptr,        参数一：线程标记，
@@ -207,11 +212,10 @@ public:
     // 1. JavaVM是全局的，是相当于APP进程的全局成员，可以跨线程、跨函数  
     JavaVM *vm;  
   
-    // 2. JNIEnv默认是局部变量，绑定当前JNI函数所在的线程，所以不能跨线程传递，会奔溃  
-    // 即使提升全局也没有用，主线程的env不能切换到子线程使用  
+    // 2. JNIEnv绑定当前JNI函数所在的线程，所以不能跨线程传递。即使提升全局也没有用，主线程的env不能切换到子线程使用  
     JNIEnv *jniEnv = nullptr;  
   
-    // 3. 默认是局部变量，不能跨线程传递，会奔溃；并且不能跨函数，也会奔溃  
+    // 3. jobjecty，不能跨线程传递，会奔溃；并且不能跨函数，也会奔溃  
     // 但是它允许被提升到全局变量，并跨线程传递  
     jobject instance = nullptr;  
 };  
