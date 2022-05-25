@@ -55,14 +55,7 @@ public class MainActivity extends Activity {
 #include <string>  
   
 // 日志输出  
-#include <android/log.h>  
-  
-#define TAG "JNISTUDY"  
-// __VA_ARGS__ 代表 ...的可变参数  
-#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG,  __VA_ARGS__);  
-#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG,  __VA_ARGS__);  
-#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, TAG,  __VA_ARGS__);  
-  
+#include <android/log.h>   
 #include <jni.h>  
 #include <string>  
 #include <pthread.h> // 在AS上 pthread不需要额外配置，默认就有  

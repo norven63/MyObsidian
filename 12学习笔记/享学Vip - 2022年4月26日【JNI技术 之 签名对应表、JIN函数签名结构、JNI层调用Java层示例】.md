@@ -128,7 +128,7 @@ Java_com_derry_jnidemo_MainActivity_getPwd(JNIEnv *env, jobject thiz) {
 <br>
 
 ##### 3、打印日志
-
+- 调用系统函数
 ```cpp
 #include <android/log.h> // 导入日志头文件
 
@@ -138,12 +138,23 @@ void
 JNICALL  
 Java_com_derry_as_1jni_1project_1cpp_MainActivity_log(JNIEnv *env, jobject mainActivitThis) {  
 
-	const char *logTag = "demoTag";
+	const char *logTag = "logTag";
 	    
-    const char *logMsg = "demo msg";
+    const char *logMsg = "log msg";
   
     __android_log_print(ANDROID_LOG_DEBUG, logTag, "*****jni log:%s\n", logMsg);  
 }
+```
+
+- 宏定义
+```cpp
+#define TAG "logTag"  
+// __VA_ARGS__ 代表 ...的可变参数  
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);  
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);  
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, TAG,  __VA_ARGS__);  
+
+LOGD("JNI日志调用：%s", str_)
 ```
 
 <br>
