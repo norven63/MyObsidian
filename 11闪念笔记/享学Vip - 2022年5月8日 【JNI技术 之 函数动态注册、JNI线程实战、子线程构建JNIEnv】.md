@@ -211,16 +211,29 @@ int pthread_create(
 ##### 3、构建JNIEnv
 - 方法一
 ```cpp
-JNIEnv *env;  
- jint r = vm->GetEnv(reinterpret_cast<void **>(&env), JNI_VERSION_1_6);  
+JNIEnv *env;
+jint r = vm->GetEnv(reinterpret_cast<void **>(&env), JNI_VERSION_1_6);  
   
-    // C 中 0就是成功  
-    // if (r) { // 非0就是ture  
-    // if (r != 0) {
-    if (r != JNI_OK) {  
-        return -1; // 这个就是让程序奔溃  
-    }  
+// C 中 0就是成功  
+// if (r) { // 非0就是ture  
+// if (r != 0) {
+if (r != JNI_OK) {  
+    return -1; // 这个就是让程序奔溃  
+}  
 ```
+
+- 方法二
+```cpp
+// 新创建JNIEnv  
+JNIEnv *env;  
+
+// AttachCurrentThread函数签名：jint AttachCurrentThread(JNIEnv** p_env, void* thr_args)  
+jint r = ::vm->AttachCurrentThread(reinterpret_cast<JNIEnv **>(&env), nullptr); // 传入env二级指针  
+if (r) { // 非0 = true = 失败  
+    return reinterpret_cast<void *>(123);  
+}
+```
+
 
 
 
