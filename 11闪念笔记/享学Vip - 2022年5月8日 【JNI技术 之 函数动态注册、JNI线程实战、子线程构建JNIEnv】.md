@@ -190,16 +190,17 @@ jint JNI_OnLoad(JavaVM *vm, void *args) {
 ##### 1、pthread_create
 ```cpp
 int pthread_create(  
-pthread_t* __pthread_ptr,        参数一：线程标记ID  
-pthread_attr_t const* __attr,    参数二：pthread配置的参数集，我目前还没用到  
-void* (*__start_routine)(void*), 参数三：函数指针  
-void* );                         参数四：指定传递给 start_routine 函数的参数，如果不需要传递任何数据时，传递
+	pthread_t* __pthread_ptr,        参数一：线程标记，
+	pthread_attr_t const* __attr,    参数二：pthread配置的参数集，我目前还没用到  
+	void* (*__start_routine)(void*), 参数三：函数指针，相当于 Java 中的 Runnable.run()
+	void*                            参数四：指定传递给 start_routine 函数的参数，如果不需要传递任何数据时，传递
+);                         
 ```
 
 
 ```cpp
 /**  
- * 1. 全局引用缓存  
+ * 【1. 全局引用缓存】  
  */
 class MyContext {  
 public:  
@@ -217,7 +218,7 @@ public:
   
   
 /**  
- * 2. 声明子线程执行的函数  
+ * 【2. 声明子线程执行的函数】  
  */
 // 1. 这个函数定位相当于 Java 中的 Runnable.run() 方法  
 // 2. 签名与 void* (*__start_routine)(void*) 一致，因为pthread_create()入参要求即如此  
@@ -248,31 +249,31 @@ void *cpp_thread_run(void *args) {
 extern "C"  
 JNIEXPORT void JNICALL  
 Java_com_mac_jni04_1study_MainActivity_naitveThread(JNIEnv *env, jobject thiz) {  
- 
-    // int pthread_create(  
-    // pthread_t* __pthread_ptr,        参数一：线程标记ID  
-    // pthread_attr_t const* __attr,    参数二：pthread配置的参数集，我目前还没用到  
-    // void* (*__start_routine)(void*), 参数三：函数指针  
-    // void* );                         参数四：指定传递给 start_routine 函数的参数，如果不需要传递任何数据时，传递NULL即可  
-  
+
     /**  
-     * 3. 创建全局引用变量  
-     */    MyContext *context = new MyContext;  
+     * 【3. 创建全局引用变量】  
+     */
+    MyContext *context = new MyContext;  
     context->instance = env->NewGlobalRef(thiz); // 把"局部成员"提升为"全局成员"  
   
   
-    /**     * 4. 创建并启动线程  
-     */    pthread_t pid;  
+    /**
+	 * 【4. 创建并启动线程】  
+     */
+	pthread_t pid;  
   
     /*p_void_start; // 视频播放的 线程标记  
     p_audio_start; // 音频播放的 线程标记*/  
   
     // 传入一级指针、函数指针  
     pthread_create(&pid, nullptr, cpp_thread_run, context);  
-  
+
+
     /**  
-     * 5. 释放全局引用变量  
-     */    // 等待子线程（pid）执行完成后，才开始执行下面代码释放  
+     * 【5. 释放全局引用变量】  
+     */
+     
+	// 等待子线程（pid）执行完成后，才开始执行下面代码释放  
     // 【注意】必须要join等待完成后才能释放，否则会变成分离线程，各自执行各自逻辑，然后这里释放了，而子线程却还在执行调用，最终发生崩溃  
     pthread_join(pid, nullptr);  
   
