@@ -128,7 +128,7 @@ static const JNINativeMethod methods[] = {
 /**  
  * 【0. Java层调用 System.loadLibrary() 时，触发C层 JNI_OnLoad() 函数】  
  */
-JavaVM *vm = nullptr; // 不规范  3532532  -3534255
+
 // java:像 Java的构造函数，如果你不写构造函数，默认就有构造函数，如果你写了 会覆盖  
 // JNI_OnLoad，如果你不写JNI_OnLoad，默认就有JNI_OnLoad，如果你写了，会覆盖  
 // 逆向工程师，做坏事的  
