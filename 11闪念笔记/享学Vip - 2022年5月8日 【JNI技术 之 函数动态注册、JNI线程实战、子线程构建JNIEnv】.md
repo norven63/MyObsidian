@@ -183,3 +183,102 @@ jint JNI_OnLoad(JavaVM *vm, void *args) {
     return JNI_VERSION_1_6; // 一般会使用最新的JNI版本标记  
 }
 ```
+
+<br><br>
+
+### 二、JNI线程
+##### 1、pthread_create
+```cpp
+int pthread_create(  
+pthread_t* __pthread_ptr,        参数一：线程标记ID  
+pthread_attr_t const* __attr,    参数二：pthread配置的参数集，我目前还没用到  
+void* (*__start_routine)(void*), 参数三：函数指针  
+void* );                         参数四：指定传递给 start_routine 函数的参数，如果不需要传递任何数据时，传递
+```
+
+
+```cpp
+/**  
+ * 1. 全局引用缓存  
+ */
+class MyContext {  
+public:  
+    // 1. JavaVM是全局的，是相当于APP进程的全局成员，可以跨线程、跨函数  
+    JavaVM *vm;  
+  
+    // 2. JNIEnv默认是局部变量，绑定当前JNI函数所在的线程，所以不能跨线程传递，会奔溃  
+    // 即使提升全局也没有用，主线程的env不能切换到子线程使用  
+    JNIEnv *jniEnv = nullptr;  
+  
+    // 3. 默认是局部变量，不能跨线程传递，会奔溃；并且不能跨函数，也会奔溃  
+    // 但是它允许被提升到全局变量，并跨线程传递  
+    jobject instance = nullptr;  
+};  
+  
+  
+/**  
+ * 2. 声明子线程执行的函数  
+ */
+// 1. 这个函数定位相当于 Java 中的 Runnable.run() 方法  
+// 2. 签名与 void* (*__start_routine)(void*) 一致，因为pthread_create()入参要求即如此  
+// 3. 返回值是 void*，所以“必须”要有return语句，哪怕是 return nullptr 也可以，否则会崩溃  
+// 4. 因为返回值是 void*，所以不论 return 34535.4f、return 543532.5、return 6、return "sads" 都可以  
+void *cpp_thread_run(void *args) {  
+    LOGD("C++ Pthread 的 异步线程 启动啦")  
+  
+    MyContext *context = static_cast<MyContext *>(args);  
+  
+    // 新创建JNIEnv  
+    JNIEnv *env;  
+  
+    // AttachCurrentThread函数签名：jint AttachCurrentThread(JNIEnv** p_env, void* thr_args)  
+    jint r = ::vm->AttachCurrentThread(reinterpret_cast<JNIEnv **>(&env), nullptr); // 传入env二级指针  
+    if (r) { // 非0 = true = 失败  
+        return reinterpret_cast<void *>(123);  
+    }  
+  
+    jclass mainActivityCls = env->GetObjectClass(context->instance);  
+    jmethodID updateActivityUI = env->GetMethodID(mainActivityCls, "updateActivityUI", "()V");  
+    env->CallVoidMethod(context->instance, updateActivityUI);  
+  
+    ::vm->DetachCurrentThread(); // 解除新创建的 JNIEnv  
+    return nullptr; // 这个return必须要有吗，否则会崩溃  
+}  
+  
+extern "C"  
+JNIEXPORT void JNICALL  
+Java_com_mac_jni04_1study_MainActivity_naitveThread(JNIEnv *env, jobject thiz) {  
+ 
+    // int pthread_create(  
+    // pthread_t* __pthread_ptr,        参数一：线程标记ID  
+    // pthread_attr_t const* __attr,    参数二：pthread配置的参数集，我目前还没用到  
+    // void* (*__start_routine)(void*), 参数三：函数指针  
+    // void* );                         参数四：指定传递给 start_routine 函数的参数，如果不需要传递任何数据时，传递NULL即可  
+  
+    /**  
+     * 3. 创建全局引用变量  
+     */    MyContext *context = new MyContext;  
+    context->instance = env->NewGlobalRef(thiz); // 把"局部成员"提升为"全局成员"  
+  
+  
+    /**     * 4. 创建并启动线程  
+     */    pthread_t pid;  
+  
+    /*p_void_start; // 视频播放的 线程标记  
+    p_audio_start; // 音频播放的 线程标记*/  
+  
+    // 传入一级指针、函数指针  
+    pthread_create(&pid, nullptr, cpp_thread_run, context);  
+  
+    /**  
+     * 5. 释放全局引用变量  
+     */    // 等待子线程（pid）执行完成后，才开始执行下面代码释放  
+    // 【注意】必须要join等待完成后才能释放，否则会变成分离线程，各自执行各自逻辑，然后这里释放了，而子线程却还在执行调用，最终发生崩溃  
+    pthread_join(pid, nullptr);  
+  
+    // 【注意】哪个线程的 env 创建的GlobalRef，就由哪个 env 来释放  
+    env->DeleteGlobalRef(context->instance);  
+    delete context;  
+    context = nullptr;  
+}
+```
