@@ -190,7 +190,10 @@ jint JNI_OnLoad(JavaVM *vm, void *args) {
 ##### 1、JavaVM、JNIEnv、jobject 的作用域
 - `JavaVM` 是全局的，是相当于APP进程的全局成员，可以跨线程、跨函数
 - `JNIEnv` 绑定当前JNI函数所在的线程，所以不能跨线程传递。即使提升全局也没有用，主线程的env不能切换到子线程使用。
-- 
+- `jobject` 与当前实例绑定，不能跨线程传递，也不能跨函数传递；但是它允许被提升到全局变量，就可以跨线程传递
+
+<br>
+
 
 ##### 2、pthread_create
 ```cpp
@@ -202,7 +205,26 @@ int pthread_create(
 );                         
 ```
 
+<br>
 
+
+##### 3、构建JNIEnv
+- 方法一
+```cpp
+JNIEnv *env;  
+ jint r = vm->GetEnv(reinterpret_cast<void **>(&env), JNI_VERSION_1_6);  
+  
+    // C 中 0就是成功  
+    // if (r) { // 非0就是ture  
+    // if (r != 0) {
+    if (r != JNI_OK) {  
+        return -1; // 这个就是让程序奔溃  
+    }  
+```
+
+
+
+##### 4、代码示例
 ```cpp
 /**  
  * 【1. 全局引用缓存】  
@@ -215,8 +237,7 @@ public:
     // 2. JNIEnv绑定当前JNI函数所在的线程，所以不能跨线程传递。即使提升全局也没有用，主线程的env不能切换到子线程使用  
     JNIEnv *jniEnv = nullptr;  
   
-    // 3. jobjecty，不能跨线程传递，会奔溃；并且不能跨函数，也会奔溃  
-    // 但是它允许被提升到全局变量，并跨线程传递  
+    // 3. jobject与当前实例绑定，不能跨线程传递，也不能跨函数传递；但是它允许被提升到全局变量，就可以跨线程传递  
     jobject instance = nullptr;  
 };  
   
