@@ -102,5 +102,23 @@ public void exceptionAction(View view) {
 
 - JNI层实现
 ```cpp
-
+extern "C"  
+JNIEXPORT void JNICALL  
+Java_com_derry_as_1jni_15_1study_MainActivity3_exception2(JNIEnv *env, jclass clazz) {  
+    jfieldID f_id = env->GetStaticFieldID(clazz, "name666", "Ljava/lang/String;");  
+  
+    jthrowable throwable = env->ExceptionOccurred(); // 检查本次函数执行，有没有异常  
+    if (throwable) {  
+        // 先清除异常，不要崩溃  
+        env->ExceptionClear();  
+  
+        // 构建一个NoSuchFieldException异常，并抛给Java层  
+        jclass no_such_clz = env->FindClass("java/lang/NoSuchFieldException");  
+        env->ThrowNew(no_such_clz, "NoSuchFieldException：找不到 String name666() 方法!");  
+    }  
+}
 ```
+
+<br>
+
+##### 3、JNI层调用Java方法，发生崩溃
