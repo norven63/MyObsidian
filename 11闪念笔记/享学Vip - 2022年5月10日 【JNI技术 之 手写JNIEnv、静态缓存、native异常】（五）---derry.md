@@ -124,7 +124,8 @@ Java_com_derry_as_1jni_15_1study_MainActivity3_exception2(JNIEnv *env, jclass cl
 ##### 3、JNI层调用Java方法，发生Java崩溃
 - `env->ExceptionCheck()` ：判断是否发生了Java崩溃
 - `ExceptionDescribe()`：打印异常堆栈
-- 不要在发生崩溃的函数与`env->ExceptionCheck()`之间执行JNIEnv的逻辑，否则可能捕获的异常不是目标异常
+- 当调用的Java层方法发生崩溃时，**JNI层的函数不会立马终止**，后面的逻辑还是会被执行的
+- 虽然函数依然可以允许，但是不要在发生崩溃的函数与 `env->ExceptionCheck()` 之间调用其他的 **`JNIEnv` 的操作**，否则可能捕获的异常不是正确的；非 **`JNIEnv` 的操作** 可以执行
 
 ```cpp
 extern "C"  
@@ -132,33 +133,25 @@ JNIEXPORT void JNICALL
 Java_com_derry_as_1jni_15_1study_MainActivity3_exception3(JNIEnv *env, jclass clazz) {  
     jmethodID showMid = env->GetStaticMethodID(clazz, "show", "()V");  
     env->CallStaticVoidMethod(clazz, showMid);  
-  
+
     // JNIEnv的操作
     // 请不要在发生崩溃的函数与env->ExceptionCheck()之间执行JNIEnv的逻辑，否则可能捕获的异常不是目标异常
     // env->GetStaticFieldID(clazz, "name1", "Ljava/lang/String;");  
-  
+
+	// 非JNIEnv的操作，可以执行
+    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.1");  
+    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.2");  
+    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.3");
+
     // 证明不是马上奔溃了，在这个区域还没有奔溃，赶快处理，把异常被 磨平  
     if (env->ExceptionCheck()) {  
         env->ExceptionDescribe(); // 输出描述  
         env->ExceptionClear();   // 清除异常  
-    }  
+    }
+
+	// 当调用的Java层方法发生崩溃时，JNI层的函数不会立马终止，后面的逻辑还是会执行
   
     // JNIEnv的操作  
-    env->GetStaticFieldID(clazz, "name1", "Ljava/lang/String;");  
-  
-    // JNIEnv的操作  
-    env->GetStaticFieldID(clazz, "name1", "Ljava/lang/String;");  
-  
-    // 按道理来说，上面的这句话：env->CallStaticVoidMethod(clazz, showMID);，就已经奔溃了，但是事实是否如此呢？  
-    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.1");  
-    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.2");  
-    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.3");  
-    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.4");  
-    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.5");  
-    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.6");  
-    // 非JNIEnv的操作  
-  
-    // JNIEnv的操作  
-    env->GetStaticFieldID(clazz, "name1", "Ljava/lang/String;");  
+    env->GetStaticFieldID(clazz, "name1", "Ljava/lang/String;");
 }
 ```
