@@ -230,7 +230,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年5月8日 【JNI技术 之 函数动态注册、JNI线程实战、子线程构建JNIEnv】]]
 
-[[享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv与静态缓存与native异常】（五）---derry]]
+[[享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常】（五）---derry]]
 
 [[享学Vip - 2022年5月12日 【JNI技术之手写Parcel的C++层与原理】]]
 

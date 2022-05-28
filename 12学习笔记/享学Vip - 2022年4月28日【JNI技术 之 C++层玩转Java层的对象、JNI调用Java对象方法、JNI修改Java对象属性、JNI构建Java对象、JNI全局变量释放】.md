@@ -54,7 +54,7 @@ Java_com_derry_as_1jni_12_MainActivity_testArrayAction(JNIEnv *env,
 	2. `JNI_COMMIT`：本次C++的修改的数组，刷新给JVM Java层，但不释放C++数组  
 	3. `JNI_ABORT`：只释放C++数组  
 
-- 修改数组元素值
+1. 修改数组元素值
 ```cpp
 extern "C"  
 JNIEXPORT void JNICALL  
@@ -122,9 +122,15 @@ Java_com_derry_as_1jni_12_MainActivity_testArrayAction(JNIEnv *env,
 } // JNI函数结束，会自动释放，所有的局部成员
 ```
 
-- 数组排序
-调用工具方法 `qsort()` 完成排序
+2. 数组排序
+- 调用工具方法 `qsort()` 完成排序
 ```cpp
+
+// 比较的函数  
+int compare(const jint *number1, const jint *number2){  
+    return *number1 - *number2;  
+}
+
 extern "C"  
 JNIEXPORT void JNICALL  
 Java_com_derry_as_1jni_15_1study_MainActivity_sort(JNIEnv *env, jobject thiz, jintArray arr) {  
