@@ -132,26 +132,31 @@ extern "C"
 JNIEXPORT void JNICALL  
 Java_com_derry_as_1jni_15_1study_MainActivity3_exception3(JNIEnv *env, jclass clazz) {  
     jmethodID showMid = env->GetStaticMethodID(clazz, "show", "()V");  
-    env->CallStaticVoidMethod(clazz, showMid);  
-
-    // JNIEnv的操作
-    // 请不要在发生崩溃的函数与env->ExceptionCheck()之间执行JNIEnv的逻辑，否则可能捕获的异常不是目标异常
+    env->CallStaticVoidMethod(clazz, showMid); // 发生崩溃的Java层方法  
+  
+    /**  
+     * 当调用的Java层方法发生崩溃时，JNI层的函数不会立马终止，后面的逻辑还是会执行  
+     */  
+    // JNIEnv的操作  
+    // 请不要在发生崩溃的函数与env->ExceptionCheck()之间执行JNIEnv的逻辑，否则可能捕获的异常不是目标异常  
     // env->GetStaticFieldID(clazz, "name1", "Ljava/lang/String;");  
-
-	// 非JNIEnv的操作，可以执行
+  
+    // 非JNIEnv的操作，可以执行  
     LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.1");  
     LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.2");  
-    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.3");
-
+    LOGI("native层：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.3");  
+  
     // 证明不是马上奔溃了，在这个区域还没有奔溃，赶快处理，把异常被 磨平  
     if (env->ExceptionCheck()) {  
         env->ExceptionDescribe(); // 输出描述  
         env->ExceptionClear();   // 清除异常  
-    }
-
-	// 当调用的Java层方法发生崩溃时，JNI层的函数不会立马终止，后面的逻辑还是会执行
+    }  
   
     // JNIEnv的操作  
-    env->GetStaticFieldID(clazz, "name1", "Ljava/lang/String;");
+    env->GetStaticFieldID(clazz, "name1", "Ljava/lang/String;");  
 }
 ```
+
+<br>
+
+##### 4、C++异常捕获

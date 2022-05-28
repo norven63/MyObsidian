@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常】（五）---derry.md",
-            "mode": "preview",
+            "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md",
+            "mode": "source",
             "backlinks": false,
             "source": false
           }
@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常】（五）---derry.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常】（五）---derry.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常】（五）---derry.md"
+                "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md"
               }
             }
           }
@@ -132,7 +132,7 @@
   },
   "active": "1d198d9821f52f07",
   "lastOpenFiles": [
-    "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常】（五）---derry.md",
+    "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md",
     "11闪念笔记/享学Vip - 2022年1月18日 【OOM与内存优化2-内存泄漏】.md",
     "12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
     "11闪念笔记/享学Vip - 2022年1月16日 【OOM与内存优化1-内存抖动】.md",
