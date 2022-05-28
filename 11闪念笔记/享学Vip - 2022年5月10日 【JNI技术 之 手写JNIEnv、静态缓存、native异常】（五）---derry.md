@@ -54,22 +54,20 @@ Java_com_derry_as_1jni_15_1study_MainActivity2_clearStaticCache(JNIEnv *env, jcl
 ### 二、异常处理
 ##### 1、JNI异常处理——自己捕获拦截
 - 在可能抛异常的代码 “下面一行**紧接着**” 调用 `env->ExceptionOccurred()` ，判断是否发生了异常
-- 
+- 调用 `env->ExceptionClear();` 消除异常
 
 ```cpp
 extern "C"  
 JNIEXPORT void JNICALL  
 Java_com_derry_as_1jni_15_1study_MainActivity3_exception(JNIEnv *env, jclass clazz) {  
-   // eclipse  Android.mk    公司用的  AS4.0 以下，  
-   jfieldID f_id = env->GetStaticFieldID(clazz, "name999", "Ljava/lang/String;");  
-  
-
-    // 补救措施：name999() 方法找不到报错的话， 那么就拿 name1() 方法
-    jthrowable throwable = env->ExceptionOccurred(); // 检查本次函数执行，有没有异常  
-    if (throwable) {  
+    jfieldID f_id = env->GetStaticFieldID(clazz, "name999", "Ljava/lang/String;");  
+    
+    // 补救措施：name999() 方法找不到报错的话， 那么就拿 name1() 方法  
+    jthrowable throwable = env->ExceptionOccurred(); // 检查本次函数执行，有没有异常    
+	if (throwable) {  
         // 补救措施，先把异常清除，先不要奔溃  
         LOGD("检查到有异常 native层")  
-        
+  
         // 清除异常  
         env->ExceptionClear();  
   
@@ -79,4 +77,30 @@ Java_com_derry_as_1jni_15_1study_MainActivity3_exception(JNIEnv *env, jclass cla
 }
 ```
 
+<br>
 
+##### 2、JNI异常处理——将异常抛给Java层
+
+- Java层调用
+```java
+/**  
+ * 方法签名自带throws异常  
+ * @throws NoSuchFieldException  
+ */  
+public static native void exception2() throws NoSuchFieldException;  
+  
+public void exceptionAction(View view) {
+    try {  
+        exception2(); // 捕获C++抛上来的异常  
+    } catch (NoSuchFieldException e) {  
+        e.printStackTrace();
+        
+        Log.d("Derry", "JNI层的异常被捕获到了...");  
+    }
+}
+```
+
+- JNI层实现
+```cpp
+
+```
