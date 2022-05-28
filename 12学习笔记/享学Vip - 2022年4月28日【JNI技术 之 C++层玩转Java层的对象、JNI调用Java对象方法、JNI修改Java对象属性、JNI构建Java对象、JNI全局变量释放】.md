@@ -117,9 +117,43 @@ Java_com_derry_as_1jni_12_MainActivity_testArrayAction(JNIEnv *env,
   
         // 4、直接调用 SetObjectArrayElement() 来修改数组的元素  
         jstring updateValue = env->NewStringUTF("Beyond");  
-        env->SetObjectArrayElement(strs, i, updateValue); // 内部会操纵杆刷新  
+        env->SetObjectArrayElement(strs, i, updateValue); // 内部会执行操纵杆刷新“同步刷新”到Java层
     }  
 } // JNI函数结束，会自动释放，所有的局部成员
+```
+
+- 数组排序
+调用工具方法 `qsort()` 完成排序
+```cpp
+extern "C"  
+JNIEXPORT void JNICALL  
+Java_com_derry_as_1jni_15_1study_MainActivity_sort(JNIEnv *env, jobject thiz, jintArray arr) {  
+    jint * intArray = env->GetIntArrayElements(arr, nullptr);  
+  
+    int length = env->GetArrayLength(arr);  
+  
+    // TODO  NDK是一个很大的工具链（包含 Java JNI，C++, stdlib， pthread ....）  
+  
+    // 第一个参数：void* 数组的首地址  
+    // 第二个参数：数组的大小长度  
+    // 第三个参数：数组元素数据类型的大小  
+    // 第四个参数：数组的一个比较的函数指针（Comparable）  
+    /**  
+	    void qsort(
+			void* __base,  // void*相当于 Java的Object、Kotlin的Any，内部数组的首地址 给 存好  
+			size_t __nmemb,
+			size_t __size,
+			int (*__comparator)(const void* __lhs, const void* __rhs)
+		);
+	 */
+	 qsort(intArray, length, sizeof(int), reinterpret_cast<int (*)(const void *, const void *)>(compare));  
+  
+    // 同步数组的数据给java 数组intArray 并不是arr ，可以简单的理解为copy  
+    // JNI_OK: 既要同步数据给arr ,又要释放intArray，会排序  
+    // JNI_COMMIT: 会同步数据给arr ，但是不会释放intArray，会排序  
+    // JNI_ABORT: 不同步数据给arr ，但是会释放intArray，所以上层看到就并不会排序  
+    env->ReleaseIntArrayElements(arr, intArray, JNI_COMMIT);  
+}
 ```
 
 <br>
