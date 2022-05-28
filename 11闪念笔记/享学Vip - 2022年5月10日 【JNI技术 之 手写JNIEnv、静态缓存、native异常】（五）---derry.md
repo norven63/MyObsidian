@@ -19,7 +19,7 @@ static jfieldID f_name3_id = nullptr;
   
 // 看WebRTC，OpenGL，... 规则 静态缓存  
   
-extern "C" // 【初始化} - 构造函数里面 一次初始化  
+extern "C" // 【初始化】 - 构造函数里面一次性初始化完毕所有static缓存  
 JNIEXPORT void JNICALL  
 Java_com_derry_as_1jni_15_1study_MainActivity2_initStaticCache(JNIEnv *env, jclass clazz) {  
     // 初始化全局静态缓存  
@@ -29,7 +29,7 @@ Java_com_derry_as_1jni_15_1study_MainActivity2_initStaticCache(JNIEnv *env, jcla
     // 省略....  
 }  
   
-extern "C" // 干活  - 重复调用了 多次  
+extern "C" // 【干活】  - 重复调用多次，全部使用实现创建好的static缓存  
 JNIEXPORT void JNICALL  
 Java_com_derry_as_1jni_15_1study_MainActivity2_staticCache(JNIEnv *env, jclass clazz,  
                                                            jstring name) {  
@@ -39,7 +39,7 @@ Java_com_derry_as_1jni_15_1study_MainActivity2_staticCache(JNIEnv *env, jclass c
     env->SetStaticObjectField(clazz, f_name3_id, name);  
 }  
   
-extern "C" // 释放  onDestroy 调用 一次  
+extern "C" // 【释放】  onDestroy 调用一次，释放静态缓存
 JNIEXPORT void JNICALL  
 Java_com_derry_as_1jni_15_1study_MainActivity2_clearStaticCache(JNIEnv *env, jclass clazz) {  
     f_name1_id = nullptr;  
@@ -48,3 +48,7 @@ Java_com_derry_as_1jni_15_1study_MainActivity2_clearStaticCache(JNIEnv *env, jcl
     LOGD("静态缓存清除完毕...");  
 }
 ```
+
+<br><br>
+
+
