@@ -10,4 +10,41 @@
 ---
 <br>
 
-### 一、
+### 一、静态缓存
+
+```cpp
+static jfieldID f_name1_id = nullptr;  
+static jfieldID f_name2_id = nullptr;  
+static jfieldID f_name3_id = nullptr;  
+  
+// 看WebRTC，OpenGL，... 规则 静态缓存  
+  
+extern "C" // 【初始化} - 构造函数里面 一次初始化  
+JNIEXPORT void JNICALL  
+Java_com_derry_as_1jni_15_1study_MainActivity2_initStaticCache(JNIEnv *env, jclass clazz) {  
+    // 初始化全局静态缓存  
+    f_name1_id = env->GetStaticFieldID(clazz, "name1", "Ljava/lang/String;");  
+    f_name2_id = env->GetStaticFieldID(clazz, "name2", "Ljava/lang/String;");  
+    f_name3_id = env->GetStaticFieldID(clazz, "name3", "Ljava/lang/String;");  
+    // 省略....  
+}  
+  
+extern "C" // 干活  - 重复调用了 多次  
+JNIEXPORT void JNICALL  
+Java_com_derry_as_1jni_15_1study_MainActivity2_staticCache(JNIEnv *env, jclass clazz,  
+                                                           jstring name) {  
+    // 如果这个方法会反复的被调用，那么不会反复的去获取jfieldID，因为是先初始化静态缓存，然后再执行此函数的  
+    env->SetStaticObjectField(clazz, f_name1_id, name);  
+    env->SetStaticObjectField(clazz, f_name2_id, name);  
+    env->SetStaticObjectField(clazz, f_name3_id, name);  
+}  
+  
+extern "C" // 释放  onDestroy 调用 一次  
+JNIEXPORT void JNICALL  
+Java_com_derry_as_1jni_15_1study_MainActivity2_clearStaticCache(JNIEnv *env, jclass clazz) {  
+    f_name1_id = nullptr;  
+    f_name2_id = nullptr;  
+    f_name3_id = nullptr;  
+    LOGD("静态缓存清除完毕...");  
+}
+```
