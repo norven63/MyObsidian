@@ -123,7 +123,7 @@ Java_com_derry_as_1jni_15_1study_MainActivity3_exception2(JNIEnv *env, jclass cl
 
 ##### 3、JNI层调用Java方法，发生Java崩溃
 - `env->ExceptionCheck()` ：判断是否发生了Java崩溃
-- `ExceptionDescribe()`：打印异常堆栈
+- `env->ExceptionDescribe()`：打印异常的堆栈
 - 当调用的Java层方法发生崩溃时，**JNI层的函数不会立马终止**，后面的逻辑还是会被执行的
 - 虽然函数依然可以允许，但是不要在发生崩溃的函数与 `env->ExceptionCheck()` 之间调用其他的 **`JNIEnv` 的操作**，否则可能捕获的异常不是正确的；非 **`JNIEnv` 的操作** 可以执行
 
@@ -204,3 +204,7 @@ int mainT1(int argc, const char * argv[]) {
     return 0;
 }
 ```
+
+<br><br>
+
+### 三、手写 `JNIEnv` 对象
