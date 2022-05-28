@@ -160,3 +160,47 @@ Java_com_derry_as_1jni_15_1study_MainActivity3_exception3(JNIEnv *env, jclass cl
 <br>
 
 ##### 4、C++异常捕获
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+void exceptionMethod01() {
+    throw "我报废了"; // 抛出的异常对象是char*字符串
+}
+  
+
+class MyException {
+public:
+    char* getInfo() {
+        return "自定义aaa";
+    }
+};
+  
+
+void exceptionMethod02() {
+    MyException *e;
+    throw e; // 抛出的异常对象是MyException
+
+}
+  
+
+int mainT1(int argc, const char * argv[]) {
+    std::cout << "Hello, World!\n";
+
+    try {
+        exceptionMethod01();
+    }catch(const char * &msg) { // 捕获的异常对象，是char*字符串
+        cout << "1捕获到异常" << msg << endl;
+    }
+
+    try {
+        exceptionMethod02();
+    }catch(MyException * msg) { // 捕获的异常对象，是MyException
+        cout << "2捕获到异常" << msg->getInfo() << endl;
+    }
+
+    return 0;
+}
+```
