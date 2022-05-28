@@ -49,7 +49,12 @@ Java_com_derry_as_1jni_12_MainActivity_testArrayAction(JNIEnv *env,
 <br>
 
 ##### 2、JNI数组操作
+- 在调用 `env->ReleaseIntArrayElements()` 释放内存时，可以通过传入不同的标识，选择对上层数组有不同的影响：
+	1. `JNI_OK`：本次C++的修改的数组，刷新给JVM Java层，并且释放C++数组  
+	2. `JNI_COMMIT`：本次C++的修改的数组，刷新给JVM Java层，但不释放C++数组  
+	3. `JNI_ABORT`：只释放C++数组  
 
+- 修改数组元素值
 ```cpp
 extern "C"  
 JNIEXPORT void JNICALL  
