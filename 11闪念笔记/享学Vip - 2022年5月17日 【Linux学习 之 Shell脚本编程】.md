@@ -19,6 +19,15 @@ test.sh：
 
 #我是注释
 echo "Hello World"
+#可以不用加双引号
+echo Hello World
+
+#定义临时变量
+age=10
+echo age: $age
+
+#打印系统的全局变量
+
 ```
 
 - 执行 .sh 文件的三种方式
@@ -27,4 +36,5 @@ echo "Hello World"
 3. **`sh test.sh`**（最优）
 
 - `echo $?` 查看上一条命令是否执行成功：0=成功、非0=不成功
+- `echo $PWD` 查看上一条命令是否执行成功：0=成功、非0=不成功
 
