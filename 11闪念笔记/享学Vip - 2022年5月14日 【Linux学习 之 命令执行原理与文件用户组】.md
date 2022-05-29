@@ -51,6 +51,19 @@ exit 【 退出 root 用户，到普通用户】
 whoami 【查看当前用户】
 
 
+- 文件的用户权限
+1. 数字修改用户文件权限
+chmod 777 file01.txt  --> 【执行完后】 -rwxrwxrwx 1 root root 323 Mar 27 15:53 file01.txt三组都 可读可写可执行
+chmod 111 file01.txt 【执行完后 ---x--x--x 1 root root 323 Mar 27 15:53
+file01.txt】三组都 可执行
+chmod 412 file02.txt 【执行完后 -r----x-w- 1 root root 323 Mar 27 15:53
+file01.txt】一组(可读) 二组(可执行) 三组(可写)
+
+3. 名字限定法
+4. 创建修改用户和用户组
+
+
+
 - 文件信息详述：
 -rw-r--r--            1              root        root         0        Mar 27 14:12    file01.txt
 文件权限    硬链接计数    所有者    所属组    大小            时间              名称
