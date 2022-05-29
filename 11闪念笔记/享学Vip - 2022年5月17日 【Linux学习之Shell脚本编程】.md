@@ -10,3 +10,5 @@
 ---
 <br>
 
+linux中sh是链接到bash上的，所以sh与bash在功能上是没有区别的，相当于bash解析器是sh的增强版本
+
