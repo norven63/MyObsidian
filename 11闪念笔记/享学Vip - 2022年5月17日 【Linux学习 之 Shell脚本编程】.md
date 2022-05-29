@@ -132,7 +132,10 @@ str2="xyz"
 #判断字符串是否为空
 if [ $str1 ]
 then
+	echo "str1不为空，值为: $str1"
+else
 	echo "str1为空"
+fi
 
 #判断两个字符串是否相等
 if [ $str1 = $str2 ]
