@@ -13,6 +13,7 @@
 linux中sh是链接到bash上的，所以sh与bash在功能上是没有区别的，相当于bash解析器是sh的增强版本。我们现在常用bash。
 
 - 写一个Hello World
+test.sh：
 ```shell
 #!bin/bash
 
@@ -20,4 +21,7 @@ linux中sh是链接到bash上的，所以sh与bash在功能上是没有区别的
 echo "Hello World"
 ```
 
-- 执行
+- 执行 .sh 文件的三种方式
+1. `./test.sh` (进入到文件所在目录下)
+2. `/bin/bash test.sh`
+3. **`sh test.sh`**（最优）
