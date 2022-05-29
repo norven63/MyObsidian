@@ -11,8 +11,8 @@
 <br>
 
 - Linux系统本质：
-Linux系统中所见即文件（哪怕驱动也是文件本质） , bin 目录一些执行文件，home 目录用户，
-lib 目录常用的 so ，opt 和 proc 是与进程相关的
+Linux系统中所见即文件（哪怕驱动也是文件本质） , bin 目录一些执行文件，home 目录用户，lib 目录常用的 so ，opt 和 proc 是与进程相关的
+
 
 - 常用命令
 cd DerryAll 【进入到DerryAll目录】
@@ -28,6 +28,11 @@ mkdir New01 【创建 New10名称 的文件夹】
 touch file01.txt 【创建 file01名称 的文件】
 rm -rf file01.txt 【删除file01文件】
 ls -R 【递归当前文件夹 到 文件，有点像 树形结构输出的效果】
+rmdir 文件夹 【只能清空空目录文件夹，如果文件夹里面有内容，就无法删除】
+rm -r 文件夹 【递归清空目录文件夹】
+rm hello.c 【删除文件】
+cp hello.c 文件夹 【拷贝文件 到 文件夹里面去】
+
 
 - 文件信息详述：
 -rw-r--r--            1              root        root         0        Mar 27 14:12    file01.txt
@@ -46,12 +51,15 @@ b 【块设备文件】
 p 【管道文件】
 s 【套接字】
 
+
 -  命令执行原理：
 ![650](../99附件/20220529_175429_1.png)
+
 
 - 临时环境变量介绍：（只在当前会话窗口下生效，新开一个会话就失效了）
 export AAAA=1234567
 echo $AAAA
+
 
 - 全局环境变量介绍：
 vim /etc/profile 修改好profile后 （export derry="Derry真牛逼"）
