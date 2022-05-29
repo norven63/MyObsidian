@@ -83,3 +83,5 @@ vim /etc/profile 修改好profile后 （export derry="Derry真牛逼"）
 让其修改生效 source /etc/profile
 echo $derry
 echo $BBBB
+
+
