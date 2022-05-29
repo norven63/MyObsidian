@@ -63,15 +63,27 @@ fi
 
 num1=100
 num2=200
-if((num1>num2));then
+if(($num1>$num2));then
 	echo "num1>num2"
 else
 	echo "num1<=num2"
 fi
 
-#这里到了[ ]语法，表示执行指令
+#使用[ ]语法判断，表示执行指令
+#注意空格的写法
+#可以不用;结尾，直接写then
+
+#只有一个=，不要写成==
+num3=100
+num4=100
+if [ $num3 = $num4 ]
+then
+	echo "num3=num4"
+fi
+
 #判断testAbc目录是否存在
-if [ ! -d `pwd`/testAbc ];then
+if [ ! -d `pwd`/testAbc ]
+then
 	echo "testAbc目录不存在"
 else
 	echo "testAbc目录已经存在"
