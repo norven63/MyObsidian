@@ -151,3 +151,17 @@ fi
 2. `/bin/bash test.sh`
 3. **`sh test.sh`**（最优）
 
+##### 重定向（写文件）
+1. 把AAA重定向（写入）到 file01.txt 文件中，并覆盖原来的内容
+```shell 
+echo AAA > file01.txt
+```
+
+2. 查看屏幕（Linux中，0是屏幕的文件），并把file01.txt文件的内容重定向（写入）屏幕中
+```shell
+cat 0<file01.txt
+```
+
+<br>
+
+#####
