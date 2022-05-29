@@ -24,6 +24,7 @@ echo Hello World
 
 
 #【定义临时变量】
+#注意，=前后不允许有空格
 age=10
 echo age: $age
 
@@ -62,6 +63,15 @@ fi
 
 
 #【for循环】
+#循环累加，`expr 10 + 20`表示10+20
+#a=`expr 10 + 20`表示把命令执行结果赋值给a
+a=1
+for((f=0;f<=100;f++))
+do
+	a=`expr $f + $a`
+	echo "遍历算子i: $i"
+done
+
 #使用`seq 1 20`作为循环数据源，表示从1到20依次取数
 for i in `seq 1 20`
 do
