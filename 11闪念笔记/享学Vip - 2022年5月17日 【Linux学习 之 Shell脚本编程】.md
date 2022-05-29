@@ -164,4 +164,8 @@ cat 0<file01.txt
 
 <br>
 
-#####
+##### 函数
+```shell
+#!bin/bash
+
+```
