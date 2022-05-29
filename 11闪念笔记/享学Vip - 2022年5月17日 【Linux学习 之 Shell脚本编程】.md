@@ -126,7 +126,21 @@ done<`pwd`/file01.txt
 
 
 #【字符串操作】
+str1="abc"
+str2="xyz"
 
+#判断字符串是否为空
+if [ $str1 ]
+then
+	echo "str1为空"
+
+#判断两个字符串是否相等
+if [ $str1 = $str2 ]
+then
+	echo "str1等于str2"
+else
+	echo "str1不等于str2"
+fi
 ```
 
 - 执行 .sh 文件的三种方式
