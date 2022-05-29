@@ -65,20 +65,27 @@ x：可执行
 - 修改文件的用户权限
 修改之前，先去除权限：chmod 000 file05.txt
 
-1. 数字修改用户文件权限【4可读，2可写，1可执行】
+1. 通过权限数字修改权限【4可读，2可写，1可执行】
 chmod 777 file01.txt --> 【执行完后 -rwxrwxrwx 1 root root 323 Mar 27 15:53 file01.txt】 --> 三组都 可读可写可执行
 chmod 111 file01.txt --> 【执行完后 ---x--x--x 1 root root 323 Mar 27 15:53 file01.txt】 --> 三组都 可执行
 chmod 412 file02.txt --> 【执行完后 -r----x-w- 1 root root 323 Mar 27 15:53 file01.txt】 --> 一组(可读)、二组(可执行)、三组(可写)
 
-2. 名字限定法【+x(加入可执行权限)，+r(加入可读权限)，+w(加入可写权限，只能给第一组加)】
+2. 通过权限名字修改权限【+x（加入可执行权限），+r（加入可读权限），+w（加入可写权限，只能给第一组加）】
 chmod +w file05.txt -->【执行完后 --w------- 1 root root 0 Mar 2714:17 file05.txt】 --> 仅第一组 增加 可执行
 chmod +x file05.txt -->【执行完后 ---x--x--x 1 root root 0 Mar27 14:17 file05.txt】 --> 三组 都 增加 可执行
 chmod +r file05.txt -->【执行完后 -r--r--r-- 1 root root 0 Mar27 14:17 file05.txt】 --> 三组 都 增加 可执行
 
-wei
+3. 通过用户标识修改权限 【u（user，当前用户)），g（group，同组用户），o（other，其他用户），a（all，所有用户）】
+chmod u+rwx file05.txt -->【执行完后 -rwx------ 1 root root0 Mar 27 14:17 file05.txt】 --> 为第一组 增加 可读可写可执行
 
 3. 创建修改用户和用户组
+sudo adduser derryNew 【创建新用户 derryNew】
+sudo chown derryNew file01.txt 【修改file01.txt文件 所属用户 ： ---x-w--wx 1 derryNew root 323 Mar 27 15:53 file01.txt】
+sudo chgrp derryNew file01.txt 【修改file02.txt文件 所属组 ：-rw-r--r-- 1 root derryNew 0 Mar 27 14:16 file02.txt】
 
+sudo chown derryNew:derryNew file03.txt 【修改file03.txt文件 所属用户/所属组 ：-rw-r-
+
+-r-- 1 derryNew derryNew 0 Mar 27 14:16 file03.txt】
 
 
 - 文件信息详述：
