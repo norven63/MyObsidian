@@ -51,17 +51,20 @@ exit 【 退出 root 用户，到普通用户】
 whoami 【查看当前用户】
 
 
-- 文件的用户权限
--rwxrwxrwx 释义：
--表示文件
+- 文件的用户权限释义说明
+以 -rwxrwxrwx 为例：
+“-”：文件，如果是d表示文件夹
+r：可读
+w：可写
+x：可执行
 第一个rwx：当前用户的文件权限
-第二个rwx：同组的文件权限
+第二个rwx：同组用户的文件权限
+第三个rwx：其他用户的文件权限
 
 1. 数字修改用户文件权限
-chmod 777 file01.txt  --> 【执行完后 -rwxrwxrwx 1 root root 323 Mar 27 15:53 file01.txt】  --> 三组都 可读可写可执行
-chmod 111 file01.txt  --> 【执行完后 ---x--x--x 1 root root 323 Mar 27 15:53 file01.txt】  --> 三组都 可执行
-chmod 412 file02.txt 【执行完后 -r----x-w- 1 root root 323 Mar 27 15:53
-file01.txt】一组(可读) 二组(可执行) 三组(可写)
+chmod 777 file01.txt --> 【执行完后 -rwxrwxrwx 1 root root 323 Mar 27 15:53 file01.txt】 --> 三组都 可读可写可执行
+chmod 111 file01.txt --> 【执行完后 ---x--x--x 1 root root 323 Mar 27 15:53 file01.txt】 --> 三组都 可执行
+chmod 412 file02.txt --> 【执行完后 -r----x-w- 1 root root 323 Mar 27 15:53 file01.txt】 --> 一组(可读)、二组(可执行)、三组(可写)
 
 2. 名字限定法、
 
