@@ -17,18 +17,18 @@ test.sh：
 ```shell
 #!bin/bash
 
-#我是注释
+#【打印】
 echo "Hello World"
-#可以不用加双引号
+#也可以不用加双引号
 echo Hello World
 
 
-#定义临时变量
+#【定义临时变量】
 age=10
 echo age: $age
 
 
-#打印系统的全局变量
+#【打印系统的全局变量】
 
 #查看上一条命令是否执行成功。0=成功、非0=不成功
 echo $?
@@ -40,7 +40,7 @@ echo $PWD
 echo $0
 
 
-#打印参数
+#【打印入参】
 
 #如果执行命令 sh test.sh abc 123 ，则参数一为abc ，参数二为123
 echo 参数一: $1
