@@ -79,6 +79,14 @@ do
 	echo "遍历算子i: $i"
 done 
 
+
+#【while循环】
+i=0
+while((i<100))
+do
+	i=`expr $i + 1`
+	echo "当前a= $a"
+done
 ```
 
 - 执行 .sh 文件的三种方式
