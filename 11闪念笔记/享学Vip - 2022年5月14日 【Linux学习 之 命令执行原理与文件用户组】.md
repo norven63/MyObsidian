@@ -39,9 +39,16 @@ cat file01.txt 【快速查看文件内容】
 vim file01.txt 【使用vim编辑器查看文件内容】
 tac file01.txt 【倒序快速查看文件内容】
 more file01.txt 【每次只查看一页，回车查看下一页】
-less file01.txt 【与 more 不同地方是, 回车是下一行，空格翻一页，没有百分百，退出 ctrl + c 不行，ESC之后 :q 】
 head -2 file01.txt 【查看前面2行内容】
 tail -3 file01.txt 【查看后面2行内容】
+
+
+- Linux中的用户与用户组
+【#】代表 root权限
+【$】代表普通用户
+sudo su root 【从普通用户 切换到 root用户，注意：要输入密码 是看不见的】
+exit 【 退出 root 用户，到普通用户】
+whoami 【查看当前用户】
 
 
 - 文件信息详述：
