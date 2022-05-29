@@ -81,11 +81,11 @@ done
 
 
 #【while循环】
-i=0
-while((i<100))
+b=0
+while((b<100))
 do
-	i=`expr $i + 1`
-	echo "当前a= $a"
+	b=`expr $b + 1`
+	echo "当前i= $b"
 done
 ```
 
