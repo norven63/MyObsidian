@@ -61,13 +61,21 @@ x：可执行
 第二个rwx：同组用户的文件权限
 第三个rwx：其他用户的文件权限
 
-1. 数字修改用户文件权限
+
+- 修改文件的用户权限
+修改之前，先去除权限：chmod 000 file05.txt
+
+1. 数字修改用户文件权限【4可读，2可写，1可执行】
 chmod 777 file01.txt --> 【执行完后 -rwxrwxrwx 1 root root 323 Mar 27 15:53 file01.txt】 --> 三组都 可读可写可执行
 chmod 111 file01.txt --> 【执行完后 ---x--x--x 1 root root 323 Mar 27 15:53 file01.txt】 --> 三组都 可执行
 chmod 412 file02.txt --> 【执行完后 -r----x-w- 1 root root 323 Mar 27 15:53 file01.txt】 --> 一组(可读)、二组(可执行)、三组(可写)
 
-2. 名字限定法、
+2. 名字限定法【+x(加入可执行权限)，+r(加入可读权限)，+w(加入可写权限，只能给第一组加)】
+chmod +w file05.txt -->【执行完后 --w------- 1 root root 0 Mar 2714:17 file05.txt】 --> 仅第一组 增加 可执行
+chmod +x file05.txt -->【执行完后 ---x--x--x 1 root root 0 Mar27 14:17 file05.txt】 --> 三组 都 增加 可执行
+chmod +r file05.txt -->【执行完后 -r--r--r-- 1 root root 0 Mar27 14:17 file05.txt】 --> 三组 都 增加 可执行
 
+wei
 
 3. 创建修改用户和用户组
 
