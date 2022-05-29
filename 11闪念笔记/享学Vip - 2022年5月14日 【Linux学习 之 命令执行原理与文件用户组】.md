@@ -120,7 +120,9 @@ echo $BBBB
 
 
 - vim操作
-wq! !代表强制退出
+菜鸟教程： https://www.runoob.com/linux/linux-vim.html
+
+wq! 保存文件，并强制退出。!代表强制退出
 shift + zz 快捷退出vim编辑器
 :set number 行号
 :25 直接进入25行
