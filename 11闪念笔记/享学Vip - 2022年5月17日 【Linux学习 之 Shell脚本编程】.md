@@ -167,5 +167,15 @@ cat 0<file01.txt
 ##### 函数
 ```shell
 #!bin/bash
-
+#声明函数
+function foo(){
+	var1="v1"
+	var2="v2"
+	echo "函数 foo() var1=$var1 var2=$var2"
+	echo "入参=`expr $1`"
+}
+#调用函数
+foo "参数1"
+#调用函数，并把自己的入参传递给该函数
+foo $1
 ```
