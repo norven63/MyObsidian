@@ -208,3 +208,71 @@ int mainT1(int argc, const char * argv[]) {
 <br><br>
 
 ### 三、手写 `JNIEnv` 对象
+**==这部分主要通过JNIEnv的实现思想，帮助理解指针的用法==**
+
+```cpp
+#include "T2.hpp"
+#include <string>
+
+using namespace std;  
+
+/**
+ * 定义几个基础类型
+ */
+typedef char *jstring;
+typedef char *jobject;
+typedef char *String;  
+
+// else 如果是 C环境
+typedef const struct JNINativeInterface *JNIEnv;  
+
+
+// 模拟一个结构体，里面有300个函数指针
+struct JNINativeInterface {
+    // 构建jstring的函数指针
+    jstring (*NewStringUTF)(JNIEnv *, char *);  
+
+    // 省略 300多个 函数指针 --- JNI内部的实现
+    // ...
+};
+  
+
+// 构建jstring的函数指针 所对应的 函数实现
+jstring NewStringUTF(JNIEnv *env, char *c_str) {
+    // 注意：这里只是简写，在真正的源码中，这里需要写很多复杂代码来转换的（毕竟涉及到跨语言操作了C<-->Java）
+    return c_str;
+}
+  
+
+// JNI 函数
+jstring Java_com_derry_xxx_exception3(JNIEnv *env, jobject jobj) {
+    // C++ 语言环境  env == 一级指针
+    // C 语言环境  env == 二级指针  
+
+    // env[0][0].NewStringUTF(env, "UUID6456"); // [0]取出二级指针的首地址，指向了一级指针    [0]取出一级指针的首地址，指向了结构体  .调用结构体所对应 成员、方法
+    // env[0] -> NewStringUTF(env, "UUID6456"); // [0]取出二级指针的首地址，指向了一级指针    ->调用一级指针的 成员、方法
+    return (*env)->NewStringUTF(env, "UUID6456"); // (*env)取出二级指针的首地址，指向了一级指针
+}
+  
+
+int main() {
+    // 构建JNIEnv * 对象
+    struct JNINativeInterface nativeInterface;  
+
+    // 给结构体的方法指针赋值（实现），让 函数指针 和 函数指针的实现 进行绑定
+    nativeInterface.NewStringUTF = NewStringUTF;  
+
+    // 因为传给 Java_com_derry_xxx_exception3 的参数是 JNIEnv *，是个指针
+    JNIEnv env = &nativeInterface;
+    JNIEnv *jniEnv = &env; // 最终的一级指针 给了 JNI函数  
+
+    // String == char *result
+    String result = Java_com_derry_xxx_exception3(jniEnv, "com/derry/MainActivity");
+    printf("Java层就拿到了C++ 给我们的result:%s\n", result);
+
+    return 0;
+}
+```
+
+
+![650](../99附件/20220529_013355_1.png)

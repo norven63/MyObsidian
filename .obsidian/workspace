@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md",
+            "file": "11闪念笔记/享学Vip - 2022年5月12日 【JNI技术之手写Parcel的C++层与原理】.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -62,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 634.4999980926514,
-    "collapsed": true
+    "width": 634.4999980926514
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -79,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月12日 【JNI技术之手写Parcel的C++层与原理】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月12日 【JNI技术之手写Parcel的C++层与原理】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md"
+                "file": "11闪念笔记/享学Vip - 2022年5月12日 【JNI技术之手写Parcel的C++层与原理】.md"
               }
             }
           }
@@ -132,15 +131,15 @@
   },
   "active": "1d198d9821f52f07",
   "lastOpenFiles": [
+    "11闪念笔记/享学Vip - 2022年5月12日 【JNI技术之手写Parcel的C++层与原理】.md",
+    "01专题索引/享学Vip课程笔记.md",
     "11闪念笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md",
-    "11闪念笔记/享学Vip - 2022年1月18日 【OOM与内存优化2-内存泄漏】.md",
     "12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
+    "11闪念笔记/享学Vip - 2022年1月18日 【OOM与内存优化2-内存泄漏】.md",
     "11闪念笔记/享学Vip - 2022年1月16日 【OOM与内存优化1-内存抖动】.md",
     "11闪念笔记/享学Vip - 2022年1月13日 【SparseArray数据结构优化】.md",
     "12学习笔记/享学Vip - 2022年5月8日 【JNI技术 之 函数动态注册、JNI线程实战、子线程构建JNIEnv】.md",
     "12学习笔记/享学Vip - 2021年3月4日 【C语言 结构体、结构体指针数组、枚举】(NDK第五节课).md",
-    "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
-    "12学习笔记/享学Vip - 2021年2月23日 【C语言 指针入门与基本数据类型】(NDK第一节课).md",
-    "12学习笔记/享学Vip - 2021年2月28日 【C语言 静态开辟内存、动态开辟内存】(NDK第三节课).md"
+    "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md"
   ]
 }
