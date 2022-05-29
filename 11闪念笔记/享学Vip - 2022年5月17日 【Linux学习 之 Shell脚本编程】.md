@@ -87,6 +87,15 @@ do
 	b=`expr $b + 1`
 	echo "当前i= $b"
 done
+
+
+#【读取文件】
+#读取当前文件目录下的file01.txt文件
+while read lineAbc
+do
+	echo $lineAbc
+done<`pwd`/file01.txt
+
 ```
 
 - 执行 .sh 文件的三种方式
