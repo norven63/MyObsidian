@@ -25,3 +25,6 @@ echo "Hello World"
 1. `./test.sh` (进入到文件所在目录下)
 2. `/bin/bash test.sh`
 3. **`sh test.sh`**（最优）
+
+- `echo $?` 查看上一条命令是否执行成功：0=成功、非0=不成功
+
