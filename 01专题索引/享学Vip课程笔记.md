@@ -232,9 +232,9 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry]]
 
-[[享学Vip - 2022年5月12日 【JNI技术之手写Parcel的C++层与原理】]]
+[[享学Vip - 2022年5月12日 【JNI技术 之 手写Parcel的C++层与原理】]]
 
-[[享学Vip - 2022年5月14日 【Linux学习之命令执行原理与文件用户组】]]
+[[享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组】]]
 
 [[享学Vip - 2022年5月17日 【Linux学习之Shell脚本编程】]]
 
