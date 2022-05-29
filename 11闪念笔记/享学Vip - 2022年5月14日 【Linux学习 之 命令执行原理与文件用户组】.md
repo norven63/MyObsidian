@@ -81,7 +81,7 @@ chmod +x file05.txt --> 【执行完后 ---x--x--x 1 root root 0 Mar27 14:17 fil
 chmod +r file05.txt --> 【执行完后 -r--r--r-- 1 root root 0 Mar27 14:17 file05.txt】 --> 三组 都 增加 可执行
 
 3. 通过用户标识修改权限 【u（user，当前用户)），g（group，同组用户），o（other，其他用户），a（all，所有用户）】
-chmod u+rwx file05.txt --> 【执行完后 -rwx------ 1 root root0 Mar 27 14:17 file05.txt】 --> 为第一组 增加 可读可写可执行
+chmod u+rwx,g+rx,o=x file05.txt --> 【执行完后 -rwx-rx--x 1 root root0 Mar 27 14:17 file05.txt】 --> 一组 增加 可读可写可执行，二组 增加 可读可写，三组 改成 可执行
 
 4. 创建修改用户和用户组
 sudo adduser derryNew --> 【创建新用户 derryNew】
@@ -119,3 +119,4 @@ echo $derry
 echo $BBBB
 
 
+- vim操作
