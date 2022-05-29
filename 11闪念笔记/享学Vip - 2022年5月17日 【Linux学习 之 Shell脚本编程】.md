@@ -61,6 +61,22 @@ else
 	echo "上一条命令执行失败"
 fi
 
+num1=100
+num2=200
+if((num1>num2));then
+	echo "num1>num2"
+else
+	echo "num1<=num2"
+fi
+
+#这里到了[ ]语法，表示执行指令
+#判断testAbc目录是否存在
+if [ ! -d `pwd`/testAbc ];then
+	echo "testAbc目录不存在"
+else
+	echo "testAbc目录已经存在"
+fi
+
 
 #【for循环】
 #循环累加，`expr 10 + 20`表示10+20
@@ -95,6 +111,9 @@ while read lineAbc
 do
 	echo $lineAbc
 done<`pwd`/file01.txt
+
+
+#【字符串操作】
 
 ```
 
