@@ -172,7 +172,7 @@ function foo(){
 	var1="v1"
 	var2="v2"
 	echo "函数 foo() var1=$var1 var2=$var2"
-	echo "入参=`expr $1`"
+	echo "入参=$1"
 }
 #调用函数
 foo "参数1"
