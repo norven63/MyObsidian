@@ -61,6 +61,12 @@ else
 fi
 
 
+#【for循环】
+#使用`seq 1 20`作为循环数据源，表示从1到20依次取数
+for i in `seq 1 20`
+do
+	echo "遍历算子i: $i"
+done 
 
 ```
 
