@@ -22,19 +22,33 @@ echo "Hello World"
 #可以不用加双引号
 echo Hello World
 
+
 #定义临时变量
 age=10
 echo age: $age
 
+
 #打印系统的全局变量
 
+#查看上一条命令是否执行成功。0=成功、非0=不成功
+echo $?
+
+#打印当前文件目录路径
+echo $PWD
+
+#打印当前文件名称
+echo $0
+
+
+#打印参数
+
+#如果执行命令 sh test.sh abc 123 ，则参数一为abc ，参数二为123
+echo 参数一: $1
+echo 参数一: $2
 ```
 
 - 执行 .sh 文件的三种方式
 1. `./test.sh` (进入到文件所在目录下)
 2. `/bin/bash test.sh`
 3. **`sh test.sh`**（最优）
-
-- `echo $?` 查看上一条命令是否执行成功：0=成功、非0=不成功
-- `echo $PWD` 查看上一条命令是否执行成功：0=成功、非0=不成功
 
