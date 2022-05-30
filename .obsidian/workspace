@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "11闪念笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
-            "mode": "preview",
+            "file": "11闪念笔记/享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】.md",
+            "mode": "source",
             "backlinks": false,
             "source": false
           }
@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md"
+                "file": "11闪念笔记/享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】.md"
               }
             }
           }
@@ -132,15 +132,15 @@
   },
   "active": "1d198d9821f52f07",
   "lastOpenFiles": [
+    "11闪念笔记/享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】.md",
+    "01专题索引/享学Vip课程笔记.md",
     "11闪念笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
     "11闪念笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组】.md",
     "88模板/模板-代码块shell.md",
     "11闪念笔记/享学Vip - 2022年2月13日 【卡顿监测 & 布局优化】.md",
     "11闪念笔记/享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】_block.md",
     "11闪念笔记/享学Vip - 2022年2月20日 【APM 线上监控】_block.md",
-    "01专题索引/享学Vip课程笔记.md",
     "99附件/74391195058704.png",
-    "99附件/Pasted image 20220529182939.png",
-    "12学习笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md"
+    "99附件/Pasted image 20220529182939.png"
   ]
 }
