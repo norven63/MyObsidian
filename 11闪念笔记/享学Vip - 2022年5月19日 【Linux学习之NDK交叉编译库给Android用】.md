@@ -16,4 +16,13 @@
 - 交叉编译使用的gcc文件路径：`android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc`
 	- 注意：**`arm-linux-androideabi-4.9`** 要根据目标Android机型的CPU架构而定
 - 通过Linux的环境变量，把这个gcc文件的路径设置成全局环境变量 [[享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组】#全局环境变量：]]
-- 
+- 拆卸分析：（注意：拆卸后，不能运行，因为换行了）
+```shell
+export AAA=
+"
+--sysroot=/root/DerryAll/Tools/android-ndk-r17c/platforms/android-21/arch-arm 【stdio.h寻找的库路径】
+-isystem /root/DerryAll/Tools/android-ndk-r17c/sysroot/usr/include 【stdio.h 的头文件】
+-isystem /root/DerryAll/Tools/android-ndk-r17c/sysroot/usr/include/arm-linuxandroideabi 【asm的问题解决】
+" 
+```
+- 一句话总结：`$【NDK_GCC地址】 --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 -pie xxxxxxxxxxx`
