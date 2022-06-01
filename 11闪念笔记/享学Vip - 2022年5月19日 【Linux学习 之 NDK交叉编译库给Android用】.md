@@ -81,9 +81,13 @@ export myj="$NDK_AR_arm rcs "
 ### 二、编译动态库
 ##### 1、Linux上流程
 - `-o` ：输出 libget.so 文件
+
 ```shell
 gcc -fPIC -shared get.c -o libget.so
 ```
+
+<br>
+
 
 ##### 2、交叉编译流程
 ```shell
@@ -94,7 +98,18 @@ $NDK_GCC_arm $NDK_CFIG_arm -fPIC -shared get.c -o libgetndk.so
 
 ### 三、编译静态库
 ##### 1、Linux上流程
+- 第一步：先根据源文件，打出**目标文件** get.o
+-  `-c` ：源文件
+
+```shell
+gcc -fPIC -c get.c -o get.o
+```
+
+- 第二步：根据目标文件，打出**静态库**
+- 注意：这里目标文件和静态库的书写顺序，是和其他方式反着来的。
+ar rcs -o libget.a get.o 【get.o 是静态库需要生成的源文件， 并不是get.c 也不能是 get.c】
 
 
 <br>
+
 
