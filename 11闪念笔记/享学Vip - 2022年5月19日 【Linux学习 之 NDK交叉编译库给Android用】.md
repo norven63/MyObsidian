@@ -138,3 +138,8 @@ $NDK_GCC_arm $NDK_CFIG_arm -fPIC -c get.c -o getndk.o
 ```shell
 $NDK_AR_arm rcs -o libgetndk.a getndk.o
 ```
+
+<br><br>
+
+### 四、app工程配置
+##### 、CMakeLists.txt
