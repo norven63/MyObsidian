@@ -14,7 +14,7 @@
 - 交叉编译：将Linux的执行文件，用gcc打包给Android系统用
 -  非交叉编译的执行文件，不能够在Android系统中运行
 
-##### 
+##### 1、需要配置的路径
 - 交叉编译使用的gcc文件路径：`android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc`
 	- 注意：**`arm-linux-androideabi-4.9`** 要根据目标Android机型的CPU架构而定
 - 通过Linux的环境变量，把这个gcc文件的路径设置成全局环境变量 [[享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组】#全局环境变量：]]
@@ -33,14 +33,14 @@ export AAA=
 <br>
 
 
-##### 完整的profile全局配置
+##### 2、完整的profile全局配置
 ```shell
 
-# NDK Linux平台的支持
+# 配置NDK路径
 export NDK="/root/DerryAll/Tools/android-ndk-r17c"
 
 
-# NDK的命令操作，把配置添加到Linux环境变量里面去
+# 把NDK路径配置，添加到Linux环境变量里面去
 export PATH=$NDK:$PATH
 
 
@@ -73,7 +73,6 @@ export NDK_AR_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linuxx8
 # 静态库 动态库相关
 export myd="$NDK_GCC_arm $NDK_CFIG_arm -fPIC -shared "
 export myj="$NDK_AR_arm rcs "
-
 
 ```
 
