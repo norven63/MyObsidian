@@ -144,5 +144,38 @@ $NDK_AR_arm rcs -o libgetndk.a getndk.o
 ### 四、app工程配置
 ##### 1、CMakeLists.txt
 ```cmake
-
+cmake_minimum_required(VERSION 3.10.2)  
+  
+# 批量导入  
+file(GLOB appCPP *.cpp)  
+  
+add_library(  
+        native-lib  
+        SHARED # 动态库  
+        ${appCPP})  
+  
+# 导入"静态库" 【第二种方式】可读性更强，代码多  
+add_library(getndk STATIC IMPORTED)  
+# 开始真正导入  
+set_target_properties(getndk PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libgetndk.a)  
+  
+  
+# 导入"动态库" 【第二种方式】可读性更强，代码多  
+add_library(getndk SHARED IMPORTED)  
+# 开始真正导入  
+set_target_properties(getndk PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}/libgetndk.so)]]  
+  
+# QQ 语音变声的时候，【第一种方式】 简洁，不好理解  环境变量知识  
+# set(CMAKE_CXX_FLAGS)  
+  
+find_library(  
+        log-lib  
+        log)  
+  
+target_link_libraries(  
+        # 如果是静态库，会把 libgetndk.a copy到总库 libnative-lib.so 里面
+        # 如果是动态库，在运行期间，总库 libnative-lib.so 去加载 libgetndk.so  
+        native-lib # libnative-lib.so  
+        ${log-lib}  
+        getndk # 链接此静态库 到 总库 libnative-lib.so
 ```
