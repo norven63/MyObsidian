@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "1d198d9821f52f07",
+        "id": "47e10fffeed6882e",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "01专题索引/享学Vip课程笔记.md",
+            "file": "11闪念笔记/享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -62,7 +62,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 564.4999980926514
+    "width": 564.4999980926514,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -78,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01专题索引/享学Vip课程笔记.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01专题索引/享学Vip课程笔记.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01专题索引/享学Vip课程笔记.md"
+                "file": "11闪念笔记/享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】.md"
               }
             }
           }
@@ -128,10 +129,10 @@
     "direction": "horizontal",
     "width": 225.1428680419922
   },
-  "active": "1d198d9821f52f07",
+  "active": "47e10fffeed6882e",
   "lastOpenFiles": [
-    "01专题索引/享学Vip课程笔记.md",
     "11闪念笔记/享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】.md",
+    "01专题索引/享学Vip课程笔记.md",
     "11闪念笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组】.md",
     "99附件/20220529210624.png",
     "99附件/Pasted image 20220530234445.png",
