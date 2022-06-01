@@ -79,6 +79,22 @@ export myj="$NDK_AR_arm rcs "
 <br><br>
 
 ### 二、编译动态库
+- get.h
+```C
+#include<stdio.h>
+
+int get();
+```
+
+- get.c
+```C
+#include<get.h>
+
+int get() {
+	return 9527;
+}
+```
+
 ##### 1、Linux上流程
 - `-o` ：输出 libget.so 文件
 
@@ -88,7 +104,6 @@ gcc -fPIC -shared get.c -o libget.so
 
 <br>
 
-
 ##### 2、交叉编译流程
 ```shell
 $NDK_GCC_arm $NDK_CFIG_arm -fPIC -shared get.c -o libgetndk.so
@@ -97,23 +112,6 @@ $NDK_GCC_arm $NDK_CFIG_arm -fPIC -shared get.c -o libgetndk.so
 <br><br>
 
 ### 三、编译静态库
-- get.h
-```C
-#include<get.h>
-int get() {
-return 9527;
-}
-```
-
-
-- get.c
-```C
-#include<get.h>
-int get() {
-	return 9527;
-}
-```
-
 
 ##### 1、Linux上流程
 - 第一步：先根据源文件，打出**目标文件** get.o
@@ -132,4 +130,5 @@ ar rcs -o libget.a get.o
 
 <br>
 
-
+##### 2、交叉编译流程
+第一步：先**==交叉编译出目标文件 getndk.o
