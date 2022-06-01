@@ -97,7 +97,6 @@ int get() {
 
 ##### 1、Linux上流程
 - `-o` ：输出 libget.so 文件
-
 ```shell
 gcc -fPIC -shared get.c -o libget.so
 ```
@@ -114,16 +113,14 @@ $NDK_GCC_arm $NDK_CFIG_arm -fPIC -shared get.c -o libgetndk.so
 ### 三、编译静态库
 
 ##### 1、Linux上流程
-- 第一步：先根据源文件，打出**目标文件** get.o
+第一步：先根据源文件，打出**目标文件** get.o
 -  `-c` ：源文件
-
 ```shell
 gcc -fPIC -c get.c -o get.o
 ```
 
-- 第二步：根据目标文件，打出**静态库**
+第二步：根据目标文件 get.o，生成 **态库**
 - 注意：这里目标文件和静态库的书写顺序，是和其他方式反着来的。即 **==静态库在前，目标文件在后==**
-
 ```shell
 ar rcs -o libget.a get.o
 ```
@@ -131,4 +128,13 @@ ar rcs -o libget.a get.o
 <br>
 
 ##### 2、交叉编译流程
-第一步：先**==交叉编译出目标文件 getndk.o
+第一步：先 **==交叉编译==** (注意：千万不要用gcc编译的目标文件，要用交叉编译的)出目标文件 getndk.o
+```shell
+$NDK_GCC_arm $NDK_CFIG_arm -fPIC -c get.c -o getndk.o
+```
+
+第二步：根据目标文件 getndk.o，生成 **静态库**
+- 使用NDK的AR命令
+```shell
+$NDK_AR_arm rcs -o libgetndk.a getndk.o
+```
