@@ -97,6 +97,24 @@ $NDK_GCC_arm $NDK_CFIG_arm -fPIC -shared get.c -o libgetndk.so
 <br><br>
 
 ### 三、编译静态库
+- get.h
+```C
+#include<get.h>
+int get() {
+return 9527;
+}
+```
+
+
+- get.c
+```C
+#include<get.h>
+int get() {
+	return 9527;
+}
+```
+
+
 ##### 1、Linux上流程
 - 第一步：先根据源文件，打出**目标文件** get.o
 -  `-c` ：源文件
@@ -106,9 +124,11 @@ gcc -fPIC -c get.c -o get.o
 ```
 
 - 第二步：根据目标文件，打出**静态库**
-- 注意：这里目标文件和静态库的书写顺序，是和其他方式反着来的。
-ar rcs -o libget.a get.o 【get.o 是静态库需要生成的源文件， 并不是get.c 也不能是 get.c】
+- 注意：这里目标文件和静态库的书写顺序，是和其他方式反着来的。即 **==静态库在前，目标文件在后==**
 
+```shell
+ar rcs -o libget.a get.o
+```
 
 <br>
 
