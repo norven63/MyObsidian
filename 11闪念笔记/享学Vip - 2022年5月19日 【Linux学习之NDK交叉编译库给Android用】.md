@@ -29,7 +29,7 @@ export AAA=
 - 一句话总结：`$【NDK_GCC地址】 --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 -pie xxxxxxxxxxx`
 
 ```shell
-################################################### 下面是Derry老师写的全局环境变量哦  ##################################################
+################################################### 下面是Derry老师写的全局环境变量哦
 
 # NDK Linux平台的支持
 export NDK="/root/DerryAll/Tools/android-ndk-r17c"
@@ -39,34 +39,38 @@ export NDK="/root/DerryAll/Tools/android-ndk-r17c"
 export PATH=$NDK:$PATH
 
 
-# 下面是交叉编译相关
+# 一句话$【NDK_GCC地址】 --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 -pie xxxxxxxxxxx
+
+
+# 下面是交叉编译相关 一句话$【NDK_GCC地址 
+# 四大平台
 export NDK_GCC_x86="$NDK/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linux-android-gcc"
 export NDK_GCC_x64="$NDK/toolchains/x86_64-4.9/prebuilt/linux-x86_64/bin/x86_64-linux-android-gcc"
-export NDK_GCC_arm="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc"
-export NDK_GCC_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gcc"
-  
+export NDK_GCC_arm="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linuxx86_64/bin/arm-linux-androideabi-gcc"
+export NDK_GCC_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linuxx86_64/bin/aarch64-linux-android-gcc"
+
+# --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 
+# 四大平台
 export NDK_CFIG_x86="--sysroot=$NDK/platforms/android-21/arch-x86 -isystem $NDK/sysroot/usr/include -isystem $NDK/sysroot/usr/include/i686-linux-android"
 export NDK_CFIG_x64="--sysroot=$NDK/platforms/android-21/arch-x86_64 -isystem $NDK/sysroot/usr/include -isystem $NDK/sysroot/usr/include/x86_64-linux-android"
-export NDK_CFIG_arm="--sysroot=$NDK/platforms/android-21/arch-arm -isystem $NDK/sysroot/usr/include -isystem $NDK/sysroot/usr/include/arm-linux-androideabi"
+export NDK_CFIG_arm="--sysroot=$NDK/platforms/android-21/arch-arm -isystem $NDK/sysroot/usr/include -isystem $NDK/sysroot/usr/include/arm-linuxandroideabi"
 export NDK_CFIG_arm_64="--isysroot=$NDK/platforms/android-21/arch-arm64 -isystem $NDK/sysroot/usr/include -isystem -isystem $NDK/sysroot/usr/include/aarch64-linux-android"
-  
-export NDK_AR_x86="$NDK/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linux-android-ar"
-export NDK_AR_x64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar"
-export NDK_AR_arm="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar"
-export NDK_AR_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar"
 
-  
+#四大平台 后面讲 输出 安卓交叉编译的 静态库 xxxx.a
+export NDK_AR_x86="$NDK/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linuxandroid-ar"
+export NDK_AR_x64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linuxx86_64/bin/aarch64-linux-android-ar"
+export NDK_AR_arm="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linuxx86_64/bin/arm-linux-androideabi-ar"
+export NDK_AR_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linuxx86_64/bin/aarch64-linux-android-ar"
+
+
+# 参考
 # 静态库 动态库相关
 export myd="$NDK_GCC_arm $NDK_CFIG_arm -fPIC -shared "
 export myj="$NDK_AR_arm rcs "
-  
 
-# 全局环境变量
-export derry="Derry真牛逼"
-export BBBB="BBBB info show ..."
-  
+################################################### 上面是Derry老师写的全局环境变量哦
+##################################################
 
-export CCCC="Derry is Ok Success"  
 
-################################################### 上面是Derry老师写的全局环境变量哦  ##################################################
+
 ```
