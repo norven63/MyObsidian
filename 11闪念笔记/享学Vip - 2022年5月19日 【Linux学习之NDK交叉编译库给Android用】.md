@@ -10,7 +10,7 @@
 ---
 <br>
 
-- 交叉编译：将Linux的执行文件，打包给Android系统用
+- 交叉编译：将Linux的执行文件，用gcc打包给Android系统用
 -  非交叉编译的执行文件，不能够在Android系统中运行
 
 - 交叉编译使用的gcc文件路径：`android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc`
@@ -28,6 +28,7 @@ export AAA=
 ```
 - 一句话总结：`$【NDK_GCC地址】 --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 -pie xxxxxxxxxxx`
 
+- 完整的profile中的定义
 ```shell
 
 # NDK Linux平台的支持
@@ -38,10 +39,10 @@ export NDK="/root/DerryAll/Tools/android-ndk-r17c"
 export PATH=$NDK:$PATH
 
 
+# 下面是交叉编译相关
 # 一句话$【NDK_GCC地址】 --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 -pie xxxxxxxxxxx
 
-
-# 下面是交叉编译相关 一句话$【NDK_GCC地址 
+# GCC路径
 # 四大平台
 export NDK_GCC_x86="$NDK/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linux-android-gcc"
 export NDK_GCC_x64="$NDK/toolchains/x86_64-4.9/prebuilt/linux-x86_64/bin/x86_64-linux-android-gcc"
