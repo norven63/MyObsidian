@@ -29,7 +29,6 @@ export AAA=
 - 一句话总结：`$【NDK_GCC地址】 --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 -pie xxxxxxxxxxx`
 
 ```shell
-################################################### 下面是Derry老师写的全局环境变量哦
 
 # NDK Linux平台的支持
 export NDK="/root/DerryAll/Tools/android-ndk-r17c"
@@ -67,10 +66,6 @@ export NDK_AR_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linuxx8
 # 静态库 动态库相关
 export myd="$NDK_GCC_arm $NDK_CFIG_arm -fPIC -shared "
 export myj="$NDK_AR_arm rcs "
-
-################################################### 上面是Derry老师写的全局环境变量哦
-##################################################
-
 
 
 ```
