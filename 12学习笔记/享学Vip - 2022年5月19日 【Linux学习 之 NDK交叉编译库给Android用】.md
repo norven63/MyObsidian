@@ -163,7 +163,7 @@ set_target_properties(getndk PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/li
 # 导入"动态库" 【第二种方式】可读性更强，代码多  
 add_library(getndk SHARED IMPORTED)  
 # 开始真正导入  
-set_target_properties(getndk PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}/libgetndk.so)]]  
+set_target_properties(getndk PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}/libgetndk.so)
   
 # QQ 语音变声的时候，【第一种方式】 简洁，不好理解  环境变量知识  
 # set(CMAKE_CXX_FLAGS)  
