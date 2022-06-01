@@ -80,12 +80,21 @@ export myj="$NDK_AR_arm rcs "
 
 ### 二、编译动态库
 ##### 1、Linux上流程
-- `-o` 表示输出 libget.so 文件
+- `-o` ：输出 libget.so 文件
 ```shell
 gcc -fPIC -shared get.c -o libget.so
 ```
 
-##### 2、jiao'c
+##### 2、交叉编译流程
+```shell
+$NDK_GCC_arm $NDK_CFIG_arm -fPIC -shared get.c -o libgetndk.so
+```
+
 <br><br>
 
 ### 三、编译静态库
+##### 1、Linux上流程
+
+
+<br>
+

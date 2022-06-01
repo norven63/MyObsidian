@@ -226,7 +226,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】]]
 
-[[享学Vip - 2022年5月5日 【JNI技术 之 实战：FMOD实现声音特效、把C库集成到Android工程的统一流程】]]
+[[享学Vip - 2022年5月5日 【JNI技术 之 实战：FMOD实现声音特效、CMakeLists.txt文件初步认识、把C库集成到Android工程的统一流程】]]
 
 [[享学Vip - 2022年5月8日 【JNI技术 之 函数动态注册、JNI线程实战、子线程构建JNIEnv】]]
 
