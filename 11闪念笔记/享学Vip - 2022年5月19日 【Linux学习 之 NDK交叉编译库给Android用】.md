@@ -142,4 +142,7 @@ $NDK_AR_arm rcs -o libgetndk.a getndk.o
 <br><br>
 
 ### 四、app工程配置
-##### 、CMakeLists.txt
+##### 1、CMakeLists.txt
+```cmake
+
+```
