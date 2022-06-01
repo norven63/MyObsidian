@@ -14,6 +14,7 @@
 - 交叉编译：将Linux的执行文件，用gcc打包给Android系统用
 -  非交叉编译的执行文件，不能够在Android系统中运行
 
+##### 
 - 交叉编译使用的gcc文件路径：`android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc`
 	- 注意：**`arm-linux-androideabi-4.9`** 要根据目标Android机型的CPU架构而定
 - 通过Linux的环境变量，把这个gcc文件的路径设置成全局环境变量 [[享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组】#全局环境变量：]]
@@ -29,6 +30,9 @@ export AAA=
 ```
 - 一句话总结：`$【NDK_GCC地址】 --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 -pie xxxxxxxxxxx`
 
+<br>
+
+
 ##### 完整的profile全局配置
 ```shell
 
@@ -36,28 +40,29 @@ export AAA=
 export NDK="/root/DerryAll/Tools/android-ndk-r17c"
 
 
-# NDK的命令操作 配置到 Linux环境变量里面去
+# NDK的命令操作，把配置添加到Linux环境变量里面去
 export PATH=$NDK:$PATH
 
 
 # 下面是交叉编译相关
 # 一句话$【NDK_GCC地址】 --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 -pie xxxxxxxxxxx
 
-# GCC路径
+# 配置GCC路径
 # 四大平台
 export NDK_GCC_x86="$NDK/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linux-android-gcc"
 export NDK_GCC_x64="$NDK/toolchains/x86_64-4.9/prebuilt/linux-x86_64/bin/x86_64-linux-android-gcc"
 export NDK_GCC_arm="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linuxx86_64/bin/arm-linux-androideabi-gcc"
 export NDK_GCC_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linuxx86_64/bin/aarch64-linux-android-gcc"
 
-# --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 
+# 配置 --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 的路径
 # 四大平台
 export NDK_CFIG_x86="--sysroot=$NDK/platforms/android-21/arch-x86 -isystem $NDK/sysroot/usr/include -isystem $NDK/sysroot/usr/include/i686-linux-android"
 export NDK_CFIG_x64="--sysroot=$NDK/platforms/android-21/arch-x86_64 -isystem $NDK/sysroot/usr/include -isystem $NDK/sysroot/usr/include/x86_64-linux-android"
 export NDK_CFIG_arm="--sysroot=$NDK/platforms/android-21/arch-arm -isystem $NDK/sysroot/usr/include -isystem $NDK/sysroot/usr/include/arm-linuxandroideabi"
 export NDK_CFIG_arm_64="--isysroot=$NDK/platforms/android-21/arch-arm64 -isystem $NDK/sysroot/usr/include -isystem -isystem $NDK/sysroot/usr/include/aarch64-linux-android"
 
-# 四大平台 后面讲 输出 安卓交叉编译的 静态库 xxxx.a
+# 配置静态编译库的路径
+# 四大平台
 export NDK_AR_x86="$NDK/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linuxandroid-ar"
 export NDK_AR_x64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linuxx86_64/bin/aarch64-linux-android-ar"
 export NDK_AR_arm="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linuxx86_64/bin/arm-linux-androideabi-ar"
