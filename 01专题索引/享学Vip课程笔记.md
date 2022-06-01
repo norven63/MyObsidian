@@ -238,7 +238,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】]]
 
-[[享学Vip - 2022年5月19日 【Linux学习之NDK交叉编译库给Android用】]]
+[[享学Vip - 2022年5月19日 【Linux学习 之 NDK交叉编译库给Android用】]]
 
 [[享学Vip - 2022年5月24日 【Cmake原生构建工具学习】]]
 
