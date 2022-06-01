@@ -179,3 +179,53 @@ target_link_libraries(
         ${log-lib}  
         getndk # 链接此静态库 到 总库 libnative-lib.so
 ```
+
+<br>
+
+
+##### 2、builde.gradle
+```groovy
+apply plugin: 'com.android.application'  
+  
+android {  
+    compileSdkVersion 30  
+    buildToolsVersion "30.0.3"  
+    defaultConfig {  
+        applicationId "com.kevin.ndk12_cmake"  
+        minSdkVersion 16  
+        targetSdkVersion 30  
+        versionCode 1  
+        versionName "1.0"  
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"  
+        externalNativeBuild {  
+            cmake {  
+                // cppFlags "" 默认包含四大平台  
+  
+                abiFilters "armeabi-v7a"  
+            }  
+        }  
+        ndk {  
+            abiFilters "armeabi-v7a"  
+        }  
+    }  
+    buildTypes {  
+        release {  
+            minifyEnabled false  
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'  
+        }  
+    }    externalNativeBuild {  
+        cmake {  
+            path "src/main/cpp/CMakeLists.txt"  
+            version "3.10.2"  
+        }  
+    }}  
+  
+dependencies {  
+    implementation fileTree(dir: 'libs', include: ['*.jar'])  
+    implementation 'androidx.appcompat:appcompat:1.1.0'  
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'  
+    testImplementation 'junit:junit:4.12'  
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'  
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'  
+}
+```
