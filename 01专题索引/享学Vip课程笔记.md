@@ -218,7 +218,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2021年3月14日 【C++ 浅拷贝、深拷贝】(NDK第九节课)]]
 
-[[享学Vip - 2021年3月16日 【C++ 可变参数、static、this原理、友元函数友元类】(NDK第十节课)]]
+[[享学Vip - 2021年3月16日 【C++ 可变参数、static、this原理、友元函数&友元类】(NDK第十节课)]]
 
 [[享学Vip - 2021年3月18日 【C++ 运算符重载、面向对象继承】]]
 
@@ -243,6 +243,12 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 [[享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】]]
 
 [[享学Vip - 2022年5月26日 【Linux学习之NDK交叉编译FFmpeg与集成FFmpeg】]]
+
+[[享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】]]
+
+[[享学Vip - 2022年5月31日 【Android音视频 基础理论-视频】]]
+
+[[享学Vip - 2022年6月1日 【Android音视频 编解码】]]
 
 <br><br>
 
