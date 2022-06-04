@@ -27,11 +27,6 @@ project("ndk28_cmake")
 # https://www.imooc.com/wenda/detail/576408  
 file(GLOB SOURCE *.cpp *.c)  
 
-
-# 【四、添加一个库】 导入头文件  
-# 相对路径（即CMakeList.txt文件当前所在目录下的inc文件夹。如果是父目录下，则用../inc）  
-include_directories("inc") 
-
   
 # 【四、添加一个库】  
 # 动态库：SHARED  
@@ -43,7 +38,12 @@ add_library(
 )  
 
 
-#【导入三方库文件】
+#【五、导入三方库的"头"文件】
+# 相对路径（即CMakeList.txt文件当前所在目录下的inc文件夹。如果是父目录下，则用../inc）  
+include_directories("inc") 
+
+
+#【六、导入三方库的"库"文件】
 #【第一种方式】：设置CMAKE_CXX_FLAGS环境变量(即源文件、库文件的路径)  
   
 # ${CMAKE_CXX_FLAGS}：本台设备C++的环境变量(例如%JAVA_HOME%;%ANDROID_HOME%;%C++HOME%;)、${CMAKE_C_FLAGS} 
@@ -54,19 +54,26 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE
 
 #【第二种方式】：可读性更强，但是代码多  
 
-# 导入.a"静态库" 
-add_library(getndk_a STATIC IMPORTED)  
+# 1.导入.a"静态库" 
+add_library(
+	getndk_a
+	STATIC
+	IMPORTED
+)  
 # 开始真正导入  
 set_target_properties(getndk_a PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libgetndk_a.a)  
   
-  
-# 导入.so"动态库"
-add_library(getndk_so SHARED IMPORTED)  
+# 2.导入.so"动态库"
+add_library(
+	getndk_so
+	SHARED
+	IMPORTED
+)  
 # 开始真正导入  
 set_target_properties(getndk_so PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}/libgetndk_so.so)
 
   
-# 【五、查找一个 NDK 工具中的动态库(liblog.so)】  
+# 【七、查找一个 NDK 工具中的动态库(liblog.so)】  
 # 最终的动态库查找路径：D:\Android\Sdk\ndk\21.0.6113669\toolchains\llvm\prebuilt\windows-x86_64\sysroot\usr\lib\arm-linux-androideabi\16\liblog.so  
   
 # 思考1：如何知道哪些库名称是可以写的，例如写log就可以？  
@@ -79,15 +86,15 @@ set_target_properties(getndk_so PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}
 # 答：因为测试机是arm32的，并且在build.bradle中配置了abiFilters "armeabi-v7a"，所以选择 arm-linux-androideabi  
 
 # 思考4：为什么是在 16 文件夹下？  
-# 答：因为build.bradle中配置的
+# 答：因为build.bradle中配置的是 minSdkVersion 16
 
-minSdkVersion 16find_library(  
+find_library(  
         log-abcdafasfsafasf # 变量名称，后面可以复用  
         log # NDK工具中的动态库  
 )  
 
 
-# 【六、把log库链接到总库中去】  
+# 【八、把依赖库链接到总库中去】  
 # native-lib是我们的总库，也就是在 apk/.../cpp/libnative-lib.so# 只有完成这部链接工作，总库的cpp代码才可以正常调用 android/log.h 的库实现代码  
 target_link_libraries(  
         native-lib # 被链接的总库  
