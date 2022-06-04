@@ -20,8 +20,8 @@
 ```cmake
 cmake_minimum_required(VERSION 3.4.1)  # 最低支持的CMake版本  
  
-# 【step1】<批量导入源文件>   
-file(GLOB allCPP *.c *.h *.cpp)  
+# <批量导入源文件> - step1. 声明源文件file
+file(GLOB SOURCE *.c *.h *.cpp)  
   
   
 # TODO【第一步】：导入头文件  
@@ -30,11 +30,12 @@ include_directories("inc")
   
 add_library(  
         native-lib  # 库的名字，最终文件名头部会自动拼接lib，即libnative-lib.so  
-        SHARED      # 动态库，生成.so文件  
-        native-lib.cpp  # 导入源文件  
+        SHARED      # 动态库，生成.so文件（如果是静态库，则用STATIC，生成.a文件）
+        
+        # native-lib.cpp  # 手动挨个导入源文件，这里建议使用下面的批量导入方式
   
-        # <批量导入源文件> step2  
-        ${allCPP}  
+        # <批量导入源文件> - step2. 使用源文件file
+        ${SOURCE}  
 )  
   
   

@@ -147,12 +147,12 @@ $NDK_AR_arm rcs -o libgetndk.a getndk.o
 cmake_minimum_required(VERSION 3.10.2)  
   
 # 批量导入  
-file(GLOB appCPP *.cpp)  
+file(GLOB SOURCE *.cpp)  
   
 add_library(  
         native-lib  
         SHARED # 动态库  
-        ${appCPP})  
+        ${SOURCE})  
   
 # 导入"静态库" 【第二种方式】可读性更强，代码多  
 add_library(getndk_a STATIC IMPORTED)  
