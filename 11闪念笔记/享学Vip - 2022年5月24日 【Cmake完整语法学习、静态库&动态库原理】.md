@@ -52,7 +52,8 @@ include_directories("inc")
 # ${CMAKE_ANDROID_ARCH_ABI}：自动获取CPU abi架构  
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}") 
 
-#【第二种方式】：可读性更强，但是如果有100个三方库，就需要写100个，所以代码多  
+#【第二种方式】：可读性更强，但是如果有100个三方库，就需要写100个，所以代码多。
+# 另外，gradle新版本4.0及以上，会自动去寻找jniLibs文件夹，导致报错"If you are using jniLibs and CMake IMPORTED targets"，需要在builder.gradle里设置"sourceSets.main.jniLibs.srcDirs = ['libs']"才能解决（在ndk{...}下面设置即可）
 
 # 1.导入.a"静态库" 
 add_library(
