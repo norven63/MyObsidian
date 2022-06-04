@@ -33,8 +33,8 @@ file(GLOB SOURCE *.cpp *.c)
 # 静态库：STATIC  
 add_library(  
         native-lib # 库的名字 ---> 完整文件：libnative-lib.so（如果是静态库，则是 .a 文件）  
-        SHARED  
-        ${SOURCE}  # cpp的源文件：把cpp源文件编译成 libnative-lib.so 库  
+        SHARED     # 动态库，生成.so文件（如果是静态库，则用STATIC，生成.a文件）
+        ${SOURCE}  # 上面定义的cpp源文件file：把cpp源文件编译成 libnative-lib.so 库  
 )  
 
 
