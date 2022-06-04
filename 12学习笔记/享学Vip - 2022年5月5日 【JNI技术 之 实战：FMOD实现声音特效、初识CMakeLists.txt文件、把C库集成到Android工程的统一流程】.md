@@ -20,7 +20,7 @@
 ```cmake
 cmake_minimum_required(VERSION 3.4.1)  # 最低支持的CMake版本  
  
-# <批量导入源文件> step1  
+# 【step1】<批量导入源文件>   
 file(GLOB allCPP *.c *.h *.cpp)  
   
   
@@ -41,7 +41,8 @@ add_library(
 # TODO【第二步】：设置CMAKE_CXX_FLAGS环境变量(即源文件、库文件的路径)  
   
 # ${CMAKE_CXX_FLAGS}：本台设备C++的环境变量(例如%JAVA_HOME%;%ANDROID_HOME%;%C++HOME%;)、${CMAKE_C_FLAGS} 
-# ${CMAKE_SOURCE_DIR}：CMakeList.txt文件当前所在目录地址，例如本项目就是 xxx\xxx\src\main\cpp\# ${CMAKE_SOURCE_DIR}/../jniLibs：等价于CMakeList.txt文件当前所在目录的父目录地址  
+# ${CMAKE_SOURCE_DIR}：CMakeList.txt文件当前所在目录地址，例如本项目就是 xxx\xxx\src\main\cpp\
+# ${CMAKE_SOURCE_DIR}/../jniLibs：等价于CMakeList.txt文件当前所在目录的父目录地址  
 # ${CMAKE_ANDROID_ARCH_ABI}：自动获取CPU abi架构  
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}")  
   

@@ -165,8 +165,8 @@ add_library(getndk_so SHARED IMPORTED)
 # 开始真正导入  
 set_target_properties(getndk_so PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}/libgetndk_so.so)
   
-# QQ 语音变声的时候，【第一种方式】 简洁，不好理解  环境变量知识  
-# set(CMAKE_CXX_FLAGS)  
+# 设置CMAKE_CXX_FLAGS环境变量，【第一种方式】 简洁，不好理解
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}")  
   
 find_library(  
         log-lib  
