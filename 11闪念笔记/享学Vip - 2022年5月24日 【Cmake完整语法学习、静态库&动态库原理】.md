@@ -44,7 +44,7 @@ include_directories("inc")
 
 
 #【六、导入三方库的"库"文件】
-#【第一种方式】：设置CMAKE_CXX_FLAGS环境变量(即源文件、库文件的路径)  
+#【第一种方式】：设置CMAKE_CXX_FLAGS环境变量(即源文件、库文件的路径)，虽然可读性差，但是一行代码就能搞定
   
 # ${CMAKE_CXX_FLAGS}：本台设备C++的环境变量(例如%JAVA_HOME%;%ANDROID_HOME%;%C++HOME%;)、${CMAKE_C_FLAGS} 
 # ${CMAKE_SOURCE_DIR}：CMakeList.txt文件当前所在目录地址，例如本项目就是 xxx\xxx\src\main\cpp\
@@ -52,7 +52,7 @@ include_directories("inc")
 # ${CMAKE_ANDROID_ARCH_ABI}：自动获取CPU abi架构  
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}") 
 
-#【第二种方式】：可读性更强，但是如果有100个三方s库，代码多  
+#【第二种方式】：可读性更强，但是如果有100个三方库，就需要写100个，所以代码多  
 
 # 1.导入.a"静态库" 
 add_library(
