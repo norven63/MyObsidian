@@ -240,7 +240,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】]]
 
-[[享学Vip - 2022年5月24日 【Cmake原生构建工具学习】]]
+[[享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】]]
 
 [[享学Vip - 2022年5月26日 【Linux学习之NDK交叉编译FFmpeg与集成FFmpeg】]]
 
