@@ -34,8 +34,7 @@ file(GLOB SOURCE *.cpp *.c)
 add_library(  
         native-lib # 库的名字 ---> 完整文件：libnative-lib.so（如果是静态库，则是 .a 文件）  
         SHARED  
-        # cpp的源文件：把cpp源文件编译成 libnative-lib.so 库  
-        ${SOURCE}  
+        ${SOURCE}  # cpp的源文件：把cpp源文件编译成 libnative-lib.so 库  
 )  
   
   
@@ -52,18 +51,20 @@ add_library(
 # 答：因为测试机是arm32的，并且在build.bradle中配置了abiFilters "armeabi-v7a"，所以选择 arm-linux-androideabi  
 
 # 思考4：为什么是在 16 文件夹下？  
-# 答：因为build.bradle中配置的 
+# 答：因为build.bradle中配置的
+
 minSdkVersion 16find_library(  
         log-abcdafasfsafasf # 变量名称，后面可以复用  
-        log # NDK 工具中的动态库  
+        log # NDK工具中的动态库  
 )  
-  
+
+
 # 【六、把log库链接到总库中去】  
 # native-lib是我们的总库，也就是在 apk/.../cpp/libnative-lib.so# 只有完成这部链接工作，总库的cpp代码才可以正常调用 android/log.h 的库实现代码  
 target_link_libraries(  
         native-lib # 被链接的总库  
-        ${log-abcdafasfsafasf} # 链接的具体库，这里用的变量名  
-        # getndk 例如：  
+        ${log-abcdafasfsafasf} # 链接的具体NDK工具库，这里用的变量名  
+        # getndk # 链接的某个三方库 
 )  
   
   
@@ -174,3 +175,6 @@ function(num_method n1 n2 n3)
     message("all args = ${ARGV}") # 输出 10000;20000;30000endfunction(num_method)  
 num_method(10000 2000 3000)  # 调用num_method函数
 ```
+
+<br><br>
+
