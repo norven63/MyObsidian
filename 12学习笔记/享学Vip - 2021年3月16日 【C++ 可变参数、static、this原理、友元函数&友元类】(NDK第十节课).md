@@ -199,9 +199,11 @@ int main() {
 ##### 1、友元函数
 1. 关键字：**`friend`**
 
-2. 在 `.h` 头文件中声明函数 `friend void foo(Persion *p);` ，在 `.cpp` 中实现函数时，就可以对 `Persion` **访问私有成员**。
+2. 在 `.h` 头文件中声明函数 `friend void foo(Persion *p);` ，在 `.cpp` 中实现函数时，就可以对传入的 `Persion` 对象参数**访问私有成员** 。
 
-3. 实现友元函数时，不需要 **`friend`**关键字，也不需要 **`Class名::`**，只需要保证函数签名一致即可
+3. 注意：区别于成员函数内通过使用this来访问私有成员，友元函数是可以对传入的任何一个Person对象进行访问私有成员的操作。
+
+4. 实现友元函数时，不需要 **`friend`**关键字，也不需要 **`Class名::`**，只需要保证函数签名一致即可
 
 ```cpp
 #include <iostream>
@@ -229,7 +231,7 @@ public:
 // 2. 实现友元函数
 // 不需要 friend 关键字，也不需要 Class名:: ，只需要保证函数签名一致即可
 void updateAge(Person *person, int age) {
-	person->age = age;
+	person->age = age; // 可以直接对传入的Person对象参数执行访问私有成员的操作
 }
 
 int main() {
