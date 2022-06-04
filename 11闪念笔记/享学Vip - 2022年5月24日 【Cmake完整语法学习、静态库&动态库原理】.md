@@ -52,7 +52,7 @@ include_directories("inc")
 # ${CMAKE_ANDROID_ARCH_ABI}：自动获取CPU abi架构  
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}") 
 
-#【第二种方式】：可读性更强，但是代码多  
+#【第二种方式】：可读性更强，但是如果有100个三方s库，代码多  
 
 # 1.导入.a"静态库" 
 add_library(
@@ -98,9 +98,11 @@ find_library(
 # native-lib是我们的总库，也就是在 apk/.../cpp/libnative-lib.so# 只有完成这部链接工作，总库的cpp代码才可以正常调用 android/log.h 的库实现代码  
 target_link_libraries(  
         native-lib # 被链接的总库  
+        
         ${log-abcdafasfsafasf} # 链接的具体NDK工具库，这里用的变量名
         # log # log库也可以直接链接库的名称，不用变量名称
-        # getndk # 链接某个三方库 
+        
+        getndk_a # 链接某个三方库
 )  
   
   
