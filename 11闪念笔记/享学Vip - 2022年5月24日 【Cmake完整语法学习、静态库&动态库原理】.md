@@ -63,8 +63,9 @@ minSdkVersion 16find_library(
 # native-lib是我们的总库，也就是在 apk/.../cpp/libnative-lib.so# 只有完成这部链接工作，总库的cpp代码才可以正常调用 android/log.h 的库实现代码  
 target_link_libraries(  
         native-lib # 被链接的总库  
-        ${log-abcdafasfsafasf} # 链接的具体NDK工具库，这里用的变量名  
-        # getndk # 链接的某个三方库 
+        ${log-abcdafasfsafasf} # 链接的具体NDK工具库，这里用的变量名
+        # log # log库也可以直接链接库的名称，不用变量名称
+        # getndk # 链接某个三方库 
 )  
   
   
