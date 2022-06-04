@@ -26,7 +26,12 @@ project("ndk28_cmake")
 # file 可以定义一个变量 SOURCE， GLOB（使用GLOB从源树中收集源文件列表，就可以开心的 *.cpp *.c *.h）  
 # https://www.imooc.com/wenda/detail/576408  
 file(GLOB SOURCE *.cpp *.c)  
-  
+
+
+# 【四、添加一个库】 导入头文件  
+# 相对路径（即CMakeList.txt文件当前所在目录下的inc文件夹。如果是父目录下，则用../inc）  
+include_directories("inc") 
+
   
 # 【四、添加一个库】  
 # 动态库：SHARED  
@@ -36,7 +41,30 @@ add_library(
         SHARED  
         ${SOURCE}  # cpp的源文件：把cpp源文件编译成 libnative-lib.so 库  
 )  
+
+
+#【导入三方库文件】
+#【第一种方式】：设置CMAKE_CXX_FLAGS环境变量(即源文件、库文件的路径)  
   
+# ${CMAKE_CXX_FLAGS}：本台设备C++的环境变量(例如%JAVA_HOME%;%ANDROID_HOME%;%C++HOME%;)、${CMAKE_C_FLAGS} 
+# ${CMAKE_SOURCE_DIR}：CMakeList.txt文件当前所在目录地址，例如本项目就是 xxx\xxx\src\main\cpp\
+# ${CMAKE_SOURCE_DIR}/../jniLibs：等价于CMakeList.txt文件当前所在目录的父目录地址  
+# ${CMAKE_ANDROID_ARCH_ABI}：自动获取CPU abi架构  
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}") 
+
+#【第二种方式】：可读性更强，但是代码多  
+
+# 导入.a"静态库" 
+add_library(getndk_a STATIC IMPORTED)  
+# 开始真正导入  
+set_target_properties(getndk_a PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libgetndk_a.a)  
+  
+  
+# 导入.so"动态库"
+add_library(getndk_so SHARED IMPORTED)  
+# 开始真正导入  
+set_target_properties(getndk_so PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}/libgetndk_so.so)
+
   
 # 【五、查找一个 NDK 工具中的动态库(liblog.so)】  
 # 最终的动态库查找路径：D:\Android\Sdk\ndk\21.0.6113669\toolchains\llvm\prebuilt\windows-x86_64\sysroot\usr\lib\arm-linux-androideabi\16\liblog.so  
