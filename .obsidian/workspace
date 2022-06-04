@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "12学习笔记/享学Vip - 2021年3月16日 【C++ 可变参数、static、this原理、友元函数&友元类】(NDK第十节课).md",
-            "mode": "source",
+            "mode": "preview",
             "backlinks": false,
             "source": false
           }
@@ -62,7 +62,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 783.4999980926514
+    "width": 783.4999980926514,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -127,7 +128,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.1428680419922
+    "width": 225.1428680419922,
+    "collapsed": true
   },
   "active": "47e10fffeed6882e",
   "lastOpenFiles": [

@@ -85,7 +85,7 @@ using namespace std;
 
 class Dog {
 public:
-	char* info;
+	char *info;
 	int age;
 
 	// 1. 声明静态成员变量
@@ -147,15 +147,15 @@ using namespace std;
 
 class Worker {
 public:
-	char* name;
+	char *name;
 	int age = NULL; // C++中不像Java，Java有默认值， 如果你不给默认值，那么就是系统值 -64664
 
-	// int * const  指针常量 指针常量【地址对应的值能改，地址不可以修改】
-	// const int *  常量指针 常量指针【地址可以修改，地址对应的值不能改】
+	// int *const  指针常量 指针常量【地址对应的值能改，地址不可以修改】
+	// const int  *常量指针 常量指针【地址可以修改，地址对应的值不能改】
 
 	// 纠结：原理：为什么可以修改age
-	// 默认持有隐式的this【类型 * const this】
-	// 类型 * const 指针常量：代表指针地址不能被修改，但是指针地址的值是可以修改的
+	// 默认持有隐式的this【类型 *const this】
+	// 类型 *const 指针常量：代表指针地址不能被修改，但是指针地址的值是可以修改的
 	void change1() {
 		// 代表指针地址不能被修改
 		// this = 0x6546;  // 编译不通过，地址不能被修改，因为是指针常量
@@ -169,7 +169,7 @@ public:
 		this->name = "JJJ";
 	}
 
-	// 默认现在：this 等价于 const Student * const  常量指针常量（地址不能改，地址对应的值不能改）
+	// 默认现在：this 等价于 const Student *const  常量指针常量（地址不能改，地址对应的值不能改）
 	void changeAction() const {
 		// 地址不能改
 		// this = 0x43563;
@@ -178,7 +178,7 @@ public:
 		// this->age = 100;
 	}
 
-	// 原理：修改隐式代码  const 类型 * const 常量指针常量
+	// 原理：修改隐式代码  const 类型 *const 常量指针常量
 	void showInfo() const {
 		// this->name = "";
 		// this->age = 88;
@@ -199,9 +199,9 @@ int main() {
 ##### 1、友元函数
 1. 关键字：**`friend`**
 
-2. 在 `.h` 头文件中声明函数 `friend void foo(Persion* p);` ，在 `.cpp` 中实现函数时，就可以对 `Persion` **访问私有成员**。
+2. 在 `.h` 头文件中声明函数 `friend void foo(Persion *p);` ，在 `.cpp` 中实现函数时，就可以对 `Persion` **访问私有成员**。
 
-3. 实现友元函数时，不需要 **`friend`** 关键字，也不需要 **`Class名::`** ，只需要保证函数签名一致即可
+3. 实现友元函数时，不需要 **`friend`**关键字，也不需要 **`Class名::`**，只需要保证函数签名一致即可
 
 ```cpp
 #include <iostream>
@@ -223,12 +223,12 @@ public:
 	}
 
 	// 1. 声明定义友元函数
-	friend void updateAge(Person* person, int age);
+	friend void updateAge(Person *person, int age);
 };
 
 // 2. 实现友元函数
 // 不需要 friend 关键字，也不需要 Class名:: ，只需要保证函数签名一致即可
-void updateAge(Person* person, int age) {
+void updateAge(Person *person, int age) {
 	person->age = age;
 }
 
@@ -300,7 +300,7 @@ using namespace std;
 class Pig {
 private:
 	int age;
-	char* name;
+	char *name;
 
 public:
 	// 静态成员的声明
@@ -320,7 +320,7 @@ public:
 
 	// 普通函数 set、get
 	int getAge();
-	char* getName();
+	char *getName();
 	void setAge(int);
 	void setName(char*);
 
@@ -333,7 +333,7 @@ public:
 	// void changeTag(int age);
 
 	// 友元函数的声明
-	friend void changeAge(Pig* pig, int age);
+	friend void changeAge(Pig *pig, int age);
 };
 
 #endif // 宏 关闭/结尾
@@ -350,11 +350,11 @@ Pig::Pig() {
     cout << "默认构造函数" << endl;
 }
 
-Pig::Pig(char * name) {
+Pig::Pig(char *name) {
     cout << "1个参数构造函数" << endl;
 }
 
-Pig::Pig(char * name, int age) {
+Pig::Pig(char *name, int age) {
     cout << "2个参数构造函数" << endl;
 }
 
@@ -371,13 +371,13 @@ Pig::Pig(const Pig &pig) {
 int Pig::getAge() {
     return this->age;
 }
-char * Pig::getName() {
+char *Pig::getName() {
     return this->name;
 }
 void Pig::setAge(int age) {
     this->age = age;
 }
-void Pig::setName(char * name) {
+void Pig::setName(char *name) {
     this->name = name;
 }
 
@@ -400,7 +400,7 @@ void Pig::changeTag(int age) {
 
 // 友元的实现
 // 友元特殊：不需要 friend 关键字，也不需要 Class名:: ，只需要保证函数签名一致即可
-void changeAge(Pig * pig, int age) {
+void changeAge(Pig *pig, int age) {
 
 }
 ```
