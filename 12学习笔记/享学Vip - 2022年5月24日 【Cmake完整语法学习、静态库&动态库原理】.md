@@ -17,17 +17,20 @@
 # 【一、最低支持的版本】  
 # 注意：这里并不能代表最终的版本，最终版本在 build.gradle 中设置的。  
 cmake_minimum_required(VERSION 3.10.2)  
-  
+
+
   
 # 【二、当前工程名】  
 # 以前的旧版本，是没有设置的，这个可以设置，也可以不设置  
 project("ndk28_cmake")  
-  
+
+
   
 # 【三、批量导入 cpp c源文件】  
 # file 可以定义一个变量 SOURCE， GLOB（使用GLOB从源树中收集源文件列表，就可以开心的 *.cpp *.c *.h）  
 # https://www.imooc.com/wenda/detail/576408  
 file(GLOB SOURCE *.cpp *.c)  
+
 
   
 # 【四、添加一个库】  
@@ -40,9 +43,9 @@ add_library(
 )  
 
 
+
 #【五、导入三方库的"头"文件】
-# 相对路径（即CMakeList.txt文件当前所在目录下的inc文件夹。如果是父目录下，则用../inc）  
-include_directories("inc") 
+include_directories("inc") # 相对路径（即CMakeList.txt文件当前所在目录下的inc文件夹。如果是父目录下，则用../inc）  
 
 
 #【六、导入三方库的"库"文件】
@@ -52,28 +55,41 @@ include_directories("inc")
 # ${CMAKE_SOURCE_DIR}：CMakeList.txt文件当前所在目录地址，例如本项目就是 xxx\xxx\src\main\cpp\
 # ${CMAKE_SOURCE_DIR}/../jniLibs：等价于CMakeList.txt文件当前所在目录的父目录地址  
 # ${CMAKE_ANDROID_ARCH_ABI}：自动获取CPU abi架构  
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}") 
+
 
 #【第二种方式】：可读性更强，但是如果有100个三方库，就需要写100个，所以代码多。
 # 另外，gradle新版本4.0及以上，会自动去寻找jniLibs文件夹，导致报错"If you are using jniLibs and CMake IMPORTED targets"，需要在builder.gradle里设置"sourceSets.main.jniLibs.srcDirs = ['libs']"才能解决（在ndk{...}下面设置即可）
 
 # 1.导入.a"静态库" 
 add_library(
-	getndk_a
-	STATIC
+	getndk_a   # 导入库的命名，后续"link链接"时会用到
+	STATIC     # 静态库
 	IMPORTED
 )  
 # 开始真正导入  
-set_target_properties(getndk_a PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libgetndk_a.a)  
+set_target_properties(
+	getndk_a 
+	PROPERTIES 
+	IMPORTED_LOCATION 
+	${CMAKE_SOURCE_DIR}/libgetndk_a.a
+)  
   
 # 2.导入.so"动态库"
 add_library(
-	getndk_so
-	SHARED
+	getndk_so  # 导入库的命名，后续"link链接"时会用到
+	SHARED     # 动态库
 	IMPORTED
 )  
 # 开始真正导入  
-set_target_properties(getndk_so PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}/libgetndk_so.so)
+set_target_properties(
+	getndk_so 
+	PROPERTIES 
+	IMPORTED_LOCATION 
+	${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}/libgetndk_so.so
+)
+
 
   
 # 【七、查找一个 NDK 工具中的动态库(liblog.so)】  
@@ -97,18 +113,27 @@ find_library(
 )  
 
 
-# 【八、把依赖库链接到总库中去】  
+
+# 【八、引入其他子目录下的CMakeLists.txt】
+# 这里的子文件可以通过add_library编译产出库文件，参与到最后的"link链接"
+add_subdirectory(${CMAKE_SOURCE_DIR}/cpp/libxxx)
+
+
+
+# 【九、把依赖库"link链接"到总库中去】  
 # native-lib是我们的总库，也就是在 apk/.../cpp/libnative-lib.so# 只有完成这部链接工作，总库的cpp代码才可以正常调用 android/log.h 的库实现代码  
 target_link_libraries(  
         native-lib # 被链接的总库  
         
         ${log-abcdafasfsafasf} # 链接的具体NDK工具库，这里用的变量名
-        # log # log库也可以直接链接库的名称，不用变量名称
+        # log                  # log库也可以直接链接库的名称，不用变量名称
         
-        getndk_a # 链接某个三方库
+        getndk_a   # 链接某个三方库，命名必须与之前add_library里的命名一致
+        getndk_so  # 同上
 )  
   
-  
+
+
 # TODO ---------------------------函数语法---------------------------  
   
 # TODO 0. log 信息输出的查看】  
@@ -144,7 +169,8 @@ message("var = ${var1}")
 # 移除变量  
 unset(var1)  
 message("my_var = ${var1}") # 会取不到值，因为被移除了  
-  
+
+
 # TODO 2. CMake列表（lists）  
 # 声明列表：set(列表名 值1 值2 ... 值N) 或 set(列表名 "值1;值2;...;值N")  
 set(list_var1 1 2 3 4 5) # 字符串列表呢？ CMake中所有变量都是string类型  
@@ -153,7 +179,8 @@ set(list_var2 "1;2;3;4;5") # 字符串列表呢？  CMake中所有变量都是st
   
 message("list_var = ${list_var1}")  
 message("list_var2 = ${list_var2}")  
-  
+
+
 # TODO 3. CMake流程控制-条件判断  
 # true：1、ON、YES、TRUE、Y，所有非0的值，都 = true# false：0、OFF、NO、FALSE、N、IGNORE、NOTFOUND，都 = falseset(if_tap OFF) # 定义一个变量if_tap，值为false  
 set(elseif_tap ON) # 定义一个变量elseif_tap，值为ture  
@@ -166,7 +193,8 @@ else (${if_tap})   # 可以不加，但规范性上考虑要加
     message("else")  
 endif (${if_tap})  # 结束if  
 # 注意：elseif和else部分是可选的，也可以有多个elseif部分，缩进和空格对语句解析没有影响  
-  
+
+
 # TODO 4. CMake流程控制-循环命令  
   
 # 4.1 while循环  
@@ -199,7 +227,8 @@ set(list_va3 1 2 3) # 声明列表
 foreach (item IN LISTS list_va3)  
     message("4item = ${item}")  
 endforeach (item)  
-  
+
+
 # TODO 5. CMake自定义函数  Shell的函数很类似  
 #[[  
 ARGC：表示传入参数的个数  
@@ -215,6 +244,18 @@ function(num_method n1 n2 n3)
     message("arg1 = ${ARGV0} arg2 = ${ARGV1} arg3 = ${ARGV2}")  
     message("all args = ${ARGV}") # 输出 10000;20000;30000endfunction(num_method)  
 num_method(10000 2000 3000)  # 调用num_method函数
+```
+
+- 在 build.gradle 文件中声明让哪个CMake文件生效
+```groovy
+externalNativeBuild {  
+    cmake {  
+        // path file('src/main/cpp/CMakeLists.txt')  
+        path file('src/main/CMakeLists.txt') // 让我们这个生效  
+  
+        version '3.10.2' // Cmake的最终版本  
+    }  
+}
 ```
 
 <br><br>
