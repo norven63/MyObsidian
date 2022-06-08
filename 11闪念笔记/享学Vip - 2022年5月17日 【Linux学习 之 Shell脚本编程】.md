@@ -165,6 +165,8 @@ cat 0<file01.txt
 <br>
 
 ##### 函数
+- function 可以忽略不写，系统会自动填充
+
 ```shell
 #!bin/bash
 #声明函数
