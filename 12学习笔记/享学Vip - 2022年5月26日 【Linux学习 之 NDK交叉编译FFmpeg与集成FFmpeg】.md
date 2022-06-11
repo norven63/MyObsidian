@@ -107,6 +107,7 @@ make install
 
 ##### 3、Android集成
 1. 将产物中的，include下的 .h、.a 文件分别导入到项目中（.a文件随便起一个目录即可，后续编译过程会copy到总so中）
+
 ![200](../99附件/20220611121144.png)
 
 2. CMakeList.txt配置
