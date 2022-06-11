@@ -19,7 +19,7 @@
 	- 注意：**`arm-linux-androideabi-4.9`** 要根据目标Android机型的CPU架构而定
 - 通过Linux的环境变量，把这个gcc文件的路径设置成全局环境变量 [[享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组】#全局环境变量：]]
 - 把依赖库的头文件、库文件路径指定好
-- 拆卸分析：（注意：拆卸后，不能运行，因为换行了，必须用 **==英文空格==** 做间隔）
+- 拆卸分析：（注意：下面拆卸后的语句，实际不能运行，因为换行了，必须用 **==英文空格==** 做间隔）
 ```shell
 export AAA=
 "
@@ -32,12 +32,11 @@ export AAA=
 
 <br>
 
-
 ##### 2、完整的profile全局配置
 ```shell
 
 # 配置NDK路径
-export NDK="/root/DerryAll/Tools/android-ndk-r17c"
+export NDK="/home/norven/MyNDK/android-ndk-r17c"
 
 
 # 把NDK路径配置，添加到Linux环境变量里面去
@@ -51,8 +50,8 @@ export PATH=$NDK:$PATH
 # 四大平台
 export NDK_GCC_x86="$NDK/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linux-android-gcc"
 export NDK_GCC_x64="$NDK/toolchains/x86_64-4.9/prebuilt/linux-x86_64/bin/x86_64-linux-android-gcc"
-export NDK_GCC_arm="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linuxx86_64/bin/arm-linux-androideabi-gcc"
-export NDK_GCC_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linuxx86_64/bin/aarch64-linux-android-gcc"
+export NDK_GCC_arm="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc"
+export NDK_GCC_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gcc"
 
 # 配置 --system $【库文件地址】 -system $【头文件地址】 -system $【asm地址】 的路径
 # 四大平台
@@ -64,9 +63,9 @@ export NDK_CFIG_arm_64="--isysroot=$NDK/platforms/android-21/arch-arm64 -isystem
 # 配置静态编译库的路径
 # 四大平台
 export NDK_AR_x86="$NDK/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linuxandroid-ar"
-export NDK_AR_x64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linuxx86_64/bin/aarch64-linux-android-ar"
-export NDK_AR_arm="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linuxx86_64/bin/arm-linux-androideabi-ar"
-export NDK_AR_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linuxx86_64/bin/aarch64-linux-android-ar"
+export NDK_AR_x64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar"
+export NDK_AR_arm="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar"
+export NDK_AR_arm_64="$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar"
 
 
 # 参考

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "11闪念笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
+            "file": "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "void*",
+                "query": "toolchain",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -62,7 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 550.4999980926514
+    "width": 573.4999980926514
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
+                "file": "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
+                "file": "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md"
+                "file": "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md"
               }
             }
           }
@@ -131,15 +131,15 @@
   },
   "active": "47e10fffeed6882e",
   "lastOpenFiles": [
-    "11闪念笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
-    "12学习笔记/享学Vip - 2021年2月23日 【C语言 指针入门与基本数据类型】(NDK第一节课).md",
-    "11闪念笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
-    "11闪念笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组】.md",
-    "12学习笔记/享学Vip - 2022年5月12日 【JNI技术 之 手写Parcel的C++层与原理】.md",
-    "12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md",
+    "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
     "01专题索引/享学Vip课程笔记.md",
-    "12学习笔记/享学Vip - 2021年3月16日 【C++ 可变参数、static、this原理、友元函数&友元类】(NDK第十节课).md",
-    "12学习笔记/享学Vip - 2022年5月5日 【JNI技术 之 实战：FMOD实现声音特效、初识CMakeLists.txt文件、把C库集成到Android工程的统一流程】.md",
-    "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md"
+    "88模板/模板-代码块shell.md",
+    "88模板/模板-代码块Java.md",
+    "88模板/模板-代码块cmake.md",
+    "88模板/模板-代码块C.md",
+    "88模板/模板-代码块C++.md",
+    "12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md",
+    "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md",
+    "12学习笔记/享学Vip - 2022年5月12日 【JNI技术 之 手写Parcel的C++层与原理】.md"
   ]
 }

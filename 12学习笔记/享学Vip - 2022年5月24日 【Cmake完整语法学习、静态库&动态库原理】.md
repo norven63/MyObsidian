@@ -141,14 +141,16 @@ target_link_libraries(
 # 想及时更新你的日志，请安装一次即可 or Linked_C++_Projects# 在Build也可以查看，注意：是点击Sync Now 才会看到  
   
 #[[  
-TAG释义  
+
+TAG释义： 
   
 (无) = 重要消息；  
 STATUS = 非重要消息；  
 WARNING = CMake 警告, 会继续执行；  
 AUTHOR_WARNING = CMake 警告 (dev), 会继续执行；  
 SEND_ERROR = CMake 错误, 继续执行，但是会跳过生成的步骤；  
-FATAL_ERROR = CMake 错误, 终止所有处理过程；  
+FATAL_ERROR = CMake 错误, 终止所有处理过程；
+
 ]]  
   
 message(STATUS "CMake Hellow World!")  
