@@ -7,13 +7,8 @@
         "id": "47e10fffeed6882e",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -78,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -131,15 +122,15 @@
   },
   "active": "47e10fffeed6882e",
   "lastOpenFiles": [
+    "99附件/20220611225443.png",
     "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】.md",
+    "99附件/74391195058704.png",
+    "99附件/20220611121144.png",
+    "99附件/24391195058704.png",
+    "99附件/34391195058704.png",
+    "99附件/44391195058704.png",
     "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
     "13沉淀笔记/MarkDown绘图示例.md",
-    "13沉淀笔记/读书技巧.md",
-    "01专题索引/享学Vip课程笔记.md",
-    "12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md",
-    "88模板/模板-代码块shell.md",
-    "88模板/模板-代码块Java.md",
-    "88模板/模板-代码块cmake.md",
-    "88模板/模板-代码块C.md"
+    "13沉淀笔记/读书技巧.md"
   ]
 }
