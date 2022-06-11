@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md",
-            "mode": "preview",
+            "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】.md",
+            "mode": "source",
             "backlinks": false,
             "source": false
           }
@@ -62,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 573.4999980926514,
-    "collapsed": true
+    "width": 573.4999980926514
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -79,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md",
+                "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md"
+                "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】.md"
               }
             }
           }
@@ -132,15 +131,15 @@
   },
   "active": "47e10fffeed6882e",
   "lastOpenFiles": [
+    "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频】.md",
+    "01专题索引/享学Vip课程笔记.md",
     "12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md",
     "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
-    "01专题索引/享学Vip课程笔记.md",
     "88模板/模板-代码块shell.md",
     "88模板/模板-代码块Java.md",
     "88模板/模板-代码块cmake.md",
     "88模板/模板-代码块C.md",
     "88模板/模板-代码块C++.md",
-    "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md",
-    "12学习笔记/享学Vip - 2022年5月12日 【JNI技术 之 手写Parcel的C++层与原理】.md"
+    "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md"
   ]
 }
