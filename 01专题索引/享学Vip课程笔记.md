@@ -250,6 +250,10 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年6月1日 【Android音视频 编解码】]]
 
+[[享学Vip - 2022年6月7日 【音视频第四次课FFmepg实战课】]]
+
+[[享学Vip - 2022年6月9日 【FFmpeg音视频编辑实战】]]
+
 <br><br>
 
 ## 其他
