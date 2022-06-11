@@ -19,4 +19,10 @@
 ![650](../99附件/20220611232812.png)
 - 傅里叶变化 https://www.bilibili.com/video/BV1kX4y1u7GJ/?spm_id_from=333.788.recommend_more_video.1
 - Android音频架构
+![550](../99附件/20220611233254.png)
+
+### OpenSL ES
+https://developer.android.google.cn/ndk/guides/audio/opensl
+
+- 处理PCM数据
 - 
