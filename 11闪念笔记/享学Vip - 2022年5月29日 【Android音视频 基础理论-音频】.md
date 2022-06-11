@@ -15,3 +15,8 @@
 - 采样位数：采样范围，精度，越高越逼真
 - 声道：Channel，左声道、双通道等等
 - 码率：比特数，指每秒传送的⽐特(bit)数。码率=采样率X采样位数X声道数
+- 音频编码过程
+![650](../99附件/20220611232812.png)
+- 傅里叶变化 https://www.bilibili.com/video/BV1kX4y1u7GJ/?spm_id_from=333.788.recommend_more_video.1
+- Android音频架构
+- 
