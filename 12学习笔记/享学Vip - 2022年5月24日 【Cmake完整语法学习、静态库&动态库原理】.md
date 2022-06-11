@@ -26,7 +26,13 @@ project("ndk28_cmake")
 
 
   
-# 【三、批量导入 cpp c源文件】  
+# 【三、批量导入cpp，即搜集c源文件】
+
+#【第一种方式】
+# 查找当前目录下所有源文件
+aux_source_directory(. SOURCE)
+
+#【第二种方式】
 # file 可以定义一个变量 SOURCE， GLOB（使用GLOB从源树中收集源文件列表，就可以开心的 *.cpp *.c *.h）  
 # https://www.imooc.com/wenda/detail/576408  
 file(GLOB SOURCE *.cpp *.c)  
