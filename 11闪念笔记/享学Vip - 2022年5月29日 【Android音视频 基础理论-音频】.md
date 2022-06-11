@@ -21,8 +21,10 @@
 - Android音频架构
 ![550](../99附件/20220611233254.png)
 
+<br>
+
 ### OpenSL ES
 https://developer.android.google.cn/ndk/guides/audio/opensl
 
-- 处理PCM数据
+- 属于移动端裁剪定制版本；处理PCM数据
 - 
