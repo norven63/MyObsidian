@@ -38,19 +38,16 @@
 	- 第二章：Features and Profiles，Effects and controls（用ffmpeg）、3D Audio（支持太弱） 跳过不看
 	- 第三章：Design Overview，**3.1小节**有大量设计原理、代码示例，认真看。
 	- 第四章：Functional Overview，核心功能点介绍
+	- 第六章：Functions，API文档，后续当字典查即可
 	- 第七章：Object Definitions，对象定义，7.2~7.4要看
-	- 
-- 
 
 <br>
-
 
 ##### 2、对象状态流转
 ![650](../99附件/20220612225404.png)
 > When the application destroys an object, that object implicitly transitions through the Unrealized state. Thus it frees its resources and makes them available to other objects.
 
 <br>
-
 
 ##### 3、核心代码
 ###### 3.1、播放功能 Play
@@ -238,4 +235,4 @@ void pcmBufferCallBack(SLAndroidSimpleBufferQueueItf bf, void *context) {
 ```
 
 ###### 3.2、录音功能 Recoder
-看Demo中的 `AudioRecoreder.cpp`
+- 看Demo中的 `AudioRecoreder.cpp`
