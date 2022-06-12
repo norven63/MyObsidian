@@ -110,7 +110,7 @@ void Audio::initOpenSLES() {
     /***********    2 创建混音器    ***********/  
 
 
-    /***********    3 配置音频信息    ***********/
+    /***********    3 配置音频信息，主要配置PCM格式    ***********/
 	SLDataLocator_OutputMix outputMix = {SL_DATALOCATOR_OUTPUTMIX, outputMixObject};  
     SLDataSink slDataSink = {&outputMix, 0};  
     //缓冲队列  
@@ -179,11 +179,13 @@ void Audio::initOpenSLES() {
 
     //设置回调函数  
     (*pcmBufferQueue)->RegisterCallback(pcmBufferQueue, pcmBufferCallBack, this);  
+    
     //设置播放状态  
     (*pcmPlayerPlay)->SetPlayState(pcmPlayerPlay, SL_PLAYSTATE_PLAYING);  
+    
     // 启动  
     pcmBufferCallBack(pcmBufferQueue, this);  
-  
+
     // 启动  
     // (*pcmBufferQueue)->Enqueue(pcmBufferQueue,"",1);  
   
