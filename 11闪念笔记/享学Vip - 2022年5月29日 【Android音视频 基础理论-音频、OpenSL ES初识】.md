@@ -36,8 +36,9 @@
 - 文档怎么读：
 	- **播放、录音** 两个板块
 	- 第二章：Features and Profiles，Effects and controls（用ffmpeg）、3D Audio（支持太弱） 跳过不看
-	- 第三章：Design Overview，有大量设计原理、代码示例，认真看。Thread Mode可以跳过（我们自己控制）
-	- 
+	- 第三章：Design Overview，**3.1小节**有大量设计原理、代码示例，认真看。
+	- 第四章：Functional Overview，核心功能点介绍
+	- 第七章：Object Definitions，对象定义，7.1~7.
 - 
 
 <br>
