@@ -183,7 +183,8 @@ void Audio::initOpenSLES() {
     //设置播放状态  
     (*pcmPlayerPlay)->SetPlayState(pcmPlayerPlay, SL_PLAYSTATE_PLAYING);  
     
-    // 启动  
+    // 启动
+    // 先手动调用一次回调函数
     pcmBufferCallBack(pcmBufferQueue, this);  
 
     // 启动  
@@ -194,5 +195,23 @@ void Audio::initOpenSLES() {
   
     long cost_time = t_end.tv_usec - t_start.tv_usec;  
     LOGD("opensled create cost:%ld ms", cost_time / 1000);  
+}
+
+//回调函数 
+//OpenSLES 会自动回调  
+//作用是不停的把pcm数据放入到队列中处理
+void pcmBufferCallBack(SLAndroidSimpleBufferQueueItf bf, void *context) {  
+    LOGD("pcmBufferCallBack ok");  
+  
+    Audio *audio = (Audio *) context;  
+    if (audio != NULL) {  
+        PcmData *data = audio->dataQueue->getPcmData();  
+        if (NULL != data) {  
+            LOGD("Enqueue ok");  
+            (*audio->pcmBufferQueue)->Enqueue(audio->pcmBufferQueue,  
+                                              data->getData(),  
+                                              data->getSize());  
+        }  
+    }  
 }
 ```
