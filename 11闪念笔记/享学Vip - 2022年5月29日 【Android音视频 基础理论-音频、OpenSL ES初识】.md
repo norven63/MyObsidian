@@ -30,7 +30,8 @@
 ##### 1、OpenSL ES 背景
 - 官方文档： https://developer.android.google.cn/ndk/guides/audio/opensl
 - pdf文档： https://kdocs.cn/l/csTk96yji5wD
-- 核心作用：处理、播放PCM数据
+- 文档主要看 **播放、录音** 两个板块，Features and Profiles 中，Effects and controls（用ffmpeg）、3D Audio（支持太弱） 跳过不看。
+- 核心作用：处理、播放PCM数据。
 
 > **OpenSL ES** 全称为 **Open Sound Library for Embedded Systems**，即 **嵌⼊式⾳频加速标准**。OpenSL ES是⽆授权费、跨平台、针对嵌⼊式系统精⼼优化的硬件⾳频加速 API。它为嵌⼊式移动多媒体设备上的本地 应⽤程序开发者提供了标准化、⾼性能、低响应时间的⾳频功能实现⽅法，同时还实现了软/硬件⾳频性能的直接跨平台部署，不仅降低了执⾏难度，⽽且促进了⾼级⾳频市场的发展。简单来说OpenSL ES是⼀个嵌⼊式跨平台免费的⾳频处理库。 所以它不是Android特有的。
 
