@@ -179,10 +179,10 @@ jint JNI_OnLoad(JavaVM *vm, void *args) {
 ##### 2、pthread_create
 ```cpp
 int pthread_create(  
-	pthread_t* __pthread_ptr,        参数一：线程标记，
-	pthread_attr_t const* __attr,    参数二：pthread配置的参数集，我目前还没用到  
-	void* (*__start_routine)(void*), 参数三：函数指针，相当于 Java 中的 Runnable.run()
-	void*                            参数四：指定传递给 start_routine 函数的参数，如果不需要传递任何数据时，传递
+	pthread_t* __pthread_ptr,        // 参数一：线程标记，
+	pthread_attr_t const* __attr,    // 参数二：pthread配置的参数集，我目前还没用到  
+	void* (*__start_routine)(void*), // 参数三：函数指针，相当于 Java 中的 Runnable.run()
+	void*                            // 参数四：指定传递给 start_routine 函数的参数，如果不需要传递任何数据时，传递void*
 );                         
 ```
 
