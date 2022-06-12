@@ -52,10 +52,13 @@ public class MainActivity extends Activity {
 /**  
     什么是静态注册？  
     默认情况下，就是静态注册，静态注册比动态注册要简单    但是在诸多系统源码中，会发现大量都是采用动态注册，因为动态注册虽然麻烦，但是比静态注册安全性高，不要暴露包名类名等信息  
-    【静态注册】    优点：      开发简单    缺点：  
-      1.JNI 函数名很长  
-      2.捆绑了上层的包名、类名等敏感信息  
-      3.运行期 才会去 匹配JNI函数，性能上 低于一点点 动态注册  
+    【静态注册】    
+	    优点：      
+			开发简单    
+		缺点：  
+		    1.JNI 函数名很长  
+	        2.捆绑了上层的包名、类名等敏感信息  
+	        3.运行期 才会去 匹配JNI函数，性能上 低于一点点 动态注册  
  */
 extern "C" JNIEXPORT jstring JNICALL  
 Java_com_mac_jni04_1study_MainActivity_stringFromJNI(  
