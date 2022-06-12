@@ -27,12 +27,22 @@
 <br>
 
 ### OpenSL ES
-https://developer.android.google.cn/ndk/guides/audio/opensl
-
+##### 1、OpenSL ES 背景
+- 官方文档： https://developer.android.google.cn/ndk/guides/audio/opensl
 - 属于移动端裁剪定制版本
 - 核心作用：处理、播放PCM数据
 
-##### 1、核心代码
+<br>
+
+
+##### 2、对象状态流转
+![650](../99附件/20220612225404.png)
+> When the application destroys an object, that object implicitly transitions through the Unrealized state. Thus it frees its resources and makes them available to other objects.
+
+<br>
+
+
+##### 3、核心代码
 -  把 PCM 数据（char[]）发送给底层的es进行播放  
 ```C
 extern "C"  
