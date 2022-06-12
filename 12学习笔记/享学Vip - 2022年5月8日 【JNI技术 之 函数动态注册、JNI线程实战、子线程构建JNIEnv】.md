@@ -48,17 +48,18 @@ public class MainActivity extends Activity {
 #include <string>  
 #include <pthread.h> // 在AS上 pthread不需要额外配置，默认就有  
   
-// TODO ============ 下面是 动态注册区域  
 /**  
     什么是静态注册？  
-    默认情况下，就是静态注册，静态注册比动态注册要简单    但是在诸多系统源码中，会发现大量都是采用动态注册，因为动态注册虽然麻烦，但是比静态注册安全性高，不要暴露包名类名等信息  
+    默认情况就是静态注册，静态注册比动态注册要简单
+	但是在诸多系统源码中，会发现大量都是采用动态注册，因为动态注册虽然麻烦，但是比静态注册安全性高，不要暴露包名类名等信息  
+	
     【静态注册】    
 	    优点：      
 			开发简单    
 		缺点：  
 		    1.JNI 函数名很长  
 	        2.捆绑了上层的包名、类名等敏感信息  
-	        3.运行期 才会去 匹配JNI函数，性能上 低于一点点 动态注册  
+	        3.运行期才会去匹配JNI函数，性能上低于一点点动态注册  
  */
 extern "C" JNIEXPORT jstring JNICALL  
 Java_com_mac_jni04_1study_MainActivity_stringFromJNI(  
@@ -71,12 +72,14 @@ Java_com_mac_jni04_1study_MainActivity_stringFromJNI(
 }  
 
 
+// TODO ============ 下面是 动态注册区域  
+
 /**  
  * 【全局持有JavaVM】
  *  用于后续创建JNIEnv
  */
-// JavaVM *vm; // 不规范，系统会默认赋值 3532532  -3534255，属于野指针
-JavaVM *vm = nullptr; // 规范，默认赋值0
+// JavaVM *vm; // 这种声明方式不规范，系统会默认赋值 3532532  -3534255，属于野指针
+JavaVM *vm = nullptr; // 规范的声明方式，默认赋值0
 
 
 /**  
