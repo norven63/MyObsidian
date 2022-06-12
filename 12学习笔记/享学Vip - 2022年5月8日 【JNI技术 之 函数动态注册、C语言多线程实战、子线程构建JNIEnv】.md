@@ -298,8 +298,7 @@ Java_com_mac_jni04_1study_MainActivity_naitveThread(JNIEnv *env, jobject thiz) {
      * 【5. 释放全局引用变量】  
      */
      
-	// 等待子线程（pid）执行完成后，才开始执行下面代码释放  
-    // 【注意】必须要join等待完成后才能释放，否则会变成分离线程，各自执行各自逻辑，然后这里释放了，而子线程却还在执行调用，最终发生崩溃  
+	// 阻塞等待子线程（pid）执行完成后，才开始执行下面代码释放  
     pthread_join(pid, nullptr);  
   
     // 【注意】哪个线程的 env 创建的GlobalRef，就由哪个 env 来释放  
@@ -311,11 +310,13 @@ Java_com_mac_jni04_1study_MainActivity_naitveThread(JNIEnv *env, jobject thiz) {
 
 <br>
 
-##### 5、线程函数拓展
+##### 5、线程常用函数
 1. **pthread_exit** 函数：`void pthread_exit(void *value_ptr);`
 
 > - `pthread_exit()` 函数唯一的参数 `value_ptr` 是函数的返回代码，只要 `pthread_join()` 中的第二个参数 `value_ptr` 不是 `NULL`，这个值将被传递给 `value_ptr`。
-> - 线程的结束退出，可以是隐式的退出（执行完函数，或者执行到 `return` 语句），也可以显式的调用 `pthread_exit()` 函数来退出。但是 `pthread_exit()` 函数只会终止当前线程，不会影响进程中其它线程的执行；`return` 语句不仅会终止主线程执行，还会终止该线程中开启的其它子线程执行。
+> - 线程的结束退出，可以是隐式的退出（执行完函数，或者执行到 `return` 语句），也可以显式的调用 `pthread_exit()` 函数来退出。
+> - `pthread_exit()` 函数只会终止当前线程，不会影响进程中其它线程的执行；`return` 语句不仅会终止主线程执行，还会终止该线程中开启的其它子线程。
+> - 执行 `pthread_exit()` 函数后，会立刻释放线程资源；`return` 语句并不会立刻释放。
 
 
 2. **pthread_join** 函数：`int pthread_join(pthread_t thread, void **value_ptr);`
