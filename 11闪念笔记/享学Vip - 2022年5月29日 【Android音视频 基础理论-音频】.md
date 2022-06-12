@@ -28,11 +28,9 @@ https://developer.android.google.cn/ndk/guides/audio/opensl
 
 - 属于移动端裁剪定制版本；处理PCM数据
 
-##### 1. 
+##### 1、核心代码
+-  把 PCM 数据（char[]）发送给底层的es进行播放  
 ```C
-/**
- *
- */
 extern "C"  
 JNIEXPORT void JNICALL  
 Java_com_opensource_openslesdemo_OpenSlEsPlayer_sendPcmData(JNIEnv *env,  
