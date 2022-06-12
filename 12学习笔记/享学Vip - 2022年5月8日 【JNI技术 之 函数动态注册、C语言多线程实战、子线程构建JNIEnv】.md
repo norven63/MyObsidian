@@ -314,8 +314,8 @@ Java_com_mac_jni04_1study_MainActivity_naitveThread(JNIEnv *env, jobject thiz) {
 ##### 5、线程函数拓展
 1. **pthread_exit** 函数：`void pthread_exit(void *value_ptr);`
 
-> - 线程的结束退出，可以是隐式的退出（执行完函数，或者执行到 `return` 语句），也可以显式的调用 `pthread_exit()` 函数来退出。
 > - `pthread_exit()` 函数唯一的参数 `value_ptr` 是函数的返回代码，只要 `pthread_join()` 中的第二个参数 `value_ptr` 不是 `NULL`，这个值将被传递给 `value_ptr`。
+> - 线程的结束退出，可以是隐式的退出（执行完函数，或者执行到 `return` 语句），也可以显式的调用 `pthread_exit()` 函数来退出。
 
 
 2. **pthread_join** 函数：`int pthread_join(pthread_t thread, void **value_ptr);`
