@@ -35,8 +35,9 @@
 - pdf文档： https://kdocs.cn/l/csTk96yji5wD
 - 文档怎么读：
 	- **播放、录音** 两个板块
-	- Features and Profiles 中，Effects and controls（用ffmpeg）、3D Audio（支持太弱） 跳过不看
-	- Design Overview，有大量设计原理、代码示例
+	- 第二章：Features and Profiles，Effects and controls（用ffmpeg）、3D Audio（支持太弱） 跳过不看
+	- 第三章：Design Overview，有大量设计原理、代码示例，认真看。Thread Mode可以跳过（我们自己控制）
+	- 
 - 
 
 <br>
