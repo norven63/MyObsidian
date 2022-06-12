@@ -11,7 +11,7 @@
 <br>
 
 ### 一、音视频基础
-> 看pdf课件
+> **==看pdf课件==**
 
 - Nyquist，频率的2倍
 - 采样率：一秒钟采样的次数。代表音频的质量
@@ -29,7 +29,8 @@
 ### OpenSL ES
 https://developer.android.google.cn/ndk/guides/audio/opensl
 
-- 属于移动端裁剪定制版本；处理PCM数据
+- 属于移动端裁剪定制版本
+- 核心作用：处理、播放PCM数据
 
 ##### 1、核心代码
 -  把 PCM 数据（char[]）发送给底层的es进行播放  
