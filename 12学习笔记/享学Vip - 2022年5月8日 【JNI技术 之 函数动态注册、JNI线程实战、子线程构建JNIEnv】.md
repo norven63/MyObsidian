@@ -279,7 +279,7 @@ Java_com_mac_jni04_1study_MainActivity_naitveThread(JNIEnv *env, jobject thiz) {
      * 【3. 创建全局引用变量】  
      */
     MyContext *context = new MyContext;  
-    context->instance = env->NewGlobalRef(thiz); // 把"局部成员"提升为"全局成员"  
+    context->instance = env->NewGlobalRef(thiz); // 把"局部成员"提升为"全局成员"，这里实际缓存的是MainActivity对象实例，主要为了拿到Java层的调用对象实例
   
   
     /**
