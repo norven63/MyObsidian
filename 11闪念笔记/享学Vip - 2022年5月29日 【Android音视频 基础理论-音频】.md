@@ -60,8 +60,9 @@ void Audio::initOpenSLES() {
     struct timeval t_start, t_end;  
     gettimeofday(&t_start, NULL);  
     LOGD("Start time: %ld us", t_start.tv_usec);  
-  
-    /***********  1 创建引擎 获取SLEngineItf***************/  
+
+
+    /***********    1 创建引擎 获取SLEngineItf    ***********/  
     SLresult result;  
     result = slCreateEngine(&engineObject, 0, 0, 0, 0, 0);  
     if (result != SL_RESULT_SUCCESS)  
@@ -77,10 +78,11 @@ void Audio::initOpenSLES() {
     } else {  
         LOGE("get SLEngineItf failed");  
     }  
-    /***********         1 创建引擎       ***************/  
-  
-    /***********  2 创建混音器 ***************/  
-    const SLInterfaceID mids[1] = {SL_IID_ENVIRONMENTALREVERB};  
+    /***********    1 创建引擎    ***********/  
+
+
+    /***********    2 创建混音器    ***********/
+	const SLInterfaceID mids[1] = {SL_IID_ENVIRONMENTALREVERB};  
     const SLboolean mreq[1] = {SL_BOOLEAN_FALSE};  
     result = (*engineEngine)->CreateOutputMix(engineEngine, &outputMixObject, 1, mids, mreq);  
     if (result != SL_RESULT_SUCCESS) {  
@@ -97,25 +99,26 @@ void Audio::initOpenSLES() {
         LOGD("mixer init success");  
     }  
   
-    result = (*outputMixObject)->GetInterface(outputMixObject, SL_IID_ENVIRONMENTALREVERB,  
-                                              &outputMixEnvironmentalReverb);  
+    result = (*outputMixObject)->GetInterface(outputMixObject, SL_IID_ENVIRONMENTALREVERB, &outputMixEnvironmentalReverb); 
+                                               
     if (SL_RESULT_SUCCESS == result) {  
         SLEnvironmentalReverbSettings reverbSettings = SL_I3DL2_ENVIRONMENT_PRESET_STONECORRIDOR;  
         result = (*outputMixEnvironmentalReverb)->SetEnvironmentalReverbProperties(  
                 outputMixEnvironmentalReverb, &reverbSettings);  
         (void) result;  
     }  
-  
-    /***********  2 创建混音器 ***************/  
-    /***********  3 配置音频信息 ***************/    SLDataLocator_OutputMix outputMix = {SL_DATALOCATOR_OUTPUTMIX, outputMixObject};  
+    /***********    2 创建混音器    ***********/  
+
+
+    /***********    3 配置音频信息    ***********/
+	SLDataLocator_OutputMix outputMix = {SL_DATALOCATOR_OUTPUTMIX, outputMixObject};  
     SLDataSink slDataSink = {&outputMix, 0};  
     //缓冲队列  
-    SLDataLocator_AndroidSimpleBufferQueue android_queue = {SL_DATALOCATOR_ANDROIDSIMPLEBUFFERQUEUE,  
-                                                            2};  
+    SLDataLocator_AndroidSimpleBufferQueue android_queue = {SL_DATALOCATOR_ANDROIDSIMPLEBUFFERQUEUE, 2};  
     //音频格式  
     SLDataFormat_PCM pcmFormat = {  
             SL_DATAFORMAT_PCM, //播放pcm格式的数据  
-                 //声道数  
+            //声道数  
             static_cast<SLuint32>(getCurrentSampleRateForOpensles(sample_rate)),  
             SL_PCMSAMPLEFORMAT_FIXED_16, //位数 16位  
             SL_PCMSAMPLEFORMAT_FIXED_16, //和位数一致就行  
@@ -124,14 +127,22 @@ void Audio::initOpenSLES() {
             SL_BYTEORDER_LITTLEENDIAN  
     };  
     SLDataSource slDataSource = {&android_queue, &pcmFormat};  
-    /***********  3 配置音频信息 ***************/  
-    /************* 4 创建播放器 ****************/    const SLInterfaceID ids[] = {SL_IID_BUFFERQUEUE, SL_IID_VOLUME, SL_IID_MUTESOLO};  
+    /***********    3 配置音频信息    ***********/  
+
+
+    /***********    4 创建播放器    ***********/
+	const SLInterfaceID ids[] = {SL_IID_BUFFERQUEUE, SL_IID_VOLUME, SL_IID_MUTESOLO};  
     const SLboolean req[] = {SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE};  
   
   
-    result = (*engineEngine)->CreateAudioPlayer(engineEngine, &pcmPlayerObject, &slDataSource,  
-                                                &slDataSink, sizeof(ids) / sizeof(SLInterfaceID),  
-                                                ids, req);  
+    result = (*engineEngine)->CreateAudioPlayer(engineEngine, 
+											    &pcmPlayerObject, 
+												&slDataSource,  
+                                                &slDataSink, 
+                                                sizeof(ids) / sizeof(SLInterfaceID),  
+                                                ids, 
+                                                req);  
+                                                
     if (result != SL_RESULT_SUCCESS) {  
         LOGE("create audio player failed");  
     } else {  
@@ -151,7 +162,7 @@ void Audio::initOpenSLES() {
     } else {  
         LOGD("player get SL_IID_PLAY success");  
     }  
-    //    获取声道操作接口  
+    //获取声道操作接口  
     (*pcmPlayerObject)->GetInterface(pcmPlayerObject, SL_IID_MUTESOLO, &pcmMutePlay);  
     // 音量  
     (*pcmPlayerObject)->GetInterface(pcmPlayerObject, SL_IID_VOLUME, &pcmVolumePlay);  
@@ -163,7 +174,9 @@ void Audio::initOpenSLES() {
     } else {  
         LOGD("player get SL_IID_BUFFERQUEUE success");  
     }  
-    /************* 4 创建播放器 ****************/  
+    /***********    4 创建播放器    ***********/  
+
+
     //设置回调函数  
     (*pcmBufferQueue)->RegisterCallback(pcmBufferQueue, pcmBufferCallBack, this);  
     //设置播放状态  
@@ -172,8 +185,7 @@ void Audio::initOpenSLES() {
     pcmBufferCallBack(pcmBufferQueue, this);  
   
     // 启动  
-   // (*pcmBufferQueue)->Enqueue(pcmBufferQueue,"",1);  
-  
+    // (*pcmBufferQueue)->Enqueue(pcmBufferQueue,"",1);  
   
     gettimeofday(&t_end, NULL);  
     LOGD("End time: %ld us", t_end.tv_usec);  
