@@ -38,7 +38,8 @@
 	- 第二章：Features and Profiles，Effects and controls（用ffmpeg）、3D Audio（支持太弱） 跳过不看
 	- 第三章：Design Overview，**3.1小节**有大量设计原理、代码示例，认真看。
 	- 第四章：Functional Overview，核心功能点介绍
-	- 第七章：Object Definitions，对象定义，7.1~7.
+	- 第七章：Object Definitions，对象定义，7.2~7.4要看
+	- 
 - 
 
 <br>
@@ -52,6 +53,7 @@
 
 
 ##### 3、核心代码
+###### 3.1、播放功能 Play
 -  把 PCM 数据（char[]）发送给底层的es进行播放  
 ```C
 extern "C"  
@@ -73,7 +75,7 @@ Java_com_opensource_openslesdemo_OpenSlEsPlayer_sendPcmData(JNIEnv *env,
 }
 ```
 
-- 初始化OpenSLES
+- 初始化OpenSLES，看Demo中的 `Audio.cpp`
 ```C
 void Audio::initOpenSLES() {  
     struct timeval t_start, t_end;  
@@ -234,3 +236,6 @@ void pcmBufferCallBack(SLAndroidSimpleBufferQueueItf bf, void *context) {
     }  
 }
 ```
+
+###### 3.2、录音功能 Recoder
+看Demo中的 `AudioRecoreder.cpp`
