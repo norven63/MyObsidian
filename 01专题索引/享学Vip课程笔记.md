@@ -228,7 +228,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年5月5日 【JNI技术 之 实战：FMOD实现声音特效、初识CMakeLists.txt文件、把C库集成到Android工程的统一流程】]]
 
-[[享学Vip - 2022年5月8日 【JNI技术 之 函数动态注册、JNI线程实战、子线程构建JNIEnv】]]
+[[享学Vip - 2022年5月8日 【JNI技术 之 函数动态注册、C语言多线程实战、子线程构建JNIEnv】]]
 
 [[享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry]]
 
