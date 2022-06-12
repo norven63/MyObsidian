@@ -129,18 +129,18 @@ static const JNINativeMethod methods[] = {
 // 逆向工程师，做坏事的  
 // 在很多的系统源码，或者是其他源码，会大量采用动态注册，动态注册虽然很麻烦，但是这个是必学项  
 // 动态的优点：1.被反编译后 安全性高一点， 2.在native中的调用，函数名简洁， 3.编译后的函数标记 较短一些  
-jint JNI_OnLoad(JavaVM *vm, void *args) {  
+jint JNI_OnLoad(JavaVM *vm_param, void *args) {  
     /**  
      * 【1. 缓存JavaVM】  
      */
-     ::vm = vm;  
+     ::vm = vm_param;  
   
   
     /**  
      * 【2. 构建JNIEnv】  
      */
     JNIEnv *env;  
-    jint r = vm->GetEnv(reinterpret_cast<void **>(&env), JNI_VERSION_1_6);  
+    jint r = vm_param->GetEnv(reinterpret_cast<void **>(&env), JNI_VERSION_1_6);  
   
     // C 中 0就是成功  
     // if (r) { // 非0就是ture  
@@ -232,7 +232,7 @@ if (r) { // 非0 = true = 失败
 class MyContext {  
 public:  
     // 1. JavaVM是全局的，是相当于APP进程的全局成员，可以跨线程、跨函数  
-    JavaVM *vm;  
+    JavaVM *vm = nullptr;  
   
     // 2. JNIEnv绑定当前JNI函数所在的线程，所以不能跨线程传递。即使提升全局也没有用，主线程的env不能切换到子线程使用  
     JNIEnv *jniEnv = nullptr;  
