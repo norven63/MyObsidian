@@ -29,6 +29,7 @@
 ### OpenSL ES
 ##### 1、OpenSL ES 背景
 - 官方文档： https://developer.android.google.cn/ndk/guides/audio/opensl
+- pdf文档： https://kdocs.cn/l/csTk96yji5wD
 - 属于移动端裁剪定制版本
 - 核心作用：处理、播放PCM数据
 
