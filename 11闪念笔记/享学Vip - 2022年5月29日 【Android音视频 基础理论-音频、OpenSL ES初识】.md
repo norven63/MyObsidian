@@ -26,7 +26,7 @@
 
 <br>
 
-### OpenSL ES
+### 二、OpenSL ES
 ##### 1、OpenSL ES 背景
 - 官方文档： https://developer.android.google.cn/ndk/guides/audio/opensl
 - pdf文档： https://kdocs.cn/l/csTk96yji5wD
