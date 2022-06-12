@@ -28,9 +28,10 @@ https://developer.android.google.cn/ndk/guides/audio/opensl
 
 - 属于移动端裁剪定制版本；处理PCM数据
 
+##### 1. 
 ```C
 /**
- * PCM 数据（char[]）的发送给底层的es进行播放  
+ *
  */
 extern "C"  
 JNIEXPORT void JNICALL  
