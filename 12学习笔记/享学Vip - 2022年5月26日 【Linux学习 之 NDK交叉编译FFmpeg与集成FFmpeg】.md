@@ -100,6 +100,35 @@ make clean
 make install
 ```
 
+- 纯净文件
+```shell
+#!/bin/bash
+NDK_ROOT=/home/norven/MyNDK/android-ndk-r17c
+TOOLCHAIN=$NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64
+FLAGS="-isysroot $NDK_ROOT/sysroot -isystem $NDK_ROOT/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=17 -U_FILE_OFFSET_BITS  -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fPIC"
+INCLUDES="-isystem $NDK_ROOT/sources/cxx-stl/llvm-libc++/include -isystem $NDK_ROOT/sources/android/surpport/include -isystem $NDK_ROOT/sources/cxx-stl/llvm-libc++abi/include"
+PREFIX=./android/arm
+./configure \
+--prefix=$PREFIX \
+--enable-small \
+--disable-programs \
+--disable-avdevice \
+--disable-encoders \
+--disable-muxers \
+--disable-filters \
+--enable-cross-compile \
+--cross-prefix=$TOOLCHAIN/bin/arm-linux-androideabi- \
+--disable-shared \
+--enable-static \
+--sysroot=$NDK_ROOT/platforms/android-17/arch-arm \
+--extra-cflags="$FLAGS $INCLUDES" \
+--arch=arm \
+--target-os=android
+make clean
+make install
+```
+
+
 7. 编译完成之后，进入产物存放文件夹，会有 include、lib、share 三个文件夹
 
 8. 把所有产物打一个zip包，方便统一导出：`zip -r myfile.zip ./*` 
