@@ -571,3 +571,8 @@ void AudioRecorder::release() {
     LOGD("release done");  
 }
 ```
+
+<br><br>
+
+### 三、Audition
+视频 03:06:26 开始讲

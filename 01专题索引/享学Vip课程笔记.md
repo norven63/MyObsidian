@@ -244,7 +244,7 @@ https://www.kdocs.cn/l/cqakeRtfWcuH
 
 [[享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】]]
 
-[[享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识】]]
+[[享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】]]
 
 [[享学Vip - 2022年5月31日 【Android音视频 基础理论-视频】]]
 
