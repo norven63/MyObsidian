@@ -66,19 +66,19 @@ struct SLObjectItf_ {
 	
 	SLresult (*GetState) (
 		SLObjectItf self,
-		SLuint32 * pState
+		SLuint32 *pState
 	);
 	
 	SLresult (*GetInterface) (
 		SLObjectItf self,
 		const SLInterfaceID iid,
-		void * pInterface
+		void *pInterface
 	);
 	
 	SLresult (*RegisterCallback) (
 		SLObjectItf self,
 		slObjectCallback callback,
-		void * pContext
+		void *pContext
 	);
 	
 	void (*AbortAsyncOperation) (
@@ -104,7 +104,7 @@ struct SLObjectItf_ {
 	SLresult (*SetLossOfControlInterfaces) (
 		SLObjectItf self,
 		SLint16 numInterfaces,
-		SLInterfaceID * pInterfaceIDs,
+		SLInterfaceID *pInterfaceIDs,
 		SLboolean enabled
 	);
 };
@@ -114,27 +114,27 @@ struct SLObjectItf_ {
 
 ##### 2、GetInterface 接口
 GetInterface可以说是OpenSL⾥使⽤频率最⾼的⽅法,通过它我们可以获取Object⾥⾯的Interface。
-由于⼀个Object⾥⾯可能包含了多个Interface,所以GetInterface⽅法有个SLInterfaceID参数来指定到的需要获取Object⾥⾯的那个Interface。
-⽐如我们通过EngineObject去获取SL_IID_ENGINE这个id的Interface,⽽这个id对应的Interface就是 `SLEngineItf` :
+由于⼀个 Object ⾥⾯可能包含了多个 Interface ，所以 `GetInterface()` ⽅法有个 `SLInterfaceID` 参数来指定到的需要获取 Object ⾥⾯的哪个 Interface。
+⽐如我们通过 `EngineObject` 去获取 `SL_IID_ENGINE` 这个id的 Interface ，⽽这个id对应的 Interface 就是 `SLEngineItf` :
 ```cpp
 SLresult (*CreateAudioPlayer) (  
         SLEngineItf self,  
-        SLObjectItf * pPlayer,  
+        SLObjectItf *pPlayer,  
         SLDataSource *pAudioSrc,  
         SLDataSink *pAudioSnk,  
         SLuint32 numInterfaces,  
-        const SLInterfaceID * pInterfaceIds,  
-        const SLboolean * pInterfaceRequired  
+        const SLInterfaceID *pInterfaceIds,  
+        const SLboolean *pInterfaceRequired  
 );  
 
 SLresult (*CreateAudioRecorder) (  
         SLEngineItf self,  
-        SLObjectItf * pRecorder,  
+        SLObjectItf *pRecorder,  
         SLDataSource *pAudioSrc,  
         SLDataSink *pAudioSnk,  
         SLuint32 numInterfaces,  
-        const SLInterfaceID * pInterfaceIds,  
-        const SLboolean * pInterfaceRequired  
+        const SLInterfaceID *pInterfaceIds,  
+        const SLboolean *pInterfaceRequired  
 );
 ```
 
