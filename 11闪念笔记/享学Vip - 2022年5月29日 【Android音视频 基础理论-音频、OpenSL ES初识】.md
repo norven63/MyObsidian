@@ -27,7 +27,7 @@
 <br>
 
 ### 二、OpenSL ES
-##### 1、基础背景
+##### 基础背景
 - 核心作用：处理、播放PCM数据。
 > **OpenSL ES** 全称为 **Open Sound Library for Embedded Systems**，即 **嵌⼊式⾳频加速标准**。OpenSL ES是⽆授权费、跨平台、针对嵌⼊式系统精⼼优化的硬件⾳频加速 API。它为嵌⼊式移动多媒体设备上的本地 应⽤程序开发者提供了标准化、⾼性能、低响应时间的⾳频功能实现⽅法，同时还实现了软/硬件⾳频性能的直接跨平台部署，不仅降低了执⾏难度，⽽且促进了⾼级⾳频市场的发展。简单来说OpenSL ES是⼀个嵌⼊式跨平台免费的⾳频处理库。 所以它不是Android特有的。
 
@@ -43,7 +43,7 @@
 
 <br>
 
-##### 2、Objects 和 Interfaces
+##### 1、Objects 和 Interfaces
 Android为了更⽅便的使⽤ OpenSL ES，把 OpenSL ES 的API设计成了类似⾯向对象的Java使⽤⽅式。Object 可以理解成 Java 的 Object 类，Interface 可以理解成 Java 的 Interface，但它们并不完全相同。
 
 他们的关系：
@@ -110,10 +110,38 @@ struct SLObjectItf_ {
 };
 ```
 
+<br>
+
+##### 2、GetInterface 接口
+GetInterface可以说是OpenSL⾥使⽤频率最⾼的⽅法,通过它我们可以获取Object⾥⾯的Interface。
+由于⼀个Object⾥⾯可能包含了多个Interface,所以GetInterface⽅法有个SLInterfaceID参数来指定到的需要获取Object⾥⾯的那个Interface。
+⽐如我们通过EngineObject去获取SL_IID_ENGINE这个id的Interface,⽽这个id对应的Interface就是 `SLEngineItf` :
+```cpp
+SLresult (*CreateAudioPlayer) (  
+        SLEngineItf self,  
+        SLObjectItf * pPlayer,  
+        SLDataSource *pAudioSrc,  
+        SLDataSink *pAudioSnk,  
+        SLuint32 numInterfaces,  
+        const SLInterfaceID * pInterfaceIds,  
+        const SLboolean * pInterfaceRequired  
+);  
+
+SLresult (*CreateAudioRecorder) (  
+        SLEngineItf self,  
+        SLObjectItf * pRecorder,  
+        SLDataSource *pAudioSrc,  
+        SLDataSink *pAudioSnk,  
+        SLuint32 numInterfaces,  
+        const SLInterfaceID * pInterfaceIds,  
+        const SLboolean * pInterfaceRequired  
+);
+```
+
 
 <br>
 
-##### 3、Object的生命周期
+##### 3、Object 的生命周期
 ###### 3.1、官方资料
 ![650](../99附件/20220612225404.png)
 > When the application destroys an object, that object implicitly transitions through the Unrealized state. Thus it frees its resources and makes them available to other objects.
