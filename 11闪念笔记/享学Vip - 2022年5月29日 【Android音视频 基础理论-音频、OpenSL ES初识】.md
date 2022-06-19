@@ -43,12 +43,12 @@
 
 <br>
 
-##### 2、OpenSL ES 中的 Objects 和 Interfaces
+##### 2、Objects 和 Interfaces
 Android为了更⽅便的使⽤ OpenSL ES，把 OpenSL ES 的API设计成了类似⾯向对象的Java使⽤⽅式。Object 可以理解成 Java 的 Object 类，Interface 可以理解成 Java 的 Interface，但它们并不完全相同。
 
 他们的关系：
 1. 每个 Object 可能会存在⼀个或者多个 Interface，官⽅为每⼀种 Object 都定义了⼀系列的 Interface
-2. 每个 Object 对象都提供了⼀些最基础的操作，⽐如：Realize，Resume，GetState，Destroy 等等，如果希 望使⽤该对象⽀持的功能函数，则必须通过其 GetInterface 函数拿到 Interface 接⼝，然后通过 Interface 来访问 功能函数
+2. 每个 Object 对象都提供了⼀些最基础的操作，⽐如：`Realize()`、`Resume()`、`GetState()`、`Destroy()` 等等，如果希望使⽤该对象⽀持的功能函数，则必须通过其 GetInterface 函数拿到 Interface 接⼝，然后通过 Interface 来访问功能函数
 3. 并不是每个系统上都实现了 OpenSL ES 为 Object 定义的所有 Interface，所以在获取 Interface 的时候需要 做⼀些选择和判断 所有的Object在OpenSL⾥⾯我们拿到的都是⼀个 `SLObjectItf` ：
 ```cpp
 typedef const struct SLObjectItf_ * const * SLObjectItf;
@@ -113,7 +113,7 @@ struct SLObjectItf_ {
 
 <br>
 
-##### 3、对象的生命周期
+##### 3、Object的生命周期
 ###### 3.1、官方资料
 ![650](../99附件/20220612225404.png)
 > When the application destroys an object, that object implicitly transitions through the Unrealized state. Thus it frees its resources and makes them available to other objects.
