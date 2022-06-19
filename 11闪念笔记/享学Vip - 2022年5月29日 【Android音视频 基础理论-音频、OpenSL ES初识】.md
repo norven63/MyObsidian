@@ -238,6 +238,7 @@ void pcmBufferCallBack(SLAndroidSimpleBufferQueueItf bf, void *context) {
 - 结合文档第6章，看Demo中的 `AudioRecoreder.cpp` 的API解释
 - 逻辑线索：`startRecord()` --> `createEngine()` --> `fopen()` --> 构建 `SLDataSource`、`SLDataSink` 对象 --> `CreateAudioRecorder()` --> `AudioRecorderCallback` --> `Enqueue()` 
 
+AudioRecoreder.cpp
 ```cpp
 //  
 // Created by Jesson on 2022/5/26.  
@@ -301,7 +302,6 @@ void AudioRecorderCallback(SLAndroidSimpleBufferQueueItf bufferQueueItf, void *c
     }  
 }  
   
-  
 // 开始采集音频数据，并保存到本地  
 void AudioRecorder::startRecord() {  
     if (engineEngine == nullptr) {  
@@ -362,7 +362,7 @@ void AudioRecorder::startRecord() {
      */    
     //创建录制的对象，并且指定开放SL_IID_ANDROIDSIMPLEBUFFERQUEUE这个接口  
     SLInterfaceID iids[NUM_RECORDER_EXPLICIT_INTERFACES] = {SL_IID_ANDROIDSIMPLEBUFFERQUEUE,  
-                                                            SL_IID_ANDROIDCONFIGURATION};  
+                                                            SL_IID_ANDROIDCONFIGURATION};
     SLboolean required[NUM_RECORDER_EXPLICIT_INTERFACES] = {SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE};  
   
     /**  
@@ -406,7 +406,8 @@ void AudioRecorder::startRecord() {
     (*recorderBuffQueueItf)->RegisterCallback(recorderBuffQueueItf, AudioRecorderCallback, this);  
     assert(SL_RESULT_SUCCESS == result);  
     /* Start recording */  
-    // 开始录制音频，//设置录制器为录制状态 SL_RECORDSTATE_RECORDING    result = (*recorderRecord)->SetRecordState(recorderRecord, SL_RECORDSTATE_RECORDING);  
+    // 开始录制音频    
+    result = (*recorderRecord)->SetRecordState(recorderRecord, SL_RECORDSTATE_RECORDING); //设置录制器为录制状态 SL_RECORDSTATE_RECORDING
     assert(SL_RESULT_SUCCESS == result);  
   
     // 在设置完录制状态后一定需要先Enqueue一次，这样的话才会开始采集回调  
@@ -420,7 +421,8 @@ void AudioRecorder::startRecord() {
 void AudioRecorder::stopRecord() {  
     // 停止录制  
     if (recorderRecord != nullptr) {  
-        //设置录制器为停止状态 SL_RECORDSTATE_STOPPED        SLresult result = result = (*recorderRecord)->SetRecordState(recorderRecord,  
+        //设置录制器为停止状态 SL_RECORDSTATE_STOPPED        
+        SLresult result = result = (*recorderRecord)->SetRecordState(recorderRecord,  
                                                                      SL_RECORDSTATE_STOPPED);  
         assert(SL_RESULT_SUCCESS == result);  
         fclose(pfile);  
