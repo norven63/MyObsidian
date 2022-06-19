@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+            "file": "11闪念笔记/享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】_block.md",
             "mode": "preview",
             "backlinks": false,
             "source": false
@@ -62,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 388.5,
-    "collapsed": true
+    "width": 597.5
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -79,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+                "file": "11闪念笔记/享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】_block.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+                "file": "11闪念笔记/享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】_block.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md"
+                "file": "11闪念笔记/享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】_block.md"
               }
             }
           }
@@ -132,7 +131,8 @@
   },
   "active": "47e10fffeed6882e",
   "lastOpenFiles": [
-    "11闪念笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+    "11闪念笔记/享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】_block.md",
+    "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
     "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
     "01专题索引/享学Vip课程笔记.md",
     "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
@@ -140,7 +140,6 @@
     "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md",
     "12学习笔记/享学Vip - 2021年2月25日 【C语言 多级指针、数组指针、函数指针、指针挪动】(NDK第二节课).md",
     "12学习笔记/享学Vip - 2022年5月8日 【JNI技术 之 函数动态注册、C语言多线程实战、子线程构建JNIEnv】.md",
-    "12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md",
-    "11闪念笔记/20220611225443.png.md"
+    "12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md"
   ]
 }
