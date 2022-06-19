@@ -236,4 +236,4 @@ void pcmBufferCallBack(SLAndroidSimpleBufferQueueItf bf, void *context) {
 
 ###### 3.2、录音功能 Recoder
 - 结合文档第6章，看Demo中的 `AudioRecoreder.cpp` 的API解释
-- `createEngine()` --> `startRecord()` --> `AudioRecorderCallback` --> `Enqueue`
+- `startRecord()` --> `createEngine()` --> `AudioRecorderCallback` --> `Enqueue` 
