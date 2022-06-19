@@ -43,12 +43,17 @@
 
 <br>
 
-##### 2、对象的生命周期
-###### 2.1、官方资料
+##### 2、OpenSL ES 中的 Objects 和 Interfaces
+
+
+<br>
+
+##### 3、对象的生命周期
+###### 3.1、官方资料
 ![650](../99附件/20220612225404.png)
 > When the application destroys an object, that object implicitly transitions through the Unrealized state. Thus it frees its resources and makes them available to other objects.
 
-###### 2.2、总结
+###### 3.2、总结
 1. OpenSL ES 的 Object ⼀般有三种状态，分别是：
 - `UNREALIZED （不可⽤）`
 - `REALIZED（可⽤）`
@@ -63,8 +68,8 @@
 
 <br>
 
-##### 3、核心代码
-###### 3.1、播放功能 Play
+##### 4、核心代码
+###### 4.1、播放功能 Play
 -  把 PCM 数据（char[]）发送给底层的es进行播放  
 ```C
 extern "C"  
@@ -248,7 +253,7 @@ void pcmBufferCallBack(SLAndroidSimpleBufferQueueItf bf, void *context) {
 }
 ```
 
-###### 3.2、录音功能 Recoder
+###### 4.2、录音功能 Recoder
 - 结合文档第6章，看Demo中的 `AudioRecoreder.cpp` 的API解释
 - 逻辑线索：`startRecord()` --> `createEngine()` --> `fopen()` --> 构建 `SLDataSource`、`SLDataSink` 对象 --> `CreateAudioRecorder()` --> `AudioRecorderCallback` --> `Enqueue()` 
 
