@@ -50,6 +50,7 @@ Android为了更⽅便的使⽤ OpenSL ES，把 OpenSL ES 的API设计成了类�
 1. 每个 Object 可能会存在⼀个或者多个 Interface，官⽅为每⼀种 Object 都定义了⼀系列的 Interface
 2. 每个 Object 对象都提供了⼀些最基础的操作，⽐如：`Realize()`、`Resume()`、`GetState()`、`Destroy()` 等等，如果希望使⽤该对象⽀持的功能函数，则必须通过其 GetInterface 函数拿到 Interface 接⼝，然后通过 Interface 来访问功能函数
 3. 并不是每个系统上都实现了 OpenSL ES 为 Object 定义的所有 Interface，所以在获取 Interface 的时候需要 做⼀些选择和判断 所有的 Object 在 OpenSL ⾥⾯我们拿到的都是⼀个 `SLObjectItf` ：
+
 ```cpp
 typedef const struct SLObjectItf_ * const * SLObjectItf;
 
@@ -116,6 +117,7 @@ struct SLObjectItf_ {
 GetInterface可以说是OpenSL⾥使⽤频率最⾼的⽅法,通过它我们可以获取Object⾥⾯的Interface。
 由于⼀个 Object ⾥⾯可能包含了多个 Interface ，所以 `GetInterface()` ⽅法有个 `SLInterfaceID` 参数来指定到的需要获取 Object ⾥⾯的哪个 Interface。
 ⽐如我们通过 `EngineObject` 去获取 `SL_IID_ENGINE` 这个id的 Interface ，⽽这个id对应的 Interface 就是 `SLEngineItf` :
+
 ```cpp
 SLresult (*CreateAudioPlayer) (  
         SLEngineItf self,  
@@ -192,7 +194,7 @@ void Audio::initOpenSLES() {
     LOGD("Start time: %ld us", t_start.tv_usec);  
 
 
-    /***********    1 创建引擎 获取SLEngineItf    ***********/  
+    /***********    【1 创建引擎 获取SLEngineItf】    ***********/  
     SLresult result;  
     result = slCreateEngine(&engineObject, 0, 0, 0, 0, 0);  
     if (result != SL_RESULT_SUCCESS)  
@@ -208,10 +210,10 @@ void Audio::initOpenSLES() {
     } else {  
         LOGE("get SLEngineItf failed");  
     }  
-    /***********    1 创建引擎    ***********/  
+    /***********    【1 创建引擎】    ***********/  
 
 
-    /***********    2 创建混音器    ***********/
+    /***********    【2 创建混音器】    ***********/
 	const SLInterfaceID mids[1] = {SL_IID_ENVIRONMENTALREVERB};  
     const SLboolean mreq[1] = {SL_BOOLEAN_FALSE};  
     result = (*engineEngine)->CreateOutputMix(engineEngine, &outputMixObject, 1, mids, mreq);  
@@ -237,10 +239,10 @@ void Audio::initOpenSLES() {
                 outputMixEnvironmentalReverb, &reverbSettings);  
         (void) result;  
     }  
-    /***********    2 创建混音器    ***********/  
+    /***********    【2 创建混音器】    ***********/  
 
 
-    /***********    3 配置音频信息，主要配置PCM格式    ***********/
+    /***********    【3 配置音频信息，主要配置PCM格式】    ***********/
 	SLDataLocator_OutputMix outputMix = {SL_DATALOCATOR_OUTPUTMIX, outputMixObject};  
     SLDataSink slDataSink = {&outputMix, 0};  
     //缓冲队列  
@@ -257,10 +259,10 @@ void Audio::initOpenSLES() {
             SL_BYTEORDER_LITTLEENDIAN  
     };  
     SLDataSource slDataSource = {&android_queue, &pcmFormat};  
-    /***********    3 配置音频信息    ***********/  
+    /***********    【3 配置音频信息】    ***********/  
 
 
-    /***********    4 创建播放器    ***********/
+    /***********    【4 创建播放器】    ***********/
 	const SLInterfaceID ids[] = {SL_IID_BUFFERQUEUE, SL_IID_VOLUME, SL_IID_MUTESOLO};  
     const SLboolean req[] = {SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE};  
   
@@ -304,7 +306,7 @@ void Audio::initOpenSLES() {
     } else {  
         LOGD("player get SL_IID_BUFFERQUEUE success");  
     }  
-    /***********    4 创建播放器    ***********/  
+    /***********    【4 创建播放器】    ***********/  
 
 
     //设置回调函数  
