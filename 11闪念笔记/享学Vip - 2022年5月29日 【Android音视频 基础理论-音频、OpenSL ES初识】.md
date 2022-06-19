@@ -54,11 +54,13 @@
 - `REALIZED（可⽤）`
 - `SUSPENDED（挂起）`
 
+
 2. 生命周期流转：
-- Object 初始处于 `UNREALIZED（不可⽤）` 状态时，系统不会为其分配资源；
-- 调⽤ `Realize()` ⽅法后便进⼊ `REALIZED（可⽤）` 状态，此时对象的各个功能和资源可以正常访问；
-- 当系统⾳频相关的硬件设备被其他进程占⽤时，Object 便会进⼊ `SUSPENDED（挂起）` 状态，随后调⽤ `Resume()` ⽅法可使对象重回 `REALIZED（可⽤）` 状态；
+- Object 初始处于 `UNREALIZED（不可⽤）` 状态时，该状态下系统不会为其分配资源。
+- 调⽤ `Realize()` ⽅法后便进⼊ `REALIZED（可⽤）` 状态，此时对象的各个功能和资源可以正常访问。
+- 当系统⾳频相关的硬件设备被其他进程占⽤时，Object 便会进⼊ `SUSPENDED（挂起）` 状态，之后如果调⽤ `Resume()` ⽅法可使其再重回 `REALIZED（可⽤）` 状态。
 - 当 Object 使⽤结束后，调⽤ `Destroy()` ⽅法释放对象资源，此时重回 `UNREALIZED（不可⽤）` 状态。
+
 <br>
 
 ##### 3、核心代码
@@ -317,7 +319,9 @@ void AudioRecorderCallback(SLAndroidSimpleBufferQueueItf bufferQueueItf, void *c
 // 开始采集音频数据，并保存到本地  
 void AudioRecorder::startRecord() {  
     if (engineEngine == nullptr) {  
-        // 【一、创建引擎对象】  
+        /**  
+		 * 【一、创建引擎对象】  
+		 */
         createEngine();  
     }  
     if (recorderObject != nullptr) {  
@@ -332,7 +336,8 @@ void AudioRecorder::startRecord() {
     /**  
      * OpenSL ES 中的 【SLDataSource】 和 【SLDataSink】 结构体，主要用于构建 audio player 和 recorder 对象，  
      * 其中 SLDataSource 表示音频数据来源的信息；SLDataSink 表示音频数据输出信息。  
-     */    SLresult result;  
+     */    
+     SLresult result;  
   
     /**  
      * 【二、设置IO设备(麦克风) 输入输出，我们需要设置采集设备的一些输入输出配置】  
@@ -351,7 +356,7 @@ void AudioRecorder::startRecord() {
     };  
     // 数据源简单缓冲队列定位器,输出buffer队列  
     SLDataLocator_AndroidSimpleBufferQueue recBufferQueue = {  
-            SL_DATALOCATOR_ANDROIDSIMPLEBUFFERQUEUE, //类型 这里只能是SL_DATALOCATOR_ANDROIDSIMPLEBUFFERQUEUE  
+            SL_DATALOCATOR_ANDROIDSIMPLEBUFFERQUEUE, //类型 这里只能是 SL_DATALOCATOR_ANDROIDSIMPLEBUFFERQUEUE  
             NUM_BUFFER_QUEUE //buffer的数量  
     };  
     // PCM 数据源格式 //设置输出数据的格式  
@@ -361,7 +366,8 @@ void AudioRecorder::startRecord() {
             SL_SAMPLINGRATE_44_1, //输出的采样频率，这里是44100Hz  
             SL_PCMSAMPLEFORMAT_FIXED_16, //输出的采样格式，这里是16bit  
             SL_PCMSAMPLEFORMAT_FIXED_16,//一般来说，跟随上一个参数  
-            SL_SPEAKER_FRONT_LEFT | SL_SPEAKER_FRONT_RIGHT,//双声道配置，如果单声道可以用 SL_SPEAKER_FRONT_CENTER            SL_BYTEORDER_LITTLEENDIAN //PCM数据的大小端排列  
+            SL_SPEAKER_FRONT_LEFT | SL_SPEAKER_FRONT_RIGHT,//双声道配置，如果单声道可以用 SL_SPEAKER_FRONT_CENTER            
+            SL_BYTEORDER_LITTLEENDIAN //PCM数据的大小端排列  
     };  
     // 输出  
     SLDataSink dataSink = {  
