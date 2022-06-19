@@ -27,14 +27,14 @@
 <br>
 
 ### 二、OpenSL ES
-##### 1、OpenSL ES 背景
+##### 1、基础背景
 - 核心作用：处理、播放PCM数据。
 > **OpenSL ES** 全称为 **Open Sound Library for Embedded Systems**，即 **嵌⼊式⾳频加速标准**。OpenSL ES是⽆授权费、跨平台、针对嵌⼊式系统精⼼优化的硬件⾳频加速 API。它为嵌⼊式移动多媒体设备上的本地 应⽤程序开发者提供了标准化、⾼性能、低响应时间的⾳频功能实现⽅法，同时还实现了软/硬件⾳频性能的直接跨平台部署，不仅降低了执⾏难度，⽽且促进了⾼级⾳频市场的发展。简单来说OpenSL ES是⼀个嵌⼊式跨平台免费的⾳频处理库。 所以它不是Android特有的。
 
 - 官方文档： https://developer.android.google.cn/ndk/guides/audio/opensl
 - pdf文档： https://kdocs.cn/l/csTk96yji5wD
 - 文档怎么读：
-	- **播放、录音** 两个板块
+	- 重点看 **播放、录音** 两个板块
 	- 第二章：Features and Profiles，Effects and controls（用ffmpeg）、3D Audio（支持太弱） 跳过不看
 	- 第三章：Design Overview，**3.1小节**有大量设计原理、代码示例，认真看。
 	- 第四章：Functional Overview，核心功能点介绍
@@ -44,6 +44,17 @@
 <br>
 
 ##### 2、OpenSL ES 中的 Objects 和 Interfaces
+Android为了更⽅便的使⽤ OpenSL ES，把 OpenSL ES 的API设计成了类似⾯向对象的Java使⽤⽅式。Object 可以理解成 Java 的 Object 类，Interface 可以理解成 Java 的 Interface，但它们并不完全相同。
+
+他们的关系：
+1. 每个 Object 可能会存在⼀个或者多个 Interface，官⽅为每⼀种 Object 都定义了⼀系列的 Interface
+2. 每个 Object 对象都提供了⼀些最基础的操作，⽐如：Realize，Resume，GetState，Destroy 等等，如果希 望使⽤该对象⽀持的功能函数，则必须通过其 GetInterface 函数拿到 Interface 接⼝，然后通过 Interface 来访问 功能函数
+3. 并不是每个系统上都实现了 OpenSL ES 为 Object 定义的所有 Interface，所以在获取 Interface 的时候需要 做⼀些选择和判断 所有的Object在OpenSL⾥⾯我们拿到的都是⼀个SLObjectItf：
+```cpp
+typedef const struct SLObjectItf_ * const * SLObjectItf;
+
+
+```
 
 
 <br>
