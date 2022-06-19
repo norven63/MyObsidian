@@ -43,10 +43,21 @@
 
 <br>
 
-##### 2、对象状态流转
+##### 2、对象的生命周期
+1. 官方资料
 ![650](../99附件/20220612225404.png)
 > When the application destroys an object, that object implicitly transitions through the Unrealized state. Thus it frees its resources and makes them available to other objects.
 
+2. 总结
+OpenSL ES 的 Object ⼀般有三种状态，分别是：
+- `UNREALIZED （不可⽤）`
+- `REALIZED（可⽤）`
+- `SUSPENDED（挂起）`
+
+Object 初始处于 `UNREALIZED（不可⽤）` 状态时，系统不会为其分配资源；
+调⽤ `Realize()` ⽅法后便进⼊ `REALIZED（可⽤）` 状态，此时对象的各个功能和资源可以正常访问；
+当系统⾳频相关的硬件设备被其他进程占⽤时，Object 便会进⼊ `SUSPENDED（挂起）` 状态，随后调⽤ `Resume()` ⽅法可使对象重回 `REALIZED（可⽤）` 状态；
+当 Object 使⽤结束后，调⽤ `Destroy()` ⽅法释放资源，是对象重回 UNREALIZED （不可⽤）状态。
 <br>
 
 ##### 3、核心代码
