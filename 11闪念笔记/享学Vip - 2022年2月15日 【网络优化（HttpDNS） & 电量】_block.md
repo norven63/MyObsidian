@@ -52,5 +52,10 @@
 <br>
 
 ##### 2、GZip压缩传输
+**优先看： https://blog.csdn.net/newone_helloworld/article/details/52472950**
 https://www.jianshu.com/p/cf7ae9c99d50
 https://blog.csdn.net/clerk0324/article/details/51672933
+
+<br><br>
+
+### 二、电量优化
