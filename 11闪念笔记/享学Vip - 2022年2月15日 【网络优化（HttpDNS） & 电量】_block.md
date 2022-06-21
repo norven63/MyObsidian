@@ -51,3 +51,6 @@
 
 <br>
 
+##### 2、GZip压缩传输
+https://www.jianshu.com/p/cf7ae9c99d50
+https://blog.csdn.net/clerk0324/article/details/51672933
