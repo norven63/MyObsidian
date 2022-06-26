@@ -59,3 +59,5 @@ https://blog.csdn.net/clerk0324/article/details/51672933
 <br><br>
 
 ### 二、电量优化
+1. 低电量测试
+2. 待机模式
