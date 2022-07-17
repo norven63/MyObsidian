@@ -18,8 +18,6 @@ https://ke.qq.com/webcourse/347420/103755197#taid=13385596290813212&vid=38770229
 - 比如Mem（2种方案 手动GC[Matrix]、阈值的处理[Koom]）
 - FPS(Handler机制、Printer)、idleHandler（闲时延迟操作）
 
-- 延迟操作：
-`Handler.postDelayed(Runnable r,long time)`
 - 闲时延迟操作：
 ```java
 Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
@@ -27,46 +25,42 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
 })
 ```
 
-##### so动态加载
-- Tinker的so的加载流程（电量那节课讲的[[享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】]]）
-- UnsatisfiedLinkError : 主要的原因是兼容性的问题。包so的裁剪由于国内的厂商魔改ROM，改的是so加载的路径（3种）。
-- ReLinker： https://github.com/KeepSafe/ReLinker 
-	- 核心类 `ReLinkerInstance` ： https://github.com/KeepSafe/ReLinker/blob/master/relinker/src/main/java/com/getkeepsafe/relinker/ReLinkerInstance.java
-	- 通过动态加载so的技术，解决UnsatisfiedLinkError问题。
-	- 最牛逼的地方就是解析SO的2进制文件，获取so的依赖属性。
+## so动态加载库：ReLinker
+- [ReLinker 库github](https://github.com/KeepSafe/ReLinker )：
+- 通过动态加载so的技术，解决UnsatisfiedLinkError问题。
+	- UnsatisfiedLinkError : 主要的原因是兼容性的问题。包so的裁剪由于国内的厂商魔改ROM，改的是so加载的路径（3种）。
+- Tinker的so的加载流程（电量那节课讲的[[享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】delay]]）
+- 核心类 [`ReLinkerInstance`](https://github.com/KeepSafe/ReLinker/blob/master/relinker/src/main/java/com/getkeepsafe/relinker/ReLinkerInstance.java)
+- ReLinker**最牛逼的地方就是解析SO的2进制文件，获取so的依赖属性。** 参见ELF文件解析类 [`ElfParser`](https://github.com/KeepSafe/ReLinker/blob/master/relinker/src/main/java/com/getkeepsafe/relinker/elf/ElfParser.java) 中的 `parseNeededDependencies()` 方法
+- System类
+	- `System.mapLibraryName("abc");` 自带拼接返回 `"libabc.so"` 字符串
+	- `loadLibrary()`、`load()` 价值so
+	- `getenv()`
 
-**性能优化的总结**
+<br><br>
 
-https://github.com/SusionSuc/rabbit-client
 
-https://github.com/Tencent/matrix/wiki/Matrix-Android-TraceCanary
+## 性能优化
+- 性能优化框架：做什么？怎么做？如何设计方案与架构？
 
-做？怎么做？设计还有架构？
-
-主流的开源项目 调研 怎么用？
-
-- Matrix：功能大而全、相对比较重力度，不适合公司的业务的迭代，经常Crash
-
+#### 主流开源项目的调研、用法：
+- [rabbit 库github](https://github.com/SusionSuc/rabbit-client)
+- [**Matrix 库github**](https://github.com/Tencent/matrix/wiki/Matrix-Android-TraceCanary) ：功能全，但很重，不适合公司的业务迭代，稳定性低
 - 听云SDK（>8.0 CPU 指标的问题）
-
 - 网易 腾讯GT （时间非常老）16年
-
 - 360的APM gradle 集成的时候会有很多的问题
 
-**指标的问题**
+#### APM有哪些指标
+##### 不要去碰和讲的指标
+1. 稳定性的问题（崩溃的问题）
+	- 主流方案：breakpad+bugly+Firebase(海外)
 
-- 稳定性的问题（崩溃的问题）
+2. 流量/网络 （Http协议的可达率、流量的大小）
+	- 使用OKHTTP的拦截器（可以获取请求的链接、byte大小，但是能够覆盖的面太小）
+	- 全链路的网络监控APM：网络一体化的问题、协议本身（例如Socket，但各家公司不一样，所以SDK本身很难统一的处理）
 
-breakpad+bugly+Firebase
-
-- 流量/网络 （Http协议的可达率、流量的大小）OKHTTP的拦截器
-
-全链路的网络监控APM、网络一体化的问题、协议本身（Socket）统一的处理
-
-**建议大家重点关注的APM的性能指标：**
-
-- 电量（battery historian、广播）
-
+##### 重点关注的APM指标
+- 电量（battery、historian、广播）
 - 流量消耗
 `TrafficStats / getUidRxBytes(int uid) / getTotalbytes()`
 
@@ -79,7 +73,7 @@ breakpad+bugly+Firebase
    * 只能用在debug model,
    * */
 
-    private fun getMemoryInfoInDebug(): RabbitMemoryInfo {
+	private fun getMemoryInfoInDebug(): RabbitMemoryInfo {
         val info = Debug.MemoryInfo()
         Debug.getMemoryInfo(info)
         val memInfo = RabbitMemoryInfo()
