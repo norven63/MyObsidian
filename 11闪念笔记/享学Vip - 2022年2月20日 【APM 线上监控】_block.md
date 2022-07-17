@@ -13,36 +13,27 @@ https://ke.qq.com/webcourse/347420/103755197#taid=13385596290813212&vid=38770229
 ---
 <br>
 
-### Tips
 
-目的：
+- 性能优化目的：知识点的沉淀、总结
+- 比如Mem（2种方案 手动GC[Matrix]、阈值的处理[Koom]）
+- FPS(Handler机制、Printer)、idleHandler（闲时延迟操作）
 
-- 知识点的沉淀、总结
-
-- Mem（2种方案 手动GC[Matrix]、阈值的处理[Koom]）
-
-- FPS(Handler机制、Printer)、idleHandler（）
-
--
-
-延迟操作 Handler.postDelayed(Runnable r,long time)
-
-~~~
+- 延迟操作：
+`Handler.postDelayed(Runnable r,long time)`
+- 闲时延迟操作：
+```java
 Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
-          //queueIdle return true/false
-
+	//queueIdle return true/false
 })
-~~~
+```
 
-so动态加载
-
-Tinker的so的加载流程
-
-- https://github.com/KeepSafe/ReLinker
-
-UnsatisfiedLinkError : 主要的原因是兼容性的问题。包so的裁剪由于国内的厂商魔改ROM
-
-改的是so加载的路径（3种）。ReLinker最牛逼的地方就是解析SO的2进制文件，获取so的依赖属性。
+##### so动态加载
+- Tinker的so的加载流程（电量那节课讲的[[享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】]]）
+- UnsatisfiedLinkError : 主要的原因是兼容性的问题。包so的裁剪由于国内的厂商魔改ROM，改的是so加载的路径（3种）。
+- ReLinker： https://github.com/KeepSafe/ReLinker 
+	- 核心类 `ReLinkerInstance` ： https://github.com/KeepSafe/ReLinker/blob/master/relinker/src/main/java/com/getkeepsafe/relinker/ReLinkerInstance.java
+	- 通过动态加载so的技术，解决UnsatisfiedLinkError问题。
+	- 最牛逼的地方就是解析SO的2进制文件，获取so的依赖属性。
 
 **性能优化的总结**
 
@@ -77,10 +68,9 @@ breakpad+bugly+Firebase
 - 电量（battery historian、广播）
 
 - 流量消耗
+`TrafficStats / getUidRxBytes(int uid) / getTotalbytes()`
 
-TrafficStats / getUidRxBytes(int uid) /getTotalbytes()  
-
-后台偷跑:后台定时任务，获取时间间隔流量，计算
+后台偷跑：后台定时任务，获取时间间隔流量，计算
 
 - 内存指标的统计/内存的泄漏
 

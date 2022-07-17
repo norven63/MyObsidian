@@ -1,6 +1,7 @@
 # 课程表
 https://www.kdocs.cn/l/cqakeRtfWcuH
 
+PDF资料密码：xiangxue666，xxkt616，xiangxueketang
 <br><br>
 
 # 3期
