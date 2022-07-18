@@ -60,45 +60,52 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
 	- 全链路的网络监控APM：网络一体化的问题、协议本身（例如Socket，但各家公司不一样，所以SDK本身很难统一的处理）
 
 ##### 重点关注的APM指标
-- 电量（battery、historian、广播）
-- 流量消耗
-`TrafficStats / getUidRxBytes(int uid) / getTotalbytes()`
+1. 电量（battery、historian、广播）
 
-后台偷跑：后台定时任务，获取时间间隔流量，计算
+2. 流量消耗： 
+	- `TrafficStats / getUidRxBytes(int uid) / getTotalbytes()`
+	- 后台偷跑：后台定时任务，获取时间间隔（2、5分钟）流量，计算平均值
 
-- 内存指标的统计/内存的泄漏
-
+3. 内存指标的统计 / 内存的泄漏
+ - rabbit库的 [RabbitMemoryMonitor](https://github.com/SusionSuc/rabbit-client/blob/master/rabbit-monitor/src/main/java/com/susion/rabbit/monitor/instance/RabbitMemoryMonitor.kt)
 ```java
- /**
-   * 只能用在debug model,
-   * */
+/**
+ * 只能用在debug model,
+ **/
 
-	private fun getMemoryInfoInDebug(): RabbitMemoryInfo {
-        val info = Debug.MemoryInfo()
-        Debug.getMemoryInfo(info)
-        val memInfo = RabbitMemoryInfo()
-        memInfo.totalSize = (info.totalPss) * 1024 // 这个值比profiler中的total大一些
-        memInfo.vmSize = (info.dalvikPss) * 1024   // 这个值比profiler中的 java 内存值小一些, Doesn't include other Dalvik overhead
-        memInfo.nativeSize = info.nativePss * 1024
-        memInfo.othersSize = info.otherPss * 1024 + info.totalSwappablePss * 1024
-        memInfo.time = System.currentTimeMillis()
-        memInfo.pageName = RabbitMonitor.getCurrentPage()
+private fun getMemoryInfoInDebug(): RabbitMemoryInfo {
+	val info = Debug.MemoryInfo()
+	Debug.getMemoryInfo(info)
+	
+	val memInfo = RabbitMemoryInfo()
+	memInfo.totalSize = (info.totalPss) * 1024 // 这个值比profiler中的total大一些
+	memInfo.vmSize = (info.dalvikPss) * 1024   // 这个值比profiler中的 java 内存值小一些, Doesn't include other Dalvik overhead
+	memInfo.nativeSize = info.nativePss * 1024
+	memInfo.othersSize = info.otherPss * 1024 + info.totalSwappablePss * 1024
+	memInfo.time = System.currentTimeMillis()
+	memInfo.pageName = RabbitMonitor.getCurrentPage()
+	
+	return memInfo
+}
 
-        return memInfo
-
-    }
-
-    //pss
+// 统计进程的内存信息 total Pss
+fun getMemoryByActivityManager(): Long {
+	... 
     mActivityManager?.getProcessMemoryInfo(intArrayOf(Process.myPid())) ?: return 0
+    ...
+}
+    
 
-    //内存的泄漏  application的 生命周期的监听
-    weakreference
-    activity，activity.class.simplename
-    activity onStop的时候 手动GC 2次 sleep
+//内存的泄漏  利用ActivityLifeCycleCallback机制
+weakreference
+activity，activity.class.simplename
+activity onStop的时候 手动GC2次 sleep间隔500ms，影响性能
 ```
 
-- FPS 原理知道了 代码写在什么位置？？
-
+3. FPS 
+- Vsync 16ms
+- 卡顿：偶尔丢1、2帧不会造成卡顿，但如果在某个时间点丢了较多帧，就会卡顿。[Matrix wiki-什么是卡顿](https://github.com/Tencent/matrix/wiki/Matrix-Android-TraceCanary#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%A1%E9%A1%BF)
+- 原理知道了 代码写在什么位置？？
   ~~~java
   Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
       @Override    
@@ -139,17 +146,10 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
       }
   }
   ~~~
-
-  OnActivityResumed（）开启监听 onWindowFocusChanged
-
-  建议大家用 Message的消息监听，不要用Choreographer。
-
+`onActivityResumed()` 开启监听 onWindowFocusChanged
+建议大家用 Message的消息监听，不要用Choreographer。
 - 启动耗时监控
-
 冷启动:APP
-
 暖启动：
-
 activity的first Frame
-
 CP大法 ContentProvider。
