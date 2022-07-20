@@ -110,10 +110,10 @@ activity onStop的时候 手动GC2次 sleep间隔500ms，影响性能
 	> 2. FPS 意为 "帧/秒"，即1秒多少帧。  
 	> 3. 若 FPS 低，只能说明1秒内显示的帧数较少，但不能表示一定发生了卡顿现象。假设，如果1秒只有30帧（即FPS低），但如果每一帧 "都耗时32ms"，则依然说明这30帧是连续的、均匀的，人眼看起来顶多觉得不流畅，但不会觉得卡顿。  
 	> 4. 所谓发生卡顿，是指某一时间段内，发生了 "大量集中丢帧" 现象，即某1帧耗时突然超过了16ms，且这个超出值非常大，大到丢掉了后面非常多的帧。  
-	> 5. Matrix引入 "掉帧程度" 的这个指标，来衡量卡顿程度：  
+	> 5. Matrix引入 "掉帧程度" 的这个指标，来衡量卡顿程度(具体参见wiki文档)
 
 - 原理知道了，代码写在什么位置？？
-  ~~~java
+  ```java
   Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
       @Override    
       public void doFrame(long frameTimeNanos) {
@@ -152,7 +152,7 @@ activity onStop的时候 手动GC2次 sleep间隔500ms，影响性能
           ...
       }
   }
-  ~~~
+```
 `onActivityResumed()` 开启监听 onWindowFocusChanged
 建议大家用 Message的消息监听，不要用Choreographer。
 - 启动耗时监控
