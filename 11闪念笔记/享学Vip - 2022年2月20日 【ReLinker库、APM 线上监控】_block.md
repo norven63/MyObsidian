@@ -49,7 +49,7 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
 - 听云SDK（>8.0 CPU 指标的问题）
 - 网易 腾讯GT （时间非常老）16年
 - 360的[ArgusAPM](https://github.com/Qihoo360/ArgusAPM) gradle 集成的时候会有很多的问题
-- []
+- [BlockCanary](https://github.com/markzhai/AndroidPerformanceMonitor)
 
 #### APM有哪些指标
 ##### 不要去碰和讲的指标
