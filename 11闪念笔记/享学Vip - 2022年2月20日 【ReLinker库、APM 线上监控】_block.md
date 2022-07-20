@@ -48,7 +48,8 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
 - [**Matrix 库github**](https://github.com/Tencent/matrix/wiki/Matrix-Android-TraceCanary) ：功能全，但很重，不适合公司的业务迭代，稳定性低
 - 听云SDK（>8.0 CPU 指标的问题）
 - 网易 腾讯GT （时间非常老）16年
-- 360的APM gradle 集成的时候会有很多的问题
+- 360的[ArgusAPM](https://github.com/Qihoo360/ArgusAPM) gradle 集成的时候会有很多的问题
+- []
 
 #### APM有哪些指标
 ##### 不要去碰和讲的指标
