@@ -105,7 +105,7 @@ activity onStop的时候 手动GC2次 sleep间隔500ms，影响性能
 3. FPS 
 - Vsync 16ms
 - 卡顿：偶尔丢1、2帧不会造成卡顿，但如果在某个时间点丢了较多帧，就会卡顿。[Matrix wiki-什么是卡顿](https://github.com/Tencent/matrix/wiki/Matrix-Android-TraceCanary#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%A1%E9%A1%BF)
-- 原理知道了 代码写在什么位置？？
+- 原理知道了，代码写在什么位置？？
   ~~~java
   Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
       @Override    
