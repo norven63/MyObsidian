@@ -114,7 +114,7 @@ activity onStop的时候 手动GC2次 sleep间隔500ms，影响性能
 	> 6. 综上，APM的 **==技术指标==** 应该是“单次连续掉了多少帧” ；**==治理手段==** ，是统计发生卡顿时，两帧之间的所有方法耗时。
 
 - 原理知道了，代码写在什么位置？？
-  ```java
+```java
   Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
       @Override    
       public void doFrame(long frameTimeNanos) {

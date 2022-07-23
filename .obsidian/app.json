@@ -2,7 +2,7 @@
   "legacyEditor": false,
   "livePreview": true,
   "promptDelete": true,
-  "readableLineLength": true,
+  "readableLineLength": false,
   "newFileLocation": "folder",
   "foldHeading": true,
   "foldIndent": true,
