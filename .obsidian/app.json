@@ -1,8 +1,8 @@
 {
   "legacyEditor": false,
   "livePreview": true,
-  "promptDelete": false,
-  "readableLineLength": false,
+  "promptDelete": true,
+  "readableLineLength": true,
   "newFileLocation": "folder",
   "foldHeading": true,
   "foldIndent": true,
@@ -21,5 +21,7 @@
     "landscape": false,
     "margin": "0",
     "downscalePercent": 100
-  }
+  },
+  "showFrontmatter": true,
+  "strictLineBreaks": true
 }
