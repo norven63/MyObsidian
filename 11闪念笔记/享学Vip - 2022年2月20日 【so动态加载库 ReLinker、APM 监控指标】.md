@@ -51,6 +51,9 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
 - 360的[ArgusAPM](https://github.com/Qihoo360/ArgusAPM) gradle 集成的时候会有很多的问题
 - [BlockCanary](https://github.com/markzhai/AndroidPerformanceMonitor)
 
+<br>
+
+
 ### 2、APM有哪些指标
 #### 2.1、不要去碰和讲的指标
 1. 稳定性的问题（崩溃的问题）
@@ -59,6 +62,9 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
 2. 流量/网络 （Http协议的可达率、流量的大小）
 	- 使用OKHTTP的拦截器（可以获取请求的链接、byte大小，但是能够覆盖的面太小）
 	- 全链路的网络监控APM：网络一体化的问题、协议本身（例如Socket，但各家公司不一样，所以SDK本身很难统一的处理）
+
+<br>
+
 
 #### 2.2、重点关注的APM指标
 ##### 2.2.1、电量
