@@ -25,7 +25,7 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
 })
 ```
 
-## so动态加载库：ReLinker
+## 一、so动态加载库：ReLinker
 - [ReLinker 库github](https://github.com/KeepSafe/ReLinker )：
 - 通过动态加载so的技术，解决UnsatisfiedLinkError问题。
 	- UnsatisfiedLinkError : 主要的原因是兼容性的问题。包so的裁剪由于国内的厂商魔改ROM，改的是so加载的路径（3种）。
