@@ -40,10 +40,10 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
 <br><br>
 
 
-## 性能优化
+## 二、性能优化
 - 性能优化框架：做什么？怎么做？如何设计方案与架构？
 
-#### 主流开源项目的调研、用法：
+#### 1、主流开源项目的调研、用法：
 - [rabbit 库github](https://github.com/SusionSuc/rabbit-client)
 - [**Matrix 库github**](https://github.com/Tencent/matrix/wiki/Matrix-Android-TraceCanary) ：功能全，但很重，不适合公司的业务迭代，稳定性低
 - 听云SDK（>8.0 CPU 指标的问题）
@@ -51,8 +51,8 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
 - 360的[ArgusAPM](https://github.com/Qihoo360/ArgusAPM) gradle 集成的时候会有很多的问题
 - [BlockCanary](https://github.com/markzhai/AndroidPerformanceMonitor)
 
-#### APM有哪些指标
-##### 不要去碰和讲的指标
+#### 2、APM有哪些指标
+##### 2.1、不要去碰和讲的指标
 1. 稳定性的问题（崩溃的问题）
 	- 主流方案：breakpad+bugly+Firebase(海外)
 
@@ -60,20 +60,19 @@ Looper.myQueue().addIdelHandler(new Message.IdelHandler(){
 	- 使用OKHTTP的拦截器（可以获取请求的链接、byte大小，但是能够覆盖的面太小）
 	- 全链路的网络监控APM：网络一体化的问题、协议本身（例如Socket，但各家公司不一样，所以SDK本身很难统一的处理）
 
-##### 重点关注的APM指标
-1. 电量（battery、historian、广播）
+##### 2.2、重点关注的APM指标
+1. **==电量==**（battery、historian、广播）
 
-2. 流量消耗： 
+2. **==流量消耗==**： 
 	- `TrafficStats / getUidRxBytes(int uid) / getTotalbytes()`
 	- 后台偷跑：后台定时任务，获取时间间隔（2、5分钟）流量，计算平均值
 
-3. 内存指标的统计 / 内存的泄漏
+3. **==内存指标的统计 / 内存的泄漏==**
  - rabbit库的 [RabbitMemoryMonitor](https://github.com/SusionSuc/rabbit-client/blob/master/rabbit-monitor/src/main/java/com/susion/rabbit/monitor/instance/RabbitMemoryMonitor.kt)
 ```java
 /**
  * 只能用在debug model,
  **/
-
 private fun getMemoryInfoInDebug(): RabbitMemoryInfo {
 	val info = Debug.MemoryInfo()
 	Debug.getMemoryInfo(info)
@@ -103,7 +102,7 @@ activity，activity.class.simplename
 activity onStop的时候 手动GC2次 sleep间隔500ms，影响性能
 ```
 
-3. FPS 
+4. **==FPS 帧率、卡顿==**
 - Vsync 16ms
 - 卡顿：偶尔丢1、2帧不会造成卡顿，但如果在某个时间点丢了较多帧，就会卡顿。[Matrix wiki-什么是卡顿](https://github.com/Tencent/matrix/wiki/Matrix-Android-TraceCanary#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%A1%E9%A1%BF)
 	> 1. 人眼识别的流程效果为：1秒显示60帧，每一帧都均匀分布耗时，即1帧≈16ms  
@@ -114,7 +113,7 @@ activity onStop的时候 手动GC2次 sleep间隔500ms，影响性能
 	> 6. 综上，APM的 **==技术指标==** 应该是“单次连续掉了多少帧” ；**==治理手段==** ，是统计发生卡顿时，两帧之间的所有方法耗时。
 
 - 原理知道了，代码写在什么位置？？
-`onActivityResumed()` 开启监听 onWindowFocusChanged
+`onActivityResumed()` 开启监听 `onWindowFocusChanged()`
 
 - 两种方案：
 1. Message的消息监听（推荐）
@@ -133,7 +132,7 @@ Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() 
 });
 ```
 
-3. Choreographer（线上性能影响大）
+2. Choreographer（线上性能影响大）
 ```java
 //推荐下面
 public static void loop() {
@@ -154,7 +153,7 @@ public static void loop() {
 }
 ```
 
-- 启动耗时监控
-1. 冷启动、暖启动
-2. Activity的first Frame
-3. CP大法 ContentProvider。
+5. **==启动耗时监控==**
+- 冷启动、暖启动
+- Activity的first Frame
+- CP大法 ContentProvider。
