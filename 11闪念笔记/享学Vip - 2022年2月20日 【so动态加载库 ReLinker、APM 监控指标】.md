@@ -278,7 +278,6 @@ Window Manager是一个用于控制window的系统服务，包含一系列的Vie
 如果t3-t1>16.7ms，则认为发生一次卡顿
 
 ## 流畅度得分计算公式
-
 设目标fps为target_fps，目标每帧耗时为target_ftime=1000/target_fps  从以下几个维度衡量流畅度：
 -   fps: 越接近target_fps越好，权重分配为40%    
 -   掉帧数：越少越好，权重分配为40%    
