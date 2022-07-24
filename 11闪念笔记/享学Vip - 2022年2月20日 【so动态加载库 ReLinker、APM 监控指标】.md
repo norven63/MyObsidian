@@ -157,3 +157,202 @@ public static void loop() {
 - 冷启动、暖启动
 - Activity的first Frame
 - CP大法 ContentProvider。
+
+<br><br>
+
+## 三、帧率
+### 图形显示过程
+
+帧的渲染过程中一些关键组件的流程图
+![[20220724_1.jpg]]
+
+#### Image Stream Producers（图像生产者）
+
+任何可以产生图形信息的组件都统称为图像的生产者，比如OpenGL ES, Canvas 2D, 和 媒体解码器等。
+
+#### Image Stream Consumers（图像消费者）
+
+SurfaceFlinger是最常见的图像消费者，Window Manager将图形信息收集起来提供给SurfaceFlinger,SurfaceFlinger接受后经过合成再把图形信息传递给显示器。同时，SurfaceFlinger也是唯一一个能够改变显示器内容的服务。SurfaceFlinger使用OpenGL和Hardware Composer来生成surface.
+
+某些OpenGL ES 应用同样也能够充当图像消费者，比如相机可以直接使用相机的预览界面图像流，一些非GL应用也可以是消费者，比如ImageReader 类。
+
+#### Window Manager
+
+Window Manager是一个用于控制window的系统服务，包含一系列的View。每个Window都会有一个surface，Window Manager会监视window的许多信息，比如生命周期、输入和焦点事件、屏幕方向、转换、动画、位置、转换、z-order等，然后将这些信息（统称window metadata）发送给SurfaceFlinger，这样，SurfaceFlinger就能将window metadata合成为显示器上的surface。
+
+#### Hardware Composer
+
+为硬件抽象层（HAL）的子系统。SurfaceFlinger可以将某些合成工作委托给Hardware Composer，从而减轻OpenGL和GPU的工作。此时，SurfaceFlinger扮演的是另一个OpenGL ES客户端，当SurfaceFlinger将一个缓冲区或两个缓冲区合成到第三个缓冲区时，它使用的是OpenGL ES。这种方式会比GPU更为高效。
+
+一般应用开发都要将UI数据使用Activity这个载体去展示，典型的Activity显示流程为：
+
+1.  startActivity启动Activity；
+    
+2.  为Activity创建一个window(PhoneWindow)，并在WindowManagerService中注册这个window；
+    
+3.  切换到前台显示时，WindowManagerService会要求SurfaceFlinger为这个window创建一个surface用来绘图。SurfaceFlinger创建一个”layer”（surface）。（以想象一下C/S架构，SF对应Server，对应Layer；App对应Client，对应Surface）,这个layer的核心即是一个BufferQueue，这时候app就可以在这个layer上render了； 将所有的layer进行合成，显示到屏幕上。
+    
+
+一般app而言，在任何屏幕上起码有三个layer：
+
+-   屏幕顶端的status bar
+    
+-   屏幕下面的navigation bar
+    
+-   还有就是app的UI部分。 一些特殊情况下，app的layer可能多余或者少于3个，例如对全屏显示的app就没有status bar，而对launcher，还有个为了wallpaper显示的layer。status bar和navigation bar是由系统进行去render，因为不是普通app的组成部分嘛。而app的UI部分对应的layer当然是自己去render，所以就有了第4条中的所有layer进行“合成”。
+    
+
+### GUI框架
+
+### Hardware Composer
+
+那么android是如何使用这两种合成机制的呢？这里就是Hardware Composer的功劳。处理流程为：
+
+1.  SurfaceFlinger给HWC提供layer list，询问如何处理这些layer；
+    
+2.  HWC将每个layer标记为overlay或者GLES composition，然后回馈给SurfaceFlinger；
+    
+3.  SurfaceFlinger需要去处理那些GLES的合成，而不用去管overlay的合成，最后将overlay的layer和GLES合成后的buffer发送给HWC处理。
+    
+
+借用google一张图说明，可以将上面讲的很多概念展现，很清晰。地址位于 [https://source.android.com/devices/graphics/](https://link.jianshu.com/?t=https://source.android.com/devices/graphics/)
+
+### 关于帧率
+
+即 Frame Rate，单位 fps，是指 gpu 生成帧的速率，如 33 fps，60fps，越高越好。  但是对于快速变化的游戏而言，你的FPS很难一直保持同样的数值，他会随着你所看到的显示卡所要描画的画面的复杂程度而变化。
+
+### VSync
+
+安卓系统中有 2 种 VSync 信号：
+
+1.  屏幕产生的**硬件 VSync**： 硬件 VSync 是一个脉冲信号，起到开关或触发某种操作的作用。
+    
+2.  由 SurfaceFlinger 将其转成的**软件 Vsync 信号**：经由 Binder 传递给 Choreographer。
+    
+
+#### 单层缓冲引发“画面撕裂”问题
+
+如上图，CPU/GPU 向 Buffer 中生成图像，屏幕从 Buffer 中取图像、刷新后显示。这是一个典型的生产者——消费者模型。理想的情况是帧率和刷新频率相等，每绘制一帧，屏幕显示一帧。而实际情况是，二者之间没有必然的大小关系，如果没有锁来控制同步，很容易出现问题。
+
+所谓”撕裂”就是一种画面分离的现象，这样得到的画像虽然相似但是上半部和下半部确实明显的不同。这种情况是由于帧绘制的频率和屏幕显示频率不同步导致的，比如显示器的刷新率是75Hz,而某个游戏的FPS是100. 这就意味着显示器每秒更新75次画面，而显示卡每秒更新100次，比你的显示器快33%。
+
+### 双缓冲
+
+两个缓存区分别为 Back Buffer 和 Frame Buffer。GPU 向 Back Buffer 中写数据，屏幕从 Frame Buffer 中读数据。VSync 信号负责调度从 Back Buffer 到 Frame Buffer 的复制操作，可认为该复制操作在瞬间完成。
+
+双缓冲的模型下，工作流程这样的：
+
+-   在某个时间点，一个屏幕刷新周期完成，进入短暂的刷新空白期。此时，VSync 信号产生，先完成复制操作，然后通知 CPU/GPU 绘制下一帧图像。复制操作完成后屏幕开始下一个刷新周期，即将刚复制到 Frame Buffer 的数据显示到屏幕上。
+    
+-   在这种模型下，只有当 VSync 信号产生时，CPU/GPU 才会开始绘制。这样，当帧率大于刷新频率时，帧率就会被迫跟刷新频率保持同步，从而避免“tearing”现象。
+    
+
+### VSYNC 偏移
+
+应用和SurfaceFlinger的渲染回路必须同步到硬件的VSYNC，在一个VSYNC事件中，显示器将显示第N帧，SurfaceFlinger合成第N+1帧，app合成第N+2帧。
+
+使用VSYNC同步可以保证延迟的一致性，减少了app和SurfaceFlinger的错误，以及显示在各个阶段之间的偏移。然而，前提是app和SurfaceFlinger每帧时间的变化并不大。因此，从输入到显示的延迟至少有两帧。  为了解决这个问题，您可以使用VSYNC偏移量来减少输入到显示的延迟，其方法为将app和SurfaceFlinger的合成信号与硬件的VSYNC关联起来。因为通常app的合成耗时是小于两帧的（33ms左右）。  VSYNC偏移信号细分为以下3种，它们都保持相同的周期和偏移向量：
+
+-   HW_VSYNC_0：显示器开始显示下一帧。
+    
+-   VSYNC：app读取输入并生成下一帧。
+    
+-   SF VSYNC：SurfaceFlinger合成下一帧的。 收到VSYNC偏移信号之后， SurfaceFlinger 才开始接收缓冲区的数据进行帧的合成，而app才处理输入并渲染帧，这些操作都将在16.7ms完成。
+    
+
+### Jank 掉帧
+
+注意，当 VSync 信号发出时，如果 GPU/CPU 正在生产帧数据，此时不会发生复制操作。屏幕进入下一个刷新周期时，从 Frame Buffer 中取出的是“老”数据，而非正在产生的帧数据，即两个刷新周期显示的是同一帧数据。这是我们称发生了“掉帧”（Dropped Frame，Skipped Frame，Jank）现象。
+
+### 流畅性解决方案思路
+
+1.  从dumpsys SurfaceFlinger --latency中获取127帧的数据
+    
+2.  上面的命令返回的第一行为设备本身固有的帧耗时，单位为ns，通常在16.7ms左右
+    
+3.  从第二行开始，分为3列，一共有127行，代表每一帧的几个关键时刻，单位也为ns
+    
+
+第一列t1： when the app started to draw （开始绘制图像的瞬时时间） 第二列t2： the vsync immediately preceding SF submitting the frame to the h/w （VSYNC信令将软件SF帧传递给硬件HW之前的垂直同步时间），也就是对应上面所说的软件Vsync 第三列t3： timestamp immediately after SF submitted that frame to the h/w （SF将帧传递给HW的瞬时时间，及完成绘制的瞬时时间）
+
+1.  将第i行和第i-1行t2相减，即可得到第i帧的绘制耗时，提取出每一帧不断地dump出帧信息，计算出
+    
+
+### 一些计算规则
+
+#### 计算fps:
+
+每dumpsys SurfaceFlinger一次计算汇总出一个fps,计算规则为：  frame的总数N：127行中的非0行数  绘制的时间T：设t=当前行t2 - 上一行的t2，求出所有行的和∑t  fps=N/T (要注意时间转化为秒)
+
+#### 计算中一些细节问题
+
+一次dumpsys SurfaceFlinger会输出127帧的信息，但是这127帧可能是这个样子：
+
+...  
+0               0               0  
+0               0               0  
+0               0               0  
+575271438588    575276081296    575275172129  
+575305169681    575309795514    575309142441  
+580245208898    580250445565    580249372231  
+580279290043    580284176346    580284812908  
+580330468482    580334851815    580333739054   
+0               0               0  
+0               0               0  
+...  
+575271438588    575276081296    575275172129  
+575305169681    575309795514    575309142441  
+ 
+
+-   出现0的地方是由于buffer中没有数据，而非0的地方为绘制帧的时刻，因此仅计算非0的部分数据
+    
+-   观察127行数据，会发现偶尔会出现9223372036854775808这种数字，这是由于字符溢出导致的，因此这一行数据也不能加入计算
+    
+-   不能单纯的dump一次计算出一个fps，举个例子，如果A时刻操作了手机，停留3s后，B时刻再次操作手机，按照上面的计算方式，则t>3s,并且也会参与到fps的计算去，从而造成了fps不准确，因此，需要加入一个阀值判断，当t大于某个值时，就计算一次fps，并且把相关数据重新初始化，这个值一般取500ms
+    
+-   如果t<16.7ms,则直接按16.7ms算，同样的总耗时T加上的也是16.7
+    
+
+#### 计算jank的次数:
+
+如果t3-t1>16.7ms，则认为发生一次卡顿
+
+## 流畅度得分计算公式
+
+设目标fps为target_fps，目标每帧耗时为target_ftime=1000/target_fps  从以下几个维度衡量流畅度：
+
+-   fps: 越接近target_fps越好，权重分配为40%
+    
+-   掉帧数：越少越好，权重分配为40%
+    
+-   超时帧：拆分成以下两个维度
+    
+    -   超时帧的个数，越少越好，权重分配为5%
+        
+    -   最大超时帧的耗时，越接近target_ftime越好，权重分配为15%
+        
+
+end_time = round(last_frame_time / 1000000000, 2)  
+T = utils.get_current_time()  
+fps = round(frame_counts * 1000 / total_time, 2)  
+​  
+# 计算得分  
+g = fps / target  
+if g > 1:  
+  g = 1  
+if max_frame_time - kpi <= 1:  
+       max_frame_time = kpi  
+h = kpi / max_frame_time  
+ score = round((g * 50 + h * 10 + (1 - over_kpi_counts / frame_counts) * 40), 2)
+
+### SurfaceView
+
+Vsync 屏幕的重绘 16ms
+
+SurfaceView&view
+
+#### APM框架总结
+
+-   类似组件化、common library（反射、工具类 获取进程ID )、业务（电量、网络监听、资源问题、anr、内存、FPSUi的问题）
+    
+-   每一个功能组件都打成AAR的包，你想用什么 集成哪一个。(Maven私有仓库)
