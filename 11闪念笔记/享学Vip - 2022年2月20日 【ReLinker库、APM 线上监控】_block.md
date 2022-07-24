@@ -114,52 +114,47 @@ activity onStop的时候 手动GC2次 sleep间隔500ms，影响性能
 	> 6. 综上，APM的 **==技术指标==** 应该是“单次连续掉了多少帧” ；**==治理手段==** ，是统计发生卡顿时，两帧之间的所有方法耗时。
 
 - 原理知道了，代码写在什么位置？？
-```java
-  Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
-      @Override    
-      public void doFrame(long frameTimeNanos) {
-          if(frameTimeNanos - mLastFrameNanos > 100) {
-
-              ...
-
-          }
-
-          mLastFrameNanos = frameTimeNanos;
-
-          Choreographer.getInstance().postFrameCallback(this);
-      }
-  });
-
-  //推荐下面
-  public static void loop() {
-      ...
-
-      for (;;) {
-
-          ...
-
-          // This must be in a local variable, in case a UI event sets the logger
-
-          Printer logging = me.mLogging;
-          if (logging != null) {
-              logging.println(">>>>> Dispatching to " + msg.target + " " + msg.callback + ": " + msg.what);
-          }
-
-          msg.target.dispatchMessage(msg);
-          if (logging != null) {
-              logging.println("<<<<< Finished to " + msg.target + " " + msg.callback);
-          }
-
-          ...
-      }
-  }
-```
 `onActivityResumed()` 开启监听 onWindowFocusChanged
-两种方案：
-1. Message的消息监听
-2. Choreographer。
+
+- 两种方案：
+1. Message的消息监听（推荐）
+```java
+Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
+    @Override    
+    public void doFrame(long frameTimeNanos) {
+        if(frameTimeNanos - mLastFrameNanos > 100) {
+            ...
+        }
+        
+        mLastFrameNanos = frameTimeNanos;
+        
+        Choreographer.getInstance().postFrameCallback(this);
+    }
+});
+```
+
+3. Choreographer（线上性能影响大）
+```java
+//推荐下面
+public static void loop() {
+    ...
+    for (;;) {
+        ...
+        // This must be in a local variable, in case a UI event sets the logger
+        Printer logging = me.mLogging;
+        if (logging != null) {
+            logging.println(">>>>> Dispatching to " + msg.target + " " + msg.callback + ": " + msg.what);
+        }
+        msg.target.dispatchMessage(msg);
+        if (logging != null) {
+            logging.println("<<<<< Finished to " + msg.target + " " + msg.callback);
+        }
+        ...
+    }
+}
+```
+
 - 启动耗时监控
-冷启动:APP
-暖启动：
-activity的first Frame
-CP大法 ContentProvider。
+1. 冷启动、暖启动
+2. Activity的first Frame
+3. CP大法 ContentProvider。
