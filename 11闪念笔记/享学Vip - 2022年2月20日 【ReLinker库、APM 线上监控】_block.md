@@ -155,7 +155,9 @@ activity onStop的时候 手动GC2次 sleep间隔500ms，影响性能
   }
 ```
 `onActivityResumed()` 开启监听 onWindowFocusChanged
-建议大家用 Message的消息监听，不要用Choreographer。
+两种方案：
+1. Message的消息监听
+2. Choreographer。
 - 启动耗时监控
 冷启动:APP
 暖启动：

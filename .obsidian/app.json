@@ -23,6 +23,6 @@
     "downscalePercent": 100
   },
   "showFrontmatter": true,
-  "strictLineBreaks": true,
+  "strictLineBreaks": false,
   "showUnsupportedFiles": true
 }
