@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
-            "mode": "preview",
+            "mode": "source",
             "backlinks": false,
             "source": false
           }
@@ -62,7 +62,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 415
+    "width": 415,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -132,14 +133,14 @@
   "active": "070b9b227470c282",
   "lastOpenFiles": [
     "99附件/20220724_1.jpg",
+    "99附件/4391195058704.jpg",
+    "12学习笔记/享学Vip - 2022年5月5日 【JNI技术 之 实战：FMOD实现声音特效、初识CMakeLists.txt文件、把C库集成到Android工程的统一流程】.md",
+    "99附件/20220521_1.png",
+    "99附件/20220529_2.png",
+    "99附件/20220529_1.png",
+    "99附件/1658670814144.jpg",
     "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
     "99附件/20220611232812.png",
-    "99附件/20220611233254.png",
-    "99附件/20220611115713.png",
-    "99附件/54391195058704.png",
-    "99附件/74391195058704.png",
-    "99附件/44391195058704.png",
-    "99附件/Pasted image 20220611225609.png",
-    "88模板/模板-##.md"
+    "99附件/20220611233254.png"
   ]
 }

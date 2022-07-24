@@ -173,69 +173,48 @@ public static void loop() {
 帧的渲染过程中一些关键组件的流程图
 ![500](../99附件/20220724_1.jpg)
 
-
 #### Image Stream Producers（图像生产者）
-
 任何可以产生图形信息的组件都统称为图像的生产者，比如OpenGL ES, Canvas 2D, 和 媒体解码器等。
 
 #### Image Stream Consumers（图像消费者）
-
 SurfaceFlinger是最常见的图像消费者，Window Manager将图形信息收集起来提供给SurfaceFlinger,SurfaceFlinger接受后经过合成再把图形信息传递给显示器。同时，SurfaceFlinger也是唯一一个能够改变显示器内容的服务。SurfaceFlinger使用OpenGL和Hardware Composer来生成surface.
 
 某些OpenGL ES 应用同样也能够充当图像消费者，比如相机可以直接使用相机的预览界面图像流，一些非GL应用也可以是消费者，比如ImageReader 类。
 
 #### Window Manager
-
 Window Manager是一个用于控制window的系统服务，包含一系列的View。每个Window都会有一个surface，Window Manager会监视window的许多信息，比如生命周期、输入和焦点事件、屏幕方向、转换、动画、位置、转换、z-order等，然后将这些信息（统称window metadata）发送给SurfaceFlinger，这样，SurfaceFlinger就能将window metadata合成为显示器上的surface。
 
 #### Hardware Composer
-
 为硬件抽象层（HAL）的子系统。SurfaceFlinger可以将某些合成工作委托给Hardware Composer，从而减轻OpenGL和GPU的工作。此时，SurfaceFlinger扮演的是另一个OpenGL ES客户端，当SurfaceFlinger将一个缓冲区或两个缓冲区合成到第三个缓冲区时，它使用的是OpenGL ES。这种方式会比GPU更为高效。
 
 一般应用开发都要将UI数据使用Activity这个载体去展示，典型的Activity显示流程为：
 
-1.  startActivity启动Activity；
-    
-2.  为Activity创建一个window(PhoneWindow)，并在WindowManagerService中注册这个window；
-    
-3.  切换到前台显示时，WindowManagerService会要求SurfaceFlinger为这个window创建一个surface用来绘图。SurfaceFlinger创建一个”layer”（surface）。（以想象一下C/S架构，SF对应Server，对应Layer；App对应Client，对应Surface）,这个layer的核心即是一个BufferQueue，这时候app就可以在这个layer上render了； 将所有的layer进行合成，显示到屏幕上。
-    
+1.  startActivity启动Activity；    
+2.  为Activity创建一个window(PhoneWindow)，并在WindowManagerService中注册这个window；    
+3.  切换到前台显示时，WindowManagerService会要求SurfaceFlinger为这个window创建一个surface用来绘图。SurfaceFlinger创建一个”layer”（surface）。（以想象一下C/S架构，SF对应Server，对应Layer；App对应Client，对应Surface）,这个layer的核心即是一个BufferQueue，这时候app就可以在这个layer上render了； 将所有的layer进行合成，显示到屏幕上。    
 
 一般app而言，在任何屏幕上起码有三个layer：
-
--   屏幕顶端的status bar
-    
--   屏幕下面的navigation bar
-    
+-   屏幕顶端的status bar    
+-   屏幕下面的navigation bar    
 -   还有就是app的UI部分。 一些特殊情况下，app的layer可能多余或者少于3个，例如对全屏显示的app就没有status bar，而对launcher，还有个为了wallpaper显示的layer。status bar和navigation bar是由系统进行去render，因为不是普通app的组成部分嘛。而app的UI部分对应的layer当然是自己去render，所以就有了第4条中的所有layer进行“合成”。
-    
 
 ### GUI框架
 
 ### Hardware Composer
-
 那么android是如何使用这两种合成机制的呢？这里就是Hardware Composer的功劳。处理流程为：
-
-1.  SurfaceFlinger给HWC提供layer list，询问如何处理这些layer；
-    
-2.  HWC将每个layer标记为overlay或者GLES composition，然后回馈给SurfaceFlinger；
-    
-3.  SurfaceFlinger需要去处理那些GLES的合成，而不用去管overlay的合成，最后将overlay的layer和GLES合成后的buffer发送给HWC处理。
-    
+1.  SurfaceFlinger给HWC提供layer list，询问如何处理这些layer；    
+2.  HWC将每个layer标记为overlay或者GLES composition，然后回馈给SurfaceFlinger；    
+3.  SurfaceFlinger需要去处理那些GLES的合成，而不用去管overlay的合成，最后将overlay的layer和GLES合成后的buffer发送给HWC处理。    
 
 借用google一张图说明，可以将上面讲的很多概念展现，很清晰。地址位于 [https://source.android.com/devices/graphics/](https://link.jianshu.com/?t=https://source.android.com/devices/graphics/)
 
 ### 关于帧率
-
 即 Frame Rate，单位 fps，是指 gpu 生成帧的速率，如 33 fps，60fps，越高越好。  但是对于快速变化的游戏而言，你的FPS很难一直保持同样的数值，他会随着你所看到的显示卡所要描画的画面的复杂程度而变化。
 
 ### VSync
-
 安卓系统中有 2 种 VSync 信号：
-
 1.  屏幕产生的**硬件 VSync**： 硬件 VSync 是一个脉冲信号，起到开关或触发某种操作的作用。
-    
-2.  由 SurfaceFlinger 将其转成的**软件 Vsync 信号**：经由 Binder 传递给 Choreographer。
+    2.  由 SurfaceFlinger 将其转成的**软件 Vsync 信号**：经由 Binder 传递给 Choreographer。
     
 
 #### 单层缓冲引发“画面撕裂”问题
