@@ -17,5 +17,10 @@
 4. Flow
 	1. 背压问题的解决策略
 		1. LRU，最近最少
-	2. 
+	2. 常用操作符：
+		- map
+		- take
+		- filter
+		- collect、launchIn、toList、toSet
+		- asFlow
 5. Flow替换LiveData
