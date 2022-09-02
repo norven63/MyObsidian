@@ -13,11 +13,12 @@
 1. 数据的双向流处理，数据源变动 --> UI变动、UI变动 --> 数据源变动
 2. LiveData
 	1. 数据粘性
-3. 观察者模式
-4. Flow
-	1. 背压问题的解决策略
+	2. 观察者模式
+3. Flow
+	1. 生产者消费者模型
+	2. 背压问题的解决策略
 		1. LRU，最近最少
-	2. 常用操作符：末端操作符（冷流数据）、中间操作符；本质，为扩展函数。
+	3. 常用操作符：末端操作符（冷流数据）、中间操作符；本质，为扩展函数。
 		- map
 		- take
 		- filter
@@ -35,4 +36,4 @@
 		- flatMapConcat
 		- flatMapMerge
 		- flatMapLastes
-5. 用Flow替换LiveData
+4. 用Flow替换LiveData
