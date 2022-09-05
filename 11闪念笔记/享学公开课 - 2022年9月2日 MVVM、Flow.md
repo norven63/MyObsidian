@@ -37,3 +37,6 @@
 		- flatMapMerge
 		- flatMapLastes
 4. 用Flow替换LiveData
+
+1. 确认停车位置的矩形位置
+2. 确认自己的
