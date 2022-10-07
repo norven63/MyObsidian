@@ -1,4 +1,4 @@
-日期： 2022-09-12
+日期： 2022-10-07
 
 标签： #学习笔记 #技术 #Android 
 
@@ -11,3 +11,4 @@
 <br>
 
 1. C层性能优化：Neno
+2. android ndk simple中的native-codec里的looper.h 
