@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "12学习笔记/深入理解ART读书笔记.md",
+            "file": "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -62,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 500,
-    "collapsed": true
+    "width": 366
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -79,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "12学习笔记/深入理解ART读书笔记.md",
+                "file": "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "12学习笔记/深入理解ART读书笔记.md",
+                "file": "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12学习笔记/深入理解ART读书笔记.md"
+                "file": "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md"
               }
             }
           }
@@ -132,15 +131,15 @@
   },
   "active": "070b9b227470c282",
   "lastOpenFiles": [
+    "12学习笔记/深入理解ART读书笔记.md",
+    "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+    "13沉淀笔记/读书技巧.md",
     "11闪念笔记/20220611225443.png.md",
     "11闪念笔记/享学公开课 - 2022年4月8日 播放器手势.md",
     "11闪念笔记/享学公开课 - 2022年9月12日 C层Hook.md",
     "11闪念笔记/享学公开课 - 2022年9月2日 MVVM、Flow.md",
     "11闪念笔记/享学公开课 - 2022年8月19日 组件化.md",
     "11闪念笔记/享学公开课 - 2022年5月7日 FFmpeg核心解析.md",
-    "11闪念笔记/享学公开课 - 2022年5月13日 音视频功能与方案、面试简历分析.md",
-    "11闪念笔记/享学公开课 - 2022年5月17日 一次性解决FFmpeg编译链条的问题.md",
-    "11闪念笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
-    "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md"
+    "11闪念笔记/享学公开课 - 2022年5月13日 音视频功能与方案、面试简历分析.md"
   ]
 }
