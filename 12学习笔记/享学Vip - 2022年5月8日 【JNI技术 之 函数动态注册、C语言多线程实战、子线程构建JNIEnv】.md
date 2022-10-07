@@ -124,7 +124,7 @@ static const JNINativeMethod methods[] = {
  * 【0. Java层调用 System.loadLibrary() 时，触发C层 JNI_OnLoad() 函数】  
  */
 
-// java:像 Java的构造函数，如果你不写构造函数，默认就有构造函数，如果你写了 会覆盖  
+// java: 像Java的构造函数，如果你不写构造函数，默认就有构造函数，如果你写了 会覆盖  
 // JNI_OnLoad，如果你不写JNI_OnLoad，默认就有JNI_OnLoad，如果你写了，会覆盖  
 // 逆向工程师，做坏事的  
 // 在很多的系统源码，或者是其他源码，会大量采用动态注册，动态注册虽然很麻烦，但是这个是必学项  
