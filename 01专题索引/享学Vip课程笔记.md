@@ -235,7 +235,7 @@ PDF资料密码：xiangxue666，xxkt616，xiangxueketang
 
 [[享学Vip - 2022年5月12日 【JNI技术 之 手写Parcel的C++层与原理】]]
 
-[[享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组】]]
+[[享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】]]
 
 [[享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】]]
 
