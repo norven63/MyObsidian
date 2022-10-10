@@ -86,8 +86,8 @@ jstring
 JNICALL // （Linux非必选、Windows必选） jni call ，约束了函数入栈顺序，和堆栈内存清理的规则
 
 // 【函数入参】
-// 如果是 "实例" 方法，则这里入参的是jobject，代表java层传递下来的 "调用对象"，例如本地即为 MainActivity 对象
-// 如果是 "静态" 方法，则这里入参的是jclass，代表java传递下来的 "class对象"，例如本地即为 MainActivity.class
+// 如果是 "实例" 方法，则这里入参的是jobject thiz，代表java层传递下来的 "调用对象"，例如本地即为 MainActivity 对象
+// 如果是 "静态" 方法，则这里入参的是jclass clazz，代表java传递下来的 "class对象"，例如本地即为 MainActivity.class
 
 // 【函数名称】
 // 命名规范：Java_包名_类名_方法名
