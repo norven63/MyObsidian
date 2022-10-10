@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
+            "file": "12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
+                "file": "12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
+                "file": "12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md"
+                "file": "12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md"
               }
             }
           }
@@ -131,6 +131,8 @@
   },
   "active": "070b9b227470c282",
   "lastOpenFiles": [
+    "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
+    "12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
     "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
     "12学习笔记/享学Vip - 2022年5月12日 【JNI技术 之 手写Parcel的C++层与原理】.md",
     "11闪念笔记/享学公开课 - 2022年9月12日 C层Hook.md",
@@ -138,8 +140,6 @@
     "00索引/Android.md",
     "13沉淀笔记/读书技巧.md",
     "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
-    "12学习笔记/深入理解ART读书笔记.md",
-    "11闪念笔记/20220611225443.png.md",
-    "11闪念笔记/享学公开课 - 2022年4月8日 播放器手势.md"
+    "12学习笔记/深入理解ART读书笔记.md"
   ]
 }

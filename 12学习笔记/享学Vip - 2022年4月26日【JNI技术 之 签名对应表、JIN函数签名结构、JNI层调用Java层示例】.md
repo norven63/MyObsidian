@@ -258,11 +258,11 @@ Java_com_derry_as_1jni_1project_1cpp_MainActivity_callAddMathod(JNIEnv *env, job
     jmethodID showStringMeId = env->GetMethodID(mainActivitCls, "showString", "(Ljava/lang/String;I)Ljava/lang/String;");  
   
     // 构建一个jstring作为入参  
-    jstring value = env->NewStringUTF("李元霸");  
+    jstring param = env->NewStringUTF("李元霸");  
   
     // 调用方法，并获取返回值  
     // 因为Java方法返回值为String，属于引用类型，所以调用CallObjectMethod()  
-    jstring resultStr = (jstring) env->CallObjectMethod(mainActivitThis, showStringMeId, value, 9527); // 因为jstring是公开继承jobject  
+    jstring resultStr = (jstring) env->CallObjectMethod(mainActivitThis, showStringMeId, param, 9527); // 因为jstring是公开继承jobject  
   
     // 将jstring转换成C的字符串  
     const char *resultCStr = env->GetStringUTFChars(resultStr, NULL);  
