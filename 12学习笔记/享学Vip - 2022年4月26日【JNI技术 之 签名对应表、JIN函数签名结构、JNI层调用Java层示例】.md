@@ -219,7 +219,7 @@ Java_com_derry_jnidemo_MainActivity_changeAge(JNIEnv *env, jclass mainActivityCl
 
 	// 3. 修改属性值
 	// void SetStaticIntField(jclass clazz, jfieldID fieldID, jint value)  
-	env->SetStaticIntField(mainActivityCls, ageFid, age + 1); // 因为修改的是 "实例" 属性，且是int类型，SetStaticIntField()，需要static关键字
+	env->SetStaticIntField(mainActivityCls, ageFid, age + 1); // 因为修改的是 "静态" 属性，且是int类型，SetStaticIntField()，需要static关键字
 	
 	return resultPwd;
 }
