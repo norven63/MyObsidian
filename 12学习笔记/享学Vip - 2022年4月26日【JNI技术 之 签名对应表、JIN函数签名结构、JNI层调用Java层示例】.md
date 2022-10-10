@@ -37,7 +37,7 @@ void --> V
 
 object（对象，引用类型）固定格式 ” L + 全限定名 + ; “，示例：**`String`** --> **`Ljava/lang/String;`**
 
-数组 固定格式 ” [ + 元素的类型签名 “，示例：**`int[]` --> `[I`**    、  **`String[][]`** --> **`[[Ljava/lang/String;`**
+数组 固定格式 “ [ + 元素的类型签名 ”，示例：**`int[]` --> `[I`**    、  **`String[][]`** --> **`[[Ljava/lang/String;`**
 
 函数签名，固定格式 ” ( + 参数的类型签名 + ) + 返回值的类型签名 “ ，示例： **`void name(int a，double b)`** --> **`(ID)V`**
 
