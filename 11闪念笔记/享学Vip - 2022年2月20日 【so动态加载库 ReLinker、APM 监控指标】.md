@@ -239,6 +239,9 @@ Window Manager是一个用于控制window的系统服务，包含一系列的Vie
 ### Jank 掉帧
 注意，当 VSync信号 发出时，若 GPU/CPU 还在生产帧数据中，则此时不会发生双缓冲的复制操作。屏幕进入下一个刷新周期时，从 Frame Buffer 中取出的是“老”数据，而非正在产生的帧数据，则前后两次刷新周期内显示的是同一帧数据。这就是我们称之为发生了“掉帧现象”（Dropped Frame，Skipped Frame，Jank）。
 
+<br>
+
+
 ### 流畅性解决方案思路
 1.  从dumpsys SurfaceFlinger --latency中获取127帧的数据    
 2.  上面的命令返回的第一行为设备本身固有的帧耗时，单位为ns，通常在16.7ms左右    
@@ -247,6 +250,8 @@ Window Manager是一个用于控制window的系统服务，包含一系列的Vie
 第一列t1： when the app started to draw （开始绘制图像的瞬时时间） 第二列t2： the vsync immediately preceding SF submitting the frame to the h/w （VSYNC信令将软件SF帧传递给硬件HW之前的垂直同步时间），也就是对应上面所说的软件Vsync 第三列t3： timestamp immediately after SF submitted that frame to the h/w （SF将帧传递给HW的瞬时时间，及完成绘制的瞬时时间）
 
 1.  将第i行和第i-1行t2相减，即可得到第i帧的绘制耗时，提取出每一帧不断地dump出帧信息，计算出    
+
+<br>
 
 ### 一些计算规则
 #### 计算fps:
@@ -276,6 +281,9 @@ Window Manager是一个用于控制window的系统服务，包含一系列的Vie
 
 #### 计算jank的次数:
 如果t3-t1>16.7ms，则认为发生一次卡顿
+
+<br><br>
+
 
 ## 流畅度得分计算公式
 设目标fps为target_fps，目标每帧耗时为target_ftime=1000/target_fps  从以下几个维度衡量流畅度：
