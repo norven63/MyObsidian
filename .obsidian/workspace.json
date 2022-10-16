@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "a952ca229469d484",
+    "type": "split",
+    "children": [
+      {
+        "id": "7857b7c339c94250",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "070b9b227470c282",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9112869b5b22a2de",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e594b66fc6df100",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b92a1b03d00959ee",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "eb69a3677a161194",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "toolchain",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "98d44a8b32ee16f1",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 658,
+    "collapsed": true
+  },
+  "right": {
+    "id": "065d4635a980b0fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "4771f7bf5b6964f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8835c8611e63d636",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "b7aeb4a4cf8795a8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2f7c56383e18c4ad",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0c80a1c3a4f47f7f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 225.1428680419922,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "070b9b227470c282",
+  "lastOpenFiles": [
+    "12学习笔记/Linux - 系统Api汇总.md",
+    "12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
+    "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
+    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+    "12学习笔记/享学Vip - 2022年5月12日 【JNI技术 之 手写Parcel的C++层与原理】.md",
+    "11闪念笔记/享学公开课 - 2022年9月12日 C层Hook.md",
+    "12学习笔记/享学Vip - 2022年5月8日 【JNI技术 之 函数动态注册、C语言多线程实战、子线程构建JNIEnv】.md",
+    "00索引/Android.md",
+    "13沉淀笔记/读书技巧.md",
+    "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md"
+  ]
+}
