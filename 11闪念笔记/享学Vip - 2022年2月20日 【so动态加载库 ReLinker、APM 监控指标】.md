@@ -128,7 +128,7 @@ activity onStop的时候 手动GC2次 sleep间隔500ms，影响性能
 `onActivityResumed()` 开启监听 `onWindowFocusChanged()`
 
 - 两种方案：
-1. Message的消息监听（推荐）
+1. Choreographer（线上性能影响大）
 ```java
 Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
     @Override    
@@ -144,7 +144,7 @@ Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() 
 });
 ```
 
-2. Choreographer（线上性能影响大）
+2. Message的消息监听（推荐）
 ```java
 //推荐下面
 public static void loop() {
