@@ -250,7 +250,7 @@ Window Manager是一个用于控制window的系统服务，包含一系列的Vie
 第一列t1： when the app started to draw （开始绘制图像的瞬时时间） 第二列t2： the vsync immediately preceding SF submitting the frame to the h/w （VSYNC信令将软件SF帧传递给硬件HW之前的垂直同步时间），也就是对应上面所说的软件Vsync 第三列t3： timestamp immediately after SF submitted that frame to the h/w （SF将帧传递给HW的瞬时时间，及完成绘制的瞬时时间）
 
 1.  将第i行和第i-1行t2相减，即可得到第i帧的绘制耗时，提取出每一帧不断地dump出帧信息，计算出    
-
+，
 <br>
 
 ### 一些计算规则
