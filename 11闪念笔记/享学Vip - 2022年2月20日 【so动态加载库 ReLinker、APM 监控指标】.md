@@ -234,10 +234,10 @@ Window Manager是一个用于控制window的系统服务，包含一系列的Vie
 使用VSYNC同步可以保证延迟的一致性，减少了app和SurfaceFlinger的错误，以及显示在各个阶段之间的偏移。然而，前提是app和SurfaceFlinger每帧时间的变化并不大。因此，从输入到显示的延迟至少有两帧。  为了解决这个问题，您可以使用VSYNC偏移量来减少输入到显示的延迟，其方法为将app和SurfaceFlinger的合成信号与硬件的VSYNC关联起来。因为通常app的合成耗时是小于两帧的（33ms左右）。  VSYNC偏移信号细分为以下3种，它们都保持相同的周期和偏移向量：
 -   HW_VSYNC_0：显示器开始显示下一帧。    
 -   VSYNC：app读取输入并生成下一帧。    
--   SF VSYNC：SurfaceFlinger合成下一帧的。 收到VSYNC偏移信号之后， SurfaceFlinger 才开始接收缓冲区的数据进行帧的合成，而app才处理输入并渲染帧，这些操作都将在16.7ms完成。    
+-   SF VSYNC：SurfaceFlinger合成下一帧。 收到VSYNC偏移信号之后， SurfaceFlinger 才开始接收缓冲区的数据进行帧的合成，而app才处理输入并渲染帧，这些操作都将在16.7ms完成。    
 
 ### Jank 掉帧
-注意，当 VSync 信号发出时，如果 GPU/CPU 正在生产帧数据，此时不会发生复制操作。屏幕进入下一个刷新周期时，从 Frame Buffer 中取出的是“老”数据，而非正在产生的帧数据，即两个刷新周期显示的是同一帧数据。这是我们称发生了“掉帧”（Dropped Frame，Skipped Frame，Jank）现象。
+注意，当 VSync信号 发出时，若 GPU/CPU 还在生产帧数据中，则此时不会发生双缓冲的复制操作。屏幕进入下一个刷新周期时，从 Frame Buffer 中取出的是“老”数据，而非正在产生的帧数据，则前后两次刷新周期内显示的是同一帧数据。这就是我们称之为发生了“掉帧”（Dropped Frame，Skipped Frame，Jank）现象。
 
 ### 流畅性解决方案思路
 1.  从dumpsys SurfaceFlinger --latency中获取127帧的数据    
