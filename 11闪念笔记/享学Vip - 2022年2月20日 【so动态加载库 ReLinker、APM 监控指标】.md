@@ -255,7 +255,7 @@ Window Manager是一个用于控制window的系统服务，包含一系列的Vie
 
 ### 一些计算规则
 #### 计算fps:
-每dumpsys SurfaceFlinger一次计算汇总出一个fps,计算规则为：  frame的总数N：127行中的非0行数  绘制的时间T：设t=当前行t2 - 上一行的t2，求出所有行的和∑t  fps=N/T (要注意时间转化为秒)
+每执行adb shell dumpsys SurfaceFlinger一次计算汇总出一个fps,计算规则为：  frame的总数N：127行中的非0行数  绘制的时间T：设t=当前行t2 - 上一行的t2，求出所有行的和∑t  fps=N/T (要注意时间转化为秒)
 
 #### 计算中一些细节问题
 一次adb shell dumpsys SurfaceFlinger会输出127帧的信息，但是这127帧可能是这个样子：
