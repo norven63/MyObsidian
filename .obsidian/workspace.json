@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -82,6 +82,16 @@
         "type": "tabs",
         "children": [
           {
+            "id": "0c80a1c3a4f47f7f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md"
+              }
+            }
+          },
+          {
             "id": "8835c8611e63d636",
             "type": "leaf",
             "state": {
@@ -120,16 +130,6 @@
                 "useHierarchy": true
               }
             }
-          },
-          {
-            "id": "0c80a1c3a4f47f7f",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md"
-              }
-            }
           }
         ]
       }
@@ -140,7 +140,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "8835c8611e63d636",
+  "active": "d2de9a5e6f7d872b",
   "lastOpenFiles": [
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化、注解、atuoservice.md",
     "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",

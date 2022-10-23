@@ -212,6 +212,8 @@ Window Manager是一个用于控制window的系统服务，包含一系列的Vie
 即 Frame Rate，单位 fps，是指 gpu 生成帧的速率，如 33 fps，60fps，越高越好。  但是对于快速变化的游戏而言，你的FPS很难一直保持同样的数值，他会随着你所看到的显示卡所要描画的画面的复杂程度而变化。
 
 ### VSync
+[]()
+
 安卓系统中有 2 种 VSync 信号：
 1.  屏幕产生的 **硬件VSync**： 硬件VSync 是一个脉冲信号，起到开关或触发某种操作的作用。   
 2.  由 SurfaceFlinger 将其转成的 **软件Vsync信号**：经由 Binder 传递给 Choreographer。    
