@@ -20,3 +20,4 @@ Window().addOnFrameMetricsAvailableListener(Window.OnFrameMetricsAvailableListen
 ### 排查定位
 - trace跟踪
 - dump信息
+- JankTracker

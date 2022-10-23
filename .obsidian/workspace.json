@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
+                "file": "11闪念笔记/APM - 流畅度监控&治理.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 658,
-    "collapsed": true
+    "width": 658
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -87,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md"
+                "file": "11闪念笔记/APM - 流畅度监控&治理.md"
               }
             }
           },
@@ -97,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
+                "file": "11闪念笔记/APM - 流畅度监控&治理.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
+                "file": "11闪念笔记/APM - 流畅度监控&治理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,10 +139,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "d2de9a5e6f7d872b",
+  "active": "b92a1b03d00959ee",
   "lastOpenFiles": [
-    "11闪念笔记/APM - 流畅度监控&治理.md",
     "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
+    "11闪念笔记/APM - 流畅度监控&治理.md",
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化、注解、atuoservice.md",
     "12学习笔记/Linux - 系统Api汇总.md",
     "12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
