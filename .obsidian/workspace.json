@@ -24,8 +24,13 @@
             "id": "95f06f848962d974",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/APM - 流畅度监控&治理.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ],
@@ -95,7 +100,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "11闪念笔记/APM - 流畅度监控&治理.md"
+              }
             }
           },
           {
@@ -104,6 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "11闪念笔记/APM - 流畅度监控&治理.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,6 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "11闪念笔记/APM - 流畅度监控&治理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
