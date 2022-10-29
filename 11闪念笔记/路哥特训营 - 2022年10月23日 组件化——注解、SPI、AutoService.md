@@ -16,13 +16,15 @@
 	- `RetentionPolicy.RUNTIME // 运行期注解，需要反射技术，耗损性能
 		- `Class cls = Class.forName("com.demo.AnnotationDemo"); cls.getAnnotations(); cls.getAnnotation(MyAnnotation.class);`
 2. `@Target、ElementType`
-3. 获取注解 --> 获取注解对应的元素数据 --> 处理元素数据
+3. 自定义注解实现 value(); 方法时，类似于构造函数
+
+5. 获取注解 --> 获取注解对应的元素数据 --> 处理元素数据
 	- Processor
 	- AbstraceProcessor
 	- ProcessingEnvironment
 	- RoundEnvironment
 	- Filer
-4. 在.gradle文件中，在dependencies下配置  `annotationProcessor project(":xxx-module")`
+6. 在.gradle文件中，在dependencies下配置  `annotationProcessor project(":xxx-module")`
 <br>
 
 
@@ -95,7 +97,7 @@ Text Hello
 [腾讯云: 使用Google开源库AutoService进行组件化开发](https://cloud.tencent.com/developer/article/1415083)
 
 - 本质上，是对原生的Processor一个封装，自动生成 META-INF/services/ 下的文件
-- AutoService的Processor实现
+- [AutoServiceProcessor](https://github.com/google/auto/blob/master/service/processor/src/main/java/com/google/auto/service/processor/AutoServiceProcessor.java)源码片段：
 ```java
 public class AutoServiceProcessor extends AbstractProcessor { 
 	// 指定支持的java版本，一般来说我们都是支持到最新版本
