@@ -27,7 +27,64 @@
 ### 2、SPI
 [知乎: 深入理解 Java 中 SPI 机制](https://zhuanlan.zhihu.com/p/84337883)
 ![650](../99附件/20221029_SPI.jpg)
-1. 先发布一个SPI
+
+#### 实践
+**1. 定义一个接口HelloSPI。**
+```java
+package com.vivo.study.spidemo.spi;
+public interface HelloSPI {
+    void sayHello();
+}
+```
+
+**2. 完成接口的多个实现。**
+```java
+package com.vivo.study.spidemo.spi.impl;
+import com.vivo.study.spidemo.spi.HelloSPI;
+public class ImageHello implements HelloSPI {
+    public void sayHello() {
+        System.out.println("Image Hello");
+    }
+}
+package com.vivo.study.spidemo.spi.impl;
+import com.vivo.study.spidemo.spi.HelloSPI;
+public class TextHello implements HelloSPI {
+    public void sayHello() {
+        System.out.println("Text Hello");
+    }
+}
+```
+
+在META-INF/services/目录里创建一个以com.vivo.study.spidemo.spi.HelloSPI的文件，这个文件里的内容就是这个接口的具体的实现类。
+![](https://pic4.zhimg.com/80/v2-d6dea7b337e0c032b55731fa97183473_1440w.webp)
+
+具体内容如下：
+```java
+com.vivo.study.spidemo.spi.impl.ImageHello
+com.vivo.study.spidemo.spi.impl.TextHello
+```
+
+**3. 使用 ServiceLoader 来加载配置文件中指定的实现**
+```java
+package com.vivo.study.spidemo.test
+import java.util.ServiceLoader;
+import com.vivo.study.spidemo.spi.HelloSPI;
+public class SPIDemo {
+    public static void main(String[] args) {
+        ServiceLoader<HelloSPI> serviceLoader = ServiceLoader.load(HelloSPI.class);
+        // 执行不同厂商的业务实现，具体根据业务需求配置
+        for (HelloSPI helloSPI : serviceLoader) {
+            helloSPI.sayHello();
+        }
+    }
+}
+```
+
+输出结果如下：
+```java
+Image Hello
+Text Hello
+```
 
 <br>
 
