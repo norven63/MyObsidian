@@ -17,8 +17,8 @@
 		- `Class cls = Class.forName("com.demo.AnnotationDemo"); cls.getAnnotations(); cls.getAnnotation(MyAnnotation.class);`
 2. `@Target、ElementType`
 3. 获取注解 --> 获取注解对应的元素数据 --> 处理元素数据
-4. Processor、AbstraceProcessor、ProcessingEnvironment
-5.  .gradle文件中，在dependencies下配置  `annotationProcessor project(":xxx-module")`
+4. Processor、AbstraceProcessor、ProcessingEnvironment、RoundEnvironment
+5. 在.gradle文件中，在dependencies下配置  `annotationProcessor project(":xxx-module")`
 <br>
 
 
@@ -118,18 +118,19 @@ public class AutoServiceProcessor extends AbstractProcessor {
 			
 			return true; 
 		} 
-	} 
+	}
+
+	private boolean processImpl(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) { 
+		if (roundEnv.processingOver()) { 
+			generateConfigFiles(); 
+		} else { 
+			processAnnotations(annotations, roundEnv); 
+		} 
+		
+		return true; 
+	}
 }
 
-private boolean processImpl(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) { 
-	if (roundEnv.processingOver()) { 
-		generateConfigFiles(); 
-	} else { 
-		processAnnotations(annotations, roundEnv); 
-	} 
-	
-	return true; 
-}
 ```
 
 #### 实践示例：
