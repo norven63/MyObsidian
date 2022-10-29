@@ -10,6 +10,8 @@
 
 ### 组件化
 1. 注解
-	1. ElementType
+	1. @Retention、@Target
+	2. ElementType
+	3. 获取注解
 2. SPI
 3. autoservice
