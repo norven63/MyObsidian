@@ -25,7 +25,9 @@
 
 
 ### 2、SPI
+[知乎: 深入理解 Java 中 SPI 机制](https://zhuanlan.zhihu.com/p/84337883)
 ![650](../99附件/20221029_SPI.jpg)
+1. 先发布一个SPI
 
 <br>
 
