@@ -57,7 +57,7 @@ public class TextHello implements HelloSPI {
 ![](https://pic4.zhimg.com/80/v2-d6dea7b337e0c032b55731fa97183473_1440w.webp)
 
 具体内容如下：
-```java
+```text
 com.vivo.study.spidemo.spi.impl.ImageHello
 com.vivo.study.spidemo.spi.impl.TextHello
 ```
@@ -88,18 +88,17 @@ Text Hello
 
 
 ### 3、autoservice
+本质上，是对原生的Processor一个封装，自动生成 META-INF/services/ 下的文件
 [腾讯云: 使用Google开源库AutoService进行组件化开发](https://cloud.tencent.com/developer/article/1415083)
 
 #### 实践示例：
-1. 引入
-
-```bash
+- 引入
+```groovy
 compile 'com.google.auto.service:auto-service:1.0-rc4'
 ```
 
-2. 官方示例说明
-
-```kotlin
+- 官方示例说明
+```java
 package foo.bar;
 
 import javax.annotation.processing.Processor;
@@ -110,10 +109,9 @@ final class MyProcessor implements Processor {
 }
 ```
 
-AutoService会自动在build/classes输入目录下生成文件META-INF/services/javax.annotation.processing.Processor，文件的内容如下
-
+- AutoService会自动在build/classes输入目录下生成文件 META-INF/services/javax.annotation.processing.Processor，文件的内容如下
 ```text
 foo.bar.MyProcessor
 ```
 
-在javax.annotation.processing.Processor的情况下，如果一个jar中包含metadata文件，并且在javac的classpath下，javac会自动加载这个jar，同时包含它的普通注解编译环境。
+- 在 javax.annotation.processing.Processor 的情况下，如果一个jar中包含metadata文件，并且在javac的classpath下，javac会自动加载这个jar，同时包含它的普通注解编译环境。
