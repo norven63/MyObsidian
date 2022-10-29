@@ -87,17 +87,19 @@ Text Hello
 <br>
 
 
-### 3、autoservice
+### 3、AutoService
 [腾讯云: 使用Google开源库AutoService进行组件化开发](https://cloud.tencent.com/developer/article/1415083)
 - 本质上，是对原生的Processor一个封装，自动生成 META-INF/services/ 下的文件
 - AutoService的Processor实现
 ```java
 public class AutoServiceProcessor extends AbstractProcessor { 
+	// 指定支持的java版本，一般来说我们都是支持到最新版本
 	@Override 
 	public SourceVersion getSupportedSourceVersion() { 
 		return SourceVersion.latestSupported(); 
 	} 
 	
+	// 返回了支持（或者说期望处理）的注解类型集合
 	@Override 
 	public Set<String> getSupportedAnnotationTypes() { 
 		return ImmutableSet.of(AutoService.class.getName()); 
@@ -122,7 +124,11 @@ private boolean processImpl(Set<? extends TypeElement> annotations, RoundEnviron
 	if (roundEnv.processingOver()) { 
 		generateConfigFiles(); 
 	} else { 
-		processAnnotations(annotations, roundEnv); } return true; }
+		processAnnotations(annotations, roundEnv); 
+	} 
+	
+	return true; 
+}
 ```
 
 #### 实践示例：
