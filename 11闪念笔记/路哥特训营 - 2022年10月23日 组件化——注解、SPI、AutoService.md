@@ -130,80 +130,87 @@ public class AutoServiceProcessor extends AbstractProcessor {
 		return true; 
 	}
 
-	private void processAnnotations(Set<? extends TypeElement> annotations,  
-    RoundEnvironment roundEnv) {  
+	private void processAnnotations(Set<? extends TypeElement> annotations,  RoundEnvironment roundEnv) {  
   
-  Set<? extends Element> elements = roundEnv.getElementsAnnotatedWith(AutoService.class);  
+		Set<? extends Element> elements = roundEnv.getElementsAnnotatedWith(AutoService.class);  
   
-  log(annotations.toString());  
-  log(elements.toString());  
+		log(annotations.toString());  
+		log(elements.toString());  
+		
+		for (Element e : elements) {  
+		  // TODO(gak): check for error trees?  
+		  TypeElement providerImplementer = (TypeElement) e;  
+		  AnnotationMirror annotationMirror = getAnnotationMirror(e, AutoService.class).get();  
+		  Set<DeclaredType> providerInterfaces = getValueFieldOfClasses(annotationMirror);  
+		  if (providerInterfaces.isEmpty()) {  
+		    error(MISSING_SERVICES_ERROR, e, annotationMirror);  
+		    continue;    
+		  }
+		  
+		  for (DeclaredType providerInterface : providerInterfaces) {  
+		    TypeElement providerType = MoreTypes.asTypeElement(providerInterface);  
+		
+		    log("provider interface: " + providerType.getQualifiedName());  
+		    log("provider implementer: " + providerImplementer.getQualifiedName());  
+		
+		    if (checkImplementer(providerImplementer, providerType)) {  
+		      providers.put(getBinaryName(providerType), getBinaryName(providerImplementer));  
+		    } else {  
+		      String message = "ServiceProviders must implement their service provider interface. "  
+		          + providerImplementer.getQualifiedName() + " does not implement "  
+		          + providerType.getQualifiedName();  
+		      error(message, e, annotationMirror);  
+		    }  
+		  }  
+		}  
+	}  
   
-  for (Element e : elements) {  
-    // TODO(gak): check for error trees?  
-    TypeElement providerImplementer = (TypeElement) e;  
-    AnnotationMirror annotationMirror = getAnnotationMirror(e, AutoService.class).get();  
-    Set<DeclaredType> providerInterfaces = getValueFieldOfClasses(annotationMirror);  
-    if (providerInterfaces.isEmpty()) {  
-      error(MISSING_SERVICES_ERROR, e, annotationMirror);  
-      continue;    }  
-    for (DeclaredType providerInterface : providerInterfaces) {  
-      TypeElement providerType = MoreTypes.asTypeElement(providerInterface);  
-  
-      log("provider interface: " + providerType.getQualifiedName());  
-      log("provider implementer: " + providerImplementer.getQualifiedName());  
-  
-      if (checkImplementer(providerImplementer, providerType)) {  
-        providers.put(getBinaryName(providerType), getBinaryName(providerImplementer));  
-      } else {  
-        String message = "ServiceProviders must implement their service provider interface. "  
-            + providerImplementer.getQualifiedName() + " does not implement "  
-            + providerType.getQualifiedName();  
-        error(message, e, annotationMirror);  
-      }  
-    }  
-  }  
-}  
-  
-private void generateConfigFiles() {  
-  Filer filer = processingEnv.getFiler();  
-  
-  for (String providerInterface : providers.keySet()) {  
-    String resourceFile = "META-INF/services/" + providerInterface;  
-    log("Working on resource file: " + resourceFile);  
-    try {  
-      SortedSet<String> allServices = Sets.newTreeSet();  
-      try {  
-        // would like to be able to print the full path  
-        // before we attempt to get the resource in case the behavior        // of filer.getResource does change to match the spec, but there's        // no good way to resolve CLASS_OUTPUT without first getting a resource.        FileObject existingFile = filer.getResource(StandardLocation.CLASS_OUTPUT, "",  
-            resourceFile);  
-        log("Looking for existing resource file at " + existingFile.toUri());  
-        Set<String> oldServices = ServicesFiles.readServiceFile(existingFile.openInputStream());  
-        log("Existing service entries: " + oldServices);  
-        allServices.addAll(oldServices);  
-      } catch (IOException e) {  
-        // According to the javadoc, Filer.getResource throws an exception  
-        // if the file doesn't already exist.  In practice this doesn't        
-        // appear to be the case.  Filer.getResource will happily return a        // FileObject that refers to a non-existent file but will throw        // IOException if you try to open an input stream for it.        log("Resource file did not already exist.");  
-      }  
-  
-      Set<String> newServices = new HashSet<String>(providers.get(providerInterface));  
-      if (allServices.containsAll(newServices)) {  
-        log("No new service entries being added.");  
-        return;      }  
-  
-      allServices.addAll(newServices);  
-      log("New service file contents: " + allServices);  
-      FileObject fileObject = filer.createResource(StandardLocation.CLASS_OUTPUT, "",  
-          resourceFile);  
-      OutputStream out = fileObject.openOutputStream();  
-      ServicesFiles.writeServiceFile(allServices, out);  
-      out.close();  
-      log("Wrote to: " + fileObject.toUri());  
-    } catch (IOException e) {  
-      fatalError("Unable to create " + resourceFile + ", " + e);  
-      return;    }  
-  }  
-}
+	private void generateConfigFiles() {  
+	  Filer filer = processingEnv.getFiler();  
+	  
+	  for (String providerInterface : providers.keySet()) {  
+	    String resourceFile = "META-INF/services/" + providerInterface;  
+	    log("Working on resource file: " + resourceFile);  
+	    try {  
+	      SortedSet<String> allServices = Sets.newTreeSet();  
+	      try {  
+	        // would like to be able to print the full path  
+	        // before we attempt to get the resource in case the behavior        
+	        // of filer.getResource does change to match the spec, but there's        
+	        // no good way to resolve CLASS_OUTPUT without first getting a resource.        
+	        FileObject existingFile = filer.getResource(StandardLocation.CLASS_OUTPUT, "",  resourceFile);  
+	        log("Looking for existing resource file at " + existingFile.toUri());  
+	        Set<String> oldServices = ServicesFiles.readServiceFile(existingFile.openInputStream());  
+	        log("Existing service entries: " + oldServices);  
+	        allServices.addAll(oldServices);  
+	      } catch (IOException e) {  
+	        // According to the javadoc, Filer.getResource throws an exception  
+	        // if the file doesn't already exist.  In practice this doesn't        
+	        // appear to be the case.  Filer.getResource will happily return a        
+	        // FileObject that refers to a non-existent file but will throw        
+	        // IOException if you try to open an input stream for it.        
+	        log("Resource file did not already exist.");  
+	      }  
+	  
+	      Set<String> newServices = new HashSet<String>(providers.get(providerInterface));  
+	      if (allServices.containsAll(newServices)) {  
+	        log("No new service entries being added.");  
+	        return;      
+		  }  
+	  
+	      allServices.addAll(newServices);  
+	      log("New service file contents: " + allServices);  
+	      FileObject fileObject = filer.createResource(StandardLocation.CLASS_OUTPUT, "",  resourceFile);  
+	      OutputStream out = fileObject.openOutputStream();  
+	      ServicesFiles.writeServiceFile(allServices, out);  
+	      out.close();  
+	      log("Wrote to: " + fileObject.toUri());  
+	    } catch (IOException e) {  
+	      fatalError("Unable to create " + resourceFile + ", " + e);  
+	      return;    
+	    }  
+	  }  
+	}
 }
 
 ```
