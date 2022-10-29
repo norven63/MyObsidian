@@ -132,37 +132,39 @@ public class AutoServiceProcessor extends AbstractProcessor {
 
 	private void processAnnotations(Set<? extends TypeElement> annotations,  RoundEnvironment roundEnv) {  
   
-		Set<? extends Element> elements = roundEnv.getElementsAnnotatedWith(AutoService.class);  
+	  Set<? extends Element> elements = roundEnv.getElementsAnnotatedWith(AutoService.class);  
   
-		log(annotations.toString());  
-		log(elements.toString());  
-		
-		for (Element e : elements) {  
-		  // TODO(gak): check for error trees?  
-		  TypeElement providerImplementer = (TypeElement) e;  
-		  AnnotationMirror annotationMirror = getAnnotationMirror(e, AutoService.class).get();  
-		  Set<DeclaredType> providerInterfaces = getValueFieldOfClasses(annotationMirror);  
-		  if (providerInterfaces.isEmpty()) {  
-		    error(MISSING_SERVICES_ERROR, e, annotationMirror);  
-		    continue;    
-		  }
-		  
-		  for (DeclaredType providerInterface : providerInterfaces) {  
-		    TypeElement providerType = MoreTypes.asTypeElement(providerInterface);  
-		
-		    log("provider interface: " + providerType.getQualifiedName());  
-		    log("provider implementer: " + providerImplementer.getQualifiedName());  
-		
-		    if (checkImplementer(providerImplementer, providerType)) {  
-		      providers.put(getBinaryName(providerType), getBinaryName(providerImplementer));  
-		    } else {  
-		      String message = "ServiceProviders must implement their service provider interface. "  
-		          + providerImplementer.getQualifiedName() + " does not implement "  
-		          + providerType.getQualifiedName();  
-		      error(message, e, annotationMirror);  
-		    }  
-		  }  
-		}  
+	  log(annotations.toString());  
+	  log(elements.toString());  
+	  
+	  for (Element e : elements) {  
+	    // TODO(gak): check for error trees?  
+	    TypeElement providerImplementer = (TypeElement) e;  
+	    AnnotationMirror annotationMirror = getAnnotationMirror(e, AutoService.class).get();  
+	    Set<DeclaredType> providerInterfaces = getValueFieldOfClasses(annotationMirror); 
+	    
+	    if (providerInterfaces.isEmpty()) {  
+	      error(MISSING_SERVICES_ERROR, e, annotationMirror);  
+	      continue;    
+	    }
+	    
+	    for (DeclaredType providerInterface : providerInterfaces) {  
+	      TypeElement providerType = MoreTypes.asTypeElement(providerInterface);  
+	  
+	      log("provider interface: " + providerType.getQualifiedName());  
+	      log("provider implementer: " + providerImplementer.getQualifiedName());  
+	  
+	      if (checkImplementer(providerImplementer, providerType)) {  
+	        providers.put(getBinaryName(providerType), getBinaryName(providerImplementer));  
+	      } else {  
+	        String message = "ServiceProviders must implement their service provider interface. "  
+	            + providerImplementer.getQualifiedName() + " does not implement "  
+	            + providerType.getQualifiedName();  
+	            + 
+	        error(message, e, annotationMirror);  
+	      }  
+	    }  
+	  }  
 	}  
   
 	private void generateConfigFiles() {  
