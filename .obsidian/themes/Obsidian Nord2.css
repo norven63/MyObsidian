@@ -474,7 +474,7 @@ h6 a
 .markdown-preview-section h3
 {
     font-weight: 500 !important;
-    font-size: 1.4em !important;
+    font-size: 1.5em !important;
     color: var(--text-title-h3) !important;
 }
 
@@ -482,7 +482,7 @@ h6 a
 .markdown-preview-section h4
 {
     font-weight: 500 !important;
-    font-size: 1.3em !important;
+    font-size: 1.4em !important;
     color: var(--text-title-h4) !important;
 }
 
@@ -490,7 +490,7 @@ h6 a
 .markdown-preview-section h5
 {
     font-weight: 500 !important;
-    font-size: 1.2em !important;
+    font-size: 1.3em !important;
     color: var(--text-title-h5) !important;
 }
 

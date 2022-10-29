@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月27日 组件化、ClassLoader初探.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -84,7 +84,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 507.5
+    "width": 507.5,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -100,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md"
+                "file": "11闪念笔记/路哥特训营 - 2022年10月27日 组件化、ClassLoader初探.md"
               }
             }
           },
@@ -110,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月27日 组件化、ClassLoader初探.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月27日 组件化、ClassLoader初探.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,13 +157,13 @@
   },
   "active": "1f25a896e0bedf24",
   "lastOpenFiles": [
+    "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
     "11闪念笔记/路哥特训营 - 2022年10月27日 组件化、ClassLoader初探.md",
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化、注解、atuoservice.md",
     "11闪念笔记/APM - 流畅度监控&治理.md",
     "11闪念笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
     "12学习笔记/Linux - 系统Api汇总.md",
     "12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
-    "12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
     "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
     "12学习笔记/享学Vip - 2022年5月12日 【JNI技术 之 手写Parcel的C++层与原理】.md",
     "11闪念笔记/享学公开课 - 2022年9月12日 C层Hook.md"
