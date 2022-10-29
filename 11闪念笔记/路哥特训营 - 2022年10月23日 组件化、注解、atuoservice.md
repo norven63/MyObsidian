@@ -14,6 +14,7 @@
 	- `RetentionPolicy.SOURCE`
 	- `RetentionPolicy.CLASS // 编译期注解`
 	- `RetentionPolicy.RUNTIME // 运行期注解，需要反射技术，耗损性能
+		- `Class cls = Class.forName("com.demo.AnnotationDemo"); cls.getAnnotations(); cls.getAnnotation(MyAnnotation.class);`
 2. `@Target、ElementType`
 3. 获取注解 --> 获取注解对应的元素数据 --> 处理元素数据
 ```java
