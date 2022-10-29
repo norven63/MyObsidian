@@ -16,15 +16,14 @@
 	- `RetentionPolicy.RUNTIME // 运行期注解，需要反射技术，耗损性能
 		- `Class cls = Class.forName("com.demo.AnnotationDemo"); cls.getAnnotations(); cls.getAnnotation(MyAnnotation.class);`
 2. `@Target、ElementType`
-3. 自定义注解实现 value(); 方法时，类似于构造函数
-
-5. 获取注解 --> 获取注解对应的元素数据 --> 处理元素数据
+3. 自定义注解实现 value(); 方法时，类似于构造函数，可以参考 `@Retention`、`@Target`、`@AutoService` 的定义、使用方式
+4. 获取注解 --> 获取注解对应的元素数据 --> 处理元素数据
 	- Processor
 	- AbstraceProcessor
 	- ProcessingEnvironment
 	- RoundEnvironment
 	- Filer
-6. 在.gradle文件中，在dependencies下配置  `annotationProcessor project(":xxx-module")`
+5. 在.gradle文件中，在dependencies下配置  `annotationProcessor project(":xxx-module")`
 <br>
 
 
