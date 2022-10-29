@@ -89,6 +89,7 @@ Text Hello
 
 ### 3、AutoService
 [腾讯云: 使用Google开源库AutoService进行组件化开发](https://cloud.tencent.com/developer/article/1415083)
+
 - 本质上，是对原生的Processor一个封装，自动生成 META-INF/services/ 下的文件
 - AutoService的Processor实现
 ```java
