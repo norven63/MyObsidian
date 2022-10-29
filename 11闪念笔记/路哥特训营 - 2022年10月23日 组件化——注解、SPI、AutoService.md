@@ -17,8 +17,12 @@
 		- `Class cls = Class.forName("com.demo.AnnotationDemo"); cls.getAnnotations(); cls.getAnnotation(MyAnnotation.class);`
 2. `@Target、ElementType`
 3. 获取注解 --> 获取注解对应的元素数据 --> 处理元素数据
-4. Processor、AbstraceProcessor、ProcessingEnvironment、RoundEnvironment
-5. 在.gradle文件中，在dependencies下配置  `annotationProcessor project(":xxx-module")`
+	- Processor
+	- AbstraceProcessor
+	- ProcessingEnvironment
+	- RoundEnvironment
+	- Filer
+4. 在.gradle文件中，在dependencies下配置  `annotationProcessor project(":xxx-module")`
 <br>
 
 
@@ -173,6 +177,7 @@ public class AutoServiceProcessor extends AbstractProcessor {
 	  for (String providerInterface : providers.keySet()) {  
 	    String resourceFile = "META-INF/services/" + providerInterface;  
 	    log("Working on resource file: " + resourceFile);  
+	    
 	    try {  
 	      SortedSet<String> allServices = Sets.newTreeSet();  
 	      try {  
@@ -182,8 +187,10 @@ public class AutoServiceProcessor extends AbstractProcessor {
 	        // no good way to resolve CLASS_OUTPUT without first getting a resource.        
 	        FileObject existingFile = filer.getResource(StandardLocation.CLASS_OUTPUT, "",  resourceFile);  
 	        log("Looking for existing resource file at " + existingFile.toUri());  
+	        
 	        Set<String> oldServices = ServicesFiles.readServiceFile(existingFile.openInputStream());  
 	        log("Existing service entries: " + oldServices);  
+	        
 	        allServices.addAll(oldServices);  
 	      } catch (IOException e) {  
 	        // According to the javadoc, Filer.getResource throws an exception  
@@ -202,6 +209,7 @@ public class AutoServiceProcessor extends AbstractProcessor {
 	  
 	      allServices.addAll(newServices);  
 	      log("New service file contents: " + allServices);  
+	      
 	      FileObject fileObject = filer.createResource(StandardLocation.CLASS_OUTPUT, "",  resourceFile);  
 	      OutputStream out = fileObject.openOutputStream();  
 	      ServicesFiles.writeServiceFile(allServices, out);  
