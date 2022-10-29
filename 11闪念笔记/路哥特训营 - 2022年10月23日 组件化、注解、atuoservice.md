@@ -9,6 +9,7 @@
 <br>
 
 ### 组件化
-1. SPI
-2. autoservice
-3. 注解
+1. 注解
+	1. ElementType
+2. SPI
+3. autoservice
