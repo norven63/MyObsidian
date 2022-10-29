@@ -26,7 +26,7 @@
 [知乎: 深入理解 Java 中 SPI 机制](https://zhuanlan.zhihu.com/p/84337883)
 ![650](../99附件/20221029_SPI.jpg)
 
-#### 实践
+#### 实践示例：
 **1. 定义一个接口HelloSPI。**
 ```java
 package com.vivo.study.spidemo.spi;
@@ -88,3 +88,32 @@ Text Hello
 
 
 ### 3、autoservice
+[腾讯云: 使用Google开源库AutoService进行组件化开发](https://cloud.tencent.com/developer/article/1415083)
+
+#### 实践示例：
+1. 引入
+
+```bash
+compile 'com.google.auto.service:auto-service:1.0-rc4'
+```
+
+2. 官方示例说明
+
+```kotlin
+package foo.bar;
+
+import javax.annotation.processing.Processor;
+
+@AutoService(Processor.class)
+final class MyProcessor implements Processor {
+  // …
+}
+```
+
+AutoService会自动在build/classes输入目录下生成文件META-INF/services/javax.annotation.processing.Processor，文件的内容如下
+
+```text
+foo.bar.MyProcessor
+```
+
+在javax.annotation.processing.Processor的情况下，如果一个jar中包含metadata文件，并且在javac的classpath下，javac会自动加载这个jar，同时包含它的普通注解编译环境。
