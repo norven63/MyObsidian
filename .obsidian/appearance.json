@@ -1,9 +1,9 @@
 {
-  "baseFontSize": 16,
+  "baseFontSize": 14,
   "theme": "obsidian",
   "translucency": false,
   "interfaceFontFamily": "",
   "textFontFamily": "",
-  "cssTheme": "Obsidian Nord",
+  "cssTheme": "Obsidian Nord2",
   "accentColor": ""
 }
