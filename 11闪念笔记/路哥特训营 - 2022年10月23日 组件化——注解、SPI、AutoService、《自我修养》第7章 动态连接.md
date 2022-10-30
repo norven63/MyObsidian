@@ -112,7 +112,7 @@ public class AutoServiceProcessor extends AbstractProcessor {
 	} 
 	
 	@Override 
-	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) { 
+	public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnvironment) { 
 		try { 
 			return processImpl(annotations, roundEnv); 
 		} catch (Exception e) { 
