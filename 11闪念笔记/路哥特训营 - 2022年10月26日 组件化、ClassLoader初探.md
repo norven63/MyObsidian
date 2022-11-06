@@ -5,9 +5,8 @@
 学习资料：
 https://iww0abxi5u.feishu.cn/minutes/obcn8qe7m4978y9pf5g55qje 
 
-ClassLoader： https://iww0abxi5u.feishu.cn/minutes/obcnbf9t41nv571895h1i78n
-文档： https://kdocs.cn/l/cp85RF2csedS 【金山文档】 JVM运行时数据区-栈_方法区
-https://kdocs.cn/l/cvaa9Cj5aiao
+ClassLoader： https://iww0abxi5u.feishu.cn/minutes/obcnbf9t41nv571895h1i78n 
+文档： https://kdocs.cn/l/cp85RF2csedS 、 https://kdocs.cn/l/cvaa9Cj5aiao 
 
 ---
 <br>
