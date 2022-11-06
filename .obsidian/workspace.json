@@ -52,7 +52,46 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5acd9a21a92a7388",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "50573a413e55b22f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "af215a0f627f6dcc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -75,7 +114,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探 -todo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -83,7 +122,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -149,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架.md"
+                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md"
               }
             }
           },
@@ -159,7 +198,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +215,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -201,17 +240,17 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "fc7dc14a3217904a",
+  "active": "af215a0f627f6dcc",
   "lastOpenFiles": [
-    "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
-    "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架.md",
+    "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
+    "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md",
+    "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法.md",
-    "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探.md",
-    "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md",
+    "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探 -todo.md",
+    "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
+    "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
     "11闪念笔记/享学公开课 - 2022年10月07日 NDK核心总结、System.loadLibrary()源码.md",
     "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
-    "12学习笔记/享学Vip - 2022年1月16日 【OOM与内存优化1-内存抖动】.md",
-    "12学习笔记/享学Vip - 2022年01月13日 【SparseArray数据结构优化】.md",
-    "11闪念笔记/享学公开课 - 2022年09月12日 C层Hook.md"
+    "12学习笔记/享学Vip - 2022年1月16日 【OOM与内存优化1-内存抖动】.md"
   ]
 }
