@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -172,7 +172,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 507.5
+    "width": 674.5
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -188,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md"
+                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md"
               }
             }
           },
@@ -198,7 +198,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -215,7 +215,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -242,6 +242,7 @@
   },
   "active": "af215a0f627f6dcc",
   "lastOpenFiles": [
+    "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
     "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
@@ -250,7 +251,6 @@
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
     "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
     "11闪念笔记/享学公开课 - 2022年10月07日 NDK核心总结、System.loadLibrary()源码.md",
-    "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
-    "12学习笔记/享学Vip - 2022年1月16日 【OOM与内存优化1-内存抖动】.md"
+    "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md"
   ]
 }
