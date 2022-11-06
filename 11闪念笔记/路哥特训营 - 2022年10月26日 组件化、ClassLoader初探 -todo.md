@@ -3,7 +3,7 @@
 标签： #学习笔记 #技术
 
 学习资料：
-https://iww0abxi5u.feishu.cn/minutes/obcn8qe7m4978y9pf5g55qje 
+组件化、ClassLoader： https://iww0abxi5u.feishu.cn/minutes/obcn8qe7m4978y9pf5g55qje 
 
 ClassLoader： https://iww0abxi5u.feishu.cn/minutes/obcnbf9t41nv571895h1i78n 
 文档： https://kdocs.cn/l/cp85RF2csedS 、 https://kdocs.cn/l/cvaa9Cj5aiao 
