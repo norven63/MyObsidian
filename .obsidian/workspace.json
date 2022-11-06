@@ -26,10 +26,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/享学公开课 - 2022年09月12日 C层Hook.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "da32d31e070e5f92",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5bd80b656dd025e0",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.3"
               }
             }
           },
@@ -47,7 +70,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -113,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/享学公开课 - 2022年09月12日 C层Hook.md"
+                "file": "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md"
               }
             }
           },
@@ -123,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/享学公开课 - 2022年09月12日 C层Hook.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/享学公开课 - 2022年09月12日 C层Hook.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,20 +188,17 @@
     "width": 200,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "0ba0c391bea06a97",
+  "active": "da32d31e070e5f92",
   "lastOpenFiles": [
+    "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法.md",
+    "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md",
     "11闪念笔记/享学公开课 - 2022年10月07日 NDK核心总结、System.loadLibrary()源码.md",
     "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
-    "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法.md",
     "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探.md",
     "12学习笔记/享学Vip - 2022年1月16日 【OOM与内存优化1-内存抖动】.md",
     "12学习笔记/享学Vip - 2022年01月13日 【SparseArray数据结构优化】.md",
     "11闪念笔记/享学公开课 - 2022年09月12日 C层Hook.md",
     "11闪念笔记/享学公开课 - 2022年09月02日 MVVM、Flow.md",
-    "11闪念笔记/享学公开课 - 2022年08月19日 组件化.md",
-    "11闪念笔记/享学公开课 - 2022年05月17日 一次性解决FFmpeg编译链条的问题.md"
+    "11闪念笔记/享学公开课 - 2022年08月19日 组件化.md"
   ]
 }
