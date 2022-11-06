@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md"
+                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探.md"
               }
             }
           },
@@ -146,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,11 +190,11 @@
   },
   "active": "da32d31e070e5f92",
   "lastOpenFiles": [
-    "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法.md",
     "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动.md",
+    "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探.md",
+    "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法.md",
     "11闪念笔记/享学公开课 - 2022年10月07日 NDK核心总结、System.loadLibrary()源码.md",
     "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
-    "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探.md",
     "12学习笔记/享学Vip - 2022年1月16日 【OOM与内存优化1-内存抖动】.md",
     "12学习笔记/享学Vip - 2022年01月13日 【SparseArray数据结构优化】.md",
     "11闪念笔记/享学公开课 - 2022年09月12日 C层Hook.md",
