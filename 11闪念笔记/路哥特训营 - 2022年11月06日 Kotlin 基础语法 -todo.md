@@ -11,4 +11,4 @@ P2 https://iww0abxi5u.feishu.cn/minutes/obcnf4q75956brf8d668x84x
 ---
 <br>
 
-1. 学习 https://github.com/coil-kt/coil 
+1. 代码学习 https://github.com/coil-kt/coil 
