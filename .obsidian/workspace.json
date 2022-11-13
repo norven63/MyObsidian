@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探 -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探 -todo.md"
+                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md"
               }
             }
           },
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探 -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探 -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,15 +138,15 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "b92a1b03d00959ee",
+  "active": "af215a0f627f6dcc",
   "lastOpenFiles": [
+    "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
+    "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法.md",
     "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
     "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader初探 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
     "11闪念笔记/享学公开课 - 2022年10月07日 NDK核心总结、System.loadLibrary()源码.md",
     "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md"
