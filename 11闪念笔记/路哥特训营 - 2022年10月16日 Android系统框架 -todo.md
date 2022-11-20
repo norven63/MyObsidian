@@ -8,7 +8,8 @@
 ---
 <br>
 
-目录：/hardware/libharware/modules/xxx模块的文件夹/xxx模块.c
+- /frameworks/base/core/java/android/os/
+- /hardware/libharware/modules/xxx模块的文件夹/xxx模块.c
 - Android.mk ：编译文件
 - Android.bp ：依赖、打包信息
 
