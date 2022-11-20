@@ -39,7 +39,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月13日 mmap、高性能日志框架、kotlin总复习 -todo.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a9807b952170762c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/路哥特训营 - 2022年11月18日 kotlin完结 -todo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -113,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md"
+                "file": "11闪念笔记/路哥特训营 - 2022年11月18日 kotlin完结 -todo.md"
               }
             }
           },
@@ -123,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月18日 kotlin完结 -todo.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月18日 kotlin完结 -todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,9 +178,10 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "16437bb75a9c5cc6",
+  "active": "a9807b952170762c",
   "lastOpenFiles": [
     "11闪念笔记/路哥特训营 - 2022年11月13日 mmap、高性能日志框架、kotlin总复习 -todo.md",
+    "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
     "11闪念笔记/享学公开课 - 2022年04月23日 音视频岗位做什么？安卓岗如何转音视频岗.md",
     "11闪念笔记/路哥特训营 - 2022年11月11日 Kotlin 协程 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
@@ -175,7 +189,6 @@
     "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md"
+    "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md"
   ]
 }
