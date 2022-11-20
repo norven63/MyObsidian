@@ -8,4 +8,10 @@
 ---
 <br>
 
-Android.mk、Android.b
+目录：/hardware/libharware/
+- Android.mk ：编译文件
+- Android.bp ：依赖、打包信息
+
+
+
+
