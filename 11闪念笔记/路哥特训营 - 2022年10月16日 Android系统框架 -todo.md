@@ -8,7 +8,7 @@
 ---
 <br>
 
-目录：/hardware/libharware/
+目录：/hardware/libharware/各个硬件模块的文件夹
 - Android.mk ：编译文件
 - Android.bp ：依赖、打包信息
 
