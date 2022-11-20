@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md"
+                "file": "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md"
               }
             }
           },
@@ -136,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,8 +178,9 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "b92a1b03d00959ee",
+  "active": "a9807b952170762c",
   "lastOpenFiles": [
+    "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月13日 mmap、高性能日志框架、kotlin总复习 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月18日 kotlin完结 -todo.md",
     "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
@@ -188,7 +189,6 @@
     "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
     "11闪念笔记/享学公开课 - 2022年04月8日 播放器手势.md",
     "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md"
   ]
 }
