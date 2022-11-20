@@ -12,7 +12,8 @@
 - /hardware/libharware/modules/xxx模块的文件夹/xxx模块.c
 - Android.mk ：编译文件
 - Android.bp ：依赖、打包信息
-- hardware.h、结构体[**module_t**、method_t、xxx硬件_t]
+- hardware.h、结构体[**==hw_module_t==**、hw_module_method_t、hw_device_t]
+- 
 
 
 
