@@ -58,9 +58,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d1e493c022182baf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化 -todo.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md"
+                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化 -todo.md"
               }
             }
           },
@@ -136,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化 -todo.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化 -todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,11 +191,11 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "a9807b952170762c",
+  "active": "d1e493c022182baf",
   "lastOpenFiles": [
+    "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
     "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月13日 mmap、高性能日志框架、kotlin总复习 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月18日 kotlin完结 -todo.md",
