@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "88模板/模板-双回车.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6c7c125440cc083d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "88模板/模板-双回车.md"
+                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md"
               }
             }
           },
@@ -96,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "88模板/模板-双回车.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "88模板/模板-双回车.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,17 +151,17 @@
     "direction": "horizontal",
     "width": 200
   },
-  "active": "6d514d935944bfb2",
+  "active": "6c7c125440cc083d",
   "lastOpenFiles": [
-    "88模板/模板-单回车.md",
+    "88模板/模板-todo补.md",
     "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
+    "88模板/模板-双回车.md",
+    "88模板/模板-单回车.md",
     "11闪念笔记/路哥特训营 - 2022年11月13日 mmap、高性能日志框架、kotlin总复习 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
     "01专题索引/享学Vip课程笔记.md",
     "12学习笔记/享学Vip - 2021年3月2日 【C语言 指针实战运用进阶之字符串操作】(NDK第四节课).md",
-    "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
-    "00索引/网络原理.md",
-    "11闪念笔记/享学公开课 - 2022年10月07日 NDK核心总结、System.loadLibrary()源码.md"
+    "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md"
   ]
 }
