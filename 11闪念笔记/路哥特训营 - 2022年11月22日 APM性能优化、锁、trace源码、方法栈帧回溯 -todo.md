@@ -225,7 +225,7 @@ void Trace::CompareAndUpdateStackTrace(Thread* thread,
 trace.cc#EncodeTraceMrthodAndAction()
 trace.cc#FinishTracing()
 
-WalkStack
+Suspend -> WalkStack
 TraceLogMethodTraceEvent
 
 
