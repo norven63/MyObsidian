@@ -237,6 +237,7 @@ TraceLogMethodTraceEvent
 
 思路：
 - start函数会传入目标线程
-	private volatile long nativepeer;Java JNil的代码反射获取到这个变量然后保存给JNI
+	private volatile long nativepeer; // Java JNil的代码反射获取到这个变量，然后保存给JNI
 - HOOK d1动态API open dlsym close
-- elf文件 /proc/self/maps获取sht_dynsym sht_strtab\sht_progbits mmap odm/1ib64 /system/lib64 vendor/lib64 ..
+- elf文件 /proc/self/maps 获取sht_dynsym sht_strtab\sht_progbits mmap odm/1ib64 /system/lib64 vendor/lib64
+- [/art/runtime/runtime.cc](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/runtime.cc)
