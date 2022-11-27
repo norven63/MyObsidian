@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
+                "file": "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "toolchain",
+                "query": "sudo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,11 +66,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 624.5
+    "width": 478.5,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -86,7 +88,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md"
+                "file": "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md"
               }
             }
           },
@@ -96,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
+                "file": "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
+                "file": "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,10 +140,10 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "6d514d935944bfb2",
+  "active": "eb69a3677a161194",
   "lastOpenFiles": [
-    "11闪念笔记/echo.md",
     "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
+    "11闪念笔记/echo.md",
     "88模板/模板-todo补.md",
     "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
     "88模板/模板-双回车.md",

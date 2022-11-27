@@ -1,7 +1,7 @@
 {
   "legacyEditor": false,
   "livePreview": true,
-  "promptDelete": true,
+  "promptDelete": false,
   "readableLineLength": false,
   "newFileLocation": "folder",
   "foldHeading": true,
