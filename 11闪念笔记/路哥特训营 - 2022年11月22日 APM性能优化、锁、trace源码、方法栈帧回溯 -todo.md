@@ -75,16 +75,15 @@ apt install trace-cmd
 ftrace
 
 堆栈信息：
-[/art/runtime/backtrace_helper.h](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/backtrace_helper.h)
-[/art/runtime/backtrace_helper.cc](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/backtrace_helper.cc)
+[/art/runtime/backtrace_helper.h](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/backtrace_helper.h) [/art/runtime/backtrace_helper.cc](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/backtrace_helper.cc)
 
-[/art/runtime/trace.h](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/trace.h)
+[/art/runtime/trace.h](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/trace.h) [/art/runtime/trace.cc](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/trace.cc)
 - TraceMode：跟踪模式
 	- kMethodTracing 插桩
 	- kSampling 时间周期采样
+
 - [android.os.Debug](http://aospxref.com/android-11.0.0_r21/xref/frameworks/base/core/java/android/os/Debug.java).startMethodTracing()
 
-[/art/runtime/trace.cc](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/trace.cc)
 Trace产物文件: 14B = 2B(ThreadID)+4B(EncodeTraceMrthodAndAction)+4B(Thread_cpu_diff)+4B(wall_clock_diff)
 
 // Create Trace object.
@@ -214,8 +213,7 @@ void Trace::CompareAndUpdateStackTrace(Thread* thread,
 ```
 
 // 代理类、钩子函数，对所有函数进行各种行为的监控
-[/art/runtime/instrumentation.h](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/instrumentation.h)
-[/art/runtime/instrumentation.cc](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/instrumentation.cc)
+[/art/runtime/instrumentation.h](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/instrumentation.h) [/art/runtime/instrumentation.cc](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/instrumentation.cc)
 - kMethodEntered、kMethodExited
 - kMethodUnwind 栈帧溯源（可以参考Matrix的unwind算法）
 - EnableSingleThreadDeopt()、UpdateStubs()
@@ -240,4 +238,4 @@ TraceLogMethodTraceEvent
 	private volatile long nativepeer; // Java JNil的代码反射获取到这个变量，然后保存给JNI
 - HOOK d1动态API open dlsym close
 - elf文件 /proc/self/maps 获取sht_dynsym sht_strtab\sht_progbits mmap odm/1ib64 /system/lib64 vendor/lib64
-- [/art/runtime/runtime.cc](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/runtime.cc)
+- [/art/runtime/runtime.h](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/runtime.h)  [/art/runtime/runtime.cc](http://aospxref.com/android-11.0.0_r21/xref/art/runtime/runtime.cc)
