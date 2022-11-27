@@ -234,3 +234,9 @@ TraceLogMethodTraceEvent
 2. trace文件的组成形式，14b + content
 3. 理解谷歌提供的2种采集方式，采样 vs 插桩，采样不精准，所以线上一般用插桩
 4. 简单了解小册子上的JVM调用栈内容
+
+思路：
+- start函数会传入目标线程
+	private volatile long nativepeer;Java JNil的代码反射获取到这个变量然后保存给JNI
+- HOOK d1动态API open dlsym close
+- elf文件 /proc/self/maps获取sht_dynsym sht_strtab\sht_progbits mmap odm/1ib64 /system/lib64 vendor/lib64 ..
