@@ -27,7 +27,7 @@
               "type": "markdown",
               "state": {
                 "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -84,7 +84,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 674.5
+    "width": 624.5,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -111,7 +112,7 @@
               "type": "backlink",
               "state": {
                 "file": "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -149,9 +150,10 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
-  "active": "6c7c125440cc083d",
+  "active": "8835c8611e63d636",
   "lastOpenFiles": [
     "88模板/模板-todo补.md",
     "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁 -todo.md",
