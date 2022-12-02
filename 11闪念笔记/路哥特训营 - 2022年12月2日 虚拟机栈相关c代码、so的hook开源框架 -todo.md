@@ -22,4 +22,5 @@
 6. Android JVMTI
 
 
-github avs333/Nougat_dlfunctions：
+### so hook
+github avs333/Nougat_dlfunctions、xDL
