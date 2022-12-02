@@ -10,7 +10,7 @@
 
 ### 核心源码与机制
 1. 老罗的《Dalvik虚拟机进程和线程的创建过程分析》博客
-2. /art/Android.bp 中写的编译后so文件
+2. 熟悉 /art/Android.bp 中写的编译后so文件
 3. 虚拟机栈：
 	1. 局部变量表 Slot
 	2. /art/runtime/stack.cc、::GetMethod、quick_method、/art/runtime/stackvisitor.cc、StackVisitor、顶上那张current stack layout图
