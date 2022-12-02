@@ -23,4 +23,9 @@
 
 
 ### so hook
-github avs333/Nougat_dlfunctions、xDL、DLHook、XCrash
+github
+- avs333/Nougat_dlfunctions
+	- fake_dlfcn.c - define fatal()
+- xDL
+- DLHook
+- XCrash
