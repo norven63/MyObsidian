@@ -23,4 +23,4 @@
 
 
 ### so hook
-github avs333/Nougat_dlfunctions、xDL
+github avs333/Nougat_dlfunctions、xDL、DLHook、XCrash
