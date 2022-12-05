@@ -9,7 +9,6 @@
 <br>
 
 ### 核心源码与机制
-### 核心源码与机制
 1. 老罗的《Dalvik虚拟机进程和线程的创建过程分析》博客
 2. 熟悉 /art/Android.bp 中写的编译后so文件
 3. 虚拟机栈：
@@ -18,16 +17,20 @@
 	3. 操作数栈
 	4. 动态链接
 4.   /art/runtime/ 下的几个核心类
-- signal_catcher.cc - 信号捕捉器
-- runtime.cc
-- thread_list.cc
-- intern_table.cc
-- class_linker.cc
-- java_vm_ext.cc
-- thread.cc
-	1. tls32：结构体，封装线程相关的信息
-	2. thin_loc_thrad_id
-	初始化流程:
+	- signal_catcher.cc - 信号捕捉器
+	- runtime.cc
+	- thread_list.cc
+	- intern_table.cc
+	- class_linker.cc
+	- java_vm_ext.cc
+	- thread.cc
+		1. tls32：结构体，封装线程相关的信息
+		2.  1. tid
+		3. jobject peer、线程句柄
+		4. suspend
+		5. monitor enter exit
+		6. thin_loc_thrad_id
+        初始化流程:
   ```c++
   bool Thread::Init(ThreadList* thread_list, JavaVMExt* java_vm, JNIEnvExt* jni_env_ext) {
    tls32_.thin_lock_thread_id = thread_list->AllocThreadId(this);
@@ -45,11 +48,8 @@
     UNREACHABLE();
   }
   ```
-	 结论:thin_lock_thread_id就是线程ThreadList中的线程的index
- 1. tid
- 2. jobject peer、线程句柄
- 3. suspend
- 4. monitor enter exit
+ 结论:thin_lock_thread_id就是线程ThreadList中的线程的index
+
 
 
 ### so hook框架
