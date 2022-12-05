@@ -10,5 +10,5 @@
 
 Sliver源码
 字节码：看下《JVM小册子》、《周志明虚拟机》，补基础
-Hugo：自动日志，基于Annotation实现，重点gradle使用方式，字节码编织
+Hugo：自动日志，基于Annotation实现，重点gradle使用方式，字节码编织，TransformManager
 
