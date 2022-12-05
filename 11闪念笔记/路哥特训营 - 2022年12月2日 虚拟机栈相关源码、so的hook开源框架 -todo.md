@@ -25,7 +25,7 @@
 	- java_vm_ext.cc
 	- thread.cc
 		1. tls32：结构体，封装线程相关的信息
-		2.  1. tid
+		2. tid
 		3. jobject peer、线程句柄
 		4. suspend
 		5. monitor enter exit
