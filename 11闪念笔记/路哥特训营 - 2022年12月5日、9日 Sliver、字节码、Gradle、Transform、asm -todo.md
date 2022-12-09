@@ -25,5 +25,5 @@
 - jadx-gui 逆向工具
 
 5. gradle
-- 自定义grdle插件(建议先用6.5版本学习使用)：[参考官方文档](https://docs.gradle.org/current/userguide/custom_plugin.html)，创建一个plugin、上传maven仓库、在build.gradle中注册使用
-- gradle-4.1.3、gradle-4.1.3-api、transform
+- 自定义grdle插件(建议先用6.5版本学习使用)：[参考官方文档](https://docs.gradle.org/current/userguide/desgin_plugin.html)，创建一个plugin、上传maven仓库、在build.gradle中注册使用
+- gradle-4.1.3、gradle-api-4.1.3、Transform
