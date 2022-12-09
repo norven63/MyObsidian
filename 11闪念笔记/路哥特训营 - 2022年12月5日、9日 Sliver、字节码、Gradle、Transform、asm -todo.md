@@ -20,9 +20,9 @@
  - Hugo：自动日志，基于Annotation实现，重点gradle使用方式，字节码编织，TransformManager
 
 4. asm框架：
-- IBM Developer的asm板块，官方文档  http://asm.ow2.io
-- IDEA插件： https://plugins.jetbrains.com/plugin/5918-asm-bytecode-outline 、as商店里的 Jadx Class Decompiler
+- IBM Developer的asm板块，[官方文档](http://asm.ow2.io) 
+- IDEA插件： [三方插件](https://plugins.jetbrains.com/plugin/5918-asm-bytecode-outline )、as商店里的 Jadx Class Decompiler
 - jadx-gui 逆向工具
 
 5. gradle
-- 
+- [参考官方文档](https://doc.gradle.org/current/useguide/custom_plugin.html)，创建一个plugin、上传maven仓库、在build.gradle中注册使用
