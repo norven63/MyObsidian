@@ -21,11 +21,12 @@
 - jadx-gui 逆向工具
 
 5. gradle
-- 自定义grdle插件(建议先用6.5版本学习使用)：[参考官方文档](https://docs.gradle.org/current/userguide/designing_gradle.html)，创建一个plugin、上传maven仓库、在build.gradle中注册使用
+- 自定义grdle插件(建议先用6.5版本学习使用)：[参考官方文档](https://docs.gradle.org/current/userguide/custom_plugins.html)，创建一个plugin、上传maven仓库、在build.gradle中注册使用
 - android-gradle-4.1.3、android-gradle-api-4.1.3
 - Transform
 	- Scope
-	- Incremental 增量编译
+	- Incremental 增量编译: apply、code、change原理
+	- Task
 - github上gralde实战的参考库
 	- didi/booster
-	- Hugo：自动日志，基于Annotation实现，重点gradle使用方式，字节码编织，TransformManager
+	- Hugo：自动日志
