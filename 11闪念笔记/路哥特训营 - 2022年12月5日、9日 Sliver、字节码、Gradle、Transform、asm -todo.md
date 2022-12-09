@@ -25,5 +25,8 @@
 - jadx-gui 逆向工具
 
 5. gradle
-- 自定义grdle插件(建议先用6.5版本学习使用)：[参考官方文档](https://docs.gradle.org/current/userguide/desgin_plugin.html)，创建一个plugin、上传maven仓库、在build.gradle中注册使用
-- gradle-4.1.3、gradle-api-4.1.3、Transform
+- 自定义grdle插件(建议先用6.5版本学习使用)：[参考官方文档](https://docs.gradle.org/current/userguide/designing_gradle.html)，创建一个plugin、上传maven仓库、在build.gradle中注册使用
+- gradle-4.1.3、gradle-api-4.1.3
+- Transform
+- Scope 指定hook处理编译流程的哪个节点
+- Increment 增量编译
