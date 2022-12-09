@@ -15,10 +15,6 @@
 - 字节码指令集，标识符，slot0 是指this
 - 局部变量表，操作数栈、弹栈、入栈
 
-3. github上gralde实战的参考库
- - didi/booster
- - Hugo：自动日志，基于Annotation实现，重点gradle使用方式，字节码编织，TransformManager
-
 4. asm框架：
 - IBM Developer的asm板块，[官方文档](http://asm.ow2.io) 
 - IDEA插件： [三方插件](https://plugins.jetbrains.com/plugin/5918-asm-bytecode-outline )、as商店里的 Jadx Class Decompiler
@@ -26,7 +22,10 @@
 
 5. gradle
 - 自定义grdle插件(建议先用6.5版本学习使用)：[参考官方文档](https://docs.gradle.org/current/userguide/designing_gradle.html)，创建一个plugin、上传maven仓库、在build.gradle中注册使用
-- gradle-4.1.3、gradle-api-4.1.3
+- android-gradle-4.1.3、android-gradle-api-4.1.3
 - Transform
-- Scope 指定hook处理编译流程的哪个节点
-- Increment 增量编译
+	- Scope
+	- Incremental 增量编译
+- github上gralde实战的参考库
+	- didi/booster
+	- Hugo：自动日志，基于Annotation实现，重点gradle使用方式，字节码编织，TransformManager
