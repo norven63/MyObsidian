@@ -11,7 +11,7 @@
 1. Sliver源码解读
 
 2. 字节码
-- 补基础：《JVM小册子》、《周志明虚拟机》、美团的《Java字节码》博客
+- 补基础：《JVM小册子》、《周志明虚拟机》、[美团的《字节码增强技术探索》博客](https://tech.meituan.com/2019/09/05/java-bytecode-enhancement.html)
 - 字节码指令集，标识符，slot0 是指this
 - 局部变量表，操作数栈、弹栈、入栈
 
