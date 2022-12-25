@@ -3,8 +3,8 @@
 标签： #学习笔记 #技术
 
 学习资料： 
-[视频](https://iww0abxi5u.feishu.cn/minutes/obcnq9v699489uhbj1614lq4)  
-[讲义](https://kdocs.cn/l/ciqwIcJ9jOhO)
+[视频](https://iww0abxi5u.feishu.cn/minutes/obcnq9v699489uhbj1614lq4) 、 [讲义](https://kdocs.cn/l/ciqwIcJ9jOhO)
+
 [掘金上的对标文章](https://juejin.cn/post/7107137302043820039)
 [西瓜视频抓栈Sliver](https://mp.weixin.qq.com/s/LW3eMK9O2tfFtZcu5eqitg)
 
