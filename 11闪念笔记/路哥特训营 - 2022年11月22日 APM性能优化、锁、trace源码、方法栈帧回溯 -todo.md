@@ -6,7 +6,7 @@
 [视频](https://iww0abxi5u.feishu.cn/minutes/obcnq9v699489uhbj1614lq4)  
 [讲义](https://kdocs.cn/l/ciqwIcJ9jOhO)
 [掘金上的对标文章](https://juejin.cn/post/7107137302043820039)
-[西瓜视频抓栈](https://mp.weixin.qq.com/s/LW3eMK9O2tfFtZcu5eqitg)
+[西瓜视频抓栈Sliver](https://mp.weixin.qq.com/s/LW3eMK9O2tfFtZcu5eqitg)
 
 [B站南京大学操作系统](https://www.bilibili.com/video/BV1Cm4y1d7Ur/?spm_id_from=333.999.0.0)
 [大佬博客](https://brendangregg.com)
