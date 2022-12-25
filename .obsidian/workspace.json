@@ -58,22 +58,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "79de709d6e51b9cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11闪念笔记/字节沙龙 - 2022年12月10日.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -138,9 +125,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "11闪念笔记/字节沙龙 - 2022年12月10日.md"
-              }
+              "state": {}
             }
           },
           {
@@ -149,7 +134,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/字节沙龙 - 2022年12月10日.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +150,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/字节沙龙 - 2022年12月10日.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +174,7 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "79de709d6e51b9cb",
+  "active": "b92a1b03d00959ee",
   "lastOpenFiles": [
     "99附件/Pasted image 20221210141716.png",
     "99附件/Pasted image 20220611225609.png",
