@@ -8,8 +8,8 @@
 ---
 <br>
 
-### 核心源码与机制
-1. 老罗的《Dalvik虚拟机进程和线程的创建过程分析》博客
+### 一、核心源码与机制
+1. 老罗的[《Dalvik虚拟机进程和线程的创建过程分析》](https://blog.csdn.net/Luoshengyang/article/details/8923484)博客
 2. 熟悉 /art/Android.bp 中写的编译后so文件
 3. 虚拟机栈：
 	1. 局部变量表 Slot
@@ -51,14 +51,13 @@
  结论:thin_lock_thread_id就是线程ThreadList中的线程的index
 
 
-
-### so hook框架
+### 二、so hook框架
 github
 - avs333/Nougat_dlfunctions - 学习思路
 	- fake_dlfcn.c - define fatal()
 - xDL - 直接用
 	- xdl.c 
-	- [Android 7.0+ linker namespace 的限制。](https://zhuanlan.zhihu.com/p/401547387 "Android 7.0+ linker namespace 的限制。")
+	- [Android 7.0+ linker namespace 的限制](https://zhuanlan.zhihu.com/p/401547387 "Android 7.0+ linker namespace 的限制。")
 - xHook bhook
 - XCrash
 - xUnwind
