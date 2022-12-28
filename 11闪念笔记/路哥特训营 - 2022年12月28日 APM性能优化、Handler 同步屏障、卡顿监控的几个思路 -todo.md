@@ -10,4 +10,4 @@
 
 ### Handler
 MessageQueue.postSyncBarrier()
-Message的target=null，即为屏障消息
+若Message的target=null，即为屏障消息
