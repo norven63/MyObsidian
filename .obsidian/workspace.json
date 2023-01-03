@@ -191,6 +191,19 @@
     "width": 200,
     "collapsed": true
   },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:Create new canvas": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "zk-prefixer:创建时间戳笔记": false,
+      "audio-recorder:开始/结束录音": false,
+      "workspaces:管理工作区布局": false,
+      "publish:发布更改": false
+    }
+  },
   "active": "e5df4b9cd6496d2b",
   "lastOpenFiles": [
     "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁、trace源码、方法栈帧回溯 -todo.md",
