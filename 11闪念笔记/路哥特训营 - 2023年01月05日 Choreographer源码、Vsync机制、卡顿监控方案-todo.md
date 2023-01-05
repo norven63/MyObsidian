@@ -10,3 +10,4 @@
 
 ### Choreographer
 FrameDisplayEventReceiver、DisplayEventReceiver、onVsync()、nativeSchedule()
+matrix-trace-canary、/tencent/matrix/trace//tracer/、/tencent/matrix/trace/core/UIThreadMonitor.java、
