@@ -8,3 +8,5 @@
 ---
 <br>
 
+### Choreographer
+FrameDispReceiver、DisplayEventReceiver、native
