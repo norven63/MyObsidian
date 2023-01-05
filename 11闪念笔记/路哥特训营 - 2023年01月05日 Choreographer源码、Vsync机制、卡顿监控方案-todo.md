@@ -9,4 +9,4 @@
 <br>
 
 ### Choreographer
-FrameDispReceiver、DisplayEventReceiver、native
+FrameDisplayEventReceiver、DisplayEventReceiver、onVsync()、nativeSchedule()
