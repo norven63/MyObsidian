@@ -11,8 +11,13 @@
             "id": "78e893883f6c1cf5",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "11闪念笔记/路哥特训营 - 2023年02月07日 内存-todo.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "11闪念笔记/路哥特训营 - 2023年02月07日 内存-todo.md"
+              }
             }
           },
           {
@@ -90,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "11闪念笔记/路哥特训营 - 2023年02月07日 内存-todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "11闪念笔记/路哥特训营 - 2023年02月07日 内存-todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
