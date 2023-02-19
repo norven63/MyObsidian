@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md"
+                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md"
               }
             }
           },
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,15 +167,15 @@
   },
   "active": "2ded685a8da9462c",
   "lastOpenFiles": [
-    "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
+    "11闪念笔记/路哥特训营 - 2023年01月05日 Choreographer源码、Vsync机制、matrix-trace-canary方案-todo.md",
+    "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
     "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
+    "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
     "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年11月11日 Kotlin 协程 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年11月13日 mmap、高性能日志框架、kotlin总复习 -todo.md"
+    "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md"
   ]
 }
