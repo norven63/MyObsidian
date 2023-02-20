@@ -33,8 +33,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md"
+                "file": "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md"
               }
             }
           },
@@ -110,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,10 +164,10 @@
       "publish:发布更改": false
     }
   },
-  "active": "2ded685a8da9462c",
+  "active": "78e893883f6c1cf5",
   "lastOpenFiles": [
-    "11闪念笔记/路哥特训营 - 2023年01月05日 Choreographer源码、Vsync机制、matrix-trace-canary方案-todo.md",
     "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
+    "11闪念笔记/路哥特训营 - 2023年01月05日 Choreographer源码、Vsync机制、matrix-trace-canary方案-todo.md",
     "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
     "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
