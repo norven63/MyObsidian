@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
+                "file": "创业/2023-02-25 技术会议 会议纪要.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md"
+                "file": "创业/2023-02-25 技术会议 会议纪要.md"
               }
             }
           },
@@ -146,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
+                "file": "创业/2023-02-25 技术会议 会议纪要.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
+                "file": "创业/2023-02-25 技术会议 会议纪要.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -203,9 +203,9 @@
   },
   "active": "102b8e0f9272ed55",
   "lastOpenFiles": [
+    "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
     "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
     "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md",
-    "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
     "11闪念笔记/路哥特训营 - 2023年01月05日 Choreographer源码、Vsync机制、matrix-trace-canary方案-todo.md",
     "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
     "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
