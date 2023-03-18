@@ -26,7 +26,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "创业/2023-02-25 技术会议 会议纪要.md",
+                "file": "12学习笔记/Linux - 系统Api汇总.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "289d25fb1994cd25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -70,7 +83,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -136,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "创业/2023-02-25 技术会议 会议纪要.md"
+                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md"
               }
             }
           },
@@ -146,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "创业/2023-02-25 技术会议 会议纪要.md",
+                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "创业/2023-02-25 技术会议 会议纪要.md",
+                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -201,8 +214,13 @@
       "publish:发布更改": false
     }
   },
-  "active": "102b8e0f9272ed55",
+  "active": "289d25fb1994cd25",
   "lastOpenFiles": [
+    "12学习笔记/Linux 常用命令.md",
+    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+    "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
+    "12学习笔记/Linux - 系统Api汇总.md",
+    "创业/2023-02-25 技术会议 会议纪要.md",
     "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
     "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
     "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md",

@@ -23,6 +23,14 @@ Linux系统中所见即文件（哪怕驱动也是文件本质）
 
 
 ### 二、Linux常用命令
+##### 远程连接
+- 连接目标主机
+```shell
+ssh -p 22 ubuntu@49.232.151.223
+```
+
+<br>
+
 ##### 用户、用户组
 【#】代表 root权限
 【$】、【%】代表普通用户
@@ -30,6 +38,7 @@ sudo su root 【从普通用户 切换到 root用户，注意：要输入密码 
 exit 【 退出 root 用户，到普通用户】
 whoami 【查看当前用户】
 
+<br>
 
 ##### 常用命令
 cd DerryAll 【进入到DerryAll目录】
@@ -51,6 +60,7 @@ rm hello.c   【删除文件】
 cp hello.c 目标文件夹名   【拷贝文件 到 目标文件夹】
 mv 原文件名 新文件名   【修改文件名】
 
+<br>
 
 ##### 文件读取操作
 cat file01.txt 【快速查看文件内容】
@@ -58,11 +68,13 @@ vim file01.txt 【使用vim编辑器查看文件内容】
 tac file01.txt 【倒序快速查看文件内容】
 more file01.txt 【每次只查看一页，回车查看下一页】
 
+<br>
 
 ##### 文件信息详述：
 -rw-r--r--            1              root        root          323        Mar 27 14:12      file01.txt
 文件权限    硬链接计数    所有者    所属组    文件大小            时间              名称
 
+<br>
 
 ##### 文件的用户权限释义说明
 以 -rwxrwxrwx 为例：
@@ -74,6 +86,7 @@ x：可执行
 第二个rwx：同组用户的文件权限
 第三个rwx：其他用户的文件权限
 
+<br>
 
 ##### 修改文件的用户权限
 修改之前，先去除权限：chmod 000 file05.txt
@@ -97,6 +110,7 @@ sudo chown derryNew file01.txt --> 【执行完后 ： ---x-w--wx 1 derryNew roo
 sudo chgrp derryNew file01.txt --> 【执行完后 ：-rw-r--r-- 1 root derryNew 323 Mar 27 14:16 file01.txt】 --> 修改file01.txt文件 所属组
 sudo chown derryNew:derryNew file01.txt --> 【执行完后：-rw-r--r-- 1 derryNew derryNew 323 Mar 27 14:16 file01.txt】 --> 修改file01.txt文件 所属用户/所属组 
 
+<br>
 
 ##### Linux文件类型：
 1. 常用
