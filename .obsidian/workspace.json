@@ -8,95 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "78e893883f6c1cf5",
+            "id": "d9c5160d16bbc05c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
+                "file": "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "102b8e0f9272ed55",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "12学习笔记/Linux - 系统Api汇总.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "289d25fb1994cd25",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "12学习笔记/Linux 常用命令.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "827ad59ce50e5dc0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c62706e2daa7f3ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "创业/2023-02-25 技术会议 会议纪要.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2ded685a8da9462c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0d15b78b2fecbd9c",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.1.15"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -146,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 610.5,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -162,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md"
+                "file": "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md"
               }
             }
           },
@@ -172,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+                "file": "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+                "file": "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -227,18 +152,23 @@
       "publish:发布更改": false
     }
   },
-  "active": "827ad59ce50e5dc0",
+  "active": "d9c5160d16bbc05c",
   "lastOpenFiles": [
-    "12学习笔记/Linux 常用命令.md",
+    "创业/2023-02-25 技术会议 会议纪要.md",
+    "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
+    "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md",
+    "01专题索引/享学Vip课程笔记.md",
+    "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+    "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
+    "11闪念笔记/享学公开课 - 2022年05月17日 一次性解决FFmpeg编译链条的问题.md",
+    "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
     "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+    "12学习笔记/Linux 常用命令.md",
     "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
     "12学习笔记/Linux - 系统Api汇总.md",
-    "创业/2023-02-25 技术会议 会议纪要.md",
     "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
-    "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
     "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md",
     "11闪念笔记/路哥特训营 - 2023年01月05日 Choreographer源码、Vsync机制、matrix-trace-canary方案-todo.md",
-    "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
     "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
