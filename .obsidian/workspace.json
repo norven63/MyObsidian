@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -154,8 +153,11 @@
   },
   "active": "6cbaa3f61b40f3e1",
   "lastOpenFiles": [
-    "12学习笔记/Linux - 系统Api汇总.md",
+    "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
+    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+    "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md",
     "12学习笔记/Linux 常用命令.md",
+    "12学习笔记/Linux - 系统Api汇总.md",
     "未命名.canvas",
     "00索引/Linux.md",
     "创业/2023-02-25 技术会议 会议纪要.md",
@@ -166,8 +168,6 @@
     "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
     "11闪念笔记/享学公开课 - 2022年05月17日 一次性解决FFmpeg编译链条的问题.md",
     "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
-    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
-    "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
     "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
     "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md",
     "11闪念笔记/路哥特训营 - 2023年01月05日 Choreographer源码、Vsync机制、matrix-trace-canary方案-todo.md",
