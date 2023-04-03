@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 610.5
+    "width": 610.5,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -154,10 +155,10 @@
   "active": "6cbaa3f61b40f3e1",
   "lastOpenFiles": [
     "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
+    "12学习笔记/Linux - 系统Api汇总.md",
     "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
     "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md",
     "12学习笔记/Linux 常用命令.md",
-    "12学习笔记/Linux - 系统Api汇总.md",
     "未命名.canvas",
     "00索引/Linux.md",
     "创业/2023-02-25 技术会议 会议纪要.md",
