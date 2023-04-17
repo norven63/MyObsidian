@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
-                "mode": "preview",
+                "file": "创业/服务端项目经验.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md"
+                "file": "创业/服务端项目经验.md"
               }
             }
           },
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
+                "file": "创业/服务端项目经验.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
+                "file": "创业/服务端项目经验.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,10 +153,17 @@
   },
   "active": "6cbaa3f61b40f3e1",
   "lastOpenFiles": [
+    "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
+    "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md",
+    "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁、trace源码、方法栈帧回溯 -todo.md",
+    "11闪念笔记/路哥特训营 - 2022年11月11日 Kotlin 协程 -todo.md",
+    "11闪念笔记/享学公开课 - 2022年09月12日 C层Hook.md",
+    "11闪念笔记/享学公开课 - 2022年05月13日 音视频功能与方案、面试简历分析.md",
+    "11闪念笔记/享学公开课 - 2022年04月23日 音视频岗位做什么？安卓岗如何转音视频岗.md",
     "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md",
+    "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
     "11闪念笔记/路哥特训营 - 2023年01月05日 Choreographer源码、Vsync机制、matrix-trace-canary方案-todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月18日 kotlin完结 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
     "12学习笔记/享学Vip - 2022年2月10日 【Alpha启动框架 & 工具（小开个头）】.md",
     "创业/服务端项目经验.md",
@@ -168,17 +175,10 @@
     "12学习笔记/Linux - 系统Api汇总.md",
     "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md",
     "00索引/Linux.md",
-    "11闪念笔记/路哥特训营 - 2023年02月19日 内存优化总结-todo.md",
     "01专题索引/享学Vip课程笔记.md",
     "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
     "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
     "11闪念笔记/享学公开课 - 2022年05月17日 一次性解决FFmpeg编译链条的问题.md",
-    "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md",
-    "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
-    "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md",
-    "11闪念笔记/路哥特训营 - 2022年09月27日 C++、JNI -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年10月16日 Android系统框架 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
-    "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md"
+    "11闪念笔记/路哥特训营 - 2022年09月22、24日 C++ -todo.md"
   ]
 }

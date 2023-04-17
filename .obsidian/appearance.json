@@ -1,9 +1,10 @@
 {
-  "baseFontSize": 13,
+  "baseFontSize": 14,
   "theme": "obsidian",
   "translucency": false,
-  "interfaceFontFamily": "",
-  "textFontFamily": "",
-  "cssTheme": "",
-  "accentColor": ""
+  "interfaceFontFamily": "Arial",
+  "textFontFamily": "Arial",
+  "cssTheme": "Obsidian Nord",
+  "accentColor": "#608dbe",
+  "monospaceFontFamily": "Consolas"
 }
