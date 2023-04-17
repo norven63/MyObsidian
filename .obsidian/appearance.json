@@ -4,7 +4,7 @@
   "translucency": false,
   "interfaceFontFamily": "Arial",
   "textFontFamily": "Arial",
-  "cssTheme": "Obsidian Nord",
-  "accentColor": "#608dbe",
+  "cssTheme": "Atom",
+  "accentColor": "#5b9ee6",
   "monospaceFontFamily": "Consolas"
 }
