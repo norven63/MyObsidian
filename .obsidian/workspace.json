@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 340.5
+    "width": 433.5
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -146,9 +146,9 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "zk-prefixer:创建时间戳笔记": false,
-      "audio-recorder:开始/结束录音": false,
+      "audio-recorder:开始/结束录音": true,
       "workspaces:管理工作区布局": false,
-      "publish:发布更改": false
+      "publish:发布更改": true
     }
   },
   "active": "6cbaa3f61b40f3e1",

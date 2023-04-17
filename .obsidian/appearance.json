@@ -2,9 +2,9 @@
   "baseFontSize": 14,
   "theme": "obsidian",
   "translucency": false,
-  "interfaceFontFamily": "Arial",
-  "textFontFamily": "Arial",
-  "cssTheme": "Atom",
+  "interfaceFontFamily": "微软雅黑",
+  "textFontFamily": "微软雅黑",
+  "cssTheme": "Red Graphite",
   "accentColor": "#5b9ee6",
   "monospaceFontFamily": "Consolas"
 }
