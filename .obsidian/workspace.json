@@ -85,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "创业/服务端项目经验.md"
+              }
             }
           },
           {
@@ -94,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "创业/服务端项目经验.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "创业/服务端项目经验.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,8 +151,9 @@
       "publish:发布更改": true
     }
   },
-  "active": "b92a1b03d00959ee",
+  "active": "6cbaa3f61b40f3e1",
   "lastOpenFiles": [
+    "12学习笔记/Linux - 多进程.md",
     "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md",
     "11闪念笔记/未命名.md",
     "创业/服务端项目经验.md",
@@ -174,7 +179,6 @@
     "00索引/Linux.md",
     "01专题索引/享学Vip课程笔记.md",
     "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
-    "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
-    "11闪念笔记/享学公开课 - 2022年05月17日 一次性解决FFmpeg编译链条的问题.md"
+    "12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md"
   ]
 }
