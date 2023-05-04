@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "创业/服务端项目经验.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433.5
+    "width": 433.5,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
