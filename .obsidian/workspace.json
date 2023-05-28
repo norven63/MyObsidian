@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "创业/服务端项目经验.md",
+                "file": "创业/Redis 使用教程.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433.5,
-    "collapsed": true
+    "width": 433.5
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "创业/服务端项目经验.md"
+                "file": "创业/Redis 使用教程.md"
               }
             }
           },
@@ -105,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "创业/服务端项目经验.md",
+                "file": "创业/Redis 使用教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "创业/服务端项目经验.md",
+                "file": "创业/Redis 使用教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,11 +161,12 @@
   },
   "active": "6cbaa3f61b40f3e1",
   "lastOpenFiles": [
+    "创业/服务端项目经验.md",
+    "创业/Redis 使用教程.md",
     "13沉淀笔记/MarkDown绘图示例.md",
     "12学习笔记/Linux - 多进程.md",
     "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md",
     "11闪念笔记/未命名.md",
-    "创业/服务端项目经验.md",
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
     "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁、trace源码、方法栈帧回溯 -todo.md",
@@ -187,7 +187,6 @@
     "12学习笔记/Linux - 系统Api汇总.md",
     "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md",
     "00索引/Linux.md",
-    "01专题索引/享学Vip课程笔记.md",
-    "12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md"
+    "01专题索引/享学Vip课程笔记.md"
   ]
 }
