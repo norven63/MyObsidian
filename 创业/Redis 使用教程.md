@@ -1,6 +1,6 @@
 当使用Spring框架与Redis进行集成时，你可以使用Spring Data Redis库来简化与Redis的交互。下面是一个关于在Spring上使用Redis的基本教程，包括了基本用法和快速上手使用的步骤：
 
-步骤1：添加依赖项
+##### 步骤1：添加依赖项
 在你的项目中添加以下依赖项，以使用Spring Data Redis库：
 
 ```xml
@@ -10,7 +10,9 @@
 </dependency>
 ```
 
-步骤2：配置Redis连接
+<br>
+
+##### 步骤2：配置Redis连接
 在Spring Boot项目中，你可以通过在`application.properties`或`application.yml`文件中设置以下属性来配置Redis连接：
 
 ```properties
@@ -18,7 +20,9 @@ spring.redis.host=your_redis_host
 spring.redis.port=your_redis_port
 ```
 
-步骤3：创建Redis配置类
+<br>
+
+##### 步骤3：创建Redis配置类
 创建一个Redis配置类，用于配置与Redis的连接和其他相关设置：
 
 ```java
@@ -52,9 +56,11 @@ public class RedisConfig {
 }
 ```
 
-确保将`your_redis_host`和`your_redis_port`替换为你的实际Redis主机和端口。
+确保将 `your_redis_host` 和 `your_redis_port` 替换为你的实际Redis主机和端口。
 
-步骤4：使用Redis
+<br>
+
+##### 步骤4：使用Redis
 一旦配置完成，你可以在你的应用程序中使用Redis。以下是一些常见的基本用法示例：
 
 ```java
@@ -87,7 +93,3 @@ public class MyService {
 ```
 
 在上面的示例中，`MyService`类演示了如何使用`redisTemplate`进行基本的键值存储操作。还展示了如何使用Spring的缓存注解`@Cacheable`来缓存方法的结果。
-
-请注意，上述示例仅为了演示基本用法。在实际的应用程序中，你可能还需要处理连接池、事务、数据序列化等更高级的概念。
-
-希望这个教程能帮助你快速上手在Spring上
