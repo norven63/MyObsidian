@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b5758fb7ef05dcab",
+        "id": "58f13e4bdb1a6d18",
         "type": "tabs",
         "children": [
           {
-            "id": "6cbaa3f61b40f3e1",
+            "id": "1d8578bf73761ca8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,12 +21,15 @@
             }
           },
           {
-            "id": "86c8c0fd928ff56d",
+            "id": "cd52a4ed1c21b1c1",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.3.5"
+                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -169,14 +172,15 @@
       "publish:发布更改": true
     }
   },
-  "active": "6cbaa3f61b40f3e1",
+  "active": "1d8578bf73761ca8",
   "lastOpenFiles": [
-    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
-    "00索引/Linux.md",
+    "12学习笔记/Linux - 多进程.md",
     "创业/服务端项目经验.md",
+    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+    "12学习笔记/Linux 常用命令.md",
+    "00索引/Linux.md",
     "创业/Redis 使用教程.md",
     "13沉淀笔记/MarkDown绘图示例.md",
-    "12学习笔记/Linux - 多进程.md",
     "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md",
     "11闪念笔记/未命名.md",
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
@@ -191,7 +195,6 @@
     "11闪念笔记/路哥特训营 - 2022年11月18日 kotlin完结 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
     "12学习笔记/享学Vip - 2022年2月10日 【Alpha启动框架 & 工具（小开个头）】.md",
-    "12学习笔记/Linux 常用命令.md",
     "创业/2023-02-25 技术会议 会议纪要.md",
     "未命名.canvas",
     "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
