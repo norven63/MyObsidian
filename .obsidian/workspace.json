@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+                "file": "创业/服务端项目经验.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
             }
+          },
+          {
+            "id": "683da4cc51e3b141",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -159,10 +173,11 @@
       "publish:发布更改": true
     }
   },
-  "active": "27e32adc53028dbb",
+  "active": "683da4cc51e3b141",
   "lastOpenFiles": [
-    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
     "创业/服务端项目经验.md",
+    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+    "13沉淀笔记/读书技巧.md",
     "12学习笔记/Linux - 多进程.md",
     "12学习笔记/Linux 常用命令.md",
     "00索引/Linux.md",
@@ -186,7 +201,6 @@
     "未命名.canvas",
     "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
     "12学习笔记/Linux - 系统Api汇总.md",
-    "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md",
-    "01专题索引/享学Vip课程笔记.md"
+    "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md"
   ]
 }

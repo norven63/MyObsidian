@@ -60,7 +60,7 @@ rm hello.c   【删除文件】
 cp hello.c 目标文件夹名   【拷贝文件 到 目标文件夹】
 mv 原文件名 新文件名   【修改文件名】
 systemctl status xxx  查看服务状态
-systemctl enable xxx  启动服务
+systemctl enable xxx  设置开机自动启动服务
 
 <br>
 
