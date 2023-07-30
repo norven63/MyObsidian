@@ -15,4 +15,5 @@ https://blog.csdn.net/qq_25928447/article/details/122438913
 #### <bean/>标签
 - 默认情况是单例，并且在程序启动时就会创建，可以通过 `scope` 属性改变
 - 通过 `depends-on` 标签控制加载顺序
-- `autowire` 自动装配，分为 byName、byType 两种模式
+- `autowire` 自动装配，分为 byName、byType、constructor 几种模式；对不想参与自动配候选的bean使用 `autowire-candidate=false` 熟悉，即可关闭；使用primary=true，可让该bean在自动装配候选时，优先选择
+- 
