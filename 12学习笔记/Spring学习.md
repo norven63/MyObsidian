@@ -4,9 +4,10 @@
 
 学习资料： 
 https://itbaima.net/document
-[Spring核心技术](https://sqihr3trvt9.feishu.cn/docx/HcWJd1z5QoJkhIxkZdycUjD9nHf)
-[SpringMvc](https://sqihr3trvt9.feishu.cn/docx/Otkqdyc5koNj6wxrAwKc2vFNnFh)
-[SpringSecurity](https://sqihr3trvt9.feishu.cn/docx/HV79dE5LuoLxOAxCG2pcDu2Mnog)
+Spring核心技术：[笔记](https://sqihr3trvt9.feishu.cn/docx/HcWJd1z5QoJkhIxkZdycUjD9nHf) 、[视频](https://www.bilibili.com/video/BV1Kv4y1x7is/?p=8&spm_id_from=pageDriver&vd_source=26c21cff608e4193bcf69f197e433f67)
+SpringMvc：[笔记](https://sqihr3trvt9.feishu.cn/docx/Otkqdyc5koNj6wxrAwKc2vFNnFh)、[视频](https://www.bilibili.com/video/BV1Lh4y1M7kx/?spm_id_from=333.999.0.0)
+SpringSecurity：[笔记](https://sqihr3trvt9.feishu.cn/docx/HV79dE5LuoLxOAxCG2pcDu2Mnog)、[视频](https://www.bilibili.com/video/BV1fV411M7aS/?spm_id_from=333.999.0.0)
+SpringBoot：
 
 ---
 <br>
