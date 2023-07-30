@@ -9,3 +9,4 @@ https://blog.csdn.net/qq_25928447/article/details/122438913
 ---
 <br>
 
+ioc控制反转，依赖注入，即面向接口编程
