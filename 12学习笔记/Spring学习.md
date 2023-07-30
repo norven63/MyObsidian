@@ -23,4 +23,4 @@ https://blog.csdn.net/qq_25928447/article/details/122438913
 - 继承关系：
 	- `parent` 指定继承某个bean的属性，**注意，这里仅仅时属性继承**，和extends不是一回事；
 	- `abstract=true` 标识该bean仅仅作为给其他bean继承属性用，不可以直接依赖注入获取
-- 
+- 工厂方法：
