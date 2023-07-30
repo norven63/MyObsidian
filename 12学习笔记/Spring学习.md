@@ -4,7 +4,9 @@
 
 学习资料： 
 https://itbaima.net/document
-https://blog.csdn.net/qq_25928447/article/details/122438913
+[Spring核心技术](https://sqihr3trvt9.feishu.cn/docx/HcWJd1z5QoJkhIxkZdycUjD9nHf)
+[SpringMvc](https://sqihr3trvt9.feishu.cn/docx/Otkqdyc5koNj6wxrAwKc2vFNnFh)
+[SpringSecurity](https://sqihr3trvt9.feishu.cn/docx/HV79dE5LuoLxOAxCG2pcDu2Mnog)
 
 ---
 <br>
