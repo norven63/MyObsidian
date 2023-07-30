@@ -26,8 +26,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "创业/服务端项目经验.md",
-                "mode": "preview",
+                "file": "12学习笔记/Spring学习.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433.5,
-    "collapsed": true
+    "width": 433.5
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -109,7 +108,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "创业/服务端项目经验.md"
+                "file": "12学习笔记/Spring学习.md"
               }
             }
           },
@@ -119,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "创业/服务端项目经验.md",
+                "file": "12学习笔记/Spring学习.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "创业/服务端项目经验.md",
+                "file": "12学习笔记/Spring学习.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,6 +175,9 @@
   },
   "active": "683da4cc51e3b141",
   "lastOpenFiles": [
+    "88模板/模板-ZK.md",
+    "12学习笔记/Spring学习.md",
+    "01专题索引/模板概览.md",
     "创业/服务端项目经验.md",
     "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
     "13沉淀笔记/读书技巧.md",
@@ -199,9 +201,6 @@
     "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
     "12学习笔记/享学Vip - 2022年2月10日 【Alpha启动框架 & 工具（小开个头）】.md",
     "创业/2023-02-25 技术会议 会议纪要.md",
-    "未命名.canvas",
-    "12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
-    "12学习笔记/Linux - 系统Api汇总.md",
-    "12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md"
+    "未命名.canvas"
   ]
 }
