@@ -26,8 +26,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "创业/服务端项目经验.md",
-                "mode": "source",
+                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "创业/服务端项目经验.md"
+                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md"
               }
             }
           },
@@ -128,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "创业/服务端项目经验.md",
+                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "创业/服务端项目经验.md",
+                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -185,11 +185,11 @@
   },
   "active": "683da4cc51e3b141",
   "lastOpenFiles": [
+    "创业/服务端项目经验.md",
     "创业/Redis 使用教程.md",
     "88模板/模板-ZK.md",
     "12学习笔记/Spring学习.md",
     "01专题索引/模板概览.md",
-    "创业/服务端项目经验.md",
     "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
     "13沉淀笔记/读书技巧.md",
     "12学习笔记/Linux - 多进程.md",
