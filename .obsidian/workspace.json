@@ -36,8 +36,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
-                "mode": "preview",
+                "file": "创业/云服务.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -125,7 +125,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 575.5
+    "width": 635.4999961853027
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md"
+                "file": "创业/云服务.md"
               }
             }
           },
@@ -151,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
+                "file": "创业/云服务.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
+                "file": "创业/云服务.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,32 +208,32 @@
   },
   "active": "4aa5bbdc9f270735",
   "lastOpenFiles": [
+    "88模板/模板-插入本地图片.md",
+    "88模板/模板-ZK.md",
+    "01专题索引/模板概览.md",
+    "88模板/模板-header学习笔记.md",
+    "创业/云服务.md",
+    "创业/服务端项目经验.md",
+    "创业/Redis 使用教程.md",
     "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
     "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
     "01专题索引/路哥特训营.md",
-    "01专题索引/模板概览.md",
     "01专题索引/享学Vip课程笔记.md",
     "00索引/效能提高.md",
     "00索引/网络原理.md",
     "01专题索引/60天引爆学习力.md",
     "12学习笔记/60天引爆学习力-1. 学习力基础.md",
     "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
-    "创业/服务端项目经验.md",
     "12学习笔记/Linux 常用命令.md",
-    "创业/Redis 使用教程.md",
-    "88模板/模板-ZK.md",
     "12学习笔记/Spring学习.md",
     "13沉淀笔记/读书技巧.md",
     "12学习笔记/Linux - 多进程.md",
     "00索引/Linux.md",
     "13沉淀笔记/MarkDown绘图示例.md",
     "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md",
-    "11闪念笔记/未命名.md",
-    "11闪念笔记/路哥特训营 - 2022年11月22日 APM性能优化、锁、trace源码、方法栈帧回溯 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年11月11日 Kotlin 协程 -todo.md",
     "未命名.canvas"
   ]
 }

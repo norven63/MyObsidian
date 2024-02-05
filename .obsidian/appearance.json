@@ -6,5 +6,6 @@
   "textFontFamily": "微软雅黑",
   "cssTheme": "Red Graphite",
   "accentColor": "#5b9ee6",
-  "monospaceFontFamily": "Consolas"
+  "monospaceFontFamily": "Consolas",
+  "nativeMenus": false
 }
