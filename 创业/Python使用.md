@@ -1,0 +1,22 @@
+日期： 2024-02-07
+
+标签： #学习笔记 #技术
+
+学习资料： 
+
+
+---
+<br>
+
+### 搭建虚拟环境
+
+```shell
+# 1. 生成虚拟环境
+python -m venv .venv
+
+# 2. 激活虚拟环境
+.venv\Scripts\activate
+
+# 
+pip install -r requirements.txt
+```

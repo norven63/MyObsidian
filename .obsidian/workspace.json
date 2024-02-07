@@ -13,20 +13,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "创业/服务端项目经验.md",
-                "mode": "preview",
+                "file": "创业/Python使用.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "ee709ff04c347267",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.16"
               }
             }
           },
@@ -36,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "创业/云服务.md",
+                "file": "11闪念笔记/路哥特训营 - 2022年12月02日 虚拟机栈相关源码、so的hook开源框架 -todo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -66,8 +56,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -125,7 +114,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 635.4999961853027
+    "width": 309.5
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -141,7 +130,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "创业/云服务.md"
+                "file": "创业/Python使用.md"
               }
             }
           },
@@ -151,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "创业/云服务.md",
+                "file": "创业/Python使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "创业/云服务.md",
+                "file": "创业/Python使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,16 +195,24 @@
       "publish:发布更改": true
     }
   },
-  "active": "4aa5bbdc9f270735",
+  "active": "27e32adc53028dbb",
   "lastOpenFiles": [
+    "创业/服务端项目经验.md",
+    "11闪念笔记/路哥特训营 - 2022年12月02日 虚拟机栈相关源码、so的hook开源框架 -todo.md",
+    "11闪念笔记/路哥特训营 - 2022年12月05日、09日 Sliver、字节码、Gradle、Transform、asm -todo.md",
+    "11闪念笔记/路哥特训营 - 2022年12月28日 APM性能优化、ASM transform、Handler 同步屏障、卡顿监控的几个思路 -todo.md",
+    "11闪念笔记/路哥特训营 - 2023年01月05日 Choreographer源码、Vsync机制、matrix-trace-canary方案-todo.md",
+    "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md",
+    "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
+    "11闪念笔记/享学公开课 - 2022年04月8日 播放器手势.md",
+    "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
+    "创业/Python使用.md",
+    "创业/云服务.md",
     "88模板/模板-插入本地图片.md",
     "88模板/模板-ZK.md",
     "01专题索引/模板概览.md",
     "88模板/模板-header学习笔记.md",
-    "创业/云服务.md",
-    "创业/服务端项目经验.md",
     "创业/Redis 使用教程.md",
-    "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
@@ -226,14 +223,6 @@
     "00索引/网络原理.md",
     "01专题索引/60天引爆学习力.md",
     "12学习笔记/60天引爆学习力-1. 学习力基础.md",
-    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
-    "12学习笔记/Linux 常用命令.md",
-    "12学习笔记/Spring学习.md",
-    "13沉淀笔记/读书技巧.md",
-    "12学习笔记/Linux - 多进程.md",
-    "00索引/Linux.md",
-    "13沉淀笔记/MarkDown绘图示例.md",
-    "11闪念笔记/路哥特训营 - 2023年03月25日 FFmpeg 结构体、读书.md",
     "未命名.canvas"
   ]
 }
