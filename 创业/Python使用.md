@@ -26,14 +26,14 @@ pip install -r requirements.txt
 
 <br><br>
 ### 代码结构
-my_project/ 
+GOGYM/ 
 ├── .venv/ 
 ├── openai/ 
 │ ├── openai_client.py 
-│ └── openai_req.py
+│ └── function_openai_req.py
 ├── .funcignore 
 ├── .gitignore 
-├──function_app 
+├── function_app.py 
 ├── host.json 
 ├── local.settings.json 
-├── requirements.txt
+└── requirements.txt
