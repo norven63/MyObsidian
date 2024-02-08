@@ -23,3 +23,17 @@ pip freeze > requirements.txt
 # 4. 安装依赖包
 pip install -r requirements.txt
 ```
+
+<br><br>
+### 代码结构
+my_project/ 
+├── .venv/ 
+├── openai/ 
+│ ├── openai_client.py 
+│ └── openai_req.py
+├── .funcignore 
+├── .gitignore 
+├──function_app 
+├── host.json 
+├── local.settings.json 
+├── requirements.txt
