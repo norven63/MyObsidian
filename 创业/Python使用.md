@@ -24,7 +24,13 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
-<br><br>
+cryptography
+
+azure-functions
+
+azure-functions-durable>=1.2.4
+
+openai<br><br>
 ### 代码结构
 GOGYM/ 
 ├── .venv/ 
