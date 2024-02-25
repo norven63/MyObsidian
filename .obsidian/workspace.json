@@ -110,7 +110,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -195,7 +196,7 @@
       "publish:发布更改": true
     }
   },
-  "active": "27e32adc53028dbb",
+  "active": "eb69a3677a161194",
   "lastOpenFiles": [
     "创业/服务端项目经验.md",
     "11闪念笔记/路哥特训营 - 2022年12月02日 虚拟机栈相关源码、so的hook开源框架 -todo.md",
