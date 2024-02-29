@@ -15,7 +15,10 @@
 python -m venv .venv
 
 # 2. 激活虚拟环境
+# windows
 .venv\Scripts\activate
+# mac
+source .venv/bin/activate
 
 # 3. 生成环境依赖文件，并往里面编辑需要的依赖
 pip freeze > requirements.txt
@@ -23,13 +26,7 @@ pip freeze > requirements.txt
 # 4. 安装依赖包
 pip install -r requirements.txt
 ```
-cryptography
 
-azure-functions
-
-azure-functions-durable>=1.2.4
-
-openai
 <br><br>
 ### 代码结构
 GOGYM/ 
