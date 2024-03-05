@@ -45,16 +45,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "4e59e620af148715",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.3.7"
-              }
-            }
           }
         ]
       }
@@ -110,8 +100,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -196,8 +185,9 @@
       "publish:发布更改": true
     }
   },
-  "active": "eb69a3677a161194",
+  "active": "27e32adc53028dbb",
   "lastOpenFiles": [
+    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
     "创业/服务端项目经验.md",
     "11闪念笔记/路哥特训营 - 2022年12月02日 虚拟机栈相关源码、so的hook开源框架 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年12月05日、09日 Sliver、字节码、Gradle、Transform、asm -todo.md",
@@ -223,7 +213,6 @@
     "00索引/效能提高.md",
     "00索引/网络原理.md",
     "01专题索引/60天引爆学习力.md",
-    "12学习笔记/60天引爆学习力-1. 学习力基础.md",
     "未命名.canvas"
   ]
 }
