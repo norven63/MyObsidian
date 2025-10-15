@@ -4,107 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "e21563c88ab4c6bf",
+        "id": "ba93ddfc79059e58",
         "type": "tabs",
         "children": [
           {
-            "id": "27e32adc53028dbb",
+            "id": "30df014b4695a443",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "创业/Python使用.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Python使用"
-            }
-          },
-          {
-            "id": "7f16d07199bfe63d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "创业/服务端项目经验.md",
+                "file": "13沉淀笔记/2025面试/渲染绘制.md",
                 "mode": "source",
+                "source": false,
                 "backlinks": true,
-                "source": false
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "服务端项目经验"
-            }
-          },
-          {
-            "id": "2f5f7d9e72462c70",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.5"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.5"
-            }
-          },
-          {
-            "id": "ecdb9125937f186b",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.6.7"
-            }
-          },
-          {
-            "id": "cbc5b4809faeaf5e",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.6.5"
-            }
-          },
-          {
-            "id": "4aa5bbdc9f270735",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11闪念笔记/路哥特训营 - 2022年12月02日 虚拟机栈相关源码、so的hook开源框架 -todo.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "路哥特训营 - 2022年12月02日 虚拟机栈相关源码、so的hook开源框架 -todo"
-            }
-          },
-          {
-            "id": "683da4cc51e3b141",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】"
+              "title": "渲染绘制"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -123,7 +50,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -152,8 +80,8 @@
             "state": {
               "type": "starred",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "lucide-ghost",
+              "title": "starred"
             }
           },
           {
@@ -170,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 270.5
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -248,6 +176,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:创建新数据库": false,
       "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -259,15 +188,33 @@
       "publish:发布更改": true
     }
   },
-  "active": "7f16d07199bfe63d",
+  "active": "30df014b4695a443",
   "lastOpenFiles": [
+    "13沉淀笔记/2025面试/Handler.md",
+    "13沉淀笔记/2025面试/渲染绘制.md",
+    "13沉淀笔记/MarkDown绘图示例.md",
+    "99附件/Pasted image 20251015232106.png",
+    "99附件/Pasted image 20251015223822.png",
+    "99附件/Pasted image 20251015222223.png",
+    "13沉淀笔记/2025面试/Binder相关.md",
+    "13沉淀笔记/2025面试",
+    "99附件/Pasted image 20251015215447.png",
+    "13沉淀笔记/2025面试/JNI、SO文件调用原理.md",
+    "99附件/20220521_1.png",
+    "13沉淀笔记/读书技巧.md",
+    "99附件/64391195058704.png",
+    "99附件/74391195058704.png",
+    "99附件/20220427235054.png",
+    "12学习笔记/享学Vip - 2022年2月10日 【Alpha启动框架 & 工具（小开个头）】.md",
+    "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
+    "12学习笔记/享学Vip - 2021年2月23日 【C语言 指针入门与基本数据类型】(NDK第一节课).md",
+    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+    "创业/服务端项目经验.md",
     "00索引/Java核心技术.md",
     "创业/Python使用.md",
-    "创业/服务端项目经验.md",
     "创业/Redis 使用教程.md",
     "创业/云服务.md",
     "12学习笔记/Spring学习.md",
-    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
     "11闪念笔记/路哥特训营 - 2022年12月02日 虚拟机栈相关源码、so的hook开源框架 -todo.md",
     "11闪念笔记/路哥特训营 - 2022年12月05日、09日 Sliver、字节码、Gradle、Transform、asm -todo.md",
     "11闪念笔记/路哥特训营 - 2022年12月28日 APM性能优化、ASM transform、Handler 同步屏障、卡顿监控的几个思路 -todo.md",
@@ -277,16 +224,6 @@
     "11闪念笔记/享学公开课 - 2022年04月8日 播放器手势.md",
     "11闪念笔记/路哥特训营 - 2022年10月26日 组件化、ClassLoader -todo.md",
     "88模板/模板-插入本地图片.md",
-    "88模板/模板-ZK.md",
-    "01专题索引/模板概览.md",
-    "88模板/模板-header学习笔记.md",
-    "11闪念笔记/路哥特训营 - 2022年11月02日 aosp android应用进程启动 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年11月06日 Kotlin 基础语法 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年10月23日 组件化——注解、SPI、AutoService、《自我修养》第7章 动态连接.md",
-    "11闪念笔记/路哥特训营 - 2022年10月13日 C++ 复习课、Linux内核、Cmake编译 -todo.md",
-    "01专题索引/路哥特训营.md",
-    "01专题索引/享学Vip课程笔记.md",
-    "00索引/效能提高.md",
     "未命名.canvas"
   ]
 }
