@@ -1,10 +1,9 @@
-# 🧩 一、AMS 的定位与作用
+# 🧩 一、ActivityManagerService（AMS） 的定位与作用
 
 | 项目             | 内容                                                                                                               |
 | -------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **英文全称**       | ActivityManagerService                                                                                           |
 | **所在进程**       | `system_server`                                                                                                  |
-| **核心职责**       | 负责**四大组件调度、进程管理、任务栈维护、系统内存与前后台切换控制**                                                                             |
+| **核心职责**       | 负责**四大组件调度、进程生命周期管理、Activity栈维护、系统内存与前后台切换控制**                                                                   |
 | **系统地位**       | Android Framework 层的中枢控制器，是 SystemServer 最核心的服务之一                                                                |
 | **Binder 服务名** | `"activity"`、`"gfxinfo"` 等各种系统Binder服务                                                                           |
 | **管理模块**       | 与 `ActivityTaskManagerService(ATMS)`、`ActiveServices`、`ProcessList`、`BroadcastQueue`、`ContentProviderRecord` 等协作 |

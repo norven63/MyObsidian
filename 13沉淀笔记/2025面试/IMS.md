@@ -74,12 +74,10 @@
 - 当检测到设备事件时读取结构体 `input_event`。    
 - 将其封装为 `RawEvent` 对象放入 `mEventBuffer`（默认大小256）。
     
-
 ### 2️⃣ 事件加工：`processEventsLocked()`
 - 将 RawEvent 转换为 `NotifyArgs`（例如 `NotifyKeyArgs`, `NotifyMotionArgs`）    
 - 应用设备映射、键值表、触控坐标变换等处理逻辑。
     
-
 ### 3️⃣ 派发请求：`mQueuedListener->flush()`
 - 调用 InputDispatcher 的 `notifyKey()` 或 `notifyMotion()`。    
 - InputDispatcher 收到事件后，唤醒分发线程执行调度。    
@@ -92,23 +90,19 @@
 - InputDispatcher 接收来自 InputReader 的 `NotifyKeyArgs`。    
 - 生成 `KeyEntry` / `MotionEntry` 并加入 `mInboundQueue`。
     
-
 ### 2️⃣ 分发循环：`dispatchOnce()`
 - 不断从队列取事件 → 调用 `dispatchEventLocked()`
     
-
 ### 3️⃣ 查找目标窗口
 - 调用 `findTouchedWindowAtLocked()`。    
 - 依据 WMS 提供的窗口输入信息（InputWindowHandle）确定目标窗口。    
 - 若找不到目标窗口，则通过 `InputDispatcherPolicy` 处理（如按键唤醒屏幕）。
     
-
 ### 4️⃣ 派发事件
-- 通过目标窗口的 `InputChannel` 写入事件。    
+- 通过Soket对目标窗口的 `InputChannel` 写入事件。    
 - 目标端（ViewRootImpl）在主线程 epoll 中监听该 channel，读取事件并交由 `enqueueInputEvent()`。
 - `enqueueInputEvent()`再往下层层调用，就会发送 Choreographer 的 INPUT 消息
     
-
 ### 5️⃣ 唤醒机制
 - 若队列为空，则 Dispatcher 进入 `pollOnce()` 等待；    
 - 当 Reader 有新事件或唤醒信号时，调用 `mLooper->wake()` 触发分发。    
@@ -141,7 +135,7 @@
 [findFocusedWindowTargetsLocked()]
    ↓
 [InputChannel.socketpair()]
-   ↙                      ↘
+   ↙ (服务端)             ↘ (客户端)
 [DispatcherThread]     [UI主线程(ViewRootImpl)]
    | publishEvent() → write()
    |                        ← read() consumeEvent()
@@ -151,14 +145,14 @@
 
 ```
 
-|阶段|模块|关键机制|线程|核心方法|
-|---|---|---|---|---|
-|**① 事件采集**|`EventHub`|epoll 监听 `/dev/input`，读取 `input_event`|InputReaderThread|`EventHub::getEvents()`|
-|**② 事件解析**|`InputReader`|解析成 `NotifyArgs` → 调用 `InputDispatcher.notify*()`|InputReaderThread|`InputReader.loopOnce()`|
-|**③ 事件分发**|`InputDispatcher`|查找目标窗口（WMS提供InputWindowHandle）→ 入队 `DispatchEntry`|InputDispatcherThread|`InputDispatcher.dispatchOnce()`|
-|**④ 事件跨进程传递**|`InputChannel` / `InputPublisher` / `InputConsumer`|socket pair通信：`InputDispatcher`写入，`ViewRootImpl`读取|DispatcherThread ↔ UI主线程|`publishKeyEvent()` / `consumeEvents()`|
-|**⑤ 事件分发与反馈**|`ViewRootImpl` / `InputStage`|Java层分发到 View → Activity → View|应用主线程|`deliverInputEvent()` / `finishInputEvent()`|
-|**⑥ 派发完成回执**|`InputDispatcher`|UI主线程通过 socket 发送 Finished 信号|DispatcherThread|`doDispatchCycleFinishedLockedInterruptible()`|
+| 阶段            | 模块                                                  | 关键机制                                               | 线程                       | 核心方法                                           |
+| ------------- | --------------------------------------------------- | -------------------------------------------------- | ------------------------ | ---------------------------------------------- |
+| **① 事件采集**    | `EventHub`                                          | epoll 监听 `/dev/input`，读取 `input_event`             | InputReaderThread        | `EventHub::getEvents()`                        |
+| **② 事件解析**    | `InputReader`                                       | 解析成 `NotifyArgs` → 调用 `InputDispatcher.notify*()`  | InputReaderThread        | `InputReader.loopOnce()`                       |
+| **③ 事件分发**    | `InputDispatcher`                                   | 查找目标窗口（WMS提供InputWindowHandle）→ 入队 `DispatchEntry` | InputDispatcherThread    | `InputDispatcher.dispatchOnce()`               |
+| **④ 事件跨进程传递** | `InputChannel` / `InputPublisher` / `InputConsumer` | socket pair通信：`InputDispatcher`写入，`ViewRootImpl`读取 | DispatcherThread ↔ UI主线程 | `publishKeyEvent()` / `consumeEvents()`        |
+| **⑤ 事件分发与反馈** | `ViewRootImpl` / `InputStage`                       | Java层分发到 View → Activity → View                    | 应用主线程                    | `deliverInputEvent()` / `finishInputEvent()`   |
+| **⑥ 派发完成回执**  | `InputDispatcher`                                   | UI主线程通过 socket 发送 Finished 信号                      | DispatcherThread         | `doDispatchCycleFinishedLockedInterruptible()` |
  
 
 ---
