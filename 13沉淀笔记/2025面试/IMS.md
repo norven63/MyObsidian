@@ -4,6 +4,7 @@
 ## 一、IMS分层结构与总体架构
 
 ```pgsql
+
 ┌─────────────────────────────────────────────┐  
 │ Java层：InputManagerService                 
 │     ↓ nativeInit                            
@@ -17,7 +18,9 @@
 │     ↑                                      
 │ WMS提供窗口输入信息(InputWindowHandle)           
 │     ↓                                         
-│ ViewRootImpl读取 → View层事件分发            └─────────────────────────────────────────────┘
+│ ViewRootImpl读取 → View层事件分发            
+└─────────────────────────────────────────────┘
+
 ```
 
 
@@ -33,7 +36,7 @@
 ## 二、IMS启动与初始化流程
 
 1. **SystemServer 启动阶段**    
-    - `SystemServer.java` → `startOtherServices()` → `InputManagerService.main()`
+    - `SystemServer.main()` → `startOtherServices()` → `InputManagerService.main()`
         
 2. **IMS 初始化**    
     - Java层构造 `InputManagerService`        
@@ -56,11 +59,11 @@
 
 ## 三、IMS核心线程模型
 
-|线程名|作用|Looper情况|调用方向|
-|---|---|---|---|
-|**android.display**|SystemServer主线程，运行Java层IMS的Handler消息|有Looper|Java层消息调度|
-|**InputReaderThread**|从 EventHub 读取原始输入事件（RawEvent）并解析为 NotifyArgs|无Looper，自行循环|→ InputDispatcher|
-|**InputDispatcherThread**|接收 NotifyArgs，查找目标窗口，派发事件|有Looper|向窗口InputChannel发送事件|
+| 线程名                       | 作用                                           | Looper情况     | 调用方向                |
+| ------------------------- | -------------------------------------------- | ------------ | ------------------- |
+| **android.display**       | SystemServer主线程，运行Java层IMS的Handler消息         | 有Looper      | Java层消息调度           |
+| **InputReaderThread**     | 从 EventHub 读取原始输入事件（RawEvent）并解析为 NotifyArgs | 无Looper，自行循环 | → InputDispatcher   |
+| **InputDispatcherThread** | 接收 NotifyArgs，查找目标窗口，派发事件                    | 有Looper      | 向窗口InputChannel发送事件 |
 
 ---
 
@@ -95,7 +98,7 @@
     
 
 ### 3️⃣ 查找目标窗口
-- 调用 `findFocusedWindowTargetsLocked()`。    
+- 调用 `findTouchedWindowAtLocked()`。    
 - 依据 WMS 提供的窗口输入信息（InputWindowHandle）确定目标窗口。    
 - 若找不到目标窗口，则通过 `InputDispatcherPolicy` 处理（如按键唤醒屏幕）。
     
@@ -103,6 +106,7 @@
 ### 4️⃣ 派发事件
 - 通过目标窗口的 `InputChannel` 写入事件。    
 - 目标端（ViewRootImpl）在主线程 epoll 中监听该 channel，读取事件并交由 `enqueueInputEvent()`。
+- `enqueueInputEvent()`再往下层层调用，就会发送 Choreographer 的 INPUT 消息
     
 
 ### 5️⃣ 唤醒机制
@@ -125,33 +129,41 @@
 ## 七、事件完整流转路径
 
 ```css
-[Linux Kernel] → 设备驱动 → /dev/input/eventX
-      ↓ 
-[EventHub] epoll_wait()
-      ↓
-[InputReader] getEvents() + processEventsLocked()
-      ↓ 
-[InputDispatcher] dispatchOnce() + findFocusedWindowTargetsLocked()
-      ↓ 
-[InputChannel] SocketPair通信
-      ↓ 
-[ViewRootImpl] enqueueInputEvent()
-      ↓ 
-[InputStage -> View层分发] → DecorView → Activity → View
+
+[Linux Kernel] (设备驱动 → /dev/input/eventX)
+   ↓ (input_event)
+[EventHub] --epoll_wait()-->
+[InputReader] --EventHub.getEvents() + processEventsLocked() + notifyKey()-->
+[InputDispatcher.mInboundQueue]
+   ↓
+[InputDispatcher.dispatchOnce()]
+   ↓
+[findFocusedWindowTargetsLocked()]
+   ↓
+[InputChannel.socketpair()]
+   ↙                      ↘
+[DispatcherThread]     [UI主线程(ViewRootImpl)]
+   | publishEvent() → write()
+   |                        ← read() consumeEvent()
+   |                        deliverInputEvent() → InputStage
+   |                        finishInputEvent() → sendFinishedSignal()
+   | ← handleReceiveCallback() → remove waitQueue entry
+
 ```
 
+|阶段|模块|关键机制|线程|核心方法|
+|---|---|---|---|---|
+|**① 事件采集**|`EventHub`|epoll 监听 `/dev/input`，读取 `input_event`|InputReaderThread|`EventHub::getEvents()`|
+|**② 事件解析**|`InputReader`|解析成 `NotifyArgs` → 调用 `InputDispatcher.notify*()`|InputReaderThread|`InputReader.loopOnce()`|
+|**③ 事件分发**|`InputDispatcher`|查找目标窗口（WMS提供InputWindowHandle）→ 入队 `DispatchEntry`|InputDispatcherThread|`InputDispatcher.dispatchOnce()`|
+|**④ 事件跨进程传递**|`InputChannel` / `InputPublisher` / `InputConsumer`|socket pair通信：`InputDispatcher`写入，`ViewRootImpl`读取|DispatcherThread ↔ UI主线程|`publishKeyEvent()` / `consumeEvents()`|
+|**⑤ 事件分发与反馈**|`ViewRootImpl` / `InputStage`|Java层分发到 View → Activity → View|应用主线程|`deliverInputEvent()` / `finishInputEvent()`|
+|**⑥ 派发完成回执**|`InputDispatcher`|UI主线程通过 socket 发送 Finished 信号|DispatcherThread|`doDispatchCycleFinishedLockedInterruptible()`|
+ 
+
 ---
 
-## 八、事件过滤与策略层
-
-- **IMS.filterInputEvent()**：过滤无需上报事件（Java层逻辑）    
-- **InputDispatcherPolicy**（NativeInputManager 实现）：    
-    - 系统策略回调，如屏幕开关、HOME/POWER按键截获、设备解锁等        
-    - 例如 `interceptKeyBeforeQueueing()` / `interceptKeyBeforeDispatching()`        
-
----
-
-## 九、关键面试要点总结
+## 八、关键面试要点总结
 
 |面试问题|要点回答|
 |---|---|
@@ -160,4 +172,3 @@
 |InputDispatcher 如何决定事件发往哪个窗口？|依据 WMS 注册的 InputWindowHandle 列表，通过焦点窗口匹配|
 |WMS 在输入系统中起什么作用？|管理输入窗口信息，提供给 InputDispatcher 做事件目标判定|
 |ViewRootImpl 如何接收事件？|通过 InputChannel 从 socket 读取事件，转入 InputStage 体系处理|
-

@@ -30,10 +30,10 @@ sequenceDiagram
 1. **发送消息**
     - `Handler` 通过 `sendMessage()` 或 `post()` 系列方法发送 `Message`        
     - 最终会调用 `MessageQueue.enqueueMessage()`，将 `Message` 根据其 **执行时间（`when`）** 插入到队列的合适位置，以维持队列的时间顺序        
-2. **写入管道，唤醒循环**    
+2. **写入管道，唤醒循环**
     - 在将 `Message` 加入队列后，如果该消息需要**立即执行**，或者新消息被插到了队列头部（即下一个要处理的消息），`enqueueMessage()` 会向一个 **Linux 管道（pipe）** 或 **eventfd** 写入一个字节        
     - **目的：** 唤醒可能正处于休眠状态的 `Looper` 线程        
-3. **提取消息与 `nativePollOnce()`    
+3. **提取消息与 `nativePollOnce()`**    
     - `Looper.loop()` 是一个死循环，其核心是调用 `MessageQueue.next()` 来获取下一条要处理的消息        
     - **`nativePollOnce()` 正是在 `MessageQueue.next()` 中被调用的**        
     - **`nativePollOnce(ptr, timeoutMillis)` 的工作机制：**        

@@ -7,5 +7,6 @@
   "cssTheme": "Red Graphite",
   "accentColor": "#5b9ee6",
   "monospaceFontFamily": "Consolas",
-  "nativeMenus": false
+  "nativeMenus": false,
+  "baseFontSizeAction": true
 }

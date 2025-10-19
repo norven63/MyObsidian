@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13沉淀笔记/2025面试/IMS.md",
+                "file": "13沉淀笔记/2025面试/渲染绘制.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "IMS"
+              "title": "渲染绘制"
             }
           }
         ]
@@ -190,23 +190,24 @@
   },
   "active": "30df014b4695a443",
   "lastOpenFiles": [
+    "13沉淀笔记/2025面试/WMS.md",
     "13沉淀笔记/2025面试/进程启动.md",
-    "13沉淀笔记/2025面试/IMS.md",
-    "99附件/Pasted image 20251018220849.png",
-    "13沉淀笔记/2025面试/Binder相关.md",
-    "13沉淀笔记/2025面试/AMS.md",
     "13沉淀笔记/2025面试/渲染绘制.md",
+    "13沉淀笔记/2025面试/IMS.md",
+    "13沉淀笔记/2025面试/AMS.md",
     "13沉淀笔记/2025面试/Handler.md",
-    "99附件/Pasted image 20251017002855.png",
+    "13沉淀笔记/2025面试/Binder相关.md",
+    "99附件/Pasted image 20251019174251.png",
     "13沉淀笔记/2025面试/JNI、SO文件调用原理.md",
+    "99附件/Pasted image 20251019165828.png",
+    "99附件/Pasted image 20251018220849.png",
+    "99附件/Pasted image 20251017002855.png",
     "99附件/Pasted image 20251016233905.png",
     "99附件/Pasted image 20251016230935.png",
     "99附件/Pasted image 20251016220556.png",
     "99附件/Pasted image 20251015222223.png",
     "99附件/Pasted image 20220611225609.png",
     "99附件/Pasted image 20251015223822.png",
-    "99附件/Pasted image 20251015232106.png",
-    "99附件/Pasted image 20251016015222.png",
     "13沉淀笔记/MarkDown绘图示例.md",
     "13沉淀笔记/2025面试",
     "13沉淀笔记/读书技巧.md",
@@ -226,7 +227,6 @@
     "11闪念笔记/路哥特训营 - 2023年01月05日 Choreographer源码、Vsync机制、matrix-trace-canary方案-todo.md",
     "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md",
     "11闪念笔记/路哥特训营 - 2023年02月24日、02月27日、02月28日 Jetpack架构 -todo.md",
-    "11闪念笔记/享学公开课 - 2022年04月8日 播放器手势.md",
     "未命名.canvas"
   ]
 }
