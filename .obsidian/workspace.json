@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ba93ddfc79059e58",
+        "id": "773ad7a1a813fe22",
         "type": "tabs",
         "children": [
           {
-            "id": "30df014b4695a443",
+            "id": "1b4468c6ae678131",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13沉淀笔记/2025面试/渲染绘制.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "渲染绘制"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -188,16 +174,30 @@
       "publish:发布更改": true
     }
   },
-  "active": "30df014b4695a443",
+  "active": "1b4468c6ae678131",
   "lastOpenFiles": [
+    "13沉淀笔记/brook/线程监控.md",
+    "13沉淀笔记/2025面试/进程启动.md",
+    "13沉淀笔记/brook",
+    "13沉淀笔记 1/2025面试/进程启动.md",
+    "13沉淀笔记 1/2025面试/渲染绘制.md",
+    "13沉淀笔记 1/2025面试/WMS.md",
+    "13沉淀笔记 1/2025面试/IMS.md",
+    "13沉淀笔记 1/2025面试/Handler.md",
+    "13沉淀笔记 1/2025面试/Binder.md",
+    "13沉淀笔记 1/2025面试/AMS.md",
+    "13沉淀笔记 1/读书技巧.md",
+    "13沉淀笔记 1/MarkDown绘图示例.md",
+    "13沉淀笔记 1/2025面试",
+    "13沉淀笔记 1",
+    "13沉淀笔记/2025面试/WMS.md",
     "13沉淀笔记/2025面试/AMS.md",
-    "13沉淀笔记/2025面试/Binder相关.md",
+    "13沉淀笔记/2025面试/渲染绘制.md",
+    "13沉淀笔记/2025面试/Binder.md",
+    "13沉淀笔记/MarkDown绘图示例.md",
     "13沉淀笔记/2025面试/Handler.md",
     "13沉淀笔记/2025面试/IMS.md",
-    "13沉淀笔记/2025面试/WMS.md",
     "12学习笔记/享学Vip - 2021年3月14日 【C++ 浅拷贝、深拷贝】(NDK第九节课).md",
-    "13沉淀笔记/2025面试/进程启动.md",
-    "13沉淀笔记/2025面试/渲染绘制.md",
     "99附件/Pasted image 20251019174251.png",
     "13沉淀笔记/2025面试/JNI、SO文件调用原理.md",
     "99附件/Pasted image 20251019165828.png",
@@ -209,7 +209,6 @@
     "99附件/Pasted image 20251015222223.png",
     "99附件/Pasted image 20220611225609.png",
     "99附件/Pasted image 20251015223822.png",
-    "13沉淀笔记/MarkDown绘图示例.md",
     "13沉淀笔记/2025面试",
     "13沉淀笔记/读书技巧.md",
     "12学习笔记/享学Vip - 2022年2月10日 【Alpha启动框架 & 工具（小开个头）】.md",
@@ -217,16 +216,6 @@
     "12学习笔记/享学Vip - 2021年2月23日 【C语言 指针入门与基本数据类型】(NDK第一节课).md",
     "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
     "创业/服务端项目经验.md",
-    "00索引/Java核心技术.md",
-    "创业/Python使用.md",
-    "创业/Redis 使用教程.md",
-    "创业/云服务.md",
-    "12学习笔记/Spring学习.md",
-    "11闪念笔记/路哥特训营 - 2022年12月02日 虚拟机栈相关源码、so的hook开源框架 -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年12月05日、09日 Sliver、字节码、Gradle、Transform、asm -todo.md",
-    "11闪念笔记/路哥特训营 - 2022年12月28日 APM性能优化、ASM transform、Handler 同步屏障、卡顿监控的几个思路 -todo.md",
-    "11闪念笔记/路哥特训营 - 2023年01月05日 Choreographer源码、Vsync机制、matrix-trace-canary方案-todo.md",
-    "11闪念笔记/路哥特训营 - 2023年02月07日、2月13日 内存优化-todo.md",
     "未命名.canvas"
   ]
 }
