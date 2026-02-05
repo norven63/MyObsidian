@@ -144,3 +144,79 @@ WMS控制层级、窗口属性      消费所有Layer的Buffer并合成帧
 > 🔹 **RenderThread 负责“画出内容”**
 > 🔹 **SurfaceFlinger 负责“把所有画面拼成一张”**
 > 🔹 **Choreographer 控制整个系统的“节奏心跳”**
+
+
+## 关于findTouchedWindowTargetsLocked实现
+在Android系统中，触摸事件从发生到传递至合适的窗口，其中关键的一环便是`InputDispatcher::findTouchedWindowTargetsLocked`函数。这个函数会根据触摸点的位置等信息，找到应该接收该事件的窗口。在这个过程中，系统会仔细检查候选窗口的`LayoutParams`中的标志位，`FLAG_NOT_TOUCHABLE`正是其中之一，它会导致窗口被跳过。
+
+下面，我们通过一个表格来梳理触摸事件目标窗口查找与标志位检查过程中的关键函数：
+
+| 函数名                                      | 关键作用                                                                 |
+| :------------------------------------------ | :----------------------------------------------------------------------- |
+| `InputDispatcher::findTouchedWindowTargetsLocked` | 触摸事件目标查找的**入口**和**核心协调者**。                               |
+| `InputDispatcher::findTouchedWindowAtLocked`     | **按Z序从前往后**遍历窗口，寻找第一个“接受触摸”的窗口。                   |
+| `windowAcceptsTouchAt`                      | **关键判断**：检查窗口是否可见、可触摸且触摸点在其区域内。                 |
+
+### 🔍 关键函数流程与标志位检查
+
+#### **1. `InputDispatcher::findTouchedWindowTargetsLocked`**
+
+这是触摸事件目标查找的**入口**和**核心协调者**。它会调用 `findTouchedWindowAtLocked` 来获取当前被触摸的窗口。
+
+#### **2. `InputDispatcher::findTouchedWindowAtLocked`**
+
+此函数负责**按Z序从前往后**遍历指定屏幕上的所有窗口，寻找第一个“接受触摸”的窗口。其核心逻辑如下：
+```cpp
+sp<WindowInfoHandle> InputDispatcher::findTouchedWindowAtLocked(int32_t displayId, int32_t x, int32_t y, ...) {
+    // 获取当前屏幕上的所有窗口句柄
+    const auto& windowHandles = getWindowHandlesLocked(displayId);
+    for (const sp<WindowInfoHandle>& windowHandle : windowHandles) { // 从顶层到底层遍历
+        ...
+        const WindowInfo& info = *windowHandle->getInfo();
+        // 关键判断：该窗口是否接受此次触摸？
+        if (!info.isSpy() && windowAcceptsTouchAt(info, displayId, x, y, isStylus)) {
+            ... // 找到目标窗口，返回其句柄
+            return windowHandle;
+        }
+        ...
+    }
+    return nullptr; // 未找到符合条件的窗口
+}
+```
+
+#### **3. `windowAcceptsTouchAt`**
+
+这是**判断窗口是否接受触摸的核心函数**，窗口的多种属性（包括标志位）都在此检查。其简化代码如下：
+```cpp
+bool windowAcceptsTouchAt(const WindowInfo& windowInfo, int32_t displayId, int32_t x, int32_t y, bool isStylus) {
+    const auto inputConfig = windowInfo.inputConfig;
+    
+    // 检查1：显示ID是否匹配，窗口是否可见
+    if (windowInfo.displayId != displayId || inputConfig.test(WindowInfo::InputConfig::NOT_VISIBLE)) {
+        return false;
+    }
+    
+    // 检查2（关键）：窗口是否可触摸
+    const bool windowCanInterceptTouch = isStylus && windowInfo.interceptsStylus();
+    if (inputConfig.test(WindowInfo::InputConfig::NOT_TOUCHABLE) && !windowCanInterceptTouch) {
+        return false; // 设置FLAG_NOT_TOUCHABLE会导致NOT_TOUCHABLE为true，此处返回false
+    }
+    
+    // 检查3：触摸点是否在窗口的可触摸区域内
+    if (!windowInfo.touchableRegionContainsPoint(x, y)) {
+        return false;
+    }
+    
+    ...
+    
+    return true;
+}
+```
+
+这里，`WindowInfo::InputConfig::NOT_TOUCHABLE` 这个内部状态就来源于窗口 `LayoutParams` 中的 `FLAG_NOT_TOUCHABLE` 标志。当此标志被设置，`NOT_TOUCHABLE` 为真，并且没有手写笔拦截等特殊情况时，函数返回 `false`，表示该窗口不接受触摸事件。
+
+### 💎 总结
+
+在`InputDispatcher::findTouchedWindowTargetsLocked`等相关函数中，系统通过遍历窗口并调用`windowAcceptsTouchAt`等函数，检查窗口的`LayoutParams`标志位。如果`FLAG_NOT_TOUCHABLE`被设置，检查会失败，导致该窗口被跳过，触摸事件也就不会传递到该窗口的`ViewRootImpl`及后续的`Activity.onTouchEvent()`。
+
+希望这些具体的源码逻辑能帮助你彻底理解`FLAG_NOT_TOUCHABLE`的作用机制。如果你对`WindowInfo`的构成或者触摸区域判断等细节还有兴趣，我们可以继续探讨。

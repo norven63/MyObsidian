@@ -42,7 +42,7 @@
     - Java层构造 `InputManagerService`        
     - 调用 `nativeInit()` → JNI → `NativeInputManager::NativeInputManager()`     
     - 创建以下核心对象：        
-        - `EventHub`：epoll 监听 `/dev/input`            
+        - `EventHub`：epoll 监听 `/dev/input/` 目录            
         - `InputReader`            
         - `InputDispatcher`            
         - `InputManager`

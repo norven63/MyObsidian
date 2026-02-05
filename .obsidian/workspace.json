@@ -11,10 +11,24 @@
             "id": "1b4468c6ae678131",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "13沉淀笔记/2025面试/渲染绘制.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "渲染绘制"
             }
           }
         ]
@@ -84,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 221.50247192382812,
+    "collapsed": true
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -100,10 +115,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00索引/Java核心技术.md"
+                "file": "13沉淀笔记/2025面试/IMS.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Java核心技术 的大纲"
+              "title": "IMS 的大纲"
             }
           },
           {
@@ -112,9 +130,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00索引/Java核心技术.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "13沉淀笔记/2025面试/IMS.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -122,7 +140,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Java核心技术 的反向链接列表"
+              "title": "IMS 的反向链接列表"
             }
           },
           {
@@ -131,12 +149,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00索引/Java核心技术.md",
+                "file": "13沉淀笔记/2025面试/渲染绘制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Java核心技术 的出链列表"
+              "title": "渲染绘制 的出链列表"
             }
           },
           {
@@ -153,7 +171,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -162,7 +180,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:创建新数据库": false,
+      "bases:新建数据库": false,
       "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -178,6 +196,12 @@
   "lastOpenFiles": [
     "13沉淀笔记/brook/线程监控.md",
     "13沉淀笔记/2025面试/进程启动.md",
+    "13沉淀笔记/2025面试/WMS.md",
+    "13沉淀笔记/2025面试/IMS.md",
+    "13沉淀笔记/2025面试/Binder.md",
+    "13沉淀笔记/2025面试/Handler.md",
+    "13沉淀笔记/2025面试/渲染绘制.md",
+    "13沉淀笔记/2025面试/AMS.md",
     "13沉淀笔记/brook",
     "13沉淀笔记 1/2025面试/进程启动.md",
     "13沉淀笔记 1/2025面试/渲染绘制.md",
@@ -190,13 +214,7 @@
     "13沉淀笔记 1/MarkDown绘图示例.md",
     "13沉淀笔记 1/2025面试",
     "13沉淀笔记 1",
-    "13沉淀笔记/2025面试/WMS.md",
-    "13沉淀笔记/2025面试/AMS.md",
-    "13沉淀笔记/2025面试/渲染绘制.md",
-    "13沉淀笔记/2025面试/Binder.md",
     "13沉淀笔记/MarkDown绘图示例.md",
-    "13沉淀笔记/2025面试/Handler.md",
-    "13沉淀笔记/2025面试/IMS.md",
     "12学习笔记/享学Vip - 2021年3月14日 【C++ 浅拷贝、深拷贝】(NDK第九节课).md",
     "99附件/Pasted image 20251019174251.png",
     "13沉淀笔记/2025面试/JNI、SO文件调用原理.md",

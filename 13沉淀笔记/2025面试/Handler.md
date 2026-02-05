@@ -49,8 +49,34 @@ sequenceDiagram
     - `Handler.dispatchMessage()` 内部按优先级处理：
         1. 最高：`Message` 自带 `Runnable callback`，则执行 `Runnable.run()`。
         2. 其次：`Handler` 设置了全局 `mCallback`，则执行 `mCallback.handleMessage(msg)`。
-        3. 最低：才回调Handler子类重写的 `handleMessage()` 方法。    
-5. **空闲处理（Idle Handler）**
+        3. 最低：才回调Handler子类重写的 `handleMessage()` 方法。
+5. 重新循环
+	当执行完毕Message后，重新进入loop()的循环，等待下一条满足时间的消息来唤醒线程并执行，loop()源码如下：	
+```java
+public static void loop() { 
+	final Looper me = myLooper(); 
+	final MessageQueue queue = me.mQueue; 
+	
+	for (;;) { 
+		// 无限循环，底层调用nativePollOnce()
+		Message msg = queue.next(); 
+		
+		// 阻塞式地获取下一个 Message 
+		if (msg == null) { 
+			// 只有在 quit 时才会返回 null，正常情况下不会退出 
+			return; 
+		} 
+		
+		try { 
+			msg.target.dispatchMessage(msg); // 调用 Handler 的 dispatchMessage 
+		} finally { 
+			msg.recycleUnchecked(); // 回收 Message 对象 
+		} 
+	} 
+}
+```
+		
+6. **空闲处理（Idle Handler）**
     - 当 `MessageQueue.next()` 方法即将调用 `nativePollOnce()` 进入阻塞**之前**，如果发现当前队列为空或队首消息是延迟消息（即当前没有立即要处理的任务），就会遍历并执行所有已注册的 `IdleHandler` 的 `queueIdle()` 方法。
     - 这是一个处理轻量级、非紧急任务的好时机。
 
@@ -58,3 +84,21 @@ sequenceDiagram
 ### 屏障消息Barrier
 执行Traversals时，即重新布局时
 ![[Pasted image 20251015222223.png]]
+这里屏障消息，是为了给FrameDisplayEventReceiver在onVsync()回调时，给UI线程发送执行doFrame()函数的消息能够尽快被执行用的，代码如下
+```java
+private final class FrameDisplayEventReceiver extends DisplayEventReceiver implements Runnable { 
+	private boolean mHavePendingVsync; 
+	private long mTimestampNanos; 
+	private int mFrame; 
+	
+	@Override 
+	public void onVsync(long timestampNanos, int builtInDisplayId, int frame) { 
+		... 
+		Message msg = Message.obtain(mHandler, this); 
+		msg.setAsynchronous(true); // 此处设置异步消息，就可以防止被屏障消息阻拦
+		mHandler.sendMessageAtTime(msg, timestampNanos / TimeUtils.NANOS_PER_MS); 
+	} 
+	
+	... 
+}
+```
