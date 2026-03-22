@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13沉淀笔记/MarkDown绘图示例.md",
+                "file": "00索引/AI.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MarkDown绘图示例"
+              "title": "AI"
             }
           }
         ]
@@ -191,8 +191,9 @@
       "templates:插入模板": false
     }
   },
-  "active": "b92a1b03d00959ee",
+  "active": "1b4468c6ae678131",
   "lastOpenFiles": [
+    "13沉淀笔记/MarkDown绘图示例.md",
     "11闪念笔记/Harness Engineering笔记.md",
     "11闪念笔记/APM - 流畅度监控&治理.md",
     "11闪念笔记/202603222043-.md",
@@ -223,7 +224,6 @@
     "13沉淀笔记/brook",
     "13沉淀笔记 1/2025面试/进程启动.md",
     "13沉淀笔记 1/2025面试/渲染绘制.md",
-    "13沉淀笔记 1/2025面试/WMS.md",
     "13沉淀笔记 1/2025面试",
     "13沉淀笔记 1",
     "99附件/Pasted image 20251019174251.png",
