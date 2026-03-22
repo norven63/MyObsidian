@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13沉淀笔记/2025面试/渲染绘制.md",
+                "file": "13沉淀笔记/MarkDown绘图示例.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "渲染绘制"
+              "title": "MarkDown绘图示例"
             }
           }
         ]
@@ -98,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 221.50247192382812,
-    "collapsed": true
+    "width": 368.5024719238281
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -149,12 +148,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "13沉淀笔记/2025面试/渲染绘制.md",
+                "file": "13沉淀笔记/2025面试/AMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "渲染绘制 的出链列表"
+              "title": "AMS 的出链列表"
             }
           },
           {
@@ -184,40 +183,50 @@
       "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
-      "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": true,
       "workspaces:管理工作区布局": false,
-      "publish:发布更改": true
+      "publish:发布更改": true,
+      "templates:插入模板": false
     }
   },
-  "active": "1b4468c6ae678131",
+  "active": "b92a1b03d00959ee",
   "lastOpenFiles": [
-    "13沉淀笔记/brook/线程监控.md",
-    "13沉淀笔记/2025面试/进程启动.md",
-    "13沉淀笔记/2025面试/WMS.md",
-    "13沉淀笔记/2025面试/IMS.md",
-    "13沉淀笔记/2025面试/Binder.md",
+    "11闪念笔记/Harness Engineering笔记.md",
+    "11闪念笔记/APM - 流畅度监控&治理.md",
+    "11闪念笔记/202603222043-.md",
+    "01专题索引/Harness Engineering.md",
+    "00索引/AI.md",
+    "00索引/效能提高.md",
+    "11闪念笔记/未命名 2.base",
+    "11闪念笔记/未命名 1.base",
+    "未命名.canvas",
+    "11闪念笔记/未命名.base",
+    "00索引/Linux.md",
+    "00索引/Java核心技术.md",
+    "00索引/Android.md",
+    "00索引/网络原理.md",
+    "01专题索引/模板概览.md",
+    "01专题索引/享学Vip课程笔记.md",
+    "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
+    "11闪念笔记/享学Vip -2021.8.8    Java基础进阶-泛型】.md",
+    "12学习笔记/60天引爆学习力-1. 学习力基础.md",
+    "13沉淀笔记/2025面试/AMS.md",
     "13沉淀笔记/2025面试/Handler.md",
     "13沉淀笔记/2025面试/渲染绘制.md",
-    "13沉淀笔记/2025面试/AMS.md",
+    "13沉淀笔记/2025面试/进程启动.md",
+    "13沉淀笔记/2025面试/WMS.md",
+    "13沉淀笔记/2025面试/Binder.md",
+    "13沉淀笔记/brook/线程监控.md",
+    "13沉淀笔记/2025面试/IMS.md",
     "13沉淀笔记/brook",
     "13沉淀笔记 1/2025面试/进程启动.md",
     "13沉淀笔记 1/2025面试/渲染绘制.md",
     "13沉淀笔记 1/2025面试/WMS.md",
-    "13沉淀笔记 1/2025面试/IMS.md",
-    "13沉淀笔记 1/2025面试/Handler.md",
-    "13沉淀笔记 1/2025面试/Binder.md",
-    "13沉淀笔记 1/2025面试/AMS.md",
-    "13沉淀笔记 1/读书技巧.md",
-    "13沉淀笔记 1/MarkDown绘图示例.md",
     "13沉淀笔记 1/2025面试",
     "13沉淀笔记 1",
-    "13沉淀笔记/MarkDown绘图示例.md",
-    "12学习笔记/享学Vip - 2021年3月14日 【C++ 浅拷贝、深拷贝】(NDK第九节课).md",
     "99附件/Pasted image 20251019174251.png",
-    "13沉淀笔记/2025面试/JNI、SO文件调用原理.md",
     "99附件/Pasted image 20251019165828.png",
     "99附件/Pasted image 20251018220849.png",
     "99附件/Pasted image 20251017002855.png",
@@ -227,13 +236,6 @@
     "99附件/Pasted image 20251015222223.png",
     "99附件/Pasted image 20220611225609.png",
     "99附件/Pasted image 20251015223822.png",
-    "13沉淀笔记/2025面试",
-    "13沉淀笔记/读书技巧.md",
-    "12学习笔记/享学Vip - 2022年2月10日 【Alpha启动框架 & 工具（小开个头）】.md",
-    "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
-    "12学习笔记/享学Vip - 2021年2月23日 【C语言 指针入门与基本数据类型】(NDK第一节课).md",
-    "12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
-    "创业/服务端项目经验.md",
-    "未命名.canvas"
+    "13沉淀笔记/2025面试"
   ]
 }
