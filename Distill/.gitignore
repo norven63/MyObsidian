@@ -1,0 +1,18 @@
+# Distill 工作区忽略规则
+
+# Git 仓库目录（通过 repo-index.json 记录元数据，支持重建）
+00-Inbox/repos/
+
+# 临时处理文件
+02-Processing/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器临时文件
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

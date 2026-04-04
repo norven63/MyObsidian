@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00索引/AI.md",
+                "file": "Distill/04-Outputs/writing-snippets.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AI"
+              "title": "writing-snippets"
             }
           }
         ]
@@ -191,14 +191,19 @@
       "templates:插入模板": false
     }
   },
-  "active": "1b4468c6ae678131",
+  "active": "b92a1b03d00959ee",
   "lastOpenFiles": [
-    "13沉淀笔记/MarkDown绘图示例.md",
+    "11闪念笔记/享学Vip -2021.8.8    Java基础进阶-泛型】.md",
     "11闪念笔记/Harness Engineering笔记.md",
+    "Distill/99-Meta/文档处理待办.md",
+    "Distill/01-Queue/待处理链接-已整理.md",
+    "Distill/99-Meta/积压文档处理报告.md",
+    "Distill/01-Queue/待处理链接.md",
+    "00索引/AI.md",
+    "13沉淀笔记/MarkDown绘图示例.md",
     "11闪念笔记/APM - 流畅度监控&治理.md",
     "11闪念笔记/202603222043-.md",
     "01专题索引/Harness Engineering.md",
-    "00索引/AI.md",
     "00索引/效能提高.md",
     "11闪念笔记/未命名 2.base",
     "11闪念笔记/未命名 1.base",
@@ -211,7 +216,6 @@
     "01专题索引/模板概览.md",
     "01专题索引/享学Vip课程笔记.md",
     "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
-    "11闪念笔记/享学Vip -2021.8.8    Java基础进阶-泛型】.md",
     "12学习笔记/60天引爆学习力-1. 学习力基础.md",
     "13沉淀笔记/2025面试/AMS.md",
     "13沉淀笔记/2025面试/Handler.md",
@@ -219,11 +223,7 @@
     "13沉淀笔记/2025面试/进程启动.md",
     "13沉淀笔记/2025面试/WMS.md",
     "13沉淀笔记/2025面试/Binder.md",
-    "13沉淀笔记/brook/线程监控.md",
-    "13沉淀笔记/2025面试/IMS.md",
     "13沉淀笔记/brook",
-    "13沉淀笔记 1/2025面试/进程启动.md",
-    "13沉淀笔记 1/2025面试/渲染绘制.md",
     "13沉淀笔记 1/2025面试",
     "13沉淀笔记 1",
     "99附件/Pasted image 20251019174251.png",
