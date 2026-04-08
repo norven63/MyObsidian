@@ -16,3 +16,5 @@ Thumbs.db
 *~
 .vscode/
 .idea/
+99-Meta/fetch-telemetry.jsonl
+99-Meta/fetch-rule-state.json
