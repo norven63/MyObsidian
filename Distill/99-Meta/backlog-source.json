@@ -1,0 +1,14 @@
+{
+  "mode": "browser-bookmarks",
+  "bookmark_source": {
+    "browser": "edge",
+    "profile": "auto",
+    "folder_name": "Obsidian_todo",
+    "include_subfolders": true
+  },
+  "bookmark_archive": {
+    "enabled": true,
+    "folder_name": "Obsidian_done"
+  },
+  "notes": "mode=queue 时直接读取 01-Queue/待处理链接.md；mode=browser-bookmarks 时先从指定浏览器收藏夹同步到 queue；bookmark_archive.enabled=true 时会在 batch gate 通过后自动归档已处理书签。归档时若目标浏览器仍在运行，则会 fail-closed。"
+}

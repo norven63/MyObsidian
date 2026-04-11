@@ -1,0 +1,184 @@
+[
+  {
+    "timestamp": "2026-04-08T18:09:41Z",
+    "reviewer": "distill-final-reaudit",
+    "files": [
+      "03-Knowledge/Sources/2026-04-03-Qoder-Harness-Engineering-指南.md",
+      "03-Knowledge/Sources/2026-03-31-字节-Harness-Agent-54k-Star.md",
+      "03-Knowledge/Sources/2026-04-02-AI-编码-渐进式-Spec-实战指南.md",
+      "03-Knowledge/Sources/2026-03-25-Anthropic-立刻做-Harness.md",
+      "03-Knowledge/Sources/2026-03-30-Agent-到-Skills-范式转变.md",
+      "03-Knowledge/Sources/2026-03-25-DeerFlow-超级AI员工框架.md",
+      "03-Knowledge/Concepts/Harness Engineering.md",
+      "03-Knowledge/Concepts/渐进式 Spec.md",
+      "03-Knowledge/Concepts/Agent Skills.md",
+      "03-Knowledge/Concepts/MCP.md",
+      "03-Knowledge/Concepts/Sub-Agent 编排.md",
+      "03-Knowledge/Concepts/独立评估器.md",
+      "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-09T16:57:32Z",
+    "reviewer": "distill-final-reaudit",
+    "files": [
+      "03-Knowledge/Sources/2026-04-09-AI-Agent-入门与框架选型.md",
+      "03-Knowledge/Concepts/AI Agent.md",
+      "03-Knowledge/Concepts/Agent 框架选型.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-10T14:32:06Z",
+    "reviewer": "distill-reviewer-r6",
+    "files": [
+      "03-Knowledge/Sources/2026-03-31-OpenCode铁三角：OpenSpec-+-Superpowers-+-OMO，从“随意编码”到“规范开发”的完整指南.md",
+      "03-Knowledge/Sources/2026-04-08-告别“伪智能”代码：用-Spec-+-RAG-打造真正懂你的AI程序员.md",
+      "03-Knowledge/Sources/2026-03-28-Harness-Task-Loop：「长任务」执行的-5-个核心机制与-4-条工程原则.md",
+      "03-Knowledge/Sources/2026-03-15-Harness-Engineering：生产级-AI-Agent-Runtime-的架构与设计原则.md",
+      "03-Knowledge/Sources/2026-03-21-一文看懂-Harness-engineering：智能体时代的-AI-编程驾驭之道.md",
+      "03-Knowledge/Sources/2026-02-04-万字长文：为什么你Vibe-Coding出的是一堆屎山，以及如何不再写屎山.md",
+      "03-Knowledge/Sources/2026-01-14-性能优化：Perfetto查看app启动时间及冷热启动介绍.md",
+      "03-Knowledge/Concepts/InputManagerService.md",
+      "03-Knowledge/Concepts/硬件层缓存.md",
+      "03-Knowledge/Concepts/RenderThread.md",
+      "03-Knowledge/Concepts/Dominator Tree.md",
+      "03-Knowledge/Topics/Android 性能优化与运行时机制.md",
+      "03-Knowledge/Sources/2026-04-10-Android-资深架构面试核心考点深度解析报告.md",
+      "03-Knowledge/Sources/2026-04-10-Android系统性能优化与底层机制深度解析.md",
+      "03-Knowledge/Sources/2026-04-10-资深Android架构师面试核心考点深度复盘与解析.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-10T18:09:20Z",
+    "reviewer": "distill-rereviewer",
+    "files": [
+      "03-Knowledge/Sources/2026-02-04-Scaling-Managed-Agents-Decoupling-the-brain-from-the-hands.md",
+      "03-Knowledge/Concepts/Managed Agents.md",
+      "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-11T05:36:59Z",
+    "reviewer": "distill-output-rereview",
+    "files": [
+      "03-Knowledge/Concepts/Binder IPC.md",
+      "03-Knowledge/Concepts/Perfetto.md",
+      "03-Knowledge/Concepts/Activity 启动模式.md",
+      "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
+      "03-Knowledge/Topics/Android 性能优化与运行时机制.md",
+      "03-Knowledge/Topics/知识图谱总纲.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-11T06:10:57Z",
+    "reviewer": "distill-targeted-backfill-revi",
+    "files": [
+      "03-Knowledge/Topics/AI 编码工程化与 Agent 体系选型.md",
+      "03-Knowledge/Topics/知识图谱总纲.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-11T07:53:21Z",
+    "reviewer": "distill-map-role-spotcheck",
+    "files": [
+      "03-Knowledge/Topics/知识图谱总纲.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-11T08:20:13Z",
+    "reviewer": "distill-style-rollout-final",
+    "files": [
+      "03-Knowledge/Topics/知识图谱总纲.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-11T10:21:03Z",
+    "reviewer": "distill-8.6.0-rereview-pass",
+    "files": [
+      "03-Knowledge/Concepts/Activity 启动模式.md",
+      "03-Knowledge/Concepts/Agent Skills.md",
+      "03-Knowledge/Concepts/Agent 框架选型.md",
+      "03-Knowledge/Concepts/AI Agent.md",
+      "03-Knowledge/Concepts/Binder IPC.md",
+      "03-Knowledge/Concepts/Dominator Tree.md",
+      "03-Knowledge/Concepts/Harness Engineering.md",
+      "03-Knowledge/Concepts/InputManagerService.md",
+      "03-Knowledge/Concepts/Managed Agents.md",
+      "03-Knowledge/Concepts/MCP.md",
+      "03-Knowledge/Concepts/Perfetto.md",
+      "03-Knowledge/Concepts/RenderThread.md",
+      "03-Knowledge/Concepts/Sub-Agent 编排.md",
+      "03-Knowledge/Concepts/独立评估器.md",
+      "03-Knowledge/Concepts/渐进式 Spec.md",
+      "03-Knowledge/Concepts/硬件层缓存.md",
+      "03-Knowledge/Topics/AI 编码工程化与 Agent 体系选型.md",
+      "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
+      "03-Knowledge/Topics/Android 性能优化与运行时机制.md",
+      "03-Knowledge/Topics/知识图谱总纲.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-11T13:04:23Z",
+    "reviewer": "distill-8.7.0-final-pass",
+    "files": [
+      "03-Knowledge/Sources/2026-02-04-Scaling-Managed-Agents-Decoupling-the-brain-from-the-hands.md",
+      "03-Knowledge/Sources/2026-03-25-Anthropic-立刻做-Harness.md",
+      "03-Knowledge/Sources/2026-03-30-Agent-到-Skills-范式转变.md",
+      "03-Knowledge/Sources/2026-03-31-字节-Harness-Agent-54k-Star.md",
+      "03-Knowledge/Sources/2026-04-02-AI-编码-渐进式-Spec-实战指南.md",
+      "03-Knowledge/Sources/2026-04-03-Qoder-Harness-Engineering-指南.md",
+      "03-Knowledge/Sources/2026-04-09-AI-Agent-入门与框架选型.md",
+      "03-Knowledge/Sources/2026-04-10-Android-资深架构面试核心考点深度解析报告.md",
+      "03-Knowledge/Sources/2026-04-10-Android系统性能优化与底层机制深度解析.md",
+      "03-Knowledge/Sources/2026-04-10-资深Android架构师面试核心考点深度复盘与解析.md",
+      "03-Knowledge/Clippings/2026-01-10-Android-一篇理透Binder机制.md",
+      "03-Knowledge/Clippings/2026-01-14-性能优化：Perfetto查看app启动时间及冷热启动介绍.md",
+      "03-Knowledge/Clippings/2026-01-30-n8n-使用入门.md",
+      "03-Knowledge/Clippings/2026-02-01-安卓系统框架init.rc启动、Binder原理和binder调用framework层原理解析.md",
+      "03-Knowledge/Clippings/2026-02-04-万字长文：为什么你Vibe-Coding出的是一堆屎山，以及如何不再写屎山.md",
+      "03-Knowledge/Clippings/2026-02-07-一个实用的Android-Perfetto分析器.md",
+      "03-Knowledge/Clippings/2026-02-22-Android-启动模式详细解析.md",
+      "03-Knowledge/Clippings/2026-03-01-万字译文：Anthropic官方发布的Claude-Skills构建指南完整版！.md",
+      "03-Knowledge/Clippings/2026-03-15-Harness-Engineering：生产级-AI-Agent-Runtime-的架构与设计原则.md",
+      "03-Knowledge/Clippings/2026-03-16-万字拆解-OpenClaw：从-Gateway、Memory、Skills、多-Agent-到-Runtime.md",
+      "03-Knowledge/Clippings/2026-03-21-一文看懂-Harness-engineering：智能体时代的-AI-编程驾驭之道.md",
+      "03-Knowledge/Clippings/2026-03-23-Claude-Code-+-OpenSpec-正在加速-AICoding-落地：从模型博弈到工程化的范式转移｜得物技术.md",
+      "03-Knowledge/Clippings/2026-03-24-Harness-design-for-long-running-application-development.md",
+      "03-Knowledge/Clippings/2026-03-25-Anthropic说：不要在等下一代模型了，立刻马上做Harness！.md",
+      "03-Knowledge/Clippings/2026-03-25-DeerFlow-超级AI员工框架.md",
+      "03-Knowledge/Clippings/2026-03-28-Harness-Task-Loop：「长任务」执行的-5-个核心机制与-4-条工程原则.md",
+      "03-Knowledge/Clippings/2026-03-31-OpenCode铁三角：OpenSpec-+-Superpowers-+-OMO，从“随意编码”到“规范开发”的完整指南.md",
+      "03-Knowledge/Clippings/2026-04-05-6-个代表性-AI-编程-Harness-工程化框架拆解：OpenSpec、Superpowers、GSD、OMC、ECC、Trellis-怎么选？.md",
+      "03-Knowledge/Clippings/2026-04-08-告别“伪智能”代码：用-Spec-+-RAG-打造真正懂你的AI程序员.md",
+      "03-Knowledge/Concepts/AI Agent.md",
+      "03-Knowledge/Concepts/Activity 启动模式.md",
+      "03-Knowledge/Concepts/Agent Skills.md",
+      "03-Knowledge/Concepts/Agent 框架选型.md",
+      "03-Knowledge/Concepts/Binder IPC.md",
+      "03-Knowledge/Concepts/Dominator Tree.md",
+      "03-Knowledge/Concepts/Harness Engineering.md",
+      "03-Knowledge/Concepts/InputManagerService.md",
+      "03-Knowledge/Concepts/MCP.md",
+      "03-Knowledge/Concepts/Managed Agents.md",
+      "03-Knowledge/Concepts/Perfetto.md",
+      "03-Knowledge/Concepts/RenderThread.md",
+      "03-Knowledge/Concepts/Sub-Agent 编排.md",
+      "03-Knowledge/Concepts/渐进式 Spec.md",
+      "03-Knowledge/Concepts/独立评估器.md",
+      "03-Knowledge/Concepts/硬件层缓存.md",
+      "03-Knowledge/Topics/AI 编码工程化与 Agent 体系选型.md",
+      "03-Knowledge/Topics/Android 性能优化与运行时机制.md",
+      "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
+      "03-Knowledge/Topics/知识图谱总纲.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-11T15:40:13Z",
+    "reviewer": "distill-phase1-auditor",
+    "files": [
+      "03-Knowledge/Concepts/Activity 启动模式.md",
+      "03-Knowledge/Concepts/Agent Skills.md",
+      "03-Knowledge/Concepts/Managed Agents.md"
+    ]
+  }
+]

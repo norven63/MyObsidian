@@ -1,0 +1,826 @@
+{
+  "generated_at": "2026-04-11T11:50:24.433117+00:00",
+  "notes_path": "/Users/norven/workspace/MyObsidian/12学习笔记",
+  "summary": {
+    "total_files": 45,
+    "maturity_counts": {
+      "fragment": 16,
+      "reference-note": 16,
+      "study-note": 10,
+      "synthesis-note": 3
+    },
+    "target_counts": {
+      "Archive": 16,
+      "Clipping": 13,
+      "Concept": 1,
+      "Source": 10,
+      "TODO": 3,
+      "Topic": 2
+    },
+    "risk_counts": {
+      "attachments": 25,
+      "empty": 2,
+      "todo-like": 6,
+      "wikilinks": 11
+    }
+  },
+  "items": [
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/60天引爆学习力-1. 学习力基础.md",
+      "relative_path": "60天引爆学习力-1. 学习力基础.md",
+      "bytes": 1136,
+      "body_chars": 580,
+      "heading_count": 10,
+      "top_level_heading_count": 4,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/60天引爆学习力-2. 学习的基本过程.md",
+      "relative_path": "60天引爆学习力-2. 学习的基本过程.md",
+      "bytes": 2496,
+      "body_chars": 1124,
+      "heading_count": 17,
+      "top_level_heading_count": 3,
+      "wikilink_count": 2,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "study-note",
+      "candidate_target": "Source",
+      "action_hint": "write",
+      "risk_tags": [
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/60天引爆学习力-3. 三步式快速学习方法.md",
+      "relative_path": "60天引爆学习力-3. 三步式快速学习方法.md",
+      "bytes": 2053,
+      "body_chars": 931,
+      "heading_count": 14,
+      "top_level_heading_count": 4,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/60天引爆学习力-4. 刻意练习.md",
+      "relative_path": "60天引爆学习力-4. 刻意练习.md",
+      "bytes": 1507,
+      "body_chars": 697,
+      "heading_count": 18,
+      "top_level_heading_count": 15,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "study-note",
+      "candidate_target": "Source",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/60天引爆学习力-5. 资料的获取、筛选和管理.md",
+      "relative_path": "60天引爆学习力-5. 资料的获取、筛选和管理.md",
+      "bytes": 2174,
+      "body_chars": 1106,
+      "heading_count": 20,
+      "top_level_heading_count": 15,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "study-note",
+      "candidate_target": "Source",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/60天引爆学习力-6. 知识的领域和结构.md",
+      "relative_path": "60天引爆学习力-6. 知识的领域和结构.md",
+      "bytes": 2087,
+      "body_chars": 953,
+      "heading_count": 26,
+      "top_level_heading_count": 10,
+      "wikilink_count": 1,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "study-note",
+      "candidate_target": "Source",
+      "action_hint": "write",
+      "risk_tags": [
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/Linux - 多进程.md",
+      "relative_path": "Linux - 多进程.md",
+      "bytes": 9069,
+      "body_chars": 5057,
+      "heading_count": 25,
+      "top_level_heading_count": 3,
+      "wikilink_count": 0,
+      "attachment_count": 1,
+      "todo_marker_count": 0,
+      "maturity": "study-note",
+      "candidate_target": "Source",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/Linux - 系统Api汇总.md",
+      "relative_path": "Linux - 系统Api汇总.md",
+      "bytes": 31775,
+      "body_chars": 16859,
+      "heading_count": 48,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/Linux 常用命令.md",
+      "relative_path": "Linux 常用命令.md",
+      "bytes": 103,
+      "body_chars": 53,
+      "heading_count": 0,
+      "top_level_heading_count": 0,
+      "wikilink_count": 1,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "empty",
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/Spring学习.md",
+      "relative_path": "Spring学习.md",
+      "bytes": 1607,
+      "body_chars": 1097,
+      "heading_count": 2,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
+      "relative_path": "享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
+      "bytes": 7266,
+      "body_chars": 4870,
+      "heading_count": 9,
+      "top_level_heading_count": 9,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "synthesis-note",
+      "candidate_target": "Topic",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年2月23日 【C语言 指针入门与基本数据类型】(NDK第一节课).md",
+      "relative_path": "享学Vip - 2021年2月23日 【C语言 指针入门与基本数据类型】(NDK第一节课).md",
+      "bytes": 7313,
+      "body_chars": 5103,
+      "heading_count": 10,
+      "top_level_heading_count": 2,
+      "wikilink_count": 0,
+      "attachment_count": 7,
+      "todo_marker_count": 0,
+      "maturity": "study-note",
+      "candidate_target": "Source",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年2月25日 【C语言 多级指针、数组指针、函数指针、指针挪动】(NDK第二节课).md",
+      "relative_path": "享学Vip - 2021年2月25日 【C语言 多级指针、数组指针、函数指针、指针挪动】(NDK第二节课).md",
+      "bytes": 7150,
+      "body_chars": 5129,
+      "heading_count": 11,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 3,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年2月28日 【C语言 静态开辟内存、动态开辟内存】(NDK第三节课).md",
+      "relative_path": "享学Vip - 2021年2月28日 【C语言 静态开辟内存、动态开辟内存】(NDK第三节课).md",
+      "bytes": 6984,
+      "body_chars": 4471,
+      "heading_count": 10,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 4,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年3月11日 【C++ 构造函数、析构函数、拷贝构造函数】(NDK第八节课).md",
+      "relative_path": "享学Vip - 2021年3月11日 【C++ 构造函数、析构函数、拷贝构造函数】(NDK第八节课).md",
+      "bytes": 12459,
+      "body_chars": 8776,
+      "heading_count": 17,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 3,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年3月14日 【C++ 浅拷贝、深拷贝】(NDK第九节课).md",
+      "relative_path": "享学Vip - 2021年3月14日 【C++ 浅拷贝、深拷贝】(NDK第九节课).md",
+      "bytes": 1117,
+      "body_chars": 927,
+      "heading_count": 4,
+      "top_level_heading_count": 0,
+      "wikilink_count": 1,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年3月16日 【C++ 可变参数、static、this原理、友元函数&友元类】(NDK第十节课).md",
+      "relative_path": "享学Vip - 2021年3月16日 【C++ 可变参数、static、this原理、友元函数&友元类】(NDK第十节课).md",
+      "bytes": 10442,
+      "body_chars": 6915,
+      "heading_count": 20,
+      "top_level_heading_count": 0,
+      "wikilink_count": 1,
+      "attachment_count": 1,
+      "todo_marker_count": 2,
+      "maturity": "fragment",
+      "candidate_target": "TODO",
+      "action_hint": "todo",
+      "risk_tags": [
+        "attachments",
+        "todo-like",
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年3月18日 【C++ 运算符重载、面向对象继承】.md",
+      "relative_path": "享学Vip - 2021年3月18日 【C++ 运算符重载、面向对象继承】.md",
+      "bytes": 10711,
+      "body_chars": 8552,
+      "heading_count": 11,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 2,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年3月2日 【C语言 指针实战运用进阶之字符串操作】(NDK第四节课).md",
+      "relative_path": "享学Vip - 2021年3月2日 【C语言 指针实战运用进阶之字符串操作】(NDK第四节课).md",
+      "bytes": 11866,
+      "body_chars": 8237,
+      "heading_count": 21,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 3,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年3月4日 【C语言 结构体、结构体指针数组、枚举】(NDK第五节课).md",
+      "relative_path": "享学Vip - 2021年3月4日 【C语言 结构体、结构体指针数组、枚举】(NDK第五节课).md",
+      "bytes": 7197,
+      "body_chars": 5534,
+      "heading_count": 24,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年3月7日 【C语言 文件操作、C语言游戏破解器】(NDK第六节课).md",
+      "relative_path": "享学Vip - 2021年3月7日 【C语言 文件操作、C语言游戏破解器】(NDK第六节课).md",
+      "bytes": 9230,
+      "body_chars": 6739,
+      "heading_count": 34,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 1,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2021年3月9日 【C++ 日志打印、命名空间、常量、引用、函数重载、默认形参、无名形参、对象、头文件、实现文件】(NDK第七节课).md",
+      "relative_path": "享学Vip - 2021年3月9日 【C++ 日志打印、命名空间、常量、引用、函数重载、默认形参、无名形参、对象、头文件、实现文件】(NDK第七节课).md",
+      "bytes": 15091,
+      "body_chars": 10380,
+      "heading_count": 33,
+      "top_level_heading_count": 0,
+      "wikilink_count": 1,
+      "attachment_count": 3,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments",
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年01月13日 【SparseArray数据结构优化】.md",
+      "relative_path": "享学Vip - 2022年01月13日 【SparseArray数据结构优化】.md",
+      "bytes": 2093,
+      "body_chars": 1489,
+      "heading_count": 11,
+      "top_level_heading_count": 9,
+      "wikilink_count": 0,
+      "attachment_count": 3,
+      "todo_marker_count": 0,
+      "maturity": "study-note",
+      "candidate_target": "Source",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年1月16日 【OOM与内存优化1-内存抖动】.md",
+      "relative_path": "享学Vip - 2022年1月16日 【OOM与内存优化1-内存抖动】.md",
+      "bytes": 2780,
+      "body_chars": 1906,
+      "heading_count": 7,
+      "top_level_heading_count": 6,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年1月18日 【OOM与内存优化2-内存泄漏】.md",
+      "relative_path": "享学Vip - 2022年1月18日 【OOM与内存优化2-内存泄漏】.md",
+      "bytes": 1760,
+      "body_chars": 1267,
+      "heading_count": 6,
+      "top_level_heading_count": 4,
+      "wikilink_count": 0,
+      "attachment_count": 1,
+      "todo_marker_count": 0,
+      "maturity": "study-note",
+      "candidate_target": "Source",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年1月20日 【面试必备Application启动过程与耗时分析】.md",
+      "relative_path": "享学Vip - 2022年1月20日 【面试必备Application启动过程与耗时分析】.md",
+      "bytes": 2749,
+      "body_chars": 2080,
+      "heading_count": 4,
+      "top_level_heading_count": 4,
+      "wikilink_count": 0,
+      "attachment_count": 1,
+      "todo_marker_count": 0,
+      "maturity": "synthesis-note",
+      "candidate_target": "Concept",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年1月23日 【StartupManager启动框架-有向无环图任务管理分析】.md",
+      "relative_path": "享学Vip - 2022年1月23日 【StartupManager启动框架-有向无环图任务管理分析】.md",
+      "bytes": 1785,
+      "body_chars": 1187,
+      "heading_count": 2,
+      "top_level_heading_count": 2,
+      "wikilink_count": 0,
+      "attachment_count": 1,
+      "todo_marker_count": 0,
+      "maturity": "study-note",
+      "candidate_target": "Source",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年1月25日 【基于AutoService和Compose的App启动架构】_delay.md",
+      "relative_path": "享学Vip - 2022年1月25日 【基于AutoService和Compose的App启动架构】_delay.md",
+      "bytes": 501,
+      "body_chars": 451,
+      "heading_count": 0,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年2月10日 【Alpha启动框架 & 工具（小开个头）】.md",
+      "relative_path": "享学Vip - 2022年2月10日 【Alpha启动框架 & 工具（小开个头）】.md",
+      "bytes": 1192,
+      "body_chars": 955,
+      "heading_count": 5,
+      "top_level_heading_count": 3,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "study-note",
+      "candidate_target": "Source",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年2月13日 【卡顿监测 & 布局优化】.md",
+      "relative_path": "享学Vip - 2022年2月13日 【卡顿监测 & 布局优化】.md",
+      "bytes": 4620,
+      "body_chars": 3764,
+      "heading_count": 5,
+      "top_level_heading_count": 5,
+      "wikilink_count": 0,
+      "attachment_count": 2,
+      "todo_marker_count": 0,
+      "maturity": "synthesis-note",
+      "candidate_target": "Topic",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】delay.md",
+      "relative_path": "享学Vip - 2022年2月15日 【网络优化（HttpDNS） & 电量】delay.md",
+      "bytes": 4058,
+      "body_chars": 3314,
+      "heading_count": 8,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 1,
+      "todo_marker_count": 1,
+      "maturity": "fragment",
+      "candidate_target": "TODO",
+      "action_hint": "todo",
+      "risk_tags": [
+        "attachments",
+        "todo-like"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
+      "relative_path": "享学Vip - 2022年2月20日 【so动态加载库 ReLinker、APM 监控指标】.md",
+      "bytes": 19006,
+      "body_chars": 11663,
+      "heading_count": 34,
+      "top_level_heading_count": 4,
+      "wikilink_count": 1,
+      "attachment_count": 1,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "attachments",
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
+      "relative_path": "享学Vip - 2022年4月26日【JNI技术 之 签名对应表、JIN函数签名结构、JNI层调用Java层示例】.md",
+      "bytes": 9222,
+      "body_chars": 6749,
+      "heading_count": 16,
+      "top_level_heading_count": 0,
+      "wikilink_count": 1,
+      "attachment_count": 1,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "attachments",
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
+      "relative_path": "享学Vip - 2022年4月28日【JNI技术 之 C++层玩转Java层的对象、JNI调用Java对象方法、JNI修改Java对象属性、JNI构建Java对象、JNI全局变量释放】.md",
+      "bytes": 15042,
+      "body_chars": 11613,
+      "heading_count": 8,
+      "top_level_heading_count": 0,
+      "wikilink_count": 1,
+      "attachment_count": 0,
+      "todo_marker_count": 1,
+      "maturity": "fragment",
+      "candidate_target": "TODO",
+      "action_hint": "todo",
+      "risk_tags": [
+        "todo-like",
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md",
+      "relative_path": "享学Vip - 2022年5月10日 【JNI技术 之 手写JNIEnv、静态缓存、native异常处理】（五）---derry.md",
+      "bytes": 9437,
+      "body_chars": 7299,
+      "heading_count": 10,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 1,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年5月12日 【JNI技术 之 手写Parcel的C++层与原理】.md",
+      "relative_path": "享学Vip - 2022年5月12日 【JNI技术 之 手写Parcel的C++层与原理】.md",
+      "bytes": 2751,
+      "body_chars": 2426,
+      "heading_count": 8,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 3,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+      "relative_path": "享学Vip - 2022年5月14日 【Linux学习 之 命令执行原理与文件用户组、vim操作】.md",
+      "bytes": 8480,
+      "body_chars": 5021,
+      "heading_count": 16,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 2,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
+      "relative_path": "享学Vip - 2022年5月17日 【Linux学习 之 Shell脚本编程】.md",
+      "bytes": 3459,
+      "body_chars": 2383,
+      "heading_count": 35,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md",
+      "relative_path": "享学Vip - 2022年5月19日 【Linux学习 之 在Linux服务器上用NDK交叉编译库给Android用、二遇CMakeLists.txt文件】.md",
+      "bytes": 8113,
+      "body_chars": 6676,
+      "heading_count": 33,
+      "top_level_heading_count": 0,
+      "wikilink_count": 1,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md",
+      "relative_path": "享学Vip - 2022年5月24日 【Cmake完整语法学习、静态库&动态库原理】.md",
+      "bytes": 10183,
+      "body_chars": 7098,
+      "heading_count": 71,
+      "top_level_heading_count": 0,
+      "wikilink_count": 2,
+      "attachment_count": 1,
+      "todo_marker_count": 7,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "attachments",
+        "todo-like",
+        "wikilinks"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
+      "relative_path": "享学Vip - 2022年5月26日 【Linux学习 之 NDK交叉编译FFmpeg与集成FFmpeg】.md",
+      "bytes": 7115,
+      "body_chars": 5739,
+      "heading_count": 28,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 2,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+      "relative_path": "享学Vip - 2022年5月29日 【Android音视频 基础理论-音频、OpenSL ES初识、Audition使用浅讲】.md",
+      "bytes": 23925,
+      "body_chars": 20023,
+      "heading_count": 13,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 3,
+      "todo_marker_count": 0,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年5月5日 【JNI技术 之 实战：FMOD实现声音特效、初识CMakeLists.txt文件、把C库集成到Android工程的统一流程】.md",
+      "relative_path": "享学Vip - 2022年5月5日 【JNI技术 之 实战：FMOD实现声音特效、初识CMakeLists.txt文件、把C库集成到Android工程的统一流程】.md",
+      "bytes": 12212,
+      "body_chars": 9782,
+      "heading_count": 30,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 2,
+      "todo_marker_count": 16,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "attachments",
+        "todo-like"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/享学Vip - 2022年5月8日 【JNI技术 之 函数动态注册、C语言多线程实战、子线程构建JNIEnv】.md",
+      "relative_path": "享学Vip - 2022年5月8日 【JNI技术 之 函数动态注册、C语言多线程实战、子线程构建JNIEnv】.md",
+      "bytes": 11920,
+      "body_chars": 8590,
+      "heading_count": 15,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 1,
+      "maturity": "reference-note",
+      "candidate_target": "Archive",
+      "action_hint": "archive",
+      "risk_tags": [
+        "todo-like"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/12学习笔记/深入理解ART读书笔记.md",
+      "relative_path": "深入理解ART读书笔记.md",
+      "bytes": 214,
+      "body_chars": 114,
+      "heading_count": 1,
+      "top_level_heading_count": 1,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "empty"
+      ],
+      "duplicate_candidates": []
+    }
+  ]
+}
