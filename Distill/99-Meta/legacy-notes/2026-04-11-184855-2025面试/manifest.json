@@ -1,0 +1,172 @@
+{
+  "generated_at": "2026-04-11T18:48:55.200410+00:00",
+  "notes_path": "/Users/norven/workspace/MyObsidian/13沉淀笔记/2025面试",
+  "summary": {
+    "total_files": 8,
+    "maturity_counts": {
+      "fragment": 5,
+      "synthesis-note": 3
+    },
+    "target_counts": {
+      "Clipping": 5,
+      "Topic": 3
+    },
+    "risk_counts": {
+      "attachments": 5
+    }
+  },
+  "items": [
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/13沉淀笔记/2025面试/AMS.md",
+      "relative_path": "AMS.md",
+      "bytes": 10815,
+      "body_chars": 7888,
+      "heading_count": 16,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 1,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/13沉淀笔记/2025面试/Android任务调度与拓扑排序：从理论到实践.md",
+      "relative_path": "Android任务调度与拓扑排序：从理论到实践.md",
+      "bytes": 8737,
+      "body_chars": 6316,
+      "heading_count": 20,
+      "top_level_heading_count": 8,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "synthesis-note",
+      "candidate_target": "Topic",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/13沉淀笔记/2025面试/Binder.md",
+      "relative_path": "Binder.md",
+      "bytes": 3091,
+      "body_chars": 1616,
+      "heading_count": 2,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 1,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "compare",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": [
+        {
+          "kind": "concept",
+          "name": "Binder IPC",
+          "path": "03-Knowledge/Concepts/Binder IPC.md",
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/13沉淀笔记/2025面试/Handler.md",
+      "relative_path": "Handler.md",
+      "bytes": 5361,
+      "body_chars": 3625,
+      "heading_count": 2,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 2,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": [
+        {
+          "kind": "concept",
+          "name": "Binder IPC",
+          "path": "03-Knowledge/Concepts/Binder IPC.md",
+          "score": 0.471
+        }
+      ]
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/13沉淀笔记/2025面试/IMS.md",
+      "relative_path": "IMS.md",
+      "bytes": 9165,
+      "body_chars": 6957,
+      "heading_count": 17,
+      "top_level_heading_count": 8,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "synthesis-note",
+      "candidate_target": "Topic",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/13沉淀笔记/2025面试/WMS.md",
+      "relative_path": "WMS.md",
+      "bytes": 11811,
+      "body_chars": 8100,
+      "heading_count": 18,
+      "top_level_heading_count": 8,
+      "wikilink_count": 0,
+      "attachment_count": 0,
+      "todo_marker_count": 0,
+      "maturity": "synthesis-note",
+      "candidate_target": "Topic",
+      "action_hint": "write",
+      "risk_tags": [],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/13沉淀笔记/2025面试/渲染绘制.md",
+      "relative_path": "渲染绘制.md",
+      "bytes": 8897,
+      "body_chars": 5299,
+      "heading_count": 8,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 5,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    },
+    {
+      "source_path": "/Users/norven/workspace/MyObsidian/13沉淀笔记/2025面试/进程启动.md",
+      "relative_path": "进程启动.md",
+      "bytes": 5352,
+      "body_chars": 3612,
+      "heading_count": 3,
+      "top_level_heading_count": 0,
+      "wikilink_count": 0,
+      "attachment_count": 2,
+      "todo_marker_count": 0,
+      "maturity": "fragment",
+      "candidate_target": "Clipping",
+      "action_hint": "write",
+      "risk_tags": [
+        "attachments"
+      ],
+      "duplicate_candidates": []
+    }
+  ]
+}

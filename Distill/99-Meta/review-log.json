@@ -180,5 +180,23 @@
       "03-Knowledge/Concepts/Agent Skills.md",
       "03-Knowledge/Concepts/Managed Agents.md"
     ]
+  },
+  {
+    "timestamp": "2026-04-11T19:06:20Z",
+    "reviewer": "distill-migration-reviewer",
+    "files": [
+      "03-Knowledge/Concepts/ActivityManagerService.md",
+      "03-Knowledge/Concepts/WindowManagerService.md",
+      "03-Knowledge/Concepts/Handler 消息机制.md",
+      "03-Knowledge/Concepts/启动任务拓扑调度.md",
+      "03-Knowledge/Topics/Android Framework 进程、消息、窗口与渲染主线.md"
+    ]
+  },
+  {
+    "timestamp": "2026-04-12T06:17:48Z",
+    "reviewer": "distill-handler-rereview-pass",
+    "files": [
+      "03-Knowledge/Concepts/Handler 消息机制.md"
+    ]
   }
 ]
