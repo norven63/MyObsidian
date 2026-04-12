@@ -23,12 +23,12 @@
   - '知识图谱总纲'
 层级: 专题
 状态: stable
-更新日期: 2026-04-11
+更新日期: 2026-04-12
 ---
 
 # Android 性能优化与运行时机制
 
-## 0. 图谱定位 (Graph Position)
+## 这篇主题在图谱中的位置
 - 上级主题：[[Topics/知识图谱总纲|知识图谱总纲]]
 - 本专题职责：把启动、输入、IPC、渲染、内存与 tracing 放回同一条 Android 运行时诊断主线，而不是拆成零散面试点。
 - 为什么值得单独学：很多 Android 性能问题不是“某个 API 用错了”，而是用户症状、系统链路与诊断证据分散在不同层；本专题的价值就是把这些层重新缝回一张可执行的问题地图。
@@ -36,14 +36,14 @@
 - 相邻专题：本专题只讨论 Android 运行时因果链，不展开通用工程治理；它更像一份“先判位、再抓证据、最后定根因”的排障型讲义。
 - 建议阅读顺序：先用本专题建立“症状 → 链路 → 第一证据”的总图，再沿 [[Concepts/Perfetto|Perfetto]]、[[Concepts/Binder IPC|Binder IPC]]、[[Concepts/RenderThread|RenderThread]]、[[Concepts/Dominator Tree|Dominator Tree]] 逐个下钻。
 
-## 1. 学完你应该能回答什么 (Learning Outcomes)
+## 读完后你应该会回答的问题
 1. 当用户说“启动慢、点了没反应、滑动掉帧、返回栈怪、内存一直涨”时，你能先把症状落到哪条运行时链路，而不是直接猜单点原因？
 2. [[Concepts/Activity 启动模式|Activity 启动模式]]、[[Concepts/Binder IPC|Binder IPC]]、[[Concepts/InputManagerService|InputManagerService]]、[[Concepts/RenderThread|RenderThread]]、[[Concepts/Perfetto|Perfetto]]、[[Concepts/Dominator Tree|Dominator Tree]] 分别回答哪一段问题，它们为什么必须协同出现？
 3. 面对不同症状时，第一份该看的证据分别是什么：task / back stack、Binder 事务、输入分发、Frame Timeline、heap dump，还是统一 trace？
 4. 为什么 Android 运行时学习不该停留在“面试八股”，而应该升级为一套可复用的诊断顺序与证据判断框架？
 
-## 2. 先建立全局图景 (Big Picture)
-### 2.1 一屏总图 / One-Screen Model
+## 先把全局图装进脑子
+### 2.1 一屏总图
 | 步骤 | 你先回答什么 | 常见选择 | 这一轮的目标 |
 | --- | --- | --- | --- |
 | **1. 先按症状分型** | 用户抱怨的是启动、点击没反应、滑动掉帧、回退异常，还是越用越重？ | 启动 / 导航、IPC、输入、渲染、内存 | 先确定主链路，不要把所有问题都混成“卡” |
@@ -51,7 +51,7 @@
 | **3. 再看 dominant wait / dominant owner** | 时间主要耗在哪段，或对象到底被谁保活？ | 等 system_server、晚在输入、晚在渲染、滞留在引用链 | 把“感觉慢”变成可定位的因果链 |
 | **4. 最后决定往哪个概念下钻** | 下一步该补哪块专用知识？ | [[Concepts/Perfetto]]、[[Concepts/Binder IPC]]、[[Concepts/RenderThread]]、[[Concepts/Dominator Tree]] 等 | 让 Topic 先完成分流，再用 Concept 做深挖 |
 
-### 2.2 问题地图 / Domain Map
+### 2.2 问题地图
 | 症状簇 | 先落到哪条链 | 第一份证据先看什么 | 最容易犯的误判 |
 |---|---|---|---|
 | 冷 / 温 / 热启动慢、通知跳转后回退异常 | 启动 / 导航链 | Perfetto 启动时间线、task / back stack、launchMode / Intent Flags | 只因为“慢”就先盯主线程函数耗时，忽略实例复用与系统服务准备 |
@@ -71,7 +71,7 @@ Android 运行时排障最重要的不是“知道更多名词”，而是先建
 - 不深入 GPU driver、厂商内核、音视频编解码、NDK 锁竞争等更底层专题；本专题只把它们当作“需要继续转交的下一层证据入口”。
 - 不把 Activity 启动模式、硬件层缓存、Perfetto 当成孤立“背诵点”；这里关心的是它们如何组成同一条诊断链，而不是名词定义本身。
 
-## 3. 主线讲解 (Lecture Notes)
+## 把主线真正讲透
 ### 3.1 启动与导航：从一次点击到首帧可交互
 - **30 秒答案**：启动问题本质上是“实例与任务栈决策 + 进程 / Activity 拉起 + 首帧准备”这三段链路的组合题；导航异常先问实例复用是否正确，时间异常先问首帧前卡在哪一段，二者都不该只靠 launchMode 背诵解决。
 - **展开解释**：用户点图标、通知或 deeplink 之后，系统先决定是否复用现有 task / Activity，再决定是否要拉起进程、attach application、创建目标 Activity、完成布局与首帧。这里“跳转怪”和“启动慢”经常混在一起：前者更偏语义正确性，常由 [[Concepts/Activity 启动模式|Activity 启动模式]]、Intent Flags、task 组织导致；后者更偏时间分布，常由进程冷启动、ContentProvider / Application 初始化、Binder 请求系统服务、首屏布局或图片准备导致。把这两类问题分开，才能避免一边修改 launchMode 一边误以为自己在做性能优化。
@@ -127,7 +127,7 @@ Android 运行时排障最重要的不是“知道更多名词”，而是先建
   - 一句话记法：时间问题先 trace，语义问题看导航，保活问题看 heap，跨层模糊问题先统一证据口径。
   - 每次排障都问自己两个问题：第一份证据是否已经能证明“谁在等谁 / 谁让谁活着”？如果不能，就别急着下结论。
 
-### 3.6 完整案例推演 / Worked Case
+### 3.6 完整案例推演
 - **场景**：用户反馈“从通知点进详情页后，页面首屏有时很慢，点按钮第一下也没反应，返回时还偶尔回到奇怪的页面”。这是典型的启动 / 导航、Binder、输入、渲染多条链纠缠在一起的症状。
 - **先看什么 / 第一证据**：先把一次稳定复现的 Perfetto trace 和当次 task / back stack 快照放在一起看；不要先盯某个 Java 方法或某个 launchMode 配置。
 - **推演链 / Decision Path**：
@@ -137,7 +137,7 @@ Android 运行时排障最重要的不是“知道更多名词”，而是先建
   4. 如果问题只在多次进入退出后越来越明显，再补 heap dump 与 Dominator Tree，检查是否存在页面对象、Bitmap 或 layer 长期滞留。
 - **结论 / 迁移**：Android 性能排障最怕一上来就猜单点原因。先按“语义是否正确 → 第一份时间证据 → 输入与渲染谁更慢 → 是否存在对象滞留”分流，才能把跨层症状拆回可执行判断。
 
-## 4. 关键概念与关键连接 (Concept Deep Dive)
+## 把关键概念重新串成一张图
 ### 4.1 为什么这组概念必须一起看
 这组概念之所以必须一起看，是因为 Android 运行时症状天然跨层。[[Concepts/Activity 启动模式|Activity 启动模式]] 只解释实例与任务栈，不解释时间分布；[[Concepts/Binder IPC|Binder IPC]] 解释跨进程等待，不解释输入事件何时到达；[[Concepts/InputManagerService|InputManagerService]] 解释事件入场，不解释帧何时呈现；[[Concepts/RenderThread|RenderThread]] 解释渲染提交，不解释对象为什么一直活着；[[Concepts/Perfetto|Perfetto]] 给出统一时间线，但不证明引用链；[[Concepts/Dominator Tree|Dominator Tree]] 证明保活关系，但不解释用户那一秒为什么觉得慢。只有把它们放在同一条主线上，你才能既回答“症状属于哪段链”，又回答“第一份证据该看什么”。
 
@@ -159,7 +159,7 @@ Android 运行时排障最重要的不是“知道更多名词”，而是先建
 - [[Concepts/Perfetto|Perfetto]] ↔ [[Concepts/Binder IPC|Binder IPC]] / [[Concepts/InputManagerService|InputManagerService]] / [[Concepts/RenderThread|RenderThread]]：前者提供统一时间坐标，后者提供具体语义解释；没有统一时间线，单点概念很难串成因果链。
 - [[Concepts/Perfetto|Perfetto]] ↔ [[Concepts/Dominator Tree|Dominator Tree]]：Perfetto 解释“慢发生在什么时候、谁在等待谁”，Dominator Tree 解释“对象为什么没死”；时间证据与对象证据必须互补使用。
 
-## 5. 常见误解与适用边界 (Misconceptions & Boundaries)
+## 容易混淆的地方与边界
 ### 5.1 常见误解
 - “所有卡顿都先看主线程”——错误。同步 Binder、输入分发、RenderThread、SurfaceFlinger、GPU deadline 都可能是主因。
 - “launchMode 调好了就算做了启动优化”——错误。launchMode 主要解决导航与实例复用语义，不直接替代初始化、渲染和系统服务耗时分析。
@@ -182,8 +182,8 @@ Android 运行时排障最重要的不是“知道更多名词”，而是先建
 - 为什么明明首帧正常，App 用久了还是越来越卡？——常见原因是 retained object、图片 / layer 缓存膨胀或 allocation / GC 节律恶化；这时应把 heap dump 与运行时 trace 联合看。
 - 为什么 trace 里已经看见 Binder wait，还要继续看 system_server 或具体服务？——因为 trace 证明了“等待发生在哪”，但真正的语义根因仍可能在服务端锁、队列深度、策略或下游调用上。
 
-## 6. 自测问题与复盘抓手 (Self-Test & Recap)
-### 6.1 记忆框架 / Memory Frame
+## 复盘框架与自测
+### 6.1 记忆框架
 - **先分症状**：先把问题分到启动 / 导航、IPC、输入、渲染、内存、诊断六类，而不是先猜 API。
 - **再找链路**：问自己用户动作是怎样进系统、进进程、进渲染、进对象生命周期的。
 - **再抓第一证据**：时间问题优先 trace，语义问题优先 task / navigation，保活问题优先 heap dump。
@@ -197,7 +197,7 @@ Android 运行时排障最重要的不是“知道更多名词”，而是先建
 5. 如果你只能给新人留一句诊断口诀，这句口诀应该如何同时覆盖启动、渲染与内存问题？
 - **一句话复盘**：Android 性能与运行时学习的核心，不是多背几个名词，而是先把症状映射到正确链路，再用正确证据证明谁在等待、谁在保活、哪一段真正失真。
 
-## 7. 延伸阅读与证据锚点 (Further Reading & Evidence)
+## 证据锚点与下一步
 ### 7.1 证据锚点
 - **先读哪篇 Source**：[[2026-04-10-Android系统性能优化与底层机制深度解析]] —— 用它先建立启动、输入、渲染、缓存与 tracing 的总图，因为它最接近本专题的全链路视角。
 - **再补哪个概念**：[[Concepts/Perfetto|Perfetto]] —— 当你能先看时间线再下钻，后续学习 Binder、RenderThread 和启动细节才不会散掉。

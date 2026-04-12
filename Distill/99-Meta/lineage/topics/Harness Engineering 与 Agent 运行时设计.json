@@ -1,0 +1,53 @@
+{
+  "笔记类型": "topic",
+  "笔记标题": "Harness Engineering 与 Agent 运行时设计",
+  "来源贡献": [
+    {
+      "来源": "2026-02-04-Scaling-Managed-Agents-Decoupling-the-brain-from-the-hands",
+      "贡献": "提供了 Managed Agents、stable interface、session / harness / sandbox 解耦的总框架，使本 Topic 能把运行时写成长期稳定对象，而不是短命实现细节。"
+    },
+    {
+      "来源": "2026-04-03-Qoder-Harness-Engineering-指南",
+      "贡献": "补足了 harness loop、执行闭环、验证与 reviewer 角色的实践视角，让“runtime 比 prompt polish 更重要”有了更具体的工程支点。"
+    },
+    {
+      "来源": "2026-04-02-AI-编码-渐进式-Spec-实战指南",
+      "贡献": "为 Topic 的契约层提供了任务目标、非目标与验收门槛的明确写法，保证运行时讨论不是脱离 contract 的空中楼阁。"
+    },
+    {
+      "来源": "2026-03-30-Agent-到-Skills-范式转变",
+      "贡献": "帮助正文把知识沉淀层与运行时层分开，明确 Skill 负责长期背景，而不是替代 loop、tool adapter 或 evaluator。"
+    },
+    {
+      "来源": "2026-03-25-Anthropic-立刻做-Harness",
+      "贡献": "强化了“先把验证、恢复、权限和日志接回执行过程”的判断，使 Topic 的升级顺序更偏 harness-first 而不是 prompt-first。"
+    },
+    {
+      "来源": "2026-03-31-字节-Harness-Agent-54k-Star",
+      "贡献": "提供了把 agent 放进受控执行壳、评估壳和工程脚手架的落地样本，支撑了本 Topic 对 loop、evaluator 与 runtime 外壳的工程化描述。"
+    },
+    {
+      "来源": "2026-03-25-DeerFlow-超级AI员工框架",
+      "贡献": "补足了 planner / worker / reviewer 式角色隔离与多 Agent 协作的案例，让“什么时候需要 Sub-Agent”有了更具体的噪声隔离语境。"
+    }
+  ],
+  "图示资产": [],
+  "修缮记录": [
+    {
+      "类型": "重写",
+      "说明": "把 0-7 顶层章节改成更自然的讲义式命名，并去掉读者可见的英文模板标签，同时保留原有 section order、one-screen model、lecture block、案例、自测和延伸阅读槽位。",
+      "依据": "8.8.7 contract 强调这些章节是语义槽位而不是必须暴露给读者的固定标题；自然化后更像讲义成品，也更利于后续验证。"
+    },
+    {
+      "类型": "补全",
+      "说明": "为本 Topic 回填 lineage sidecar，把来源贡献、修缮动作与图示决策沉到 meta 层，正文继续保持面向学习者的讲义主线。",
+      "依据": "quality checklist 与 2026-04-12 健康报告都要求 Topic 补齐 lineage sidecar，避免 provenance 元信息继续挤占正文。"
+    }
+  ],
+  "省略说明": [
+    {
+      "对象": "来源对照正文章节与原始图示逐项说明",
+      "理由": "来源贡献、修缮动作与图示决策已经迁移到 lineage sidecar；当前 Topic 的一屏总图、问题地图和案例链足以承载教学主线，因此正文不再插入 provenance 元话术，图示资产也记为空数组。"
+    }
+  ]
+}

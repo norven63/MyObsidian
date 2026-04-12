@@ -1,0 +1,50 @@
+{
+  "笔记类型": "concept",
+  "笔记标题": "ActivityManagerService",
+  "来源贡献": [
+    {
+      "来源": "AMS（2025面试旧笔记迁移）",
+      "贡献": "提供了 AMS 在 `system_server` 的中枢定位、ATMS / ActiveServices / BroadcastQueue / ProcessList 的分工，以及四大组件统一进入系统调度链的骨架。"
+    },
+    {
+      "来源": "进程启动（2025面试旧笔记迁移）",
+      "贡献": "补足了 `Process.start()` → Zygote socket → `forkAndSpecialize()` → `ActivityThread.main()` → `attachApplication()` 这条真正把 app 进程拉起来的关键链。"
+    }
+  ],
+  "图示资产": [
+    {
+      "引用": "13沉淀笔记/2025面试/AMS.md:13-25 SystemServer/AMS 结构图",
+      "类型": "文本图",
+      "教学角色": "支持",
+      "决策": "转写为文本",
+      "正文落点": "Section 1《AMS 真正管的，不是某个 Activity，而是组件请求如何被系统接成进程与生命周期调度》",
+      "理由": "原图最重要的价值是把 AMS 与 ATMS、ActiveServices、BroadcastQueue、ProcessList 的职责边界放在同一张图上，正文已用文字版重新承接。"
+    },
+    {
+      "引用": "13沉淀笔记/2025面试/AMS.md:207-235 Activity 启动时序图",
+      "类型": "文本图",
+      "教学角色": "核心",
+      "决策": "转写为文本",
+      "正文落点": "Section 3《真正决定启动结果的是 startProcess、attachApplication 和 schedule 这条系统链》",
+      "理由": "这张时序图承载了 Launcher → AMS → Zygote → ActivityThread 的跨进程主链，是理解 AMS 调度角色的关键证据。"
+    }
+  ],
+  "修缮记录": [
+    {
+      "类型": "补全",
+      "说明": "补入了 warm process 分支、Provider 提前拉进程、`ApplicationThread` 遥控器与 `OOM_adj` 这几个会直接改写排障结论的决定层。",
+      "依据": "旧版概念页已具备 AMS 与进程启动的骨架，但 8.8.7 合同要求把真正决定行为的函数链与状态层显式教学化保留下来。"
+    },
+    {
+      "类型": "重写",
+      "说明": "去掉旧版 numbered template 与来源对照，把正文重写成 7 段 learner-facing 主线，并将 provenance 信息迁到 lineage。",
+      "依据": "新版 Concept 合同要求 final note 保持自然章节名，同时把来源贡献 / 图示决策外移到 sidecar。"
+    }
+  ],
+  "省略说明": [
+    {
+      "对象": "来源对照正文章节",
+      "理由": "来源贡献和修缮依据已迁移到 lineage sidecar，避免 provenance 元话术打断 learner-facing 主线。"
+    }
+  ]
+}

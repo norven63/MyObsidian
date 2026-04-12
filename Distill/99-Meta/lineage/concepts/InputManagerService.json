@@ -1,0 +1,54 @@
+{
+  "笔记类型": "concept",
+  "笔记标题": "InputManagerService",
+  "来源贡献": [
+    {
+      "来源": "IMS（2025面试旧笔记迁移）",
+      "贡献": "提供了 Java / JNI / Native 分层、EventHub、InputReaderThread、InputDispatcherThread、InputChannel 以及 WaitQueue / finish 信号这条最靠近运行时的输入主链。"
+    },
+    {
+      "来源": "2026-04-10-Android系统性能优化与底层机制深度解析",
+      "贡献": "补足了输入卡顿、WaitQueue 阈值与“事件到了应用但画面仍晚到”这类性能诊断语境。"
+    },
+    {
+      "来源": "2026-04-10-Android-资深架构面试核心考点深度解析报告",
+      "贡献": "强化了 IMS 作为系统输入骨架的定位，让概念不再只停留在 API 层。"
+    }
+  ],
+  "图示资产": [
+    {
+      "引用": "13沉淀笔记/2025面试/IMS.md:6-23 输入系统分层结构图",
+      "类型": "文本图",
+      "教学角色": "核心",
+      "决策": "转写为文本",
+      "正文落点": "Section 1《IMS 真正管理的，不是 View 回调，而是输入事件怎样被读到、路由到、确认完》",
+      "理由": "这张分层图最适合帮助读者先把 Java / Native / Kernel 三层与 Reader / Dispatcher 双线程放进脑子里。"
+    },
+    {
+      "引用": "13沉淀笔记/2025面试/IMS.md:125-146 输入完整流转路径图",
+      "类型": "文本图",
+      "教学角色": "核心",
+      "决策": "转写为文本",
+      "正文落点": "Section 3《真正决定输入时延的是 EventHub、InputReader、InputDispatcher、InputChannel 和 finish 回执》",
+      "理由": "原图完整展示了输入从 kernel 到 ViewRootImpl，再回到 finish 信号的闭环，是理解 WaitQueue 与超时治理的关键图示。"
+    }
+  ],
+  "修缮记录": [
+    {
+      "类型": "补全",
+      "说明": "补入了 WaitQueue、finish 回执、`InputChannel` socket 边界和 WMS 提供 `InputWindowHandle` 这几个真正决定排障结论的层级。",
+      "依据": "旧版概念页已具备输入分层，但 8.8.7 合同要求把最低决定层和误判边界显式教学化，避免只留高层摘要。"
+    },
+    {
+      "类型": "重写",
+      "说明": "移除了旧版 provenance 章节，改写为围绕输入时延与目标窗口判定展开的 7 段 learner-facing 主线。",
+      "依据": "新版 Concept 合同要求正文围绕主题自然命名，并把来源贡献 / 图示决策迁出正文。"
+    }
+  ],
+  "省略说明": [
+    {
+      "对象": "来源对照正文章节",
+      "理由": "来源贡献和修缮依据已迁移到 lineage sidecar，避免 provenance 元话术打断 learner-facing 主线。"
+    }
+  ]
+}

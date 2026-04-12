@@ -35,7 +35,7 @@ Android 要解决的不是“怎么把一个 Runnable 执行掉”，而是：**
 Android 没把 UI 线程调度做成到处 `wait/notify`，也没有在每个回调点各写一套唤醒协议，而是选择了 **ThreadLocal 绑定 Looper + MessageQueue 按 `when` 排序 + `nativePollOnce()` 阻塞唤醒** 这条统一主链。它换来的好处是时序可预测、空闲时不空转、系统事件和业务任务都能落回同一节奏线；代价是“发出去就立刻执行”的错觉必须被放弃，所有任务都要服从队列、时间点、屏障和 Looper 生命周期。
 
 ## 真正决定 Handler 行为的，不是 `post()`，而是 `loop / next / poll / dispatch` 这条链
-先把原始笔记里那张最有价值的流程图迁进来：它不是装饰，而是最适合拿来建立“消息从发送到执行到底经历了什么”的第一眼模型。
+先看这张流程图：它不是装饰，而是最适合拿来建立“消息从发送到执行到底经历了什么”的第一眼模型。
 
 ```mermaid
 sequenceDiagram
@@ -97,8 +97,11 @@ for (;;) {
 - [[Concepts/ActivityManagerService|ActivityManagerService]] `(callback[中])`：系统把生命周期和进程调度结果回传给 app 时，最终也离不开主线程消息接力。
 
 ## 读到这里，如果你还答不出这三个问题，就说明还没真正吃透
+### 记忆锚点
 一句话记住：**Handler = 线程绑定 + 消息按时序排队 + `nativePollOnce()` 精准休眠 / 唤醒 + `dispatchMessage()` 分发 + barrier / async 改写执行资格。**
 一旦看到“主线程为什么会等”“消息为什么发了却没立刻跑”“`doFrame()` 为什么能抢先”，就该回到这条链上。
+
+### 自测问题
 1. 为什么说 Handler 真正该看的不是 `post()`，而是 `loop() -> next() -> nativePollOnce() -> dispatchMessage()` 这条链？
 2. `IdleHandler` 和 `quit()` 分别说明了消息循环的哪两种边界状态？
 3. 同步屏障的 `msg.target = null` 和 `setAsynchronous(true)` 各自改写了什么，为什么这会直接影响一帧 UI 的先后顺序？

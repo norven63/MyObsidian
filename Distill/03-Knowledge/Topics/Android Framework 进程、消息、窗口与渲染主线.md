@@ -29,7 +29,7 @@
 
 # Android Framework 进程、消息、窗口与渲染主线
 
-## 0. 图谱定位 (Graph Position)
+## 这篇主题在图谱中的位置
 - 上级主题：[[Topics/知识图谱总纲|知识图谱总纲]]
 - 本专题回答：当一个 Android 应用从“被系统拉起”到“用户看见并点到首屏”时，AMS、Binder、Handler、WMS、IMS、RenderThread 分别在负责哪一段主线。
 - 为什么值得单独学：很多 Android 学习材料把这些知识点拆成零散八股，结果你知道名词，却不知道一次真实交付链是怎样从进程、消息、窗口、输入一路传到渲染上屏。
@@ -37,14 +37,14 @@
 - 建议先备知识：理解 Activity 生命周期、线程与 Looper 基础、ViewRootImpl / Choreographer 的大致位置会更容易进入本专题。
 - 相邻专题：[[Topics/Android 性能优化与运行时机制|Android 性能优化与运行时机制]]
 
-## 1. 学完你应该能回答什么 (Learning Outcomes)
+## 读完后你应该会回答的问题
 1. 一次冷启动为什么不是“应用自己 new 出 Activity”，而是要经过 AMS、Binder、Zygote、ActivityThread 的整条系统调度链？
 2. 为什么输入、动画、布局和普通业务任务都能在一条主线程上运转，而这条秩序又为什么会因为 Handler / MessageQueue 失衡而表现成卡顿？
 3. WMS、IMS、RenderThread 和 SurfaceFlinger 各自负责什么，为什么“看得见但点不到”和“点到了但画面晚到”不是同一种问题？
 4. 当启动治理越来越复杂时，为什么初始化顺序不能只写成一张列表，而要升级成事件驱动的拓扑编排？
 
-## 2. 先建立全局图景 (Big Picture)
-### 2.1 一屏总图 / One-Screen Model
+## 先把全局图装进脑子
+### 2.1 一屏总图
 | 你在追的现象 | 先抓哪一层 | 这一层真正负责什么 | 第一份证据通常看什么 |
 | --- | --- | --- | --- |
 | 页面为什么还没起来 | AMS + Binder + Zygote | 组件请求、进程建立、attach 与生命周期指令回传 | 启动 trace、Binder wait、process start |
@@ -53,7 +53,7 @@
 | 画面为什么还是晚到 | RenderThread + SurfaceFlinger | DisplayList 提交、GPU 渲染、Buffer 交付与合成上屏 | Frame Timeline、RenderThread、SurfaceFlinger |
 | 启动为什么被一堆初始化拖长 | 启动任务拓扑调度 | 任务依赖、并行释放、关键路径治理 | 启动任务 trace、ready 集、关键路径 |
 
-### 2.2 问题地图 / Domain Map
+### 2.2 问题地图
 | 现象 | 最该先落到哪条链 | 第一证据先看什么 | 下一跳通常补哪个概念 |
 | --- | --- | --- | --- |
 | 冷启动首帧晚 | 进程与组件调度链 | process start、attach、first frame | [[Concepts/ActivityManagerService]] / [[Concepts/Binder IPC]] |
@@ -72,7 +72,7 @@
 - 不把每个类都讲成源码导读；这里更强调责任分工和因果链，而不是追求把所有方法名背出来。
 - 不直接替代 [[Topics/Android 性能优化与运行时机制|Android 性能优化与运行时机制]]；本篇更偏“架构主线”，相邻专题更偏“排障与证据主线”。
 
-## 3. 主线讲解 (Lecture Notes)
+## 把主线真正讲透
 ### 3.1 从组件请求到 App 进程建立：AMS、Binder 与 Zygote
 - **30 秒答案**：一次冷启动本质上是“系统先接住组件调度请求，再决定要不要拉进程，再把运行时建立起来，最后把生命周期指令回传到目标 app”。
 - **展开解释**：当 Launcher、通知或其他进程请求启动组件时，真正先收到这件事的不是目标 app，而是 system_server 里的 AMS / ATMS。AMS 先看目标进程是否存在；如果不存在，就经由 `Process.start()` 走 socket 找 Zygote fork 新进程。新进程进入 `ActivityThread.main()` 后，先建主线程 Looper，再通过 `attachApplication()` 把 `ApplicationThread` 回传给 AMS。此时 AMS 才真正获得“遥控器”，后续才有 `bindApplication`、`scheduleLaunchActivity` 这类动作。
@@ -128,7 +128,7 @@
   - 如果首屏慢但系统链正常，就把视线转到初始化关键路径：哪些任务在主线程，哪些本可并行却没有并行。
   - 如果框架宣称自己“支持拓扑调度”，却在 trace 里完全串行，那问题不在算法概念，而在工程落地。
 
-### 3.6 完整案例推演 / Worked Case
+### 3.6 完整案例推演
 - **场景**：某应用从通知点进详情页时，偶发“首屏出来很慢，第一下点击没反应，某些机型上弹窗还能看见却点不到”。这是一个跨进程调度、消息节奏、窗口输入和渲染交付同时可能出问题的混合症状。
 - **先看什么 / 第一证据**：先把一次稳定复现的启动 / 输入 trace 拉出来，同时确认当时的焦点窗口与窗口标志；不要一上来就改 launchMode、重写 UI 或盲猜某个方法慢。
 - **推演链 / Decision Path**：
@@ -138,7 +138,7 @@
   4. 如果系统主线都正常但整体仍慢，再补看启动任务编排，确认 app 自己是否把配置、路由、网络等初始化错误地压在关键路径上。
 - **结论 / 迁移**：这类问题最怕“抓到一段症状就把整条链拍死成一个原因”。先按进程调度、消息节奏、窗口输入、渲染交付、业务初始化五层分流，才能把复杂症状拆回可验证的因果路径。
 
-## 4. 关键概念与关键连接 (Concept Deep Dive)
+## 把关键概念重新串成一张图
 ### 4.1 为什么这组概念必须一起看
 这组概念必须一起看，因为它们回答的是**同一条用户体验链上不同层的责任边界**。[[Concepts/ActivityManagerService|ActivityManagerService]] 负责“系统先把 app 拉起来”；[[Concepts/Binder IPC|Binder IPC]] 解释“为什么跨进程等待会折叠回当前线程”；[[Concepts/Handler 消息机制|Handler 消息机制]] 解释“回到线程后为什么要按这样的节奏执行”；[[Concepts/WindowManagerService|WindowManagerService]] 和 [[Concepts/InputManagerService|InputManagerService]] 解释“事件为什么会进这个窗口”；[[Concepts/RenderThread|RenderThread]] 解释“内容怎样真正变成可显示的一帧”；[[Concepts/启动任务拓扑调度|启动任务拓扑调度]] 则补足 app 自己能不能把关键路径缩短。少了任何一层，你都会把现象误判成别人的责任。
 
@@ -159,7 +159,7 @@
 - [[Concepts/WindowManagerService|WindowManagerService]] ↔ [[Concepts/InputManagerService|InputManagerService]]：WMS 给出窗口和焦点，IMS 再据此把事件送给正确目标。
 - [[Concepts/启动任务拓扑调度|启动任务拓扑调度]] ↔ [[Concepts/ActivityManagerService|ActivityManagerService]]：前者解决 app 内部如何不把启动关键路径拖长，后者解决系统如何把 app 真正拉起来，两条链相互叠加形成最终启动体验。
 
-## 5. 常见误解与适用边界 (Misconceptions & Boundaries)
+## 容易混淆的地方与边界
 ### 5.1 常见误解
 - “Android Framework 就是一堆并列名词，背熟就够了。” 真正重要的是这些名词在一次用户操作里如何接力，不是单独记住谁的定义。
 - “只要主线程不重，就说明不是 Android 运行时问题。” 很多等待折叠在 Binder、消息节奏、窗口输入或渲染交付链里，主线程看起来不忙并不等于没有主线问题。
@@ -176,8 +176,8 @@
 - 为什么这篇 Topic 还要保留 [[Topics/Android 性能优化与运行时机制|Android 性能优化与运行时机制]]？ —— 因为本篇先讲清“系统主线如何接力”，相邻专题再把这些主线转成“先看哪份证据、怎样定位性能症状”的排障路径。
 - 初始化治理为什么被放进 framework Topic？ —— 因为真实首屏体验是系统拉起链和 app 自身关键路径的叠加，不把两者放回同一张图，你很难解释“系统已经准备好了，为什么还是慢”。
 
-## 6. 自测问题与复盘抓手 (Self-Test & Recap)
-### 6.1 记忆框架 / Memory Frame
+## 复盘框架与自测
+### 6.1 记忆框架
 - **先拉起，再排队，再定窗口，再送输入，最后上屏**：这是从组件请求到用户看见反馈的纵向主线。
 - **系统主线 + app 初始化主线**：系统决定 app 能否及时进入运行态，app 决定自己是否又把关键路径重新拉长。
 
@@ -187,7 +187,7 @@
 3. 启动任务拓扑调度为什么不是“算法点缀”，而是首屏治理里真正能缩短关键路径的工程手段？
 - **一句话复盘**：Android Framework 学习的关键，不是把名词一个个记住，而是建立“谁先接住请求、谁负责线程节奏、谁定义窗口与输入、谁交付一帧、谁拖长关键路径”的完整接力图。
 
-## 7. 延伸阅读与证据锚点 (Further Reading & Evidence)
+## 证据锚点与下一步
 ### 7.1 证据锚点
 - **先读哪个概念**：[[Concepts/ActivityManagerService|ActivityManagerService]] —— 先把“系统如何把 app 拉起来”这条上游主线装牢。
 - **再补哪组概念**：[[Concepts/WindowManagerService|WindowManagerService]] / [[Concepts/InputManagerService|InputManagerService]] —— 再把“窗口是谁、输入发给谁”这一段接完整。

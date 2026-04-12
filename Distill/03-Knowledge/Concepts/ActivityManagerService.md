@@ -11,87 +11,88 @@
   - 'Activity 启动模式'
   - 'WindowManagerService'
 状态: stable
-定义: ActivityManagerService 是 Android system_server 中负责组件调度、进程生命周期与系统级状态切换的中枢服务；它把“谁该被拉起、谁该被回收、哪一步该通知 App 执行”统一收束在一条系统调度链里。
+定义: ActivityManagerService 是 Android `system_server` 中把四大组件请求、进程启动与进程状态治理收束到统一调度链的核心服务；它真正负责的不是“某个页面怎么开”，而是“系统何时拉起谁、何时回调谁、谁该继续活着”。
 ---
 
 # ActivityManagerService
 
-## 1. 它是什么 (What It Is)
+## AMS 真正管的，不是某个 Activity，而是组件请求如何被系统接成进程与生命周期调度
+### 一眼认知骨架
+- **对象**：`system_server` 里的组件与进程总调度器，不是单一的“Activity 栈管理类”。
+- **目的**：统一决定组件请求何时拉起进程、何时 attach、何时把生命周期回调送回目标 App。
+- **组成**：AMS / ATMS、`ProcessList` / `ProcessRecord`、`ActiveServices`、`BroadcastQueue`、`ApplicationThread` Binder 回路。
+- **主线**：组件请求进入系统 → 必要时 `startProcess` → Zygote fork → `ActivityThread.main()` attach → AMS `bindApplication` / `schedule*` 回调。
+- **变体**：Activity、Service、Receiver、Provider 各有分支；冷启动、热启动、进程死亡重启也会改写整条链。
+- **用法**：最适合解释冷启动、服务起不来、广播迟到、Provider 拉进程、前后台切换和 OOM_adj 异常。
 ### 快速判断 / Quick Scan
-| 维度 | 内容 |
-| --- | --- |
-| 一句话定义 | ActivityManagerService 是 system_server 里负责协调组件调度、进程管理和系统级状态切换的总控服务。 |
-| 不要和什么混为一谈 | 它不是“只管 Activity 栈”的单一模块；Android 10 以后 task / stack 更集中在 ATMS，但 AMS 仍然承担进程、组件与系统协同的主调度职责。 |
-| 什么时候想到它 | 冷启动拉进程、`startService()` / `sendBroadcast()` / `getContentProvider()` 触发系统调度、前后台切换异常、system_server 组件链疑似卡住时。 |
-
+- 如果只用一句话说清，AMS 不是“帮你启动页面”，而是“把系统侧组件意图翻译成进程与生命周期动作”。
+- 你最容易把它和 Activity 栈本身混为一谈；但 Android 10 以后 task / stack 更偏 ATMS，AMS 仍然掌控进程、组件与系统状态协同。
+- 一旦你开始追“用户还在等但主线程并不重”“服务为什么没调起来”“死进程为什么又被拉起”，就已经进入 AMS 的责任边界。
 ### 展开理解
-- AMS 的价值不在“懂几个源码类名”，而在它把四大组件、进程优先级、前后台切换和系统服务协同放进了一条统一调度链。
-- 从 app 视角看，很多动作只是“调一个 framework API”；从系统视角看，真正决定是否拉进程、何时 attach、哪一段回调回到主线程的，往往都要经过 AMS。
+AMS 的难点在于：上层看到的是 `startActivity()`、`startService()`、`sendBroadcast()` 这些 API，系统侧真正执行的却是一条长得多的调度链。它既要回答“目标进程存不存在”，也要回答“现在该不该拉起、attach 完没有、该把哪个生命周期投递回去、这个进程之后该以什么优先级活着”。所以 AMS 最重要的不是记住几个类名，而是把**组件请求、进程建立、Binder 回调、存活策略**看成同一条因果链。
 
-## 2. 为什么它重要 (Why It Matters)
+## Android 宁可把四大组件和进程命运收束到 AMS，也不让每条组件链各写一套规则
 ### 它解决的判断 / 工程问题
-- 它回答的是：**当应用请求启动一个组件时，系统到底由谁来判断要不要建新进程、何时把组件生命周期投递回目标进程、进程又该以什么优先级继续存活。**
-- 如果没有 AMS，Activity、Service、Broadcast、Provider 会各自维护一套调度协议，framework 很难形成统一的系统行为。
-
+AMS 要解决的是：**当应用或系统请求启动一个组件时，系统由谁来统一判断是否需要建新进程、何时让目标进程 attach、何时把 Activity / Service / Receiver / Provider 的生命周期真正送进去，以及谁在这之后该继续保活。** 没有这层统一调度，四大组件会各自维护自己的启动协议，前后台切换、权限检查、进程死亡回收也很难保持一致。
 ### 如果忽略它会怎样
-- 你会把“启动慢”“页面没起来”“服务没调到”“广播迟到”误看成孤立 API 问题，而不是一条被 system_server 协调过的系统调度链。
-- 你也会分不清“真正慢的是业务代码”还是“系统还在拉进程、attach Application、等 Binder 返回”。
+如果忽略 AMS，你会把很多系统等待误看成“App 自己慢”。页面没起来，不一定是 `onCreate()` 重；服务没调到，不一定是业务代码没执行；广播来晚了，也不一定是 receiver 自己阻塞。很多时候，系统还在拉进程、attach、等待 Binder 返回，或者根本没把回调送进目标进程。只盯 App 主线程，等于把真正的前置调度层看丢了。
+### 为什么系统宁可这样设计 (Design Rationale / Trade-off)
+Android 没有让 Activity、Service、Broadcast、Provider 各写一套独立的系统协议，而是把它们收束到 AMS 这一类中枢服务里。这样换来的好处是：权限检查、进程状态、前后台切换、死进程清理、OOM_adj 调整都能沿一套统一模型推进；代价则是链路更长，排障必须跨 `app → Binder → system_server → Zygote → app` 多层边界，单看一个方法名几乎解释不了完整现象。系统宁可增加中枢复杂度，也要换取全局一致性。
 
-## 3. 它是怎么工作的 (How It Works)
+## 真正决定启动结果的是 startProcess、attachApplication 和 schedule 这条系统链
 ### 机制链 / Mechanism Chain
-1. App 或系统组件通过 Binder 把 `startActivity()`、`startService()`、广播或 Provider 请求送进 system_server，AMS / ATMS 先接住这类“组件调度意图”。
-2. AMS 判断目标组件所在进程是否已存在；如果不存在，就准备 uid、gid、nice-name 等参数，通过 `Process.start()` 走 socket 向 Zygote 发起 fork 请求。
-3. Zygote `forkAndSpecialize()` 出新进程后，目标进程进入 `ActivityThread.main()`：先准备主线程 Looper，再把 `ApplicationThread` 这个 Binder “遥控器”回传给 AMS。
-4. AMS 拿到这个“遥控器”后，依次发出 `bindApplication`、启动 Activity / Service / Receiver / Provider 等生命周期指令，目标进程再把真正执行动作投递回自己的主线程。
-5. 在后续运行中，AMS 继续基于前后台状态、组件绑定关系、OOM_adj 和进程死亡回调，决定谁该保活、谁该被回收、谁该被重新拉起。
-
+1. App 或系统组件通过 Binder 把 `startActivity()`、`startService()`、`sendBroadcast()`、`getContentProvider()` 等请求送进 `system_server`，AMS / ATMS 先解析目标组件、调用方身份与当前系统状态。
+2. 如果目标进程不存在，AMS 会走 `startProcessLocked()` / `Process.start()`，准备 `uid`、`gid`、`nice-name` 等参数，再通过 Zygote socket 请求 `forkAndSpecialize()`；热进程则直接跳过这段。
+3. 新进程被 fork 后进入 `ActivityThread.main()`：先 `Looper.prepareMainLooper()`，再创建 `ActivityThread`，随后通过 `attach()` 把 `ApplicationThread` 这个 Binder“遥控器”回传给 AMS。
+4. AMS 在 `attachApplicationLocked()` 中拿到这个遥控器后，先发 `bindApplication`，再根据组件分支发 `scheduleLaunchActivity()`、`scheduleCreateService()`、`scheduleReceiver()` 或 Provider 安装等回调，让真正执行动作落回目标进程主线程。
+5. 组件跑起来以后，AMS 还会继续维护 `ProcessRecord`、前后台状态与 `OOM_adj`，并在进程死亡、低内存或绑定关系变化时决定谁该重启、谁该回收、谁该继续保活。
+### 关键条件 / 分支 / 例外 (Critical Conditions / Exceptions)
+- **热进程分支**：如果进程已经存在，AMS 会直接走 attach 之后的 schedule 路径，不再重复 fork；这也是为什么“同一个页面第二次进来”常常比第一次短很多。
+- **组件分工分支**：Activity 的任务栈语义更多落在 ATMS；Service、Broadcast、Provider 则分别走 `ActiveServices`、`BroadcastQueue`、Provider helper 的专用分支。
+- **Provider 提前拉进程**：有些场景下用户甚至还没看到页面，只因为先访问了 ContentProvider，AMS 就已经把目标进程拉起来了。
+- **死亡 / 超时分支**：attach 失败、Binder death、低内存回收都会让链路换轨，表现为进程反复重建或组件回调迟迟进不去。
+### 最低决定层 / 关键锚点 (Decisive Layer Anchors)
+- `startProcessLocked()` / `Process.start()` → `ZygoteConnection.runOnce()` → `forkAndSpecialize()` → `ActivityThread.main()` → `attachApplicationLocked()` 是 AMS 最低决定层的主链。只看 App 端 `onCreate()`，你会把大量启动空洞误判成业务代码慢。
+- `ApplicationThread` 是 AMS 控制目标进程的 Binder 遥控器；AMS 并不直接在 app 进程里跑代码，而是靠这条回路把生命周期投递回去。忽略这一点，就会把“谁在执行”看歪。
+- `ProcessRecord` / `OOM_adj` 不是附属信息，而是组件启动后“它能活多久”的关键约束。若把它看丢，就解释不了为什么同一 App 总在后台被杀、前台又被拉起。
+- Activity 栈不对、页面复用异常不一定是 AMS 本体的问题，那更像 [[Concepts/Activity 启动模式|Activity 启动模式]] / ATMS 分支；AMS 负责的是更上游的系统调度骨架。
 ### 排查 / 应用抓手 (Diagnostic / Application Hooks)
-- **启动问题先分层**：是还没拉起进程、进程已建但还没 attach、还是 Activity 已调度但首帧没出来？先分层，才知道证据该去看 Zygote、Binder 还是 UI 链。
-- **线程不忙不等于系统没事**：如果主线程 Java 栈看起来不重，但页面仍迟迟不出现，要优先怀疑 AMS 主导的进程建立、系统服务等待或回调投递链。
-- **语义和时间别混看**：返回栈异常更偏 [[Concepts/Activity 启动模式|Activity 启动模式]]；启动耗时更偏 AMS + Binder + 进程初始化。两者常同场出现，但不是一类问题。
+- 把“启动慢”拆成 `process start`、`attach`、`bindApplication`、`activity launch`、`first frame` 五段；只有先分层，后面的证据才不会混在一起。
+- 如果 Service / Receiver / Provider 没有真正跑到 App 里，先确认目标进程是否存在、`attachApplication` 是否完成、AMS 是否已经发出了对应 `schedule*` 回调。
+- 反复重启或偶发白屏时，不要只盯 Activity 生命周期；同时看进程是否被 LMK 杀过、Binder 是否断过、`OOM_adj` 是否异常抖动。
 
-## 4. 一个最小例子 / 对比 (Minimal Example / Contrast)
+## 一次冷启动首页的过程，最能看出 AMS 如何把“点一下”变成“首屏出现”
 ### 最小例子
-- **场景**：Launcher 点击一个冷启动应用的首页 Activity。
-- **为什么这里会想到它**：点击不是直接“把 Activity new 出来”；AMS 需要先判断目标进程是否存在、必要时经由 Zygote 创建进程，再让目标进程 attach 并执行生命周期。
-- **结果**：如果进程建立、`bindApplication` 和 `scheduleLaunchActivity` 链路都顺畅，用户看到的是“点一下就开”；如果其中某段排队或阻塞，用户感知到的就是首帧明显变晚。
-
+- **场景**：用户从 Launcher 点击一个此前未运行的应用首页 Activity。
+- **为什么这里会想到它**：用户只做了一次点击，但系统要先确认目标进程是否存在、是否要 fork、何时 attach、何时 `bindApplication`、何时把 Activity 真正 launch 进主线程。
+- **结果**：如果这条链一路顺畅，用户感知到的是“点一下就开”；如果某段卡在 process start、attach、Binder 等待或首帧前准备，表面看起来像“App 没干活”，实际上系统调度链还没走完。
 ### 对比
-| 易混概念 / 做法 | 真正差异 | 这里为什么不是它 |
-| --- | --- | --- |
-| ActivityTaskManagerService | 更聚焦 task / stack / Activity 任务组织 | AMS 还要负责进程建立、其他组件调度和系统级存活策略 |
-| ActivityThread | 是目标 app 进程里的执行入口和主线程管理器 | AMS 在 system_server，负责“指挥什么时候做”；ActivityThread 负责“在 app 里真正做” |
-| Activity 启动模式 | 解释实例复用和任务栈语义 | 启动模式不解释进程怎么拉起、系统回调什么时候投递到 app |
+- **ActivityTaskManagerService**：更聚焦 Task / Stack 与 Activity 组织；AMS 仍要负责进程建立、其他组件调度和系统级进程状态治理。
+- **ActivityThread**：它是目标 App 进程里的执行入口，负责在应用主线程真正跑生命周期；AMS 则是 `system_server` 里的总调度者。
+- **[[Concepts/WindowManagerService|WindowManagerService]]**：WMS 负责窗口可见与焦点；AMS 负责把组件与进程先推到“可以显示”的状态，两者是上下游关系。
 
-## 5. 常见误解与边界 (Mistakes & Boundaries)
+## 把 AMS 看成“只管 Activity 栈”之后，排障几乎一定会盯错层
 ### 常见误解
-- “AMS 只要懂 startActivity 流程就够了。” 实际上它统一覆盖四大组件和进程生命周期，启动只是最常被拿来讲的一条分支。
-- “页面没起来，一定是 app 自己 onCreate 太慢。” 现实里可能是进程还没建完、Binder 等待长、attach / bindApplication 还没走完。
-
+- “AMS 只要懂 `startActivity()` 就够了。” 错。AMS 真正难的是四大组件共享同一条进程与生命周期调度骨架，Activity 只是最常被拿来讲的一支。
+- “页面没起来，一定是 App 自己 `onCreate()` 慢。” 很多时候，进程都还没 attach 完、`bindApplication` 还没走到、或者系统正在等跨进程返回。
 ### 失效 / 反噬信号
-- 冷启动时 trace 里 process start、attach、bindApplication、activity launch 之间出现明显空洞，说明系统调度链值得优先怀疑。
-- system_server 无明显崩溃，但组件创建时序紊乱、进程优先级异常抖动、死进程被反复拉起，也说明要回到 AMS 这层看调度和存活策略。
-
+- 冷启动 trace 里 `process start`、`attach`、`bindApplication`、`activity launch` 之间存在明显空洞，但 App 主线程看起来并不重。
+- system_server 没崩，但 Service / Receiver / Provider 的创建时序反复异常，死进程被频繁重拉，说明该回到 AMS 的进程状态与调度分支看问题。
+- 明明优化了首页代码，体验却只改善一点点，往往说明真正拖慢的是 AMS 之前或 AMS 驱动的系统前置阶段。
 ### 不适用场景
-- 如果问题已经确认发生在 View 树内部的布局 / 绘制，AMS 不是主抓手。
-- 如果你要解释的是一个具体页面为什么复用了旧实例、为什么回退栈顺序不对，[[Concepts/Activity 启动模式|Activity 启动模式]] 会比 AMS 更直接。
+- 如果问题已经明确发生在 View 树的布局、绘制或 GPU 提交阶段，AMS 不是主要抓手。
+- 如果现象是“回退路径不对、实例复用错了”，优先回到 [[Concepts/Activity 启动模式|Activity 启动模式]] 与 Task 语义，而不是继续深挖 AMS。
 
-## 6. 与哪些概念容易一起出现 (Nearby Concepts)
-- [[Concepts/Binder IPC|Binder IPC]] `(mechanism[强])`：AMS 几乎所有关键调度都要穿过 Binder 边界，不理解 Binder，就很难解释“线程不忙但用户还在等”。
-- [[Concepts/Activity 启动模式|Activity 启动模式]] `(context[中])`：启动模式负责解释导航语义，AMS 负责把组件真正拉起来；两者经常在“启动不对劲”问题里同时出现。
-- [[Concepts/WindowManagerService|WindowManagerService]] `(handoff[中])`：AMS 把组件和进程链推起来之后，窗口可见、焦点切换和显示协同又会转交给 WMS。
+## AMS 通常要和这些概念连着看
+- [[Concepts/Binder IPC|Binder IPC]] `(mechanism[强])`：AMS 的关键调度几乎都要穿过 Binder 往返；不理解远程调用等待，就很难解释“主线程不忙但用户还在等”。
+- [[Concepts/Activity 启动模式|Activity 启动模式]] `(context[中])`：启动模式负责实例与 Task 语义，AMS 负责把组件真正拉起来；两者经常在“启动不对劲”问题里同时出现。
+- [[Concepts/WindowManagerService|WindowManagerService]] `(handoff[中])`：AMS 把组件和进程推到可运行状态后，窗口何时可见、谁拿焦点、Layer 怎样交给显示系统，就转交给 WMS。
 
-## 7. 来源对照 (Source Cross-check)
-- **来源 1（AMS 旧笔记）**：强调 AMS 在 system_server 中的中枢定位、与 ATMS / ActiveServices / BroadcastQueue / ProcessList 的分工，以及四大组件进入系统后的统一调度规律。
-- **来源 2（进程启动旧笔记）**：补足了 `Process.start()` → Zygote socket → `forkAndSpecialize()` → `ActivityThread.main()` → `attachApplication()` 这条真正把 app 进程拉起来的链路。
-- **我的整合结论**：学习 AMS 时最值得记住的不是单个源码方法名，而是“系统调度意图如何被拆成拉进程、建运行时、回传 Binder 遥控器、再把生命周期投递回目标进程”的完整因果链。
-
-## 8. 自测问题 (Self-Test)
+## 先记住这条系统调度线，再用三个问题自测
 ### 记忆锚点 / Memory Anchor
-- **一句话记住**：AMS = system_server 里的组件与进程总调度器。
-- **看到这个信号就想到它**：冷启动要拉进程、四大组件要过系统中枢、进程优先级和前后台切换看起来“不太对”。
-
+- **一句话记住**：AMS = `system_server` 里的组件与进程总调度器，负责把“有人要启动它”翻译成“进程被拉起、生命周期被送达、状态被继续管理”。
+- **看到这个信号就想到它**：冷启动要拉进程、服务 / 广播 / Provider 迟迟不进目标进程、后台进程总被反复拉起。
 ### 自测问题
-1. 为什么说 AMS 的关键不只是“管理 Activity”，而是“统一组件与进程调度”？
-2. 冷启动时，AMS、Zygote、ActivityThread 三者各自负责哪一段动作？
+1. 为什么说 AMS 的关键不只是“管理 Activity”，而是“统一组件请求、进程建立和生命周期投递”？
+2. 冷启动时，`Process.start()`、Zygote、`ActivityThread.main()`、`attachApplicationLocked()` 各自负责哪一段动作？
 3. 如果用户看到“页面还没出来但主线程看起来不忙”，你为什么应该先怀疑 AMS 主导的系统调度链？

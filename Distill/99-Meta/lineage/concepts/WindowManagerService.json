@@ -1,0 +1,46 @@
+{
+  "笔记类型": "concept",
+  "笔记标题": "WindowManagerService",
+  "来源贡献": [
+    {
+      "来源": "WMS（2025面试旧笔记迁移）",
+      "贡献": "提供了 `WindowState`、`WindowToken`、`DisplayContent`、`SurfaceControl.Transaction` 与 Layer 树交接这条窗口结构主线。"
+    },
+    {
+      "来源": "IMS（2025面试旧笔记迁移）",
+      "贡献": "补足了 `InputWindowHandle`、焦点窗口、`FLAG_NOT_TOUCHABLE` / `NOT_TOUCHABLE` 与目标窗口判定之间的输入协同链。"
+    },
+    {
+      "来源": "渲染绘制（2025面试旧笔记迁移）",
+      "贡献": "把 WMS 放回 Choreographer、RenderThread、SurfaceFlinger 的整体交付链里，避免它被误学成孤立服务。"
+    }
+  ],
+  "图示资产": [
+    {
+      "引用": "13沉淀笔记/2025面试/WMS.md:91-111 WMS + SurfaceFlinger + Choreographer 时序图",
+      "类型": "文本图",
+      "教学角色": "核心",
+      "决策": "转写为文本",
+      "正文落点": "Section 3《真正决定“看得见 / 点得到 / 盖得住”的，是 WindowState、SurfaceControl 事务和输入窗口同步这条链》",
+      "理由": "该时序图最适合把 App、WMS 与 SurfaceFlinger 的职责分层放在同一张图里，正文已将关键协同关系转写成机制链。"
+    }
+  ],
+  "修缮记录": [
+    {
+      "类型": "补全",
+      "说明": "补入了 `WindowState / WindowToken / DisplayContent → SurfaceControl.Transaction → InputWindowHandle` 这条最低决定层，并显式接回 `FLAG_NOT_TOUCHABLE` 的输入语义。",
+      "依据": "旧版页面已有丰富结构图与代码片段，但新版合同要求把真正决定现象的系统链教学化串成 learner-facing 主线。"
+    },
+    {
+      "类型": "重写",
+      "说明": "移除了旧版来源对照与模板腔章节，重写为围绕窗口结构、焦点与输入协同展开的 7 段主线。",
+      "依据": "8.8.7 Concept 合同要求章节名自然、正文去 provenance/meta，并把图示决策迁入 sidecar。"
+    }
+  ],
+  "省略说明": [
+    {
+      "对象": "来源对照正文章节",
+      "理由": "来源贡献和修缮依据已迁移到 lineage sidecar，避免 provenance 元话术打断 learner-facing 主线。"
+    }
+  ]
+}

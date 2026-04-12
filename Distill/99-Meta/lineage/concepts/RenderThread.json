@@ -1,0 +1,46 @@
+{
+  "笔记类型": "concept",
+  "笔记标题": "RenderThread",
+  "来源贡献": [
+    {
+      "来源": "渲染绘制（2025面试旧笔记迁移）",
+      "贡献": "提供了 `Choreographer`、`RenderThread`、`queueBuffer / eglSwapBuffers`、SurfaceFlinger 与 Fence 的完整渲染交付链。"
+    },
+    {
+      "来源": "2026-04-10-Android系统性能优化与底层机制深度解析",
+      "贡献": "补足了异步渲染、性能排障与 layer / 纹理失效的实践语境。"
+    },
+    {
+      "来源": "2026-04-10-资深Android架构师面试核心考点深度复盘与解析",
+      "贡献": "强化了“UI 线程并不等于渲染完成”这一教学主轴，让概念能服务于跨层性能定位。"
+    }
+  ],
+  "图示资产": [
+    {
+      "引用": "13沉淀笔记/2025面试/渲染绘制.md:73-86 mermaid#1",
+      "类型": "mermaid",
+      "教学角色": "支持",
+      "决策": "转写为文本",
+      "正文落点": "Section 3《真正决定掉帧归因的是 DisplayList、syncFrameState、queueBuffer 和合成链交接》",
+      "理由": "该图最重要的教学价值是区分 VSYNC-app 与 VSYNC-sf 两阶段里 GPU / 合成的职责，正文已把关键含义转写进机制链。"
+    }
+  ],
+  "修缮记录": [
+    {
+      "类型": "补全",
+      "说明": "补入了 `syncFrameState`、`queueBuffer / eglSwapBuffers`、BufferQueue 与 Fence 这些真正决定“Java 结束后为什么还会晚”的后半程锚点。",
+      "依据": "旧版页面已经指出主线程与 RenderThread 分工，但新版合同要求把最低决定层与误判边界显式教学化保留。"
+    },
+    {
+      "类型": "重写",
+      "说明": "移除了旧版来源对照与模板腔章节，改写为围绕“录制之后如何真正上屏”展开的 7 段 learner-facing 主线。",
+      "依据": "8.8.7 Concept 合同要求章节名自然、主线清晰，并把来源贡献 / 图示决策外移到 sidecar。"
+    }
+  ],
+  "省略说明": [
+    {
+      "对象": "来源对照正文章节",
+      "理由": "来源贡献和修缮依据已迁移到 lineage sidecar，避免 provenance 元话术打断 learner-facing 主线。"
+    }
+  ]
+}
