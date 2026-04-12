@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "773ad7a1a813fe22",
+        "id": "81a179ee6f65be44",
         "type": "tabs",
         "children": [
           {
-            "id": "1b4468c6ae678131",
+            "id": "4bcf0dcdf3e75a00",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Distill/04-Outputs/writing-snippets.md",
+                "file": "Distill/03-Knowledge/Sources/2026-04-03-Qoder-Harness-Engineering-指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "writing-snippets"
+              "title": "2026-04-03-Qoder-Harness-Engineering-指南"
             }
           }
         ]
@@ -65,9 +65,9 @@
               "state": {
                 "query": "",
                 "matchingCase": false,
-                "explainSearch": false,
+                "explainSearch": true,
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
@@ -98,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368.5024719238281
+    "width": 498.5
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -191,51 +191,54 @@
       "templates:插入模板": false
     }
   },
-  "active": "b92a1b03d00959ee",
+  "active": "4bcf0dcdf3e75a00",
   "lastOpenFiles": [
-    "11闪念笔记/享学Vip -2021.8.8    Java基础进阶-泛型】.md",
-    "11闪念笔记/Harness Engineering笔记.md",
-    "Distill/99-Meta/文档处理待办.md",
-    "Distill/01-Queue/待处理链接-已整理.md",
-    "Distill/99-Meta/积压文档处理报告.md",
-    "Distill/01-Queue/待处理链接.md",
-    "00索引/AI.md",
-    "13沉淀笔记/MarkDown绘图示例.md",
-    "11闪念笔记/APM - 流畅度监控&治理.md",
-    "11闪念笔记/202603222043-.md",
-    "01专题索引/Harness Engineering.md",
-    "00索引/效能提高.md",
-    "11闪念笔记/未命名 2.base",
-    "11闪念笔记/未命名 1.base",
-    "未命名.canvas",
-    "11闪念笔记/未命名.base",
-    "00索引/Linux.md",
-    "00索引/Java核心技术.md",
-    "00索引/Android.md",
-    "00索引/网络原理.md",
-    "01专题索引/模板概览.md",
-    "01专题索引/享学Vip课程笔记.md",
-    "12学习笔记/享学Vip - 2021年12月9日 【Handler源码分析】_block.md",
-    "12学习笔记/60天引爆学习力-1. 学习力基础.md",
-    "13沉淀笔记/2025面试/AMS.md",
+    "Distill/03-Knowledge/Concepts/Harness Engineering.md",
+    "Distill/03-Knowledge/Concepts/Managed Agents.md",
+    "Distill/03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
+    "Distill/03-Knowledge/Topics/AI 编码工程化与 Agent 体系选型.md",
+    "Distill/03-Knowledge/Concepts/Handler 消息机制.md",
+    "Distill/99-Meta/lineage/concepts/硬件层缓存.json",
+    "Distill/99-Meta/lineage/concepts/独立评估器.json",
+    "Distill/99-Meta/lineage/concepts/渐进式 Spec.json",
+    "Distill/99-Meta/lineage/concepts/启动任务拓扑调度.json",
+    "Distill/99-Meta/lineage/concepts/WindowManagerService.json",
+    "Distill/99-Meta/lineage/concepts/Sub-Agent 编排.json",
+    "Distill/99-Meta/lineage/concepts/Managed Agents.json",
+    "Distill/99-Meta/lineage/concepts/MCP.json",
+    "Distill/99-Meta/lineage/concepts/Harness Engineering.json",
+    "Distill/99-Meta/lineage/concepts/Agent 框架选型.json",
+    "Distill/03-Knowledge/Topics/Android Framework 进程、消息、窗口与渲染主线.md",
     "13沉淀笔记/2025面试/Handler.md",
-    "13沉淀笔记/2025面试/渲染绘制.md",
     "13沉淀笔记/2025面试/进程启动.md",
-    "13沉淀笔记/2025面试/WMS.md",
-    "13沉淀笔记/2025面试/Binder.md",
-    "13沉淀笔记/brook",
-    "13沉淀笔记 1/2025面试",
-    "13沉淀笔记 1",
-    "99附件/Pasted image 20251019174251.png",
-    "99附件/Pasted image 20251019165828.png",
-    "99附件/Pasted image 20251018220849.png",
-    "99附件/Pasted image 20251017002855.png",
-    "99附件/Pasted image 20251016233905.png",
-    "99附件/Pasted image 20251016230935.png",
-    "99附件/Pasted image 20251016220556.png",
-    "99附件/Pasted image 20251015222223.png",
-    "99附件/Pasted image 20220611225609.png",
-    "99附件/Pasted image 20251015223822.png",
-    "13沉淀笔记/2025面试"
+    "Distill/03-Knowledge/Concepts/WindowManagerService.md",
+    "Distill/03-Knowledge/Topics/事件循环、同步屏障与异步调度主线.md",
+    "Distill/03-Knowledge/Concepts/同步屏障.md",
+    "Distill/03-Knowledge/Sources/2026-04-12-事件循环中的同步屏障与异步调度.md",
+    "Distill/03-Knowledge/Concepts/Binder IPC.md",
+    "Distill/03-Knowledge/Topics/Android 性能优化与运行时机制.md",
+    "Distill/03-Knowledge/Concepts/启动任务拓扑调度.md",
+    "Distill/03-Knowledge/Concepts/ActivityManagerService.md",
+    "Distill/99-Meta/legacy-notes/2026-04-11-184855-2025面试/report.md",
+    "Distill/03-Knowledge/Concepts/AI Agent.md",
+    "Distill/03-Knowledge/Concepts/硬件层缓存.md",
+    "Distill/99-Meta/health-reports/2026-04-12.md",
+    "Distill/03-Knowledge/Concepts/独立评估器.md",
+    "NotebookLM-Tailored-Report-Prompt-Compact.md",
+    "13沉淀笔记/2025面试/Android任务调度与拓扑排序：从理论到实践.md",
+    "Distill/03-Knowledge/Sources/2026-04-09-AI-Agent-入门与框架选型.md",
+    "Distill/03-Knowledge/Sources/2026-04-02-AI-编码-渐进式-Spec-实战指南.md",
+    "Distill/03-Knowledge/Sources/2026-03-31-字节-Harness-Agent-54k-Star.md",
+    "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/survival_overview.png",
+    "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/survival_by_class.png",
+    "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/survival_by_age.png",
+    "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/fare_analysis.png",
+    "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/family_size_analysis.png",
+    "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/correlation_heatmap.png",
+    "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/class_gender_survival.png",
+    "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/b83fbb2a-4e36-4d82-9de0-7b2a02c2092a/user-data/outputs/caren-lifestyle.jpg",
+    "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/b83fbb2a-4e36-4d82-9de0-7b2a02c2092a/user-data/outputs/caren-products.jpg",
+    "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/b83fbb2a-4e36-4d82-9de0-7b2a02c2092a/user-data/outputs/caren-ingredients.jpg",
+    "未命名.canvas"
   ]
 }
