@@ -1,12 +1,12 @@
 {
-  "baseFontSize": 15,
-  "theme": "obsidian",
-  "translucency": false,
+  "baseFontSize": 14,
+  "theme": "system",
+  "translucency": true,
   "interfaceFontFamily": "微软雅黑",
   "textFontFamily": "微软雅黑",
-  "cssTheme": "Red Graphite",
-  "accentColor": "#5b9ee6",
+  "cssTheme": "",
+  "accentColor": "",
   "monospaceFontFamily": "Consolas",
-  "nativeMenus": false,
+  "nativeMenus": true,
   "baseFontSizeAction": true
 }

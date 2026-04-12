@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Distill/03-Knowledge/Sources/2026-04-03-Qoder-Harness-Engineering-指南.md",
-                "mode": "source",
+                "file": "13沉淀笔记/2025面试/Binder.md",
+                "mode": "preview",
                 "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-04-03-Qoder-Harness-Engineering-指南"
+              "title": "Binder"
             }
           }
         ]
@@ -98,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 498.5
+    "width": 328.50390243530273
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -193,6 +193,9 @@
   },
   "active": "4bcf0dcdf3e75a00",
   "lastOpenFiles": [
+    "13沉淀笔记/2025面试/算法.md",
+    "13沉淀笔记/2025面试/Binder.md",
+    "Distill/03-Knowledge/Sources/2026-04-03-Qoder-Harness-Engineering-指南.md",
     "Distill/03-Knowledge/Concepts/Harness Engineering.md",
     "Distill/03-Knowledge/Concepts/Managed Agents.md",
     "Distill/03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
@@ -226,9 +229,6 @@
     "Distill/03-Knowledge/Concepts/独立评估器.md",
     "NotebookLM-Tailored-Report-Prompt-Compact.md",
     "13沉淀笔记/2025面试/Android任务调度与拓扑排序：从理论到实践.md",
-    "Distill/03-Knowledge/Sources/2026-04-09-AI-Agent-入门与框架选型.md",
-    "Distill/03-Knowledge/Sources/2026-04-02-AI-编码-渐进式-Spec-实战指南.md",
-    "Distill/03-Knowledge/Sources/2026-03-31-字节-Harness-Agent-54k-Star.md",
     "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/survival_overview.png",
     "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/survival_by_class.png",
     "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/survival_by_age.png",
