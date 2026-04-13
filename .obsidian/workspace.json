@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13沉淀笔记/2025面试/Binder.md",
+                "file": "13沉淀笔记/2025面试/Trace工具原理.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Binder"
+              "title": "Trace工具原理"
             }
           }
         ]
@@ -98,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 328.50390243530273
+    "width": 279.50390243530273
   },
   "right": {
     "id": "065d4635a980b0fe",
@@ -191,44 +191,44 @@
       "templates:插入模板": false
     }
   },
-  "active": "4bcf0dcdf3e75a00",
+  "active": "b92a1b03d00959ee",
   "lastOpenFiles": [
-    "13沉淀笔记/2025面试/算法.md",
+    "docs/superpowers/reports/evidence/2026-04-10-distill-mixed-source-e2e-evidence.md",
+    "docs/superpowers/reports/evidence/2026-04-10-dcr-rollout-review.md",
+    "docs/superpowers/specs/2026-04-10-distill-reporting-design.md",
+    "docs/superpowers/specs/2026-04-07-distill-fetch-adapters-design.md",
+    "docs/superpowers/reports/evidence",
+    "docs/superpowers/reports/_distill-completion-report-template.md",
+    "docs/superpowers/reports/2026-04-10-distill-mixed-source-e2e-completion-report.md",
+    "docs/superpowers/specs",
+    "docs/superpowers/reports",
+    "docs/superpowers",
+    "docs",
+    "13沉淀笔记/2025面试/面试题todo.md",
+    "13沉淀笔记/2025面试/Trace工具原理.md",
+    "13沉淀笔记/2025面试/事件分发与消费.md",
+    "13沉淀笔记/2025面试/AMS 1.md",
+    "13沉淀笔记/2025面试/AMS.md",
+    "13沉淀笔记/2025面试/WMS.md",
+    "13沉淀笔记/2025面试/渲染绘制.md",
+    "13沉淀笔记/2025面试/Handler.md",
+    "13沉淀笔记/2025面试/Looper与Handler.md",
+    "13沉淀笔记/2025面试/IMS.md",
     "13沉淀笔记/2025面试/Binder.md",
+    "13沉淀笔记/2025面试/Binder.md",
+    "算法/算法面试.md",
+    "13沉淀笔记/2025面试/算法.md",
+    "算法/算法.md",
     "Distill/03-Knowledge/Sources/2026-04-03-Qoder-Harness-Engineering-指南.md",
     "Distill/03-Knowledge/Concepts/Harness Engineering.md",
     "Distill/03-Knowledge/Concepts/Managed Agents.md",
     "Distill/03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
     "Distill/03-Knowledge/Topics/AI 编码工程化与 Agent 体系选型.md",
-    "Distill/03-Knowledge/Concepts/Handler 消息机制.md",
     "Distill/99-Meta/lineage/concepts/硬件层缓存.json",
     "Distill/99-Meta/lineage/concepts/独立评估器.json",
     "Distill/99-Meta/lineage/concepts/渐进式 Spec.json",
     "Distill/99-Meta/lineage/concepts/启动任务拓扑调度.json",
     "Distill/99-Meta/lineage/concepts/WindowManagerService.json",
-    "Distill/99-Meta/lineage/concepts/Sub-Agent 编排.json",
-    "Distill/99-Meta/lineage/concepts/Managed Agents.json",
-    "Distill/99-Meta/lineage/concepts/MCP.json",
-    "Distill/99-Meta/lineage/concepts/Harness Engineering.json",
-    "Distill/99-Meta/lineage/concepts/Agent 框架选型.json",
-    "Distill/03-Knowledge/Topics/Android Framework 进程、消息、窗口与渲染主线.md",
-    "13沉淀笔记/2025面试/Handler.md",
-    "13沉淀笔记/2025面试/进程启动.md",
-    "Distill/03-Knowledge/Concepts/WindowManagerService.md",
-    "Distill/03-Knowledge/Topics/事件循环、同步屏障与异步调度主线.md",
-    "Distill/03-Knowledge/Concepts/同步屏障.md",
-    "Distill/03-Knowledge/Sources/2026-04-12-事件循环中的同步屏障与异步调度.md",
-    "Distill/03-Knowledge/Concepts/Binder IPC.md",
-    "Distill/03-Knowledge/Topics/Android 性能优化与运行时机制.md",
-    "Distill/03-Knowledge/Concepts/启动任务拓扑调度.md",
-    "Distill/03-Knowledge/Concepts/ActivityManagerService.md",
-    "Distill/99-Meta/legacy-notes/2026-04-11-184855-2025面试/report.md",
-    "Distill/03-Knowledge/Concepts/AI Agent.md",
-    "Distill/03-Knowledge/Concepts/硬件层缓存.md",
-    "Distill/99-Meta/health-reports/2026-04-12.md",
-    "Distill/03-Knowledge/Concepts/独立评估器.md",
-    "NotebookLM-Tailored-Report-Prompt-Compact.md",
-    "13沉淀笔记/2025面试/Android任务调度与拓扑排序：从理论到实践.md",
     "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/survival_overview.png",
     "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/survival_by_class.png",
     "Distill/00-Inbox/repos/deer-flow/frontend/public/demo/threads/ad76c455-5bf9-4335-8517-fc03834ab828/user-data/outputs/visualizations/survival_by_age.png",
