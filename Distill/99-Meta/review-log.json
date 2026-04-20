@@ -330,5 +330,28 @@
     "files_sha256": "26aa46e2fdd5b0fc4495bacde1e6b29d19144d9be2d4cb0c6ac5aa06af375bfd",
     "reviewer": "prism:gemini",
     "trigger": "on_review_complete"
+  },
+  {
+    "timestamp": "2026-04-20T18:56:59Z",
+    "status": "pending_review",
+    "files": [
+      "03-Knowledge/Guides/AI 编码返工分诊与分层补强手册.md",
+      "99-Meta/lineage/guides/AI 编码返工分诊与分层补强手册.json"
+    ],
+    "file_count": 2,
+    "files_sha256": "7b1c610b823f74be73c03784e6c0e3931e03c92aea19706d86ccd32b149a0889",
+    "trigger": "on_guide_written"
+  },
+  {
+    "timestamp": "2026-04-20T19:00:32Z",
+    "status": "completed",
+    "files": [
+      "03-Knowledge/Guides/AI 编码返工分诊与分层补强手册.md",
+      "99-Meta/lineage/guides/AI 编码返工分诊与分层补强手册.json"
+    ],
+    "file_count": 2,
+    "files_sha256": "7b1c610b823f74be73c03784e6c0e3931e03c92aea19706d86ccd32b149a0889",
+    "reviewer": "prism:gemini",
+    "trigger": "on_review_complete"
   }
 ]
