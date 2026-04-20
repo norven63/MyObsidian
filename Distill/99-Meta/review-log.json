@@ -3,71 +3,81 @@
     "timestamp": "2026-04-08T18:09:41Z",
     "reviewer": "distill-final-reaudit",
     "files": [
-      "03-Knowledge/Sources/2026-04-03-Qoder-Harness-Engineering-指南.md",
-      "03-Knowledge/Sources/2026-03-31-字节-Harness-Agent-54k-Star.md",
-      "03-Knowledge/Sources/2026-04-02-AI-编码-渐进式-Spec-实战指南.md",
-      "03-Knowledge/Sources/2026-03-25-Anthropic-立刻做-Harness.md",
-      "03-Knowledge/Sources/2026-03-30-Agent-到-Skills-范式转变.md",
-      "03-Knowledge/Sources/2026-03-25-DeerFlow-超级AI员工框架.md",
-      "03-Knowledge/Concepts/Harness Engineering.md",
-      "03-Knowledge/Concepts/渐进式 Spec.md",
       "03-Knowledge/Concepts/Agent Skills.md",
+      "03-Knowledge/Concepts/Harness Engineering.md",
       "03-Knowledge/Concepts/MCP.md",
       "03-Knowledge/Concepts/Sub-Agent 编排.md",
+      "03-Knowledge/Concepts/渐进式 Spec.md",
       "03-Knowledge/Concepts/独立评估器.md",
+      "03-Knowledge/Sources/2026-03-25-Anthropic-立刻做-Harness.md",
+      "03-Knowledge/Sources/2026-03-25-DeerFlow-超级AI员工框架.md",
+      "03-Knowledge/Sources/2026-03-30-Agent-到-Skills-范式转变.md",
+      "03-Knowledge/Sources/2026-03-31-字节-Harness-Agent-54k-Star.md",
+      "03-Knowledge/Sources/2026-04-02-AI-编码-渐进式-Spec-实战指南.md",
+      "03-Knowledge/Sources/2026-04-03-Qoder-Harness-Engineering-指南.md",
       "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md"
-    ]
+    ],
+    "file_count": 13,
+    "files_sha256": "41746f96c59430064873aab67859f9f0355c186eaf33adce49170ca1ff80eb21"
   },
   {
     "timestamp": "2026-04-09T16:57:32Z",
     "reviewer": "distill-final-reaudit",
     "files": [
-      "03-Knowledge/Sources/2026-04-09-AI-Agent-入门与框架选型.md",
       "03-Knowledge/Concepts/AI Agent.md",
-      "03-Knowledge/Concepts/Agent 框架选型.md"
-    ]
+      "03-Knowledge/Concepts/Agent 框架选型.md",
+      "03-Knowledge/Sources/2026-04-09-AI-Agent-入门与框架选型.md"
+    ],
+    "file_count": 3,
+    "files_sha256": "7536e505635bc5fcdd35cf5d8689ca884ddc1226dfa6911a104dc2e728292242"
   },
   {
     "timestamp": "2026-04-10T14:32:06Z",
     "reviewer": "distill-reviewer-r6",
     "files": [
-      "03-Knowledge/Sources/2026-03-31-OpenCode铁三角：OpenSpec-+-Superpowers-+-OMO，从“随意编码”到“规范开发”的完整指南.md",
-      "03-Knowledge/Sources/2026-04-08-告别“伪智能”代码：用-Spec-+-RAG-打造真正懂你的AI程序员.md",
-      "03-Knowledge/Sources/2026-03-28-Harness-Task-Loop：「长任务」执行的-5-个核心机制与-4-条工程原则.md",
+      "03-Knowledge/Concepts/Dominator Tree.md",
+      "03-Knowledge/Concepts/InputManagerService.md",
+      "03-Knowledge/Concepts/RenderThread.md",
+      "03-Knowledge/Concepts/硬件层缓存.md",
+      "03-Knowledge/Sources/2026-01-14-性能优化：Perfetto查看app启动时间及冷热启动介绍.md",
+      "03-Knowledge/Sources/2026-02-04-万字长文：为什么你Vibe-Coding出的是一堆屎山，以及如何不再写屎山.md",
       "03-Knowledge/Sources/2026-03-15-Harness-Engineering：生产级-AI-Agent-Runtime-的架构与设计原则.md",
       "03-Knowledge/Sources/2026-03-21-一文看懂-Harness-engineering：智能体时代的-AI-编程驾驭之道.md",
-      "03-Knowledge/Sources/2026-02-04-万字长文：为什么你Vibe-Coding出的是一堆屎山，以及如何不再写屎山.md",
-      "03-Knowledge/Sources/2026-01-14-性能优化：Perfetto查看app启动时间及冷热启动介绍.md",
-      "03-Knowledge/Concepts/InputManagerService.md",
-      "03-Knowledge/Concepts/硬件层缓存.md",
-      "03-Knowledge/Concepts/RenderThread.md",
-      "03-Knowledge/Concepts/Dominator Tree.md",
-      "03-Knowledge/Topics/Android 性能优化与运行时机制.md",
+      "03-Knowledge/Sources/2026-03-28-Harness-Task-Loop：「长任务」执行的-5-个核心机制与-4-条工程原则.md",
+      "03-Knowledge/Sources/2026-03-31-OpenCode铁三角：OpenSpec-+-Superpowers-+-OMO，从“随意编码”到“规范开发”的完整指南.md",
+      "03-Knowledge/Sources/2026-04-08-告别“伪智能”代码：用-Spec-+-RAG-打造真正懂你的AI程序员.md",
       "03-Knowledge/Sources/2026-04-10-Android-资深架构面试核心考点深度解析报告.md",
       "03-Knowledge/Sources/2026-04-10-Android系统性能优化与底层机制深度解析.md",
-      "03-Knowledge/Sources/2026-04-10-资深Android架构师面试核心考点深度复盘与解析.md"
-    ]
+      "03-Knowledge/Sources/2026-04-10-资深Android架构师面试核心考点深度复盘与解析.md",
+      "03-Knowledge/Topics/Android 性能优化与运行时机制.md"
+    ],
+    "file_count": 15,
+    "files_sha256": "58d59cfb1caf12187253783bce8d7e905a1264178377239b5cef44b999ca2996"
   },
   {
     "timestamp": "2026-04-10T18:09:20Z",
     "reviewer": "distill-rereviewer",
     "files": [
-      "03-Knowledge/Sources/2026-02-04-Scaling-Managed-Agents-Decoupling-the-brain-from-the-hands.md",
       "03-Knowledge/Concepts/Managed Agents.md",
+      "03-Knowledge/Sources/2026-02-04-Scaling-Managed-Agents-Decoupling-the-brain-from-the-hands.md",
       "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md"
-    ]
+    ],
+    "file_count": 3,
+    "files_sha256": "8eb624e6699ebb1d71f3c179479337e647190cb882583f3fc00c6567fc10ecde"
   },
   {
     "timestamp": "2026-04-11T05:36:59Z",
     "reviewer": "distill-output-rereview",
     "files": [
+      "03-Knowledge/Concepts/Activity 启动模式.md",
       "03-Knowledge/Concepts/Binder IPC.md",
       "03-Knowledge/Concepts/Perfetto.md",
-      "03-Knowledge/Concepts/Activity 启动模式.md",
-      "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
       "03-Knowledge/Topics/Android 性能优化与运行时机制.md",
+      "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
       "03-Knowledge/Topics/知识图谱总纲.md"
-    ]
+    ],
+    "file_count": 6,
+    "files_sha256": "830401f18b72b799fa29ba9f5f1bddc7bb78c7dab21d375f59cca63666aa1f89"
   },
   {
     "timestamp": "2026-04-11T06:10:57Z",
@@ -75,62 +85,60 @@
     "files": [
       "03-Knowledge/Topics/AI 编码工程化与 Agent 体系选型.md",
       "03-Knowledge/Topics/知识图谱总纲.md"
-    ]
+    ],
+    "file_count": 2,
+    "files_sha256": "900c39f32d6f5f24fcfec9f636ae8ea41069f1e3134dd99882f8c39bb7586eb4"
   },
   {
     "timestamp": "2026-04-11T07:53:21Z",
     "reviewer": "distill-map-role-spotcheck",
     "files": [
       "03-Knowledge/Topics/知识图谱总纲.md"
-    ]
+    ],
+    "file_count": 1,
+    "files_sha256": "bbae1bf40fe965860be3386259ad41e56cdd11d8a6ca310ffb324b06281492d5"
   },
   {
     "timestamp": "2026-04-11T08:20:13Z",
     "reviewer": "distill-style-rollout-final",
     "files": [
       "03-Knowledge/Topics/知识图谱总纲.md"
-    ]
+    ],
+    "file_count": 1,
+    "files_sha256": "bbae1bf40fe965860be3386259ad41e56cdd11d8a6ca310ffb324b06281492d5"
   },
   {
     "timestamp": "2026-04-11T10:21:03Z",
     "reviewer": "distill-8.6.0-rereview-pass",
     "files": [
+      "03-Knowledge/Concepts/AI Agent.md",
       "03-Knowledge/Concepts/Activity 启动模式.md",
       "03-Knowledge/Concepts/Agent Skills.md",
       "03-Knowledge/Concepts/Agent 框架选型.md",
-      "03-Knowledge/Concepts/AI Agent.md",
       "03-Knowledge/Concepts/Binder IPC.md",
       "03-Knowledge/Concepts/Dominator Tree.md",
       "03-Knowledge/Concepts/Harness Engineering.md",
       "03-Knowledge/Concepts/InputManagerService.md",
-      "03-Knowledge/Concepts/Managed Agents.md",
       "03-Knowledge/Concepts/MCP.md",
+      "03-Knowledge/Concepts/Managed Agents.md",
       "03-Knowledge/Concepts/Perfetto.md",
       "03-Knowledge/Concepts/RenderThread.md",
       "03-Knowledge/Concepts/Sub-Agent 编排.md",
-      "03-Knowledge/Concepts/独立评估器.md",
       "03-Knowledge/Concepts/渐进式 Spec.md",
+      "03-Knowledge/Concepts/独立评估器.md",
       "03-Knowledge/Concepts/硬件层缓存.md",
       "03-Knowledge/Topics/AI 编码工程化与 Agent 体系选型.md",
-      "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
       "03-Knowledge/Topics/Android 性能优化与运行时机制.md",
+      "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
       "03-Knowledge/Topics/知识图谱总纲.md"
-    ]
+    ],
+    "file_count": 20,
+    "files_sha256": "75f467b14ebf3394d5432da164d61678e60dd19f26b15f917fee3caf35a84d7b"
   },
   {
     "timestamp": "2026-04-11T13:04:23Z",
     "reviewer": "distill-8.7.0-final-pass",
     "files": [
-      "03-Knowledge/Sources/2026-02-04-Scaling-Managed-Agents-Decoupling-the-brain-from-the-hands.md",
-      "03-Knowledge/Sources/2026-03-25-Anthropic-立刻做-Harness.md",
-      "03-Knowledge/Sources/2026-03-30-Agent-到-Skills-范式转变.md",
-      "03-Knowledge/Sources/2026-03-31-字节-Harness-Agent-54k-Star.md",
-      "03-Knowledge/Sources/2026-04-02-AI-编码-渐进式-Spec-实战指南.md",
-      "03-Knowledge/Sources/2026-04-03-Qoder-Harness-Engineering-指南.md",
-      "03-Knowledge/Sources/2026-04-09-AI-Agent-入门与框架选型.md",
-      "03-Knowledge/Sources/2026-04-10-Android-资深架构面试核心考点深度解析报告.md",
-      "03-Knowledge/Sources/2026-04-10-Android系统性能优化与底层机制深度解析.md",
-      "03-Knowledge/Sources/2026-04-10-资深Android架构师面试核心考点深度复盘与解析.md",
       "03-Knowledge/Clippings/2026-01-10-Android-一篇理透Binder机制.md",
       "03-Knowledge/Clippings/2026-01-14-性能优化：Perfetto查看app启动时间及冷热启动介绍.md",
       "03-Knowledge/Clippings/2026-01-30-n8n-使用入门.md",
@@ -166,11 +174,23 @@
       "03-Knowledge/Concepts/渐进式 Spec.md",
       "03-Knowledge/Concepts/独立评估器.md",
       "03-Knowledge/Concepts/硬件层缓存.md",
+      "03-Knowledge/Sources/2026-02-04-Scaling-Managed-Agents-Decoupling-the-brain-from-the-hands.md",
+      "03-Knowledge/Sources/2026-03-25-Anthropic-立刻做-Harness.md",
+      "03-Knowledge/Sources/2026-03-30-Agent-到-Skills-范式转变.md",
+      "03-Knowledge/Sources/2026-03-31-字节-Harness-Agent-54k-Star.md",
+      "03-Knowledge/Sources/2026-04-02-AI-编码-渐进式-Spec-实战指南.md",
+      "03-Knowledge/Sources/2026-04-03-Qoder-Harness-Engineering-指南.md",
+      "03-Knowledge/Sources/2026-04-09-AI-Agent-入门与框架选型.md",
+      "03-Knowledge/Sources/2026-04-10-Android-资深架构面试核心考点深度解析报告.md",
+      "03-Knowledge/Sources/2026-04-10-Android系统性能优化与底层机制深度解析.md",
+      "03-Knowledge/Sources/2026-04-10-资深Android架构师面试核心考点深度复盘与解析.md",
       "03-Knowledge/Topics/AI 编码工程化与 Agent 体系选型.md",
       "03-Knowledge/Topics/Android 性能优化与运行时机制.md",
       "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
       "03-Knowledge/Topics/知识图谱总纲.md"
-    ]
+    ],
+    "file_count": 49,
+    "files_sha256": "d597d9a2b7ea41bddbd202054d1ce7864688af5d21d5d9f7d64094262e98ccca"
   },
   {
     "timestamp": "2026-04-11T15:40:13Z",
@@ -179,25 +199,31 @@
       "03-Knowledge/Concepts/Activity 启动模式.md",
       "03-Knowledge/Concepts/Agent Skills.md",
       "03-Knowledge/Concepts/Managed Agents.md"
-    ]
+    ],
+    "file_count": 3,
+    "files_sha256": "3899b058f1574ea4010eb3f9ac6f0ced2eebb12df528df9a6e57f4e763ca04ba"
   },
   {
     "timestamp": "2026-04-11T19:06:20Z",
     "reviewer": "distill-migration-reviewer",
     "files": [
       "03-Knowledge/Concepts/ActivityManagerService.md",
-      "03-Knowledge/Concepts/WindowManagerService.md",
       "03-Knowledge/Concepts/Handler 消息机制.md",
+      "03-Knowledge/Concepts/WindowManagerService.md",
       "03-Knowledge/Concepts/启动任务拓扑调度.md",
       "03-Knowledge/Topics/Android Framework 进程、消息、窗口与渲染主线.md"
-    ]
+    ],
+    "file_count": 5,
+    "files_sha256": "93214ccac9e909a48e7c02c23b494005cf1d42a09d7f6bd21c14cf8d7f8d4f91"
   },
   {
     "timestamp": "2026-04-12T06:17:48Z",
     "reviewer": "distill-handler-rereview-pass",
     "files": [
       "03-Knowledge/Concepts/Handler 消息机制.md"
-    ]
+    ],
+    "file_count": 1,
+    "files_sha256": "adc4d3d4b2056095ac1c427c6213dcacfcf5cee45cd6b51427fd2d912b7f1683"
   },
   {
     "timestamp": "2026-04-12T06:49:19Z",
@@ -253,11 +279,56 @@
       "99-Meta/lineage/topics/Android 性能优化与运行时机制.json",
       "99-Meta/lineage/topics/Harness Engineering 与 Agent 运行时设计.json",
       "99-Meta/lineage/topics/知识图谱总纲.json"
-    ]
+    ],
+    "file_count": 50,
+    "files_sha256": "143e6cd2e4d525e420591e22f6f267298f54f5bcfa774b02805f3892daa2f343"
   },
   {
-    "timestamp": "2026-04-12T07:22:15Z",
-    "reviewer": "distill-8.8.8-final-pass",
-    "files": []
+    "timestamp": "2026-04-20T17:44:38Z",
+    "status": "pending_review",
+    "files": [
+      "03-Knowledge/Sources/2026-01-23-Building-multi-agent-systems.md"
+    ],
+    "file_count": 1,
+    "files_sha256": "827d24a491b00205ad14044ad88d292cd935f88508c61b93bc9a00a295f40ddd",
+    "trigger": "on_source_written"
+  },
+  {
+    "timestamp": "2026-04-20T17:44:49Z",
+    "status": "pending_review",
+    "files": [
+      "03-Knowledge/Sources/2026-01-23-Building-multi-agent-systems.md",
+      "03-Knowledge/Sources/2026-04-08-Claude-Managed-Agents-10x-faster.md"
+    ],
+    "file_count": 2,
+    "files_sha256": "7c325f7642fe1daa2292f2fae20b7c01ab14f245307158c54b1602ea27a38ae3",
+    "trigger": "on_source_written"
+  },
+  {
+    "timestamp": "2026-04-20T17:45:02Z",
+    "status": "pending_review",
+    "files": [
+      "03-Knowledge/Guides/单 Agent、Sub-Agent 与 Managed Agents 升级选择手册.md",
+      "03-Knowledge/Sources/2026-01-23-Building-multi-agent-systems.md",
+      "03-Knowledge/Sources/2026-04-08-Claude-Managed-Agents-10x-faster.md",
+      "99-Meta/lineage/guides/单 Agent、Sub-Agent 与 Managed Agents 升级选择手册.json"
+    ],
+    "file_count": 4,
+    "files_sha256": "26aa46e2fdd5b0fc4495bacde1e6b29d19144d9be2d4cb0c6ac5aa06af375bfd",
+    "trigger": "on_guide_written"
+  },
+  {
+    "timestamp": "2026-04-20T18:00:07Z",
+    "status": "completed",
+    "files": [
+      "03-Knowledge/Guides/单 Agent、Sub-Agent 与 Managed Agents 升级选择手册.md",
+      "03-Knowledge/Sources/2026-01-23-Building-multi-agent-systems.md",
+      "03-Knowledge/Sources/2026-04-08-Claude-Managed-Agents-10x-faster.md",
+      "99-Meta/lineage/guides/单 Agent、Sub-Agent 与 Managed Agents 升级选择手册.json"
+    ],
+    "file_count": 4,
+    "files_sha256": "26aa46e2fdd5b0fc4495bacde1e6b29d19144d9be2d4cb0c6ac5aa06af375bfd",
+    "reviewer": "prism:gemini",
+    "trigger": "on_review_complete"
   }
 ]
