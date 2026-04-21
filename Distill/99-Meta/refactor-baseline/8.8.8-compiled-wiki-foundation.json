@@ -1,0 +1,72 @@
+{
+  "schema_version": "1",
+  "baseline_name": "distill-8.8.8-compiled-wiki-foundation",
+  "captured_for": "8.9.x additive wiki refactor",
+  "distill_version": "8.8.8",
+  "captured_at": "2026-04-14T15:13:00Z",
+  "release_anchors": {
+    "skill_release_commit": "aac3024",
+    "vault_release_commit": "5cc5be1",
+    "vault_current_head": "abcccc7"
+  },
+  "compiled_batch_sha256": "754144697ffad5a58a06e85e5dafe721622c44ea210965c84bbde08fdb8f4f48",
+  "counts": {
+    "sources": 10,
+    "clippings": 19,
+    "concepts": 20,
+    "topics": 5
+  },
+  "stop_ship_rules": [
+    "learner-facing TODO leakage must remain zero",
+    "published Concepts and Topics must not leak provenance or lineage meta wording",
+    "Concept and Topic lineage sidecars must remain complete and valid",
+    "existing wikilinks and root-topic navigation must not regress",
+    "index/log/manifests must remain derived artifacts, not replace review-log or telemetry as machine truth"
+  ],
+  "golden_files": [
+    {
+      "role": "root_topic",
+      "path": "03-Knowledge/Topics/知识图谱总纲.md",
+      "sha256": "f26d291c8c765d837201142da7720cc95ebd137c03a365fafdb4b9bd9615d1a6"
+    },
+    {
+      "role": "topic_exemplar",
+      "path": "03-Knowledge/Topics/Harness Engineering 与 Agent 运行时设计.md",
+      "sha256": "0e7f7ffaf8532d59f71d8d2b15a1d0d7bd3bcce257f2f54cc47f531efc322b05"
+    },
+    {
+      "role": "concept_exemplar",
+      "path": "03-Knowledge/Concepts/Handler 消息机制.md",
+      "sha256": "9f773ca5d6f16665af3443f07e8df4909f2c5c0aa3917400e2043650fdbceeb5"
+    },
+    {
+      "role": "concept_specificity_sample",
+      "path": "03-Knowledge/Concepts/AI Agent.md",
+      "sha256": "dcf80640036394c2b9254d5bda5ef612510cb648aea34330b25832347acec5d4"
+    },
+    {
+      "role": "source_sample",
+      "path": "03-Knowledge/Sources/2026-04-09-AI-Agent-入门与框架选型.md",
+      "sha256": "0bbca0cb79575e8fb3a6c0d715eb0ad5e9f5cde8bfb8bfa1d5a73bb15c8f55e4"
+    },
+    {
+      "role": "concept_lineage_sample",
+      "path": "99-Meta/lineage/concepts/Handler 消息机制.json",
+      "sha256": "1b45b860f762d354b0699e378e8e85bc7ba956b1a052b840c0eac74a51818974"
+    },
+    {
+      "role": "topic_lineage_sample",
+      "path": "99-Meta/lineage/topics/Harness Engineering 与 Agent 运行时设计.json",
+      "sha256": "0484429266adccd85247f71a934f059e2c27269b2aaba5797d09f8df3d90b758"
+    },
+    {
+      "role": "health_report_sample",
+      "path": "99-Meta/health-reports/2026-04-12.md",
+      "sha256": "935123dc1f0f92bf4bbf66e361e4deac6b70caa32ddeb84dd1924c122e7a2e51"
+    }
+  ],
+  "notes": [
+    "This snapshot is the regression anchor for the additive wiki refactor. It freezes the current learner-facing corpus shape without redefining Sources, Concepts, or Topics into generic pages.",
+    "Future index/log/manifests must remain additive. If a refactor changes any golden file intentionally, the change needs an explicit reviewer-approved migration note."
+  ]
+}
