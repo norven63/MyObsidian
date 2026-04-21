@@ -144,11 +144,11 @@
 
 ### 6.2 关键铁律
 
-1. **任务开始铁律**：非 trivial 长任务进入执行前，必须先发 `started`
+1. **任务开始铁律**：非 trivial 长任务进入执行前，必须先登记 `started`；默认 quiet-first 策略下只写本地 lifecycle，不发飞书
 2. **等待铁律**：任务若进入等待用户输入 / 外部阻塞，必须发 `waiting_user`
 3. **完成铁律**：任务在对外宣称完成前，必须发 `completed`
 4. **失败铁律**：任务在对外宣称失败或停止前，必须发 `failed` / `cancelled`
-5. **去噪铁律**：`progress` 只在阶段变化或达到节流阈值时发送，不得按微步骤刷屏
+5. **去噪铁律**：`progress` 默认只写本地 lifecycle；只有 `--force`、显式 `DISTILL_FEISHU_NOTIFY_POLICY=normal|verbose` 或特殊长会话才发送，不得按微步骤刷屏
 
 ## 7. 推荐设计
 
@@ -170,8 +170,8 @@ Distill `agent-hook-handler.sh` 不再单独扮演“特殊通知系统”，而
 
 | 事件 | 含义 | 默认是否发飞书 |
 | --- | --- | --- |
-| `started` | 任务正式开始执行 | 是 |
-| `progress` | 阶段推进或长阶段心跳 | 是，节流 |
+| `started` | 任务正式开始执行 | 否，默认只写本地 lifecycle |
+| `progress` | 阶段推进或长阶段心跳 | 否；`--force` 或 normal/verbose policy 才发送 |
 | `waiting_user` | 任务正在等待用户或外部输入 | 是 |
 | `completed` | 任务完成 | 是 |
 | `failed` | 任务失败 | 是 |
@@ -185,7 +185,6 @@ Distill `agent-hook-handler.sh` 不再单独扮演“特殊通知系统”，而
 
 #### A. Critical events
 
-- `started`
 - `waiting_user`
 - `completed`
 - `failed`
@@ -195,11 +194,12 @@ Distill `agent-hook-handler.sh` 不再单独扮演“特殊通知系统”，而
 
 1. 发送失败不能静默吞掉
 2. `completed / failed / cancelled` 必须 fail-closed
-3. `started` 发送失败时，不应进入“无人值守长任务”状态
-4. `waiting_user` 发送失败时，不应假装用户已被提醒
+3. `waiting_user` 发送失败时，不应假装用户已被提醒
+4. `started` 必须写入本地 lifecycle；默认不再作为飞书 critical event
 
 #### B. Advisory events
 
+- `started`
 - `progress`
 
 规则：
@@ -279,13 +279,13 @@ Distill `agent-hook-handler.sh` 不再单独扮演“特殊通知系统”，而
 2. 从“实现”进入“测试”
 3. 从“测试”进入“修复”
 4. 开始一个明显会持续较久的 shell 命令
-5. 同一阶段持续超过节流阈值（建议 10 分钟）时可发心跳
+5. 同一阶段持续较久且确有外部可见价值时，可用 `--force` 或 normal/verbose policy 发心跳
 
 动作：
 
 1. 更新 `current_phase`
 2. 写状态
-3. 若符合节流条件则发送 `progress`
+3. 默认不发飞书；只有 `--force` 或 normal/verbose policy 才发送 `progress`
 
 飞书文本建议包含：
 
@@ -416,14 +416,14 @@ Distill `agent-hook-handler.sh` 不再单独扮演“特殊通知系统”，而
 
 首轮实现至少应覆盖：
 
-1. `started` 真发成功
-2. `progress` 真发成功
+1. `started` 默认 quiet 时只写本地 state，不发飞书
+2. `progress` 默认 quiet 时只写本地 state，不发飞书
 3. `waiting_user` 真发成功
 4. `completed` 真发成功
 5. `failed` 真发成功
 6. `completed` 发送失败时 fail-closed
 7. `failed` 发送失败时 fail-closed
-8. `progress` 发送失败时不误报完成，但会被记录
+8. `progress --force` 真发成功；发送失败时不误报完成，但会被记录
 9. 重复同一事件时不会双发
 10. 崩溃恢复能识别未收尾任务
 

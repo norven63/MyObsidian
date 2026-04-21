@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/distill_session_start.py\"",
+            "statusMessage": "Loading Distill closeout rules"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/distill_stop_hook.py\"",
+            "timeout": 120,
+            "statusMessage": "Checking Distill closeout gate"
+          }
+        ]
+      }
+    ]
+  }
+}

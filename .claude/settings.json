@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "command": "bash /Users/norven/.claude/skills/distill/scripts/distill-stop-hook.sh Stop"
+      }
+    ],
+    "SessionEnd": [
+      {
+        "command": "bash /Users/norven/.claude/skills/distill/scripts/distill-stop-hook.sh SessionEnd"
+      }
+    ]
+  }
+}

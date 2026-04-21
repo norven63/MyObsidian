@@ -18,3 +18,11 @@ Thumbs.db
 .idea/
 99-Meta/fetch-telemetry.jsonl
 99-Meta/fetch-rule-state.json
+.distill-hook-stage/
+99-Meta/hook-debug.log
+99-Meta/index.md
+99-Meta/index.json
+99-Meta/lint-report.md
+99-Meta/lint-report.json
+99-Meta/log.md
+99-Meta/health-reports/*.md
