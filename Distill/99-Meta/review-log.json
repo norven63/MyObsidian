@@ -353,5 +353,30 @@
     "files_sha256": "7b1c610b823f74be73c03784e6c0e3931e03c92aea19706d86ccd32b149a0889",
     "reviewer": "prism:gemini",
     "trigger": "on_review_complete"
+  },
+  {
+    "timestamp": "2026-04-21T00:24:41Z",
+    "status": "pending_review",
+    "files": [
+      "03-Knowledge/Guides/AI Agent 框架选型与落地顺序手册.md",
+      "04-Outputs/writing-snippets.md",
+      "99-Meta/lineage/guides/AI Agent 框架选型与落地顺序手册.json"
+    ],
+    "file_count": 3,
+    "files_sha256": "e6479b9e68dba9c3cbc28b87603c43c635ad48dcf978c80691d931cc6ec25920",
+    "trigger": "on_guide_written"
+  },
+  {
+    "timestamp": "2026-04-21T00:26:04Z",
+    "status": "completed",
+    "files": [
+      "03-Knowledge/Guides/AI Agent 框架选型与落地顺序手册.md",
+      "04-Outputs/writing-snippets.md",
+      "99-Meta/lineage/guides/AI Agent 框架选型与落地顺序手册.json"
+    ],
+    "file_count": 3,
+    "files_sha256": "e6479b9e68dba9c3cbc28b87603c43c635ad48dcf978c80691d931cc6ec25920",
+    "reviewer": "prism:gemini",
+    "trigger": "on_review_complete"
   }
 ]
