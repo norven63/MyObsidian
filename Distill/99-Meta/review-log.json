@@ -378,5 +378,30 @@
     "files_sha256": "e6479b9e68dba9c3cbc28b87603c43c635ad48dcf978c80691d931cc6ec25920",
     "reviewer": "prism:gemini",
     "trigger": "on_review_complete"
+  },
+  {
+    "timestamp": "2026-04-21T12:50:04Z",
+    "status": "pending_review",
+    "files": [
+      "03-Knowledge/Guides/Android 运行时性能分诊与证据顺序手册.md",
+      "04-Outputs/writing-snippets.md",
+      "99-Meta/lineage/guides/Android 运行时性能分诊与证据顺序手册.json"
+    ],
+    "file_count": 3,
+    "files_sha256": "54a9399754edc1b1030840fdd3caf5cfb7a346aa8d32d6c747dca1a0be33ed03",
+    "trigger": "on_guide_written"
+  },
+  {
+    "timestamp": "2026-04-21T13:12:10Z",
+    "status": "completed",
+    "files": [
+      "03-Knowledge/Guides/Android 运行时性能分诊与证据顺序手册.md",
+      "04-Outputs/writing-snippets.md",
+      "99-Meta/lineage/guides/Android 运行时性能分诊与证据顺序手册.json"
+    ],
+    "file_count": 3,
+    "files_sha256": "54a9399754edc1b1030840fdd3caf5cfb7a346aa8d32d6c747dca1a0be33ed03",
+    "reviewer": "degraded:local-expanded-audit",
+    "trigger": "on_review_complete"
   }
 ]
