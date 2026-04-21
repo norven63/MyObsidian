@@ -27,14 +27,6 @@
 6. ~~Systrace / Perfetto / Android Studio Profiler 的统计口径、实现思路 / 算法、性能耗损~~  
 7. 冷启动优化：ART 角度方案（除基准文件促进 AOT 外）  
 8. 从 so 远程化扩展到 so 热修复：核心原理与工程边界  
-9. Android 进程启动机制  
-10. Handler / Looper / MessageQueue 底层原理  
-11. Android 渲染绘制原理与关键底层机制  
-12. AMS 核心机制与原理  
-13. Binder 核心机制与原理  
-14. WMS 核心机制与原理  
-15. ANR 机制、判定链路与排查  
-16. App 冷启动优化方法论
 
 ## 报告结构
 ### 一、总览
