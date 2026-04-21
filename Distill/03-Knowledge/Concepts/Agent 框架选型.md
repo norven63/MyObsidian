@@ -61,6 +61,7 @@
 - 最低锚点是 complexity matrix：先定位复杂度源头，再映射到 RAG / state graph / orchestration / runtime。
 - 其次是底座对 state visibility、retry / recovery、evaluator integration 和 tool ecosystem 的承载能力。
 - 最后要看迁移与运维成本：如果接入后大量逻辑仍躲在 prompt 和人工补位里，说明框架并没有接住主复杂度。
+- 如果讨论始终停在 stars、demo 和品牌名，就会误判“选型已经完成”，并看丢 complexity matrix 与 state / recovery 承载能力这层真正决定成败的最低锚点。
 
 ### 排查 / 应用抓手
 - **排查时先问**：现有方案到底卡在知识供给、状态可见性、协作分工，还是运行时稳定性？如果问题都还没定性，选型一定会跑偏。

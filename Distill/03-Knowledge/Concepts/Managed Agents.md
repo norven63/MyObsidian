@@ -60,6 +60,7 @@ Managed Agents 之所以不是“把 Agent 扔上云”，是因为要把 sessio
 - 最低锚点是 session store：任务做到哪、为何暂停、如何恢复，不能跟着进程一起消失。
 - 其次是 harness object 和 sandbox boundary：执行壳与受控环境需要分别治理，不能都混在同一短命进程里。
 - 再看 handoff semantics：模型 / 容器替换后，上层工作流是否还能沿旧状态继续，而不是从零解释背景。
+- 如果只把托管理解成“任务跑在云上”或“容器可以重启”，就会看丢 session store、sandbox boundary 和 handoff semantics 这层真正决定任务能否跨环境接棒的最低层。
 
 ### 排查 / 应用抓手
 - **排查运行时脆弱性时先问**：任务状态到底存在 prompt 里、容器里，还是独立 session 里？如果进程一死就全丢，说明还没进入 Managed Agents 范式。

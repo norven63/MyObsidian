@@ -61,6 +61,7 @@
 - 真正决定行为的不是“会不会调工具”，而是任务状态结构里是否明确保存了 goal / constraint / success / failure / next-step 这些可机读对象。
 - 其次是 observe → update state / memory → choose next action → execute 这条闭环是否真的存在；少任何一环，系统都会退回建议型助手。
 - 再往下看，tool result、evaluator result 和 termination signal 是否能进入下一轮决策；没有这层，Agent 只会不断重试，或者提前自称完成。
+- 如果把 AI Agent 误判成“带工具调用的聊天模型”，就会看丢 state / feedback / termination 这层真正决定它能否持续把事做完的执行闭环。
 
 ### 排查 / 应用抓手
 - **排查时先问**：目标、已尝试动作、失败原因和待办状态到底存在什么地方？如果这些信息只活在临时聊天里，系统还不够像 Agent。

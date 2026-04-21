@@ -64,6 +64,7 @@ Harness 要独立存在，是因为权限、验证、恢复、日志和检查点
 - 关键锚点是 run loop 里的 plan → act → check → repair，以及每一步对应的可执行验证入口。
 - 其次是 sandbox / permission boundary：什么能跑、能读、能写，谁来兜底，这些才是“护栏”真正落地的地方。
 - 再往下一层是 checkpoint / log / evaluator integration；这些决定失败后是局部修复，还是整段任务只能从零开始。
+- 如果只看到 orchestration 面板或流程说明，就会把 Harness 误判成“更复杂的工作流”，并看丢 plan → act → check → repair 与 checkpoint / evaluator 这层真正兜底执行质量的最低层。
 
 ### 排查 / 应用抓手
 - **排查时先问**：哪些保证必须由系统强制执行，而不是靠模型记住？如果答不出来，Harness 边界通常还没立住。

@@ -61,6 +61,7 @@
 - 最低锚点是 baseline rules 与 task-specific spec 的边界：哪些是常驻底线，哪些是这次任务新增的契约。
 - 其次是 escalation triggers：复杂度、影响面、失败成本达到什么阈值才升级流程。
 - 最后是 post-task backflow：新稳定经验如何回写成 rules / skills / knowledge artifacts，让下一次任务从更高起点开始。
+- 如果只把渐进式 Spec 理解成“任务越大文档越多”，就会看丢 baseline rules、升级触发条件和 backflow 这层真正决定流程重量是否合理的最低层。
 
 ### 排查 / 应用抓手
 - **排查时先问**：如果现在只靠聊天和临场发挥推进，这次变更最可能在哪个环节出错——范围、验收、依赖、评审，还是知识回写？

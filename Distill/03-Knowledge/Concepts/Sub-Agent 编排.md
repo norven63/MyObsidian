@@ -63,6 +63,7 @@
 - 最低锚点是 task contract：每个 sub-agent 拿什么输入、交什么产物、由谁验收。
 - 其次是 context isolation：worker 只读与本任务相关的背景、工具和约束，而不是把全任务历史一起背在身上。
 - 最后是 coordinator merge + evaluator gate；这一步决定并行产物如何变成整体结论。
+- 如果只看到“开了多个代理并行跑”，就会把编排误判成简单并发，并看丢 task contract、context isolation 和 merge / evaluator gate 这层真正决定整体正确性的最低层。
 
 ### 排查 / 应用抓手
 - **排查时先问**：每个子代理到底要交付什么产物——代码、报告、测试结果还是审计结论？如果产物说不清，拆分大概率也不清楚。
