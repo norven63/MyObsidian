@@ -403,5 +403,61 @@
     "files_sha256": "54a9399754edc1b1030840fdd3caf5cfb7a346aa8d32d6c747dca1a0be33ed03",
     "reviewer": "degraded:local-expanded-audit",
     "trigger": "on_review_complete"
+  },
+  {
+    "timestamp": "2026-04-21T14:36:08Z",
+    "status": "pending_review",
+    "files": [
+      "03-Knowledge/Topics/LLM 持久 Wiki 与知识库编译范式.md",
+      "99-Meta/lineage/topics/LLM 持久 Wiki 与知识库编译范式.json"
+    ],
+    "file_count": 2,
+    "files_sha256": "396bdef534b79033bbc94e4ae05c6ab2821d1a9f9231c732ae98130f7f8cafce",
+    "trigger": "on_topic_written"
+  },
+  {
+    "timestamp": "2026-04-21T14:36:08Z",
+    "status": "pending_review",
+    "files": [
+      "03-Knowledge/Guides/把 Obsidian 做成 LLM 持久 Wiki 的最小落地手册.md",
+      "03-Knowledge/Topics/LLM 持久 Wiki 与知识库编译范式.md",
+      "04-Outputs/writing-snippets.md",
+      "99-Meta/lineage/guides/把 Obsidian 做成 LLM 持久 Wiki 的最小落地手册.json",
+      "99-Meta/lineage/topics/LLM 持久 Wiki 与知识库编译范式.json"
+    ],
+    "file_count": 5,
+    "files_sha256": "be4b0722c2c36207fb0ad46f168f2a4f30f0b3c624555fc930698406c6d80a0a",
+    "trigger": "on_guide_written"
+  },
+  {
+    "timestamp": "2026-04-21T14:36:08Z",
+    "status": "pending_review",
+    "files": [
+      "03-Knowledge/Guides/把 Obsidian 做成 LLM 持久 Wiki 的最小落地手册.md",
+      "03-Knowledge/Sources/2026-04-21-LLM-Wiki-持久知识库编译范式.md",
+      "03-Knowledge/Topics/LLM 持久 Wiki 与知识库编译范式.md",
+      "04-Outputs/writing-snippets.md",
+      "99-Meta/lineage/guides/把 Obsidian 做成 LLM 持久 Wiki 的最小落地手册.json",
+      "99-Meta/lineage/topics/LLM 持久 Wiki 与知识库编译范式.json"
+    ],
+    "file_count": 6,
+    "files_sha256": "14179020405d2e9b622b0f67774ac488d4ded890b89c953db7aa84800c07f874",
+    "trigger": "on_source_written"
+  },
+  {
+    "timestamp": "2026-04-21T14:46:50Z",
+    "status": "completed",
+    "files": [
+      "03-Knowledge/Guides/把 Obsidian 做成 LLM 持久 Wiki 的最小落地手册.md",
+      "03-Knowledge/Sources/2026-04-21-LLM-Wiki-持久知识库编译范式.md",
+      "03-Knowledge/Topics/LLM 持久 Wiki 与知识库编译范式.md",
+      "04-Outputs/writing-snippets.md",
+      "99-Meta/lineage/guides/把 Obsidian 做成 LLM 持久 Wiki 的最小落地手册.json",
+      "99-Meta/lineage/topics/LLM 持久 Wiki 与知识库编译范式.json"
+    ],
+    "file_count": 6,
+    "files_sha256": "14179020405d2e9b622b0f67774ac488d4ded890b89c953db7aa84800c07f874",
+    "reviewer": "prism-kimi",
+    "trigger": "on_review_complete"
   }
 ]
